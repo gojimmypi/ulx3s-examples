@@ -1,0 +1,1590 @@
+
+     Lattice Mapping Report File for Design Module 'ulx3s_passthru_wifi'
+
+
+Design Information
+------------------
+
+Command line:   map -a ECP5U -p LFE5U-12F -t CABGA381 -s 6 -oc Industrial
+     passthru_implementation.ngd -o passthru_implementation_map.ncd -pr
+     passthru_implementation.prf -mp passthru_implementation.mrp -lpf C:/workspa
+     ce/ulx3s/examples/passthru/Diamond/implementation/passthru_implementation.l
+     pf -lpf C:/workspace/ulx3s/examples/passthru/Diamond/ulx3s_v20.lpf -gui 
+Target Vendor:  LATTICE
+Target Device:  LFE5U-12FCABGA381
+Target Performance:   6
+Mapper:  sa5p00,  version:  Diamond (64-bit) 3.10.3.144
+Mapped on:  03/01/19  12:58:00
+
+Design Summary
+--------------
+
+   Number of registers:     35 out of 12687 (0%)
+      PFU registers:           35 out of 12096 (0%)
+      PIO registers:            0 out of   591 (0%)
+   Number of SLICEs:        46 out of  6048 (1%)
+      SLICEs as Logic/ROM:     46 out of  6048 (1%)
+      SLICEs as RAM:            0 out of  4536 (0%)
+      SLICEs as Carry:         10 out of  6048 (0%)
+   Number of LUT4s:         56 out of 12096 (0%)
+      Number used as logic LUTs:         36
+      Number used as distributed RAM:     0
+      Number used as ripple logic:       20
+      Number used as shift registers:     0
+   Number of PIO sites used: 38 out of 197 (19%)
+   Number of block RAMs:  0 out of 32 (0%)
+   Number of GSRs:  1 out of 1 (100%)
+   JTAG used :      No
+   Readback used :  No
+   Oscillator used :  No
+   Startup used :   No
+   DTR used :   No
+   Number of Dynamic Bank Controller (BCINRD):  0 out of 4 (0%)
+   Number of Dynamic Bank Controller (BCLVDSOB):  0 out of 4 (0%)
+   Number of DCC:  0 out of 60 (0%)
+   Number of DCS:  0 out of 2 (0%)
+   Number of PLLs:  0 out of 2 (0%)
+   Number of DDRDLLs:  0 out of 4 (0%)
+   Number of CLKDIV:  0 out of 4 (0%)
+   Number of ECLKSYNC:  0 out of 10 (0%)
+   Number of ECLKBRIDGECS:  0 out of 2 (0%)
+   Notes:-
+      1. Total number of LUT4s = (Number of logic LUT4s) + 2*(Number of
+     distributed RAMs) + 2*(Number of ripple logic)
+      2. Number of logic LUT4s does not include count of distributed RAM and
+     ripple logic.
+
+        Number Of Mapped DSP Components:
+   --------------------------------
+   MULT18X18D          0
+   MULT9X9D            0
+   ALU54B              0
+   ALU24B              0
+
+                                    Page 1
+
+
+
+
+Design:  ulx3s_passthru_wifi                           Date:  03/01/19  12:58:00
+
+Design Summary (cont)
+---------------------
+   PRADD18A            0
+   PRADD9A             0
+   --------------------------------
+   Number of Used DSP MULT Sites:  0 out of 56 (0 %)
+   Number of Used DSP ALU Sites:  0 out of 28 (0 %)
+   Number of Used DSP PRADD Sites:  0 out of 56 (0 %)
+   Number of clocks:  2
+     Net clk_25mhz_c: 11 loads, 11 rising, 0 falling (Driver: PIO clk_25mhz )
+     Net oled_clk_c_c: 15 loads, 15 rising, 0 falling (Driver: PIO sd_clk )
+   Number of Clock Enables:  1
+     Net clk_25mhz_c_enable_18: 10 loads, 10 LSLICEs
+   Number of LSRs:  15
+     Net n413: 1 loads, 1 LSLICEs
+     Net n404: 1 loads, 1 LSLICEs
+     Net n401: 1 loads, 1 LSLICEs
+     Net R_prog_release_17__N_74: 10 loads, 10 LSLICEs
+     Net n403: 1 loads, 1 LSLICEs
+     Net n402: 1 loads, 1 LSLICEs
+     Net n414: 1 loads, 1 LSLICEs
+     Net n415: 1 loads, 1 LSLICEs
+     Net n410: 1 loads, 1 LSLICEs
+     Net n411: 1 loads, 1 LSLICEs
+     Net n408: 1 loads, 1 LSLICEs
+     Net n409: 1 loads, 1 LSLICEs
+     Net n406: 1 loads, 1 LSLICEs
+     Net n407: 1 loads, 1 LSLICEs
+     Net n412: 1 loads, 1 LSLICEs
+   Number of nets driven by tri-state buffers:  0
+   Top 10 highest fanout non-clock nets:
+     Net oled_csn_c_c: 24 loads
+     Net clk_25mhz_c_enable_18: 10 loads
+     Net R_prog_release_17__N_74: 10 loads
+     Net ftdi_ndtr_c: 6 loads
+     Net ftdi_nrts_c: 6 loads
+     Net R_prog_release_17: 5 loads
+     Net btn_c_0: 4 loads
+     Net btn_c_1: 3 loads
+     Net btn_c_2: 3 loads
+     Net btn_c_3: 3 loads
+
+
+
+
+   Number of warnings:  388
+   Number of errors:    0
+     
+
+Design Errors/Warnings
+----------------------
+
+WARNING - map: C:/workspace/ulx3s/examples/passthru/Diamond/ulx3s_v20.lpf(26):
+     Semantic error in "IOBUF PORT "ftdi_txden" PULLMODE=UP IO_TYPE=LVCMOS33 ;":
+     Port "ftdi_txden" does not exist in the design. This preference has been
+     disabled.
+WARNING - map: C:/workspace/ulx3s/examples/passthru/Diamond/ulx3s_v20.lpf(63):
+     Semantic error in "LOCATE COMP "sw[0]" SITE "E8" ;": COMP "sw[0]" cannot be
+
+                                    Page 2
+
+
+
+
+Design:  ulx3s_passthru_wifi                           Date:  03/01/19  12:58:00
+
+Design Errors/Warnings (cont)
+-----------------------------
+     found in design. This preference has been disabled.
+WARNING - map: C:/workspace/ulx3s/examples/passthru/Diamond/ulx3s_v20.lpf(67):
+     Semantic error in "IOBUF PORT "sw[0]" PULLMODE=DOWN IO_TYPE=LVCMOS33 ;":
+     Port "sw[0]" does not exist in the design. This preference has been
+     disabled.
+WARNING - map: C:/workspace/ulx3s/examples/passthru/Diamond/ulx3s_v20.lpf(68):
+     Semantic error in "IOBUF PORT "sw[1]" PULLMODE=DOWN IO_TYPE=LVCMOS33 ;":
+     Port "sw[1]" does not exist in the design. This preference has been
+     disabled.
+WARNING - map: C:/workspace/ulx3s/examples/passthru/Diamond/ulx3s_v20.lpf(69):
+     Semantic error in "IOBUF PORT "sw[2]" PULLMODE=DOWN IO_TYPE=LVCMOS33 ;":
+     Port "sw[2]" does not exist in the design. This preference has been
+     disabled.
+WARNING - map: C:/workspace/ulx3s/examples/passthru/Diamond/ulx3s_v20.lpf(70):
+     Semantic error in "IOBUF PORT "sw[3]" PULLMODE=DOWN IO_TYPE=LVCMOS33 ;":
+     Port "sw[3]" does not exist in the design. This preference has been
+     disabled.
+WARNING - map: C:/workspace/ulx3s/examples/passthru/Diamond/ulx3s_v20.lpf(85):
+     Semantic error in "LOCATE COMP "flash_csn" SITE "R2" ;": COMP "flash_csn"
+     cannot be found in design. This preference has been disabled.
+WARNING - map: C:/workspace/ulx3s/examples/passthru/Diamond/ulx3s_v20.lpf(87):
+     Semantic error in "LOCATE COMP "flash_mosi" SITE "W2" ;": COMP "flash_mosi"
+     cannot be found in design. This preference has been disabled.
+WARNING - map: C:/workspace/ulx3s/examples/passthru/Diamond/ulx3s_v20.lpf(88):
+     Semantic error in "LOCATE COMP "flash_miso" SITE "V2" ;": COMP "flash_miso"
+     cannot be found in design. This preference has been disabled.
+WARNING - map: C:/workspace/ulx3s/examples/passthru/Diamond/ulx3s_v20.lpf(98):
+     Semantic error in "IOBUF PORT "flash_csn" PULLMODE=NONE IO_TYPE=LVCMOS33
+     DRIVE=4 ;": Port "flash_csn" does not exist in the design. This preference
+     has been disabled.
+WARNING - map: C:/workspace/ulx3s/examples/passthru/Diamond/ulx3s_v20.lpf(100):
+     Semantic error in "IOBUF PORT "flash_mosi" PULLMODE=NONE IO_TYPE=LVCMOS33
+     DRIVE=4 ;": Port "flash_mosi" does not exist in the design. This preference
+     has been disabled.
+WARNING - map: C:/workspace/ulx3s/examples/passthru/Diamond/ulx3s_v20.lpf(101):
+     Semantic error in "IOBUF PORT "flash_miso" PULLMODE=NONE IO_TYPE=LVCMOS33
+     DRIVE=4 ;": Port "flash_miso" does not exist in the design. This preference
+     has been disabled.
+WARNING - map: C:/workspace/ulx3s/examples/passthru/Diamond/ulx3s_v20.lpf(124):
+     Semantic error in "IOBUF PORT "sd_d[1]" PULLMODE=UP IO_TYPE=LVCMOS33
+     DRIVE=4 ;": Port "sd_d[1]" does not exist in the design. This preference
+     has been disabled.
+WARNING - map: C:/workspace/ulx3s/examples/passthru/Diamond/ulx3s_v20.lpf(125):
+     Semantic error in "IOBUF PORT "sd_d[2]" PULLMODE=UP IO_TYPE=LVCMOS33
+     DRIVE=4 ;": Port "sd_d[2]" does not exist in the design. This preference
+     has been disabled.
+WARNING - map: C:/workspace/ulx3s/examples/passthru/Diamond/ulx3s_v20.lpf(126):
+     Semantic error in "IOBUF PORT "sd_d[3]" PULLMODE=UP IO_TYPE=LVCMOS33
+     DRIVE=4 ;": Port "sd_d[3]" does not exist in the design. This preference
+     has been disabled.
+WARNING - map: C:/workspace/ulx3s/examples/passthru/Diamond/ulx3s_v20.lpf(127):
+     Semantic error in "IOBUF PORT "sd_wp" PULLMODE=UP IO_TYPE=LVCMOS33 DRIVE=4
+     ;": Port "sd_wp" does not exist in the design. This preference has been
+     disabled.
+WARNING - map: C:/workspace/ulx3s/examples/passthru/Diamond/ulx3s_v20.lpf(128):
+     Semantic error in "IOBUF PORT "sd_cdn" PULLMODE=UP IO_TYPE=LVCMOS33 DRIVE=4
+
+                                    Page 3
+
+
+
+
+Design:  ulx3s_passthru_wifi                           Date:  03/01/19  12:58:00
+
+Design Errors/Warnings (cont)
+-----------------------------
+     ;": Port "sd_cdn" does not exist in the design. This preference has been
+     disabled.
+WARNING - map: C:/workspace/ulx3s/examples/passthru/Diamond/ulx3s_v20.lpf(131):
+     Semantic error in "LOCATE COMP "adc_csn" SITE "R17" ;": COMP "adc_csn"
+     cannot be found in design. This preference has been disabled.
+WARNING - map: C:/workspace/ulx3s/examples/passthru/Diamond/ulx3s_v20.lpf(132):
+     Semantic error in "LOCATE COMP "adc_mosi" SITE "R16" ;": COMP "adc_mosi"
+     cannot be found in design. This preference has been disabled.
+WARNING - map: C:/workspace/ulx3s/examples/passthru/Diamond/ulx3s_v20.lpf(133):
+     Semantic error in "LOCATE COMP "adc_miso" SITE "U16" ;": COMP "adc_miso"
+     cannot be found in design. This preference has been disabled.
+WARNING - map: C:/workspace/ulx3s/examples/passthru/Diamond/ulx3s_v20.lpf(134):
+     Semantic error in "LOCATE COMP "adc_sclk" SITE "P17" ;": COMP "adc_sclk"
+     cannot be found in design. This preference has been disabled.
+WARNING - map: C:/workspace/ulx3s/examples/passthru/Diamond/ulx3s_v20.lpf(135):
+     Semantic error in "IOBUF PORT "adc_csn" PULLMODE=UP IO_TYPE=LVCMOS33
+     DRIVE=4 ;": Port "adc_csn" does not exist in the design. This preference
+     has been disabled.
+WARNING - map: C:/workspace/ulx3s/examples/passthru/Diamond/ulx3s_v20.lpf(136):
+     Semantic error in "IOBUF PORT "adc_mosi" PULLMODE=UP IO_TYPE=LVCMOS33
+     DRIVE=4 ;": Port "adc_mosi" does not exist in the design. This preference
+     has been disabled.
+WARNING - map: C:/workspace/ulx3s/examples/passthru/Diamond/ulx3s_v20.lpf(137):
+     Semantic error in "IOBUF PORT "adc_miso" PULLMODE=UP IO_TYPE=LVCMOS33
+     DRIVE=4 ;": Port "adc_miso" does not exist in the design. This preference
+     has been disabled.
+WARNING - map: C:/workspace/ulx3s/examples/passthru/Diamond/ulx3s_v20.lpf(138):
+     Semantic error in "IOBUF PORT "adc_sclk" PULLMODE=UP IO_TYPE=LVCMOS33
+     DRIVE=4 ;": Port "adc_sclk" does not exist in the design. This preference
+     has been disabled.
+WARNING - map: C:/workspace/ulx3s/examples/passthru/Diamond/ulx3s_v20.lpf(155):
+     Semantic error in "IOBUF PORT "audio_l[3]" PULLMODE=NONE IO_TYPE=LVCMOS33
+     DRIVE=16 ;": Port "audio_l[3]" does not exist in the design. This
+     preference has been disabled.
+WARNING - map: C:/workspace/ulx3s/examples/passthru/Diamond/ulx3s_v20.lpf(156):
+     Semantic error in "IOBUF PORT "audio_l[2]" PULLMODE=NONE IO_TYPE=LVCMOS33
+     DRIVE=16 ;": Port "audio_l[2]" does not exist in the design. This
+     preference has been disabled.
+WARNING - map: C:/workspace/ulx3s/examples/passthru/Diamond/ulx3s_v20.lpf(157):
+     Semantic error in "IOBUF PORT "audio_l[1]" PULLMODE=NONE IO_TYPE=LVCMOS33
+     DRIVE=16 ;": Port "audio_l[1]" does not exist in the design. This
+     preference has been disabled.
+WARNING - map: C:/workspace/ulx3s/examples/passthru/Diamond/ulx3s_v20.lpf(158):
+     Semantic error in "IOBUF PORT "audio_l[0]" PULLMODE=NONE IO_TYPE=LVCMOS33
+     DRIVE=16 ;": Port "audio_l[0]" does not exist in the design. This
+     preference has been disabled.
+WARNING - map: C:/workspace/ulx3s/examples/passthru/Diamond/ulx3s_v20.lpf(159):
+     Semantic error in "IOBUF PORT "audio_r[3]" PULLMODE=NONE IO_TYPE=LVCMOS33
+     DRIVE=16 ;": Port "audio_r[3]" does not exist in the design. This
+     preference has been disabled.
+WARNING - map: C:/workspace/ulx3s/examples/passthru/Diamond/ulx3s_v20.lpf(160):
+     Semantic error in "IOBUF PORT "audio_r[2]" PULLMODE=NONE IO_TYPE=LVCMOS33
+     DRIVE=16 ;": Port "audio_r[2]" does not exist in the design. This
+     preference has been disabled.
+WARNING - map: C:/workspace/ulx3s/examples/passthru/Diamond/ulx3s_v20.lpf(161):
+     Semantic error in "IOBUF PORT "audio_r[1]" PULLMODE=NONE IO_TYPE=LVCMOS33
+
+                                    Page 4
+
+
+
+
+Design:  ulx3s_passthru_wifi                           Date:  03/01/19  12:58:00
+
+Design Errors/Warnings (cont)
+-----------------------------
+     DRIVE=16 ;": Port "audio_r[1]" does not exist in the design. This
+     preference has been disabled.
+WARNING - map: C:/workspace/ulx3s/examples/passthru/Diamond/ulx3s_v20.lpf(162):
+     Semantic error in "IOBUF PORT "audio_r[0]" PULLMODE=NONE IO_TYPE=LVCMOS33
+     DRIVE=16 ;": Port "audio_r[0]" does not exist in the design. This
+     preference has been disabled.
+WARNING - map: C:/workspace/ulx3s/examples/passthru/Diamond/ulx3s_v20.lpf(163):
+     Semantic error in "IOBUF PORT "audio_v[3]" PULLMODE=NONE IO_TYPE=LVCMOS33
+     DRIVE=16 ;": Port "audio_v[3]" does not exist in the design. This
+     preference has been disabled.
+WARNING - map: C:/workspace/ulx3s/examples/passthru/Diamond/ulx3s_v20.lpf(164):
+     Semantic error in "IOBUF PORT "audio_v[2]" PULLMODE=NONE IO_TYPE=LVCMOS33
+     DRIVE=16 ;": Port "audio_v[2]" does not exist in the design. This
+     preference has been disabled.
+WARNING - map: C:/workspace/ulx3s/examples/passthru/Diamond/ulx3s_v20.lpf(165):
+     Semantic error in "IOBUF PORT "audio_v[1]" PULLMODE=NONE IO_TYPE=LVCMOS33
+     DRIVE=16 ;": Port "audio_v[1]" does not exist in the design. This
+     preference has been disabled.
+WARNING - map: C:/workspace/ulx3s/examples/passthru/Diamond/ulx3s_v20.lpf(166):
+     Semantic error in "IOBUF PORT "audio_v[0]" PULLMODE=NONE IO_TYPE=LVCMOS33
+     DRIVE=16 ;": Port "audio_v[0]" does not exist in the design. This
+     preference has been disabled.
+WARNING - map: C:/workspace/ulx3s/examples/passthru/Diamond/ulx3s_v20.lpf(174):
+     Semantic error in "LOCATE COMP "wifi_gpio5" SITE "N4" ;": COMP "wifi_gpio5"
+     cannot be found in design. This preference has been disabled.
+WARNING - map: C:/workspace/ulx3s/examples/passthru/Diamond/ulx3s_v20.lpf(187):
+     Semantic error in "LOCATE COMP "ant_433mhz" SITE "G1" ;": COMP "ant_433mhz"
+     cannot be found in design. This preference has been disabled.
+WARNING - map: C:/workspace/ulx3s/examples/passthru/Diamond/ulx3s_v20.lpf(188):
+     Semantic error in "IOBUF PORT "ant_433mhz" PULLMODE=NONE IO_TYPE=LVCMOS33
+     DRIVE=4 ;": Port "ant_433mhz" does not exist in the design. This preference
+     has been disabled.
+WARNING - map: C:/workspace/ulx3s/examples/passthru/Diamond/ulx3s_v20.lpf(191):
+     Semantic error in "LOCATE COMP "usb_fpga_dp" SITE "E16" ;": COMP
+     "usb_fpga_dp" cannot be found in design. This preference has been disabled.
+WARNING - map: C:/workspace/ulx3s/examples/passthru/Diamond/ulx3s_v20.lpf(192):
+     Semantic error in "LOCATE COMP "usb_fpga_dn" SITE "F16" ;": COMP
+     "usb_fpga_dn" cannot be found in design. This preference has been disabled.
+WARNING - map: C:/workspace/ulx3s/examples/passthru/Diamond/ulx3s_v20.lpf(193):
+     Semantic error in "IOBUF PORT "usb_fpga_dp" PULLMODE=NONE IO_TYPE=LVCMOS33D
+     DRIVE=16 ;": Port "usb_fpga_dp" does not exist in the design. This
+     preference has been disabled.
+WARNING - map: C:/workspace/ulx3s/examples/passthru/Diamond/ulx3s_v20.lpf(194):
+     Semantic error in "IOBUF PORT "usb_fpga_dn" PULLMODE=NONE IO_TYPE=LVCMOS33D
+     DRIVE=16 ;": Port "usb_fpga_dn" does not exist in the design. This
+     preference has been disabled.
+WARNING - map: C:/workspace/ulx3s/examples/passthru/Diamond/ulx3s_v20.lpf(195):
+     Semantic error in "LOCATE COMP "usb_fpga_bd_dp" SITE "D15" ;": COMP
+     "usb_fpga_bd_dp" cannot be found in design. This preference has been
+     disabled.
+WARNING - map: C:/workspace/ulx3s/examples/passthru/Diamond/ulx3s_v20.lpf(196):
+     Semantic error in "LOCATE COMP "usb_fpga_bd_dn" SITE "E15" ;": COMP
+     "usb_fpga_bd_dn" cannot be found in design. This preference has been
+     disabled.
+WARNING - map: C:/workspace/ulx3s/examples/passthru/Diamond/ulx3s_v20.lpf(197):
+     Semantic error in "IOBUF PORT "usb_fpga_bd_dp" PULLMODE=NONE
+
+                                    Page 5
+
+
+
+
+Design:  ulx3s_passthru_wifi                           Date:  03/01/19  12:58:00
+
+Design Errors/Warnings (cont)
+-----------------------------
+     IO_TYPE=LVCMOS33 DRIVE=4 ;": Port "usb_fpga_bd_dp" does not exist in the
+     design. This preference has been disabled.
+WARNING - map: C:/workspace/ulx3s/examples/passthru/Diamond/ulx3s_v20.lpf(198):
+     Semantic error in "IOBUF PORT "usb_fpga_bd_dn" PULLMODE=NONE
+     IO_TYPE=LVCMOS33 DRIVE=4 ;": Port "usb_fpga_bd_dn" does not exist in the
+     design. This preference has been disabled.
+WARNING - map: C:/workspace/ulx3s/examples/passthru/Diamond/ulx3s_v20.lpf(199):
+     Semantic error in "LOCATE COMP "usb_fpga_pu_dp" SITE "B12" ;": COMP
+     "usb_fpga_pu_dp" cannot be found in design. This preference has been
+     disabled.
+WARNING - map: C:/workspace/ulx3s/examples/passthru/Diamond/ulx3s_v20.lpf(200):
+     Semantic error in "LOCATE COMP "usb_fpga_pu_dn" SITE "C12" ;": COMP
+     "usb_fpga_pu_dn" cannot be found in design. This preference has been
+     disabled.
+WARNING - map: C:/workspace/ulx3s/examples/passthru/Diamond/ulx3s_v20.lpf(201):
+     Semantic error in "IOBUF PORT "usb_fpga_pu_dp" PULLMODE=NONE
+     IO_TYPE=LVCMOS33 DRIVE=16 ;": Port "usb_fpga_pu_dp" does not exist in the
+     design. This preference has been disabled.
+WARNING - map: C:/workspace/ulx3s/examples/passthru/Diamond/ulx3s_v20.lpf(202):
+     Semantic error in "IOBUF PORT "usb_fpga_pu_dn" PULLMODE=NONE
+     IO_TYPE=LVCMOS33 DRIVE=16 ;": Port "usb_fpga_pu_dn" does not exist in the
+     design. This preference has been disabled.
+WARNING - map: C:/workspace/ulx3s/examples/passthru/Diamond/ulx3s_v20.lpf(218):
+     Semantic error in "LOCATE COMP "sdram_clk" SITE "F19" ;": COMP "sdram_clk"
+     cannot be found in design. This preference has been disabled.
+WARNING - map: C:/workspace/ulx3s/examples/passthru/Diamond/ulx3s_v20.lpf(219):
+     Semantic error in "LOCATE COMP "sdram_cke" SITE "F20" ;": COMP "sdram_cke"
+     cannot be found in design. This preference has been disabled.
+WARNING - map: C:/workspace/ulx3s/examples/passthru/Diamond/ulx3s_v20.lpf(220):
+     Semantic error in "LOCATE COMP "sdram_csn" SITE "P20" ;": COMP "sdram_csn"
+     cannot be found in design. This preference has been disabled.
+WARNING - map: C:/workspace/ulx3s/examples/passthru/Diamond/ulx3s_v20.lpf(221):
+     Semantic error in "LOCATE COMP "sdram_wen" SITE "T20" ;": COMP "sdram_wen"
+     cannot be found in design. This preference has been disabled.
+WARNING - map: C:/workspace/ulx3s/examples/passthru/Diamond/ulx3s_v20.lpf(222):
+     Semantic error in "LOCATE COMP "sdram_rasn" SITE "R20" ;": COMP
+     "sdram_rasn" cannot be found in design. This preference has been disabled.
+WARNING - map: C:/workspace/ulx3s/examples/passthru/Diamond/ulx3s_v20.lpf(223):
+     Semantic error in "LOCATE COMP "sdram_casn" SITE "T19" ;": COMP
+     "sdram_casn" cannot be found in design. This preference has been disabled.
+WARNING - map: C:/workspace/ulx3s/examples/passthru/Diamond/ulx3s_v20.lpf(224):
+     Semantic error in "LOCATE COMP "sdram_a[0]" SITE "M20" ;": COMP
+     "sdram_a[0]" cannot be found in design. This preference has been disabled.
+WARNING - map: C:/workspace/ulx3s/examples/passthru/Diamond/ulx3s_v20.lpf(225):
+     Semantic error in "LOCATE COMP "sdram_a[1]" SITE "M19" ;": COMP
+     "sdram_a[1]" cannot be found in design. This preference has been disabled.
+WARNING - map: C:/workspace/ulx3s/examples/passthru/Diamond/ulx3s_v20.lpf(226):
+     Semantic error in "LOCATE COMP "sdram_a[2]" SITE "L20" ;": COMP
+     "sdram_a[2]" cannot be found in design. This preference has been disabled.
+WARNING - map: C:/workspace/ulx3s/examples/passthru/Diamond/ulx3s_v20.lpf(227):
+     Semantic error in "LOCATE COMP "sdram_a[3]" SITE "L19" ;": COMP
+     "sdram_a[3]" cannot be found in design. This preference has been disabled.
+WARNING - map: C:/workspace/ulx3s/examples/passthru/Diamond/ulx3s_v20.lpf(228):
+     Semantic error in "LOCATE COMP "sdram_a[4]" SITE "K20" ;": COMP
+     "sdram_a[4]" cannot be found in design. This preference has been disabled.
+WARNING - map: C:/workspace/ulx3s/examples/passthru/Diamond/ulx3s_v20.lpf(229):
+
+                                    Page 6
+
+
+
+
+Design:  ulx3s_passthru_wifi                           Date:  03/01/19  12:58:00
+
+Design Errors/Warnings (cont)
+-----------------------------
+     Semantic error in "LOCATE COMP "sdram_a[5]" SITE "K19" ;": COMP
+     "sdram_a[5]" cannot be found in design. This preference has been disabled.
+WARNING - map: C:/workspace/ulx3s/examples/passthru/Diamond/ulx3s_v20.lpf(230):
+     Semantic error in "LOCATE COMP "sdram_a[6]" SITE "K18" ;": COMP
+     "sdram_a[6]" cannot be found in design. This preference has been disabled.
+WARNING - map: C:/workspace/ulx3s/examples/passthru/Diamond/ulx3s_v20.lpf(231):
+     Semantic error in "LOCATE COMP "sdram_a[7]" SITE "J20" ;": COMP
+     "sdram_a[7]" cannot be found in design. This preference has been disabled.
+WARNING - map: C:/workspace/ulx3s/examples/passthru/Diamond/ulx3s_v20.lpf(232):
+     Semantic error in "LOCATE COMP "sdram_a[8]" SITE "J19" ;": COMP
+     "sdram_a[8]" cannot be found in design. This preference has been disabled.
+WARNING - map: C:/workspace/ulx3s/examples/passthru/Diamond/ulx3s_v20.lpf(233):
+     Semantic error in "LOCATE COMP "sdram_a[9]" SITE "H20" ;": COMP
+     "sdram_a[9]" cannot be found in design. This preference has been disabled.
+WARNING - map: C:/workspace/ulx3s/examples/passthru/Diamond/ulx3s_v20.lpf(234):
+     Semantic error in "LOCATE COMP "sdram_a[10]" SITE "N19" ;": COMP
+     "sdram_a[10]" cannot be found in design. This preference has been disabled.
+WARNING - map: C:/workspace/ulx3s/examples/passthru/Diamond/ulx3s_v20.lpf(235):
+     Semantic error in "LOCATE COMP "sdram_a[11]" SITE "G20" ;": COMP
+     "sdram_a[11]" cannot be found in design. This preference has been disabled.
+WARNING - map: C:/workspace/ulx3s/examples/passthru/Diamond/ulx3s_v20.lpf(236):
+     Semantic error in "LOCATE COMP "sdram_a[12]" SITE "G19" ;": COMP
+     "sdram_a[12]" cannot be found in design. This preference has been disabled.
+WARNING - map: C:/workspace/ulx3s/examples/passthru/Diamond/ulx3s_v20.lpf(237):
+     Semantic error in "LOCATE COMP "sdram_ba[0]" SITE "P19" ;": COMP
+     "sdram_ba[0]" cannot be found in design. This preference has been disabled.
+WARNING - map: C:/workspace/ulx3s/examples/passthru/Diamond/ulx3s_v20.lpf(238):
+     Semantic error in "LOCATE COMP "sdram_ba[1]" SITE "N20" ;": COMP
+     "sdram_ba[1]" cannot be found in design. This preference has been disabled.
+WARNING - map: C:/workspace/ulx3s/examples/passthru/Diamond/ulx3s_v20.lpf(239):
+     Semantic error in "LOCATE COMP "sdram_dqm[0]" SITE "U19" ;": COMP
+     "sdram_dqm[0]" cannot be found in design. This preference has been
+     disabled.
+WARNING - map: C:/workspace/ulx3s/examples/passthru/Diamond/ulx3s_v20.lpf(240):
+     Semantic error in "LOCATE COMP "sdram_dqm[1]" SITE "E20" ;": COMP
+     "sdram_dqm[1]" cannot be found in design. This preference has been
+     disabled.
+WARNING - map: C:/workspace/ulx3s/examples/passthru/Diamond/ulx3s_v20.lpf(241):
+     Semantic error in "LOCATE COMP "sdram_d[0]" SITE "J16" ;": COMP
+     "sdram_d[0]" cannot be found in design. This preference has been disabled.
+WARNING - map: C:/workspace/ulx3s/examples/passthru/Diamond/ulx3s_v20.lpf(242):
+     Semantic error in "LOCATE COMP "sdram_d[1]" SITE "L18" ;": COMP
+     "sdram_d[1]" cannot be found in design. This preference has been disabled.
+WARNING - map: C:/workspace/ulx3s/examples/passthru/Diamond/ulx3s_v20.lpf(243):
+     Semantic error in "LOCATE COMP "sdram_d[2]" SITE "M18" ;": COMP
+     "sdram_d[2]" cannot be found in design. This preference has been disabled.
+WARNING - map: C:/workspace/ulx3s/examples/passthru/Diamond/ulx3s_v20.lpf(244):
+     Semantic error in "LOCATE COMP "sdram_d[3]" SITE "N18" ;": COMP
+     "sdram_d[3]" cannot be found in design. This preference has been disabled.
+WARNING - map: C:/workspace/ulx3s/examples/passthru/Diamond/ulx3s_v20.lpf(245):
+     Semantic error in "LOCATE COMP "sdram_d[4]" SITE "P18" ;": COMP
+     "sdram_d[4]" cannot be found in design. This preference has been disabled.
+WARNING - map: C:/workspace/ulx3s/examples/passthru/Diamond/ulx3s_v20.lpf(246):
+     Semantic error in "LOCATE COMP "sdram_d[5]" SITE "T18" ;": COMP
+     "sdram_d[5]" cannot be found in design. This preference has been disabled.
+WARNING - map: C:/workspace/ulx3s/examples/passthru/Diamond/ulx3s_v20.lpf(247):
+
+                                    Page 7
+
+
+
+
+Design:  ulx3s_passthru_wifi                           Date:  03/01/19  12:58:00
+
+Design Errors/Warnings (cont)
+-----------------------------
+     Semantic error in "LOCATE COMP "sdram_d[6]" SITE "T17" ;": COMP
+     "sdram_d[6]" cannot be found in design. This preference has been disabled.
+WARNING - map: C:/workspace/ulx3s/examples/passthru/Diamond/ulx3s_v20.lpf(248):
+     Semantic error in "LOCATE COMP "sdram_d[7]" SITE "U20" ;": COMP
+     "sdram_d[7]" cannot be found in design. This preference has been disabled.
+WARNING - map: C:/workspace/ulx3s/examples/passthru/Diamond/ulx3s_v20.lpf(249):
+     Semantic error in "LOCATE COMP "sdram_d[8]" SITE "E19" ;": COMP
+     "sdram_d[8]" cannot be found in design. This preference has been disabled.
+WARNING - map: C:/workspace/ulx3s/examples/passthru/Diamond/ulx3s_v20.lpf(250):
+     Semantic error in "LOCATE COMP "sdram_d[9]" SITE "D20" ;": COMP
+     "sdram_d[9]" cannot be found in design. This preference has been disabled.
+WARNING - map: C:/workspace/ulx3s/examples/passthru/Diamond/ulx3s_v20.lpf(251):
+     Semantic error in "LOCATE COMP "sdram_d[10]" SITE "D19" ;": COMP
+     "sdram_d[10]" cannot be found in design. This preference has been disabled.
+WARNING - map: C:/workspace/ulx3s/examples/passthru/Diamond/ulx3s_v20.lpf(252):
+     Semantic error in "LOCATE COMP "sdram_d[11]" SITE "C20" ;": COMP
+     "sdram_d[11]" cannot be found in design. This preference has been disabled.
+WARNING - map: C:/workspace/ulx3s/examples/passthru/Diamond/ulx3s_v20.lpf(253):
+     Semantic error in "LOCATE COMP "sdram_d[12]" SITE "E18" ;": COMP
+     "sdram_d[12]" cannot be found in design. This preference has been disabled.
+WARNING - map: C:/workspace/ulx3s/examples/passthru/Diamond/ulx3s_v20.lpf(254):
+     Semantic error in "LOCATE COMP "sdram_d[13]" SITE "F18" ;": COMP
+     "sdram_d[13]" cannot be found in design. This preference has been disabled.
+WARNING - map: C:/workspace/ulx3s/examples/passthru/Diamond/ulx3s_v20.lpf(255):
+     Semantic error in "LOCATE COMP "sdram_d[14]" SITE "J18" ;": COMP
+     "sdram_d[14]" cannot be found in design. This preference has been disabled.
+WARNING - map: C:/workspace/ulx3s/examples/passthru/Diamond/ulx3s_v20.lpf(256):
+     Semantic error in "LOCATE COMP "sdram_d[15]" SITE "J17" ;": COMP
+     "sdram_d[15]" cannot be found in design. This preference has been disabled.
+WARNING - map: C:/workspace/ulx3s/examples/passthru/Diamond/ulx3s_v20.lpf(257):
+     Semantic error in "IOBUF PORT "sdram_clk" PULLMODE=NONE IO_TYPE=LVCMOS33
+     DRIVE=4 ;": Port "sdram_clk" does not exist in the design. This preference
+     has been disabled.
+WARNING - map: C:/workspace/ulx3s/examples/passthru/Diamond/ulx3s_v20.lpf(258):
+     Semantic error in "IOBUF PORT "sdram_cke" PULLMODE=NONE IO_TYPE=LVCMOS33
+     DRIVE=4 ;": Port "sdram_cke" does not exist in the design. This preference
+     has been disabled.
+WARNING - map: C:/workspace/ulx3s/examples/passthru/Diamond/ulx3s_v20.lpf(259):
+     Semantic error in "IOBUF PORT "sdram_csn" PULLMODE=NONE IO_TYPE=LVCMOS33
+     DRIVE=4 ;": Port "sdram_csn" does not exist in the design. This preference
+     has been disabled.
+WARNING - map: C:/workspace/ulx3s/examples/passthru/Diamond/ulx3s_v20.lpf(260):
+     Semantic error in "IOBUF PORT "sdram_wen" PULLMODE=NONE IO_TYPE=LVCMOS33
+     DRIVE=4 ;": Port "sdram_wen" does not exist in the design. This preference
+     has been disabled.
+WARNING - map: C:/workspace/ulx3s/examples/passthru/Diamond/ulx3s_v20.lpf(261):
+     Semantic error in "IOBUF PORT "sdram_rasn" PULLMODE=NONE IO_TYPE=LVCMOS33
+     DRIVE=4 ;": Port "sdram_rasn" does not exist in the design. This preference
+     has been disabled.
+WARNING - map: C:/workspace/ulx3s/examples/passthru/Diamond/ulx3s_v20.lpf(262):
+     Semantic error in "IOBUF PORT "sdram_casn" PULLMODE=NONE IO_TYPE=LVCMOS33
+     DRIVE=4 ;": Port "sdram_casn" does not exist in the design. This preference
+     has been disabled.
+WARNING - map: C:/workspace/ulx3s/examples/passthru/Diamond/ulx3s_v20.lpf(263):
+     Semantic error in "IOBUF PORT "sdram_a[0]" PULLMODE=NONE IO_TYPE=LVCMOS33
+     DRIVE=4 ;": Port "sdram_a[0]" does not exist in the design. This preference
+
+                                    Page 8
+
+
+
+
+Design:  ulx3s_passthru_wifi                           Date:  03/01/19  12:58:00
+
+Design Errors/Warnings (cont)
+-----------------------------
+     has been disabled.
+WARNING - map: C:/workspace/ulx3s/examples/passthru/Diamond/ulx3s_v20.lpf(264):
+     Semantic error in "IOBUF PORT "sdram_a[1]" PULLMODE=NONE IO_TYPE=LVCMOS33
+     DRIVE=4 ;": Port "sdram_a[1]" does not exist in the design. This preference
+     has been disabled.
+WARNING - map: C:/workspace/ulx3s/examples/passthru/Diamond/ulx3s_v20.lpf(265):
+     Semantic error in "IOBUF PORT "sdram_a[2]" PULLMODE=NONE IO_TYPE=LVCMOS33
+     DRIVE=4 ;": Port "sdram_a[2]" does not exist in the design. This preference
+     has been disabled.
+WARNING - map: C:/workspace/ulx3s/examples/passthru/Diamond/ulx3s_v20.lpf(266):
+     Semantic error in "IOBUF PORT "sdram_a[3]" PULLMODE=NONE IO_TYPE=LVCMOS33
+     DRIVE=4 ;": Port "sdram_a[3]" does not exist in the design. This preference
+     has been disabled.
+WARNING - map: C:/workspace/ulx3s/examples/passthru/Diamond/ulx3s_v20.lpf(267):
+     Semantic error in "IOBUF PORT "sdram_a[4]" PULLMODE=NONE IO_TYPE=LVCMOS33
+     DRIVE=4 ;": Port "sdram_a[4]" does not exist in the design. This preference
+     has been disabled.
+WARNING - map: C:/workspace/ulx3s/examples/passthru/Diamond/ulx3s_v20.lpf(268):
+     Semantic error in "IOBUF PORT "sdram_a[5]" PULLMODE=NONE IO_TYPE=LVCMOS33
+     DRIVE=4 ;": Port "sdram_a[5]" does not exist in the design. This preference
+     has been disabled.
+WARNING - map: C:/workspace/ulx3s/examples/passthru/Diamond/ulx3s_v20.lpf(269):
+     Semantic error in "IOBUF PORT "sdram_a[6]" PULLMODE=NONE IO_TYPE=LVCMOS33
+     DRIVE=4 ;": Port "sdram_a[6]" does not exist in the design. This preference
+     has been disabled.
+WARNING - map: C:/workspace/ulx3s/examples/passthru/Diamond/ulx3s_v20.lpf(270):
+     Semantic error in "IOBUF PORT "sdram_a[7]" PULLMODE=NONE IO_TYPE=LVCMOS33
+     DRIVE=4 ;": Port "sdram_a[7]" does not exist in the design. This preference
+     has been disabled.
+WARNING - map: C:/workspace/ulx3s/examples/passthru/Diamond/ulx3s_v20.lpf(271):
+     Semantic error in "IOBUF PORT "sdram_a[8]" PULLMODE=NONE IO_TYPE=LVCMOS33
+     DRIVE=4 ;": Port "sdram_a[8]" does not exist in the design. This preference
+     has been disabled.
+WARNING - map: C:/workspace/ulx3s/examples/passthru/Diamond/ulx3s_v20.lpf(272):
+     Semantic error in "IOBUF PORT "sdram_a[9]" PULLMODE=NONE IO_TYPE=LVCMOS33
+     DRIVE=4 ;": Port "sdram_a[9]" does not exist in the design. This preference
+     has been disabled.
+WARNING - map: C:/workspace/ulx3s/examples/passthru/Diamond/ulx3s_v20.lpf(273):
+     Semantic error in "IOBUF PORT "sdram_a[10]" PULLMODE=NONE IO_TYPE=LVCMOS33
+     DRIVE=4 ;": Port "sdram_a[10]" does not exist in the design. This
+     preference has been disabled.
+WARNING - map: C:/workspace/ulx3s/examples/passthru/Diamond/ulx3s_v20.lpf(274):
+     Semantic error in "IOBUF PORT "sdram_a[11]" PULLMODE=NONE IO_TYPE=LVCMOS33
+     DRIVE=4 ;": Port "sdram_a[11]" does not exist in the design. This
+     preference has been disabled.
+WARNING - map: C:/workspace/ulx3s/examples/passthru/Diamond/ulx3s_v20.lpf(275):
+     Semantic error in "IOBUF PORT "sdram_a[12]" PULLMODE=NONE IO_TYPE=LVCMOS33
+     DRIVE=4 ;": Port "sdram_a[12]" does not exist in the design. This
+     preference has been disabled.
+WARNING - map: C:/workspace/ulx3s/examples/passthru/Diamond/ulx3s_v20.lpf(276):
+     Semantic error in "IOBUF PORT "sdram_ba[0]" PULLMODE=NONE IO_TYPE=LVCMOS33
+     DRIVE=4 ;": Port "sdram_ba[0]" does not exist in the design. This
+     preference has been disabled.
+WARNING - map: C:/workspace/ulx3s/examples/passthru/Diamond/ulx3s_v20.lpf(277):
+     Semantic error in "IOBUF PORT "sdram_ba[1]" PULLMODE=NONE IO_TYPE=LVCMOS33
+     DRIVE=4 ;": Port "sdram_ba[1]" does not exist in the design. This
+
+                                    Page 9
+
+
+
+
+Design:  ulx3s_passthru_wifi                           Date:  03/01/19  12:58:00
+
+Design Errors/Warnings (cont)
+-----------------------------
+     preference has been disabled.
+WARNING - map: C:/workspace/ulx3s/examples/passthru/Diamond/ulx3s_v20.lpf(278):
+     Semantic error in "IOBUF PORT "sdram_dqm[0]" PULLMODE=NONE IO_TYPE=LVCMOS33
+     DRIVE=4 ;": Port "sdram_dqm[0]" does not exist in the design. This
+     preference has been disabled.
+WARNING - map: C:/workspace/ulx3s/examples/passthru/Diamond/ulx3s_v20.lpf(279):
+     Semantic error in "IOBUF PORT "sdram_dqm[1]" PULLMODE=NONE IO_TYPE=LVCMOS33
+     DRIVE=4 ;": Port "sdram_dqm[1]" does not exist in the design. This
+     preference has been disabled.
+WARNING - map: C:/workspace/ulx3s/examples/passthru/Diamond/ulx3s_v20.lpf(280):
+     Semantic error in "IOBUF PORT "sdram_d[0]" PULLMODE=NONE IO_TYPE=LVCMOS33
+     DRIVE=4 ;": Port "sdram_d[0]" does not exist in the design. This preference
+     has been disabled.
+WARNING - map: C:/workspace/ulx3s/examples/passthru/Diamond/ulx3s_v20.lpf(281):
+     Semantic error in "IOBUF PORT "sdram_d[1]" PULLMODE=NONE IO_TYPE=LVCMOS33
+     DRIVE=4 ;": Port "sdram_d[1]" does not exist in the design. This preference
+     has been disabled.
+WARNING - map: C:/workspace/ulx3s/examples/passthru/Diamond/ulx3s_v20.lpf(282):
+     Semantic error in "IOBUF PORT "sdram_d[2]" PULLMODE=NONE IO_TYPE=LVCMOS33
+     DRIVE=4 ;": Port "sdram_d[2]" does not exist in the design. This preference
+     has been disabled.
+WARNING - map: C:/workspace/ulx3s/examples/passthru/Diamond/ulx3s_v20.lpf(283):
+     Semantic error in "IOBUF PORT "sdram_d[3]" PULLMODE=NONE IO_TYPE=LVCMOS33
+     DRIVE=4 ;": Port "sdram_d[3]" does not exist in the design. This preference
+     has been disabled.
+WARNING - map: C:/workspace/ulx3s/examples/passthru/Diamond/ulx3s_v20.lpf(284):
+     Semantic error in "IOBUF PORT "sdram_d[4]" PULLMODE=NONE IO_TYPE=LVCMOS33
+     DRIVE=4 ;": Port "sdram_d[4]" does not exist in the design. This preference
+     has been disabled.
+WARNING - map: C:/workspace/ulx3s/examples/passthru/Diamond/ulx3s_v20.lpf(285):
+     Semantic error in "IOBUF PORT "sdram_d[5]" PULLMODE=NONE IO_TYPE=LVCMOS33
+     DRIVE=4 ;": Port "sdram_d[5]" does not exist in the design. This preference
+     has been disabled.
+WARNING - map: C:/workspace/ulx3s/examples/passthru/Diamond/ulx3s_v20.lpf(286):
+     Semantic error in "IOBUF PORT "sdram_d[6]" PULLMODE=NONE IO_TYPE=LVCMOS33
+     DRIVE=4 ;": Port "sdram_d[6]" does not exist in the design. This preference
+     has been disabled.
+WARNING - map: C:/workspace/ulx3s/examples/passthru/Diamond/ulx3s_v20.lpf(287):
+     Semantic error in "IOBUF PORT "sdram_d[7]" PULLMODE=NONE IO_TYPE=LVCMOS33
+     DRIVE=4 ;": Port "sdram_d[7]" does not exist in the design. This preference
+     has been disabled.
+WARNING - map: C:/workspace/ulx3s/examples/passthru/Diamond/ulx3s_v20.lpf(288):
+     Semantic error in "IOBUF PORT "sdram_d[8]" PULLMODE=NONE IO_TYPE=LVCMOS33
+     DRIVE=4 ;": Port "sdram_d[8]" does not exist in the design. This preference
+     has been disabled.
+WARNING - map: C:/workspace/ulx3s/examples/passthru/Diamond/ulx3s_v20.lpf(289):
+     Semantic error in "IOBUF PORT "sdram_d[9]" PULLMODE=NONE IO_TYPE=LVCMOS33
+     DRIVE=4 ;": Port "sdram_d[9]" does not exist in the design. This preference
+     has been disabled.
+WARNING - map: C:/workspace/ulx3s/examples/passthru/Diamond/ulx3s_v20.lpf(290):
+     Semantic error in "IOBUF PORT "sdram_d[10]" PULLMODE=NONE IO_TYPE=LVCMOS33
+     DRIVE=4 ;": Port "sdram_d[10]" does not exist in the design. This
+     preference has been disabled.
+WARNING - map: C:/workspace/ulx3s/examples/passthru/Diamond/ulx3s_v20.lpf(291):
+     Semantic error in "IOBUF PORT "sdram_d[11]" PULLMODE=NONE IO_TYPE=LVCMOS33
+     DRIVE=4 ;": Port "sdram_d[11]" does not exist in the design. This
+
+                                   Page 10
+
+
+
+
+Design:  ulx3s_passthru_wifi                           Date:  03/01/19  12:58:00
+
+Design Errors/Warnings (cont)
+-----------------------------
+     preference has been disabled.
+WARNING - map: C:/workspace/ulx3s/examples/passthru/Diamond/ulx3s_v20.lpf(292):
+     Semantic error in "IOBUF PORT "sdram_d[12]" PULLMODE=NONE IO_TYPE=LVCMOS33
+     DRIVE=4 ;": Port "sdram_d[12]" does not exist in the design. This
+     preference has been disabled.
+WARNING - map: C:/workspace/ulx3s/examples/passthru/Diamond/ulx3s_v20.lpf(293):
+     Semantic error in "IOBUF PORT "sdram_d[13]" PULLMODE=NONE IO_TYPE=LVCMOS33
+     DRIVE=4 ;": Port "sdram_d[13]" does not exist in the design. This
+     preference has been disabled.
+WARNING - map: C:/workspace/ulx3s/examples/passthru/Diamond/ulx3s_v20.lpf(294):
+     Semantic error in "IOBUF PORT "sdram_d[14]" PULLMODE=NONE IO_TYPE=LVCMOS33
+     DRIVE=4 ;": Port "sdram_d[14]" does not exist in the design. This
+     preference has been disabled.
+WARNING - map: C:/workspace/ulx3s/examples/passthru/Diamond/ulx3s_v20.lpf(295):
+     Semantic error in "IOBUF PORT "sdram_d[15]" PULLMODE=NONE IO_TYPE=LVCMOS33
+     DRIVE=4 ;": Port "sdram_d[15]" does not exist in the design. This
+     preference has been disabled.
+WARNING - map: C:/workspace/ulx3s/examples/passthru/Diamond/ulx3s_v20.lpf(298):
+     Semantic error in "LOCATE COMP "gpdi_dp[0]" SITE "A16" ;": COMP
+     "gpdi_dp[0]" cannot be found in design. This preference has been disabled.
+WARNING - map: C:/workspace/ulx3s/examples/passthru/Diamond/ulx3s_v20.lpf(299):
+     Semantic error in "LOCATE COMP "gpdi_dn[0]" SITE "B16" ;": COMP
+     "gpdi_dn[0]" cannot be found in design. This preference has been disabled.
+WARNING - map: C:/workspace/ulx3s/examples/passthru/Diamond/ulx3s_v20.lpf(300):
+     Semantic error in "LOCATE COMP "gpdi_dp[1]" SITE "A14" ;": COMP
+     "gpdi_dp[1]" cannot be found in design. This preference has been disabled.
+WARNING - map: C:/workspace/ulx3s/examples/passthru/Diamond/ulx3s_v20.lpf(301):
+     Semantic error in "LOCATE COMP "gpdi_dn[1]" SITE "C14" ;": COMP
+     "gpdi_dn[1]" cannot be found in design. This preference has been disabled.
+WARNING - map: C:/workspace/ulx3s/examples/passthru/Diamond/ulx3s_v20.lpf(302):
+     Semantic error in "LOCATE COMP "gpdi_dp[2]" SITE "A12" ;": COMP
+     "gpdi_dp[2]" cannot be found in design. This preference has been disabled.
+WARNING - map: C:/workspace/ulx3s/examples/passthru/Diamond/ulx3s_v20.lpf(303):
+     Semantic error in "LOCATE COMP "gpdi_dn[2]" SITE "A13" ;": COMP
+     "gpdi_dn[2]" cannot be found in design. This preference has been disabled.
+WARNING - map: C:/workspace/ulx3s/examples/passthru/Diamond/ulx3s_v20.lpf(304):
+     Semantic error in "LOCATE COMP "gpdi_dp[3]" SITE "A17" ;": COMP
+     "gpdi_dp[3]" cannot be found in design. This preference has been disabled.
+WARNING - map: C:/workspace/ulx3s/examples/passthru/Diamond/ulx3s_v20.lpf(305):
+     Semantic error in "LOCATE COMP "gpdi_dn[3]" SITE "B18" ;": COMP
+     "gpdi_dn[3]" cannot be found in design. This preference has been disabled.
+WARNING - map: C:/workspace/ulx3s/examples/passthru/Diamond/ulx3s_v20.lpf(306):
+     Semantic error in "LOCATE COMP "gpdi_ethp" SITE "A19" ;": COMP "gpdi_ethp"
+     cannot be found in design. This preference has been disabled.
+WARNING - map: C:/workspace/ulx3s/examples/passthru/Diamond/ulx3s_v20.lpf(307):
+     Semantic error in "LOCATE COMP "gpdi_ethn" SITE "B20" ;": COMP "gpdi_ethn"
+     cannot be found in design. This preference has been disabled.
+WARNING - map: C:/workspace/ulx3s/examples/passthru/Diamond/ulx3s_v20.lpf(308):
+     Semantic error in "LOCATE COMP "gpdi_cec" SITE "A18" ;": COMP "gpdi_cec"
+     cannot be found in design. This preference has been disabled.
+WARNING - map: C:/workspace/ulx3s/examples/passthru/Diamond/ulx3s_v20.lpf(309):
+     Semantic error in "LOCATE COMP "gpdi_sda" SITE "B19" ;": COMP "gpdi_sda"
+     cannot be found in design. This preference has been disabled.
+WARNING - map: C:/workspace/ulx3s/examples/passthru/Diamond/ulx3s_v20.lpf(310):
+     Semantic error in "LOCATE COMP "gpdi_scl" SITE "E12" ;": COMP "gpdi_scl"
+     cannot be found in design. This preference has been disabled.
+
+                                   Page 11
+
+
+
+
+Design:  ulx3s_passthru_wifi                           Date:  03/01/19  12:58:00
+
+Design Errors/Warnings (cont)
+-----------------------------
+WARNING - map: C:/workspace/ulx3s/examples/passthru/Diamond/ulx3s_v20.lpf(311):
+     Semantic error in "IOBUF PORT "gpdi_dp[0]" IO_TYPE=LVCMOS33D DRIVE=4 ;":
+     Port "gpdi_dp[0]" does not exist in the design. This preference has been
+     disabled.
+WARNING - map: C:/workspace/ulx3s/examples/passthru/Diamond/ulx3s_v20.lpf(312):
+     Semantic error in "IOBUF PORT "gpdi_dn[0]" IO_TYPE=LVCMOS33D DRIVE=4 ;":
+     Port "gpdi_dn[0]" does not exist in the design. This preference has been
+     disabled.
+WARNING - map: C:/workspace/ulx3s/examples/passthru/Diamond/ulx3s_v20.lpf(313):
+     Semantic error in "IOBUF PORT "gpdi_dp[1]" IO_TYPE=LVCMOS33D DRIVE=4 ;":
+     Port "gpdi_dp[1]" does not exist in the design. This preference has been
+     disabled.
+WARNING - map: C:/workspace/ulx3s/examples/passthru/Diamond/ulx3s_v20.lpf(314):
+     Semantic error in "IOBUF PORT "gpdi_dn[1]" IO_TYPE=LVCMOS33D DRIVE=4 ;":
+     Port "gpdi_dn[1]" does not exist in the design. This preference has been
+     disabled.
+WARNING - map: C:/workspace/ulx3s/examples/passthru/Diamond/ulx3s_v20.lpf(315):
+     Semantic error in "IOBUF PORT "gpdi_dp[2]" IO_TYPE=LVCMOS33D DRIVE=4 ;":
+     Port "gpdi_dp[2]" does not exist in the design. This preference has been
+     disabled.
+WARNING - map: C:/workspace/ulx3s/examples/passthru/Diamond/ulx3s_v20.lpf(316):
+     Semantic error in "IOBUF PORT "gpdi_dn[2]" IO_TYPE=LVCMOS33D DRIVE=4 ;":
+     Port "gpdi_dn[2]" does not exist in the design. This preference has been
+     disabled.
+WARNING - map: C:/workspace/ulx3s/examples/passthru/Diamond/ulx3s_v20.lpf(317):
+     Semantic error in "IOBUF PORT "gpdi_dp[3]" IO_TYPE=LVCMOS33D DRIVE=4 ;":
+     Port "gpdi_dp[3]" does not exist in the design. This preference has been
+     disabled.
+WARNING - map: C:/workspace/ulx3s/examples/passthru/Diamond/ulx3s_v20.lpf(318):
+     Semantic error in "IOBUF PORT "gpdi_dn[3]" IO_TYPE=LVCMOS33D DRIVE=4 ;":
+     Port "gpdi_dn[3]" does not exist in the design. This preference has been
+     disabled.
+WARNING - map: C:/workspace/ulx3s/examples/passthru/Diamond/ulx3s_v20.lpf(319):
+     Semantic error in "IOBUF PORT "gpdi_ethp" IO_TYPE=LVCMOS33D DRIVE=4 ;":
+     Port "gpdi_ethp" does not exist in the design. This preference has been
+     disabled.
+WARNING - map: C:/workspace/ulx3s/examples/passthru/Diamond/ulx3s_v20.lpf(320):
+     Semantic error in "IOBUF PORT "gpdi_ethn" IO_TYPE=LVCMOS33D DRIVE=4 ;":
+     Port "gpdi_ethn" does not exist in the design. This preference has been
+     disabled.
+WARNING - map: C:/workspace/ulx3s/examples/passthru/Diamond/ulx3s_v20.lpf(321):
+     Semantic error in "IOBUF PORT "gpdi_cec" PULLMODE=UP IO_TYPE=LVCMOS33
+     DRIVE=4 ;": Port "gpdi_cec" does not exist in the design. This preference
+     has been disabled.
+WARNING - map: C:/workspace/ulx3s/examples/passthru/Diamond/ulx3s_v20.lpf(322):
+     Semantic error in "IOBUF PORT "gpdi_sda" PULLMODE=UP IO_TYPE=LVCMOS33
+     DRIVE=4 ;": Port "gpdi_sda" does not exist in the design. This preference
+     has been disabled.
+WARNING - map: C:/workspace/ulx3s/examples/passthru/Diamond/ulx3s_v20.lpf(323):
+     Semantic error in "IOBUF PORT "gpdi_scl" PULLMODE=UP IO_TYPE=LVCMOS33
+     DRIVE=4 ;": Port "gpdi_scl" does not exist in the design. This preference
+     has been disabled.
+WARNING - map: C:/workspace/ulx3s/examples/passthru/Diamond/ulx3s_v20.lpf(347):
+     Semantic error in "IOBUF PORT "gp[0]" PULLMODE=UP IO_TYPE=LVCMOS33 DRIVE=4
+     ;": Port "gp[0]" does not exist in the design. This preference has been
+     disabled.
+
+                                   Page 12
+
+
+
+
+Design:  ulx3s_passthru_wifi                           Date:  03/01/19  12:58:00
+
+Design Errors/Warnings (cont)
+-----------------------------
+WARNING - map: C:/workspace/ulx3s/examples/passthru/Diamond/ulx3s_v20.lpf(348):
+     Semantic error in "IOBUF PORT "gn[0]" PULLMODE=UP IO_TYPE=LVCMOS33 DRIVE=4
+     ;": Port "gn[0]" does not exist in the design. This preference has been
+     disabled.
+WARNING - map: C:/workspace/ulx3s/examples/passthru/Diamond/ulx3s_v20.lpf(349):
+     Semantic error in "IOBUF PORT "gp[1]" PULLMODE=UP IO_TYPE=LVCMOS33 DRIVE=4
+     ;": Port "gp[1]" does not exist in the design. This preference has been
+     disabled.
+WARNING - map: C:/workspace/ulx3s/examples/passthru/Diamond/ulx3s_v20.lpf(350):
+     Semantic error in "IOBUF PORT "gn[1]" PULLMODE=UP IO_TYPE=LVCMOS33 DRIVE=4
+     ;": Port "gn[1]" does not exist in the design. This preference has been
+     disabled.
+WARNING - map: C:/workspace/ulx3s/examples/passthru/Diamond/ulx3s_v20.lpf(351):
+     Semantic error in "IOBUF PORT "gp[2]" PULLMODE=UP IO_TYPE=LVCMOS33 DRIVE=4
+     ;": Port "gp[2]" does not exist in the design. This preference has been
+     disabled.
+WARNING - map: C:/workspace/ulx3s/examples/passthru/Diamond/ulx3s_v20.lpf(352):
+     Semantic error in "IOBUF PORT "gn[2]" PULLMODE=UP IO_TYPE=LVCMOS33 DRIVE=4
+     ;": Port "gn[2]" does not exist in the design. This preference has been
+     disabled.
+WARNING - map: C:/workspace/ulx3s/examples/passthru/Diamond/ulx3s_v20.lpf(353):
+     Semantic error in "IOBUF PORT "gp[3]" PULLMODE=UP IO_TYPE=LVCMOS33 DRIVE=4
+     ;": Port "gp[3]" does not exist in the design. This preference has been
+     disabled.
+WARNING - map: C:/workspace/ulx3s/examples/passthru/Diamond/ulx3s_v20.lpf(354):
+     Semantic error in "IOBUF PORT "gn[3]" PULLMODE=UP IO_TYPE=LVCMOS33 DRIVE=4
+     ;": Port "gn[3]" does not exist in the design. This preference has been
+     disabled.
+WARNING - map: C:/workspace/ulx3s/examples/passthru/Diamond/ulx3s_v20.lpf(355):
+     Semantic error in "IOBUF PORT "gp[4]" PULLMODE=UP IO_TYPE=LVCMOS33 DRIVE=4
+     ;": Port "gp[4]" does not exist in the design. This preference has been
+     disabled.
+WARNING - map: C:/workspace/ulx3s/examples/passthru/Diamond/ulx3s_v20.lpf(356):
+     Semantic error in "IOBUF PORT "gn[4]" PULLMODE=UP IO_TYPE=LVCMOS33 DRIVE=4
+     ;": Port "gn[4]" does not exist in the design. This preference has been
+     disabled.
+WARNING - map: C:/workspace/ulx3s/examples/passthru/Diamond/ulx3s_v20.lpf(357):
+     Semantic error in "IOBUF PORT "gp[5]" PULLMODE=UP IO_TYPE=LVCMOS33 DRIVE=4
+     ;": Port "gp[5]" does not exist in the design. This preference has been
+     disabled.
+WARNING - map: C:/workspace/ulx3s/examples/passthru/Diamond/ulx3s_v20.lpf(358):
+     Semantic error in "IOBUF PORT "gn[5]" PULLMODE=UP IO_TYPE=LVCMOS33 DRIVE=4
+     ;": Port "gn[5]" does not exist in the design. This preference has been
+     disabled.
+WARNING - map: C:/workspace/ulx3s/examples/passthru/Diamond/ulx3s_v20.lpf(359):
+     Semantic error in "IOBUF PORT "gp[6]" PULLMODE=UP IO_TYPE=LVCMOS33 DRIVE=4
+     ;": Port "gp[6]" does not exist in the design. This preference has been
+     disabled.
+WARNING - map: C:/workspace/ulx3s/examples/passthru/Diamond/ulx3s_v20.lpf(360):
+     Semantic error in "IOBUF PORT "gn[6]" PULLMODE=UP IO_TYPE=LVCMOS33 DRIVE=4
+     ;": Port "gn[6]" does not exist in the design. This preference has been
+     disabled.
+WARNING - map: C:/workspace/ulx3s/examples/passthru/Diamond/ulx3s_v20.lpf(375):
+     Semantic error in "IOBUF PORT "gp[7]" PULLMODE=UP IO_TYPE=LVCMOS33 DRIVE=4
+     ;": Port "gp[7]" does not exist in the design. This preference has been
+     disabled.
+
+                                   Page 13
+
+
+
+
+Design:  ulx3s_passthru_wifi                           Date:  03/01/19  12:58:00
+
+Design Errors/Warnings (cont)
+-----------------------------
+WARNING - map: C:/workspace/ulx3s/examples/passthru/Diamond/ulx3s_v20.lpf(376):
+     Semantic error in "IOBUF PORT "gn[7]" PULLMODE=UP IO_TYPE=LVCMOS33 DRIVE=4
+     ;": Port "gn[7]" does not exist in the design. This preference has been
+     disabled.
+WARNING - map: C:/workspace/ulx3s/examples/passthru/Diamond/ulx3s_v20.lpf(377):
+     Semantic error in "IOBUF PORT "gp[8]" PULLMODE=UP IO_TYPE=LVCMOS33 DRIVE=4
+     ;": Port "gp[8]" does not exist in the design. This preference has been
+     disabled.
+WARNING - map: C:/workspace/ulx3s/examples/passthru/Diamond/ulx3s_v20.lpf(378):
+     Semantic error in "IOBUF PORT "gn[8]" PULLMODE=UP IO_TYPE=LVCMOS33 DRIVE=4
+     ;": Port "gn[8]" does not exist in the design. This preference has been
+     disabled.
+WARNING - map: C:/workspace/ulx3s/examples/passthru/Diamond/ulx3s_v20.lpf(379):
+     Semantic error in "IOBUF PORT "gp[9]" PULLMODE=UP IO_TYPE=LVCMOS33 DRIVE=4
+     ;": Port "gp[9]" does not exist in the design. This preference has been
+     disabled.
+WARNING - map: C:/workspace/ulx3s/examples/passthru/Diamond/ulx3s_v20.lpf(380):
+     Semantic error in "IOBUF PORT "gn[9]" PULLMODE=UP IO_TYPE=LVCMOS33 DRIVE=4
+     ;": Port "gn[9]" does not exist in the design. This preference has been
+     disabled.
+WARNING - map: C:/workspace/ulx3s/examples/passthru/Diamond/ulx3s_v20.lpf(381):
+     Semantic error in "IOBUF PORT "gp[10]" PULLMODE=UP IO_TYPE=LVCMOS33 DRIVE=4
+     ;": Port "gp[10]" does not exist in the design. This preference has been
+     disabled.
+WARNING - map: C:/workspace/ulx3s/examples/passthru/Diamond/ulx3s_v20.lpf(382):
+     Semantic error in "IOBUF PORT "gn[10]" PULLMODE=UP IO_TYPE=LVCMOS33 DRIVE=4
+     ;": Port "gn[10]" does not exist in the design. This preference has been
+     disabled.
+WARNING - map: C:/workspace/ulx3s/examples/passthru/Diamond/ulx3s_v20.lpf(384):
+     Semantic error in "IOBUF PORT "gn[11]" PULLMODE=UP IO_TYPE=LVCMOS33 DRIVE=4
+     ;": Port "gn[11]" does not exist in the design. This preference has been
+     disabled.
+WARNING - map: C:/workspace/ulx3s/examples/passthru/Diamond/ulx3s_v20.lpf(385):
+     Semantic error in "IOBUF PORT "gp[12]" PULLMODE=UP IO_TYPE=LVCMOS33 DRIVE=4
+     ;": Port "gp[12]" does not exist in the design. This preference has been
+     disabled.
+WARNING - map: C:/workspace/ulx3s/examples/passthru/Diamond/ulx3s_v20.lpf(386):
+     Semantic error in "IOBUF PORT "gn[12]" PULLMODE=UP IO_TYPE=LVCMOS33 DRIVE=4
+     ;": Port "gn[12]" does not exist in the design. This preference has been
+     disabled.
+WARNING - map: C:/workspace/ulx3s/examples/passthru/Diamond/ulx3s_v20.lpf(387):
+     Semantic error in "IOBUF PORT "gp[13]" PULLMODE=UP IO_TYPE=LVCMOS33 DRIVE=4
+     ;": Port "gp[13]" does not exist in the design. This preference has been
+     disabled.
+WARNING - map: C:/workspace/ulx3s/examples/passthru/Diamond/ulx3s_v20.lpf(388):
+     Semantic error in "IOBUF PORT "gn[13]" PULLMODE=UP IO_TYPE=LVCMOS33 DRIVE=4
+     ;": Port "gn[13]" does not exist in the design. This preference has been
+     disabled.
+WARNING - map: C:/workspace/ulx3s/examples/passthru/Diamond/ulx3s_v20.lpf(403):
+     Semantic error in "IOBUF PORT "gp[14]" PULLMODE=UP IO_TYPE=LVCMOS33 DRIVE=4
+     ;": Port "gp[14]" does not exist in the design. This preference has been
+     disabled.
+WARNING - map: C:/workspace/ulx3s/examples/passthru/Diamond/ulx3s_v20.lpf(404):
+     Semantic error in "IOBUF PORT "gn[14]" PULLMODE=UP IO_TYPE=LVCMOS33 DRIVE=4
+     ;": Port "gn[14]" does not exist in the design. This preference has been
+     disabled.
+
+                                   Page 14
+
+
+
+
+Design:  ulx3s_passthru_wifi                           Date:  03/01/19  12:58:00
+
+Design Errors/Warnings (cont)
+-----------------------------
+WARNING - map: C:/workspace/ulx3s/examples/passthru/Diamond/ulx3s_v20.lpf(405):
+     Semantic error in "IOBUF PORT "gp[15]" PULLMODE=UP IO_TYPE=LVCMOS33 DRIVE=4
+     ;": Port "gp[15]" does not exist in the design. This preference has been
+     disabled.
+WARNING - map: C:/workspace/ulx3s/examples/passthru/Diamond/ulx3s_v20.lpf(406):
+     Semantic error in "IOBUF PORT "gn[15]" PULLMODE=UP IO_TYPE=LVCMOS33 DRIVE=4
+     ;": Port "gn[15]" does not exist in the design. This preference has been
+     disabled.
+WARNING - map: C:/workspace/ulx3s/examples/passthru/Diamond/ulx3s_v20.lpf(407):
+     Semantic error in "IOBUF PORT "gp[16]" PULLMODE=UP IO_TYPE=LVCMOS33 DRIVE=4
+     ;": Port "gp[16]" does not exist in the design. This preference has been
+     disabled.
+WARNING - map: C:/workspace/ulx3s/examples/passthru/Diamond/ulx3s_v20.lpf(408):
+     Semantic error in "IOBUF PORT "gn[16]" PULLMODE=UP IO_TYPE=LVCMOS33 DRIVE=4
+     ;": Port "gn[16]" does not exist in the design. This preference has been
+     disabled.
+WARNING - map: C:/workspace/ulx3s/examples/passthru/Diamond/ulx3s_v20.lpf(409):
+     Semantic error in "IOBUF PORT "gp[17]" PULLMODE=UP IO_TYPE=LVCMOS33 DRIVE=4
+     ;": Port "gp[17]" does not exist in the design. This preference has been
+     disabled.
+WARNING - map: C:/workspace/ulx3s/examples/passthru/Diamond/ulx3s_v20.lpf(410):
+     Semantic error in "IOBUF PORT "gn[17]" PULLMODE=UP IO_TYPE=LVCMOS33 DRIVE=4
+     ;": Port "gn[17]" does not exist in the design. This preference has been
+     disabled.
+WARNING - map: C:/workspace/ulx3s/examples/passthru/Diamond/ulx3s_v20.lpf(411):
+     Semantic error in "IOBUF PORT "gp[18]" PULLMODE=UP IO_TYPE=LVCMOS33 DRIVE=4
+     ;": Port "gp[18]" does not exist in the design. This preference has been
+     disabled.
+WARNING - map: C:/workspace/ulx3s/examples/passthru/Diamond/ulx3s_v20.lpf(412):
+     Semantic error in "IOBUF PORT "gn[18]" PULLMODE=UP IO_TYPE=LVCMOS33 DRIVE=4
+     ;": Port "gn[18]" does not exist in the design. This preference has been
+     disabled.
+WARNING - map: C:/workspace/ulx3s/examples/passthru/Diamond/ulx3s_v20.lpf(413):
+     Semantic error in "IOBUF PORT "gp[19]" PULLMODE=UP IO_TYPE=LVCMOS33 DRIVE=4
+     ;": Port "gp[19]" does not exist in the design. This preference has been
+     disabled.
+WARNING - map: C:/workspace/ulx3s/examples/passthru/Diamond/ulx3s_v20.lpf(414):
+     Semantic error in "IOBUF PORT "gn[19]" PULLMODE=UP IO_TYPE=LVCMOS33 DRIVE=4
+     ;": Port "gn[19]" does not exist in the design. This preference has been
+     disabled.
+WARNING - map: C:/workspace/ulx3s/examples/passthru/Diamond/ulx3s_v20.lpf(415):
+     Semantic error in "IOBUF PORT "gp[20]" PULLMODE=UP IO_TYPE=LVCMOS33 DRIVE=4
+     ;": Port "gp[20]" does not exist in the design. This preference has been
+     disabled.
+WARNING - map: C:/workspace/ulx3s/examples/passthru/Diamond/ulx3s_v20.lpf(416):
+     Semantic error in "IOBUF PORT "gn[20]" PULLMODE=UP IO_TYPE=LVCMOS33 DRIVE=4
+     ;": Port "gn[20]" does not exist in the design. This preference has been
+     disabled.
+WARNING - map: C:/workspace/ulx3s/examples/passthru/Diamond/ulx3s_v20.lpf(431):
+     Semantic error in "IOBUF PORT "gp[21]" PULLMODE=UP IO_TYPE=LVCMOS33 DRIVE=4
+     ;": Port "gp[21]" does not exist in the design. This preference has been
+     disabled.
+WARNING - map: C:/workspace/ulx3s/examples/passthru/Diamond/ulx3s_v20.lpf(432):
+     Semantic error in "IOBUF PORT "gn[21]" PULLMODE=UP IO_TYPE=LVCMOS33 DRIVE=4
+     ;": Port "gn[21]" does not exist in the design. This preference has been
+     disabled.
+
+                                   Page 15
+
+
+
+
+Design:  ulx3s_passthru_wifi                           Date:  03/01/19  12:58:00
+
+Design Errors/Warnings (cont)
+-----------------------------
+WARNING - map: C:/workspace/ulx3s/examples/passthru/Diamond/ulx3s_v20.lpf(433):
+     Semantic error in "IOBUF PORT "gp[22]" PULLMODE=UP IO_TYPE=LVCMOS33 DRIVE=4
+     ;": Port "gp[22]" does not exist in the design. This preference has been
+     disabled.
+WARNING - map: C:/workspace/ulx3s/examples/passthru/Diamond/ulx3s_v20.lpf(434):
+     Semantic error in "IOBUF PORT "gn[22]" PULLMODE=UP IO_TYPE=LVCMOS33 DRIVE=4
+     ;": Port "gn[22]" does not exist in the design. This preference has been
+     disabled.
+WARNING - map: C:/workspace/ulx3s/examples/passthru/Diamond/ulx3s_v20.lpf(435):
+     Semantic error in "IOBUF PORT "gp[23]" PULLMODE=UP IO_TYPE=LVCMOS33 DRIVE=4
+     ;": Port "gp[23]" does not exist in the design. This preference has been
+     disabled.
+WARNING - map: C:/workspace/ulx3s/examples/passthru/Diamond/ulx3s_v20.lpf(436):
+     Semantic error in "IOBUF PORT "gn[23]" PULLMODE=UP IO_TYPE=LVCMOS33 DRIVE=4
+     ;": Port "gn[23]" does not exist in the design. This preference has been
+     disabled.
+WARNING - map: C:/workspace/ulx3s/examples/passthru/Diamond/ulx3s_v20.lpf(437):
+     Semantic error in "IOBUF PORT "gp[24]" PULLMODE=UP IO_TYPE=LVCMOS33 DRIVE=4
+     ;": Port "gp[24]" does not exist in the design. This preference has been
+     disabled.
+WARNING - map: C:/workspace/ulx3s/examples/passthru/Diamond/ulx3s_v20.lpf(438):
+     Semantic error in "IOBUF PORT "gn[24]" PULLMODE=UP IO_TYPE=LVCMOS33 DRIVE=4
+     ;": Port "gn[24]" does not exist in the design. This preference has been
+     disabled.
+WARNING - map: C:/workspace/ulx3s/examples/passthru/Diamond/ulx3s_v20.lpf(439):
+     Semantic error in "IOBUF PORT "gp[25]" PULLMODE=UP IO_TYPE=LVCMOS33 DRIVE=4
+     ;": Port "gp[25]" does not exist in the design. This preference has been
+     disabled.
+WARNING - map: C:/workspace/ulx3s/examples/passthru/Diamond/ulx3s_v20.lpf(440):
+     Semantic error in "IOBUF PORT "gn[25]" PULLMODE=UP IO_TYPE=LVCMOS33 DRIVE=4
+     ;": Port "gn[25]" does not exist in the design. This preference has been
+     disabled.
+WARNING - map: C:/workspace/ulx3s/examples/passthru/Diamond/ulx3s_v20.lpf(441):
+     Semantic error in "IOBUF PORT "gp[26]" PULLMODE=UP IO_TYPE=LVCMOS33 DRIVE=4
+     ;": Port "gp[26]" does not exist in the design. This preference has been
+     disabled.
+WARNING - map: C:/workspace/ulx3s/examples/passthru/Diamond/ulx3s_v20.lpf(442):
+     Semantic error in "IOBUF PORT "gn[26]" PULLMODE=UP IO_TYPE=LVCMOS33 DRIVE=4
+     ;": Port "gn[26]" does not exist in the design. This preference has been
+     disabled.
+WARNING - map: C:/workspace/ulx3s/examples/passthru/Diamond/ulx3s_v20.lpf(443):
+     Semantic error in "IOBUF PORT "gp[27]" PULLMODE=UP IO_TYPE=LVCMOS33 DRIVE=4
+     ;": Port "gp[27]" does not exist in the design. This preference has been
+     disabled.
+WARNING - map: C:/workspace/ulx3s/examples/passthru/Diamond/ulx3s_v20.lpf(444):
+     Semantic error in "IOBUF PORT "gn[27]" PULLMODE=UP IO_TYPE=LVCMOS33 DRIVE=4
+     ;": Port "gn[27]" does not exist in the design. This preference has been
+     disabled.
+WARNING - map: C:/workspace/ulx3s/examples/passthru/Diamond/ulx3s_v20.lpf(448):
+     Semantic error in "LOCATE COMP "user_programn" SITE "M4" ;": COMP
+     "user_programn" cannot be found in design. This preference has been
+     disabled.
+WARNING - map: C:/workspace/ulx3s/examples/passthru/Diamond/ulx3s_v20.lpf(449):
+     Semantic error in "IOBUF PORT "user_programn" PULLMODE=UP IO_TYPE=LVCMOS33
+     DRIVE=4 ;": Port "user_programn" does not exist in the design. This
+     preference has been disabled.
+
+                                   Page 16
+
+
+
+
+Design:  ulx3s_passthru_wifi                           Date:  03/01/19  12:58:00
+
+Design Errors/Warnings (cont)
+-----------------------------
+WARNING - map: DRIVE=4 for oled_dc_c_pad/IOBUF violates legal combination and is
+     ignored.
+WARNING - map: PULLMODE=UP for wifi_en_pad/IOBUF violates legal combination and
+     is ignored.
+WARNING - map: DRIVE=4 for ftdi_rxd_c_pad/IOBUF violates legal combination and
+     is ignored.
+WARNING - map: PULLMODE=UP for wifi_rxd_pad/IOBUF violates legal combination and
+     is ignored.
+WARNING - map: PULLMODE=UP for ftdi_rxd_pad/IOBUF violates legal combination and
+     is ignored.
+WARNING - map: PULLMODE=UP for wifi_gpio0_pad/IOBUF violates legal combination
+     and is ignored.
+WARNING - map: PULLMODE=UP for sd_d_pad_0/IOBUF violates legal combination and
+     is ignored.
+WARNING - map: PULLMODE=DOWN for shutdown_pad/IOBUF violates legal combination
+     and is ignored.
+WARNING - map: PULLMODE=UP for oled_resn_pad/IOBUF violates legal combination
+     and is ignored.
+WARNING - map: PULLMODE=UP for oled_dc_pad/IOBUF violates legal combination and
+     is ignored.
+WARNING - map: PULLMODE=UP for oled_mosi_pad/IOBUF violates legal combination
+     and is ignored.
+WARNING - map: PULLMODE=UP for oled_clk_pad/IOBUF violates legal combination and
+     is ignored.
+WARNING - map: PULLMODE=UP for oled_csn_pad/IOBUF violates legal combination and
+     is ignored.
+WARNING - map: DRIVE=4 for oled_csn_c_pad/IOBUF violates legal combination and
+     is ignored.
+WARNING - map: DRIVE=4 for oled_resn_c_pad/IOBUF violates legal combination and
+     is ignored.
+WARNING - map: DRIVE=4 for oled_mosi_c_pad/IOBUF violates legal combination and
+     is ignored.
+WARNING - map: DRIVE=4 for oled_clk_c_pad/IOBUF violates legal combination and
+     is ignored.
+WARNING - map: input pad net 'ftdi_ndsr' has no legal load.
+WARNING - map: input pad net 'ftdi_txden' has no legal load.
+WARNING - map: input pad net 'wifi_gpio2' has no legal load.
+WARNING - map: input pad net 'sw[1]' has no legal load.
+WARNING - map: input pad net 'sw[2]' has no legal load.
+WARNING - map: input pad net 'sw[3]' has no legal load.
+WARNING - map: input pad net 'sw[4]' has no legal load.
+WARNING - map: input pad net 'gp[27]' has no legal load.
+WARNING - map: input pad net 'gp[26]' has no legal load.
+WARNING - map: input pad net 'gp[25]' has no legal load.
+WARNING - map: input pad net 'gp[24]' has no legal load.
+WARNING - map: input pad net 'gp[23]' has no legal load.
+WARNING - map: input pad net 'gp[22]' has no legal load.
+WARNING - map: input pad net 'gp[21]' has no legal load.
+WARNING - map: input pad net 'gp[20]' has no legal load.
+WARNING - map: input pad net 'gp[19]' has no legal load.
+WARNING - map: input pad net 'gp[18]' has no legal load.
+WARNING - map: input pad net 'gp[17]' has no legal load.
+WARNING - map: input pad net 'gp[16]' has no legal load.
+WARNING - map: input pad net 'gp[15]' has no legal load.
+WARNING - map: input pad net 'gp[14]' has no legal load.
+WARNING - map: input pad net 'gp[13]' has no legal load.
+
+                                   Page 17
+
+
+
+
+Design:  ulx3s_passthru_wifi                           Date:  03/01/19  12:58:00
+
+Design Errors/Warnings (cont)
+-----------------------------
+WARNING - map: input pad net 'gp[12]' has no legal load.
+WARNING - map: input pad net 'gp[10]' has no legal load.
+WARNING - map: input pad net 'gp[9]' has no legal load.
+WARNING - map: input pad net 'gp[8]' has no legal load.
+WARNING - map: input pad net 'gp[7]' has no legal load.
+WARNING - map: input pad net 'gp[6]' has no legal load.
+WARNING - map: input pad net 'gp[5]' has no legal load.
+WARNING - map: input pad net 'gp[4]' has no legal load.
+WARNING - map: input pad net 'gp[3]' has no legal load.
+WARNING - map: input pad net 'gp[2]' has no legal load.
+WARNING - map: input pad net 'gp[1]' has no legal load.
+WARNING - map: input pad net 'gp[0]' has no legal load.
+WARNING - map: input pad net 'gn[27]' has no legal load.
+WARNING - map: input pad net 'gn[26]' has no legal load.
+WARNING - map: input pad net 'gn[25]' has no legal load.
+WARNING - map: input pad net 'gn[24]' has no legal load.
+WARNING - map: input pad net 'gn[23]' has no legal load.
+WARNING - map: input pad net 'gn[22]' has no legal load.
+WARNING - map: input pad net 'gn[21]' has no legal load.
+WARNING - map: input pad net 'gn[20]' has no legal load.
+WARNING - map: input pad net 'gn[19]' has no legal load.
+WARNING - map: input pad net 'gn[18]' has no legal load.
+WARNING - map: input pad net 'gn[17]' has no legal load.
+WARNING - map: input pad net 'gn[16]' has no legal load.
+WARNING - map: input pad net 'gn[15]' has no legal load.
+WARNING - map: input pad net 'gn[14]' has no legal load.
+WARNING - map: input pad net 'gn[13]' has no legal load.
+WARNING - map: input pad net 'gn[12]' has no legal load.
+WARNING - map: input pad net 'gn[11]' has no legal load.
+WARNING - map: input pad net 'gn[10]' has no legal load.
+WARNING - map: input pad net 'gn[9]' has no legal load.
+WARNING - map: input pad net 'gn[8]' has no legal load.
+WARNING - map: input pad net 'gn[7]' has no legal load.
+WARNING - map: input pad net 'gn[6]' has no legal load.
+WARNING - map: input pad net 'gn[5]' has no legal load.
+WARNING - map: input pad net 'gn[4]' has no legal load.
+WARNING - map: input pad net 'gn[3]' has no legal load.
+WARNING - map: input pad net 'gn[2]' has no legal load.
+WARNING - map: input pad net 'gn[1]' has no legal load.
+WARNING - map: input pad net 'gn[0]' has no legal load.
+WARNING - map: input pad net 'audio_l[3]' has no legal load.
+WARNING - map: input pad net 'audio_l[2]' has no legal load.
+WARNING - map: input pad net 'audio_l[1]' has no legal load.
+WARNING - map: input pad net 'audio_l[0]' has no legal load.
+WARNING - map: input pad net 'audio_r[3]' has no legal load.
+WARNING - map: input pad net 'audio_r[2]' has no legal load.
+WARNING - map: input pad net 'audio_r[1]' has no legal load.
+WARNING - map: input pad net 'audio_r[0]' has no legal load.
+WARNING - map: input pad net 'audio_v[3]' has no legal load.
+WARNING - map: input pad net 'audio_v[2]' has no legal load.
+WARNING - map: input pad net 'audio_v[1]' has no legal load.
+WARNING - map: input pad net 'audio_v[0]' has no legal load.
+WARNING - map: input pad net 'sd_d[3]' has no legal load.
+WARNING - map: input pad net 'sd_d[2]' has no legal load.
+WARNING - map: input pad net 'sd_d[1]' has no legal load.
+WARNING - map: input pad net 'sd_cdn' has no legal load.
+
+                                   Page 18
+
+
+
+
+Design:  ulx3s_passthru_wifi                           Date:  03/01/19  12:58:00
+
+Design Errors/Warnings (cont)
+-----------------------------
+WARNING - map: input pad net 'sd_wp' has no legal load.
+WARNING - map: IO buffer missing for top level port ftdi_ndsr...logic will be
+     discarded.
+WARNING - map: IO buffer missing for top level port ftdi_txden...logic will be
+     discarded.
+WARNING - map: IO buffer missing for top level port wifi_gpio2...logic will be
+     discarded.
+WARNING - map: IO buffer missing for top level port sw[1:4](0)...logic will be
+     discarded.
+WARNING - map: IO buffer missing for top level port sw[1:4](1)...logic will be
+     discarded.
+WARNING - map: IO buffer missing for top level port sw[1:4](2)...logic will be
+     discarded.
+WARNING - map: IO buffer missing for top level port sw[1:4](3)...logic will be
+     discarded.
+WARNING - map: IO buffer missing for top level port gp[27:0](27)...logic will be
+     discarded.
+WARNING - map: IO buffer missing for top level port gp[27:0](26)...logic will be
+     discarded.
+WARNING - map: IO buffer missing for top level port gp[27:0](25)...logic will be
+     discarded.
+WARNING - map: IO buffer missing for top level port gp[27:0](24)...logic will be
+     discarded.
+WARNING - map: IO buffer missing for top level port gp[27:0](23)...logic will be
+     discarded.
+WARNING - map: IO buffer missing for top level port gp[27:0](22)...logic will be
+     discarded.
+WARNING - map: IO buffer missing for top level port gp[27:0](21)...logic will be
+     discarded.
+WARNING - map: IO buffer missing for top level port gp[27:0](20)...logic will be
+     discarded.
+WARNING - map: IO buffer missing for top level port gp[27:0](19)...logic will be
+     discarded.
+WARNING - map: IO buffer missing for top level port gp[27:0](18)...logic will be
+     discarded.
+WARNING - map: IO buffer missing for top level port gp[27:0](17)...logic will be
+     discarded.
+WARNING - map: IO buffer missing for top level port gp[27:0](16)...logic will be
+     discarded.
+WARNING - map: IO buffer missing for top level port gp[27:0](15)...logic will be
+     discarded.
+WARNING - map: IO buffer missing for top level port gp[27:0](14)...logic will be
+     discarded.
+WARNING - map: IO buffer missing for top level port gp[27:0](13)...logic will be
+     discarded.
+WARNING - map: IO buffer missing for top level port gp[27:0](12)...logic will be
+     discarded.
+WARNING - map: IO buffer missing for top level port gp[27:0](10)...logic will be
+     discarded.
+WARNING - map: IO buffer missing for top level port gp[27:0](9)...logic will be
+     discarded.
+WARNING - map: IO buffer missing for top level port gp[27:0](8)...logic will be
+     discarded.
+WARNING - map: IO buffer missing for top level port gp[27:0](7)...logic will be
+     discarded.
+WARNING - map: IO buffer missing for top level port gp[27:0](6)...logic will be
+
+                                   Page 19
+
+
+
+
+Design:  ulx3s_passthru_wifi                           Date:  03/01/19  12:58:00
+
+Design Errors/Warnings (cont)
+-----------------------------
+     discarded.
+WARNING - map: IO buffer missing for top level port gp[27:0](5)...logic will be
+     discarded.
+WARNING - map: IO buffer missing for top level port gp[27:0](4)...logic will be
+     discarded.
+WARNING - map: IO buffer missing for top level port gp[27:0](3)...logic will be
+     discarded.
+WARNING - map: IO buffer missing for top level port gp[27:0](2)...logic will be
+     discarded.
+WARNING - map: IO buffer missing for top level port gp[27:0](1)...logic will be
+     discarded.
+WARNING - map: IO buffer missing for top level port gp[27:0](0)...logic will be
+     discarded.
+WARNING - map: IO buffer missing for top level port gn[27:0](27)...logic will be
+     discarded.
+WARNING - map: IO buffer missing for top level port gn[27:0](26)...logic will be
+     discarded.
+WARNING - map: IO buffer missing for top level port gn[27:0](25)...logic will be
+     discarded.
+WARNING - map: IO buffer missing for top level port gn[27:0](24)...logic will be
+     discarded.
+WARNING - map: IO buffer missing for top level port gn[27:0](23)...logic will be
+     discarded.
+WARNING - map: IO buffer missing for top level port gn[27:0](22)...logic will be
+     discarded.
+WARNING - map: IO buffer missing for top level port gn[27:0](21)...logic will be
+     discarded.
+WARNING - map: IO buffer missing for top level port gn[27:0](20)...logic will be
+     discarded.
+WARNING - map: IO buffer missing for top level port gn[27:0](19)...logic will be
+     discarded.
+WARNING - map: IO buffer missing for top level port gn[27:0](18)...logic will be
+     discarded.
+WARNING - map: IO buffer missing for top level port gn[27:0](17)...logic will be
+     discarded.
+WARNING - map: IO buffer missing for top level port gn[27:0](16)...logic will be
+     discarded.
+WARNING - map: IO buffer missing for top level port gn[27:0](15)...logic will be
+     discarded.
+WARNING - map: IO buffer missing for top level port gn[27:0](14)...logic will be
+     discarded.
+WARNING - map: IO buffer missing for top level port gn[27:0](13)...logic will be
+     discarded.
+WARNING - map: IO buffer missing for top level port gn[27:0](12)...logic will be
+     discarded.
+WARNING - map: IO buffer missing for top level port gn[27:0](11)...logic will be
+     discarded.
+WARNING - map: IO buffer missing for top level port gn[27:0](10)...logic will be
+     discarded.
+WARNING - map: IO buffer missing for top level port gn[27:0](9)...logic will be
+     discarded.
+WARNING - map: IO buffer missing for top level port gn[27:0](8)...logic will be
+     discarded.
+WARNING - map: IO buffer missing for top level port gn[27:0](7)...logic will be
+     discarded.
+WARNING - map: IO buffer missing for top level port gn[27:0](6)...logic will be
+
+                                   Page 20
+
+
+
+
+Design:  ulx3s_passthru_wifi                           Date:  03/01/19  12:58:00
+
+Design Errors/Warnings (cont)
+-----------------------------
+     discarded.
+WARNING - map: IO buffer missing for top level port gn[27:0](5)...logic will be
+     discarded.
+WARNING - map: IO buffer missing for top level port gn[27:0](4)...logic will be
+     discarded.
+WARNING - map: IO buffer missing for top level port gn[27:0](3)...logic will be
+     discarded.
+WARNING - map: IO buffer missing for top level port gn[27:0](2)...logic will be
+     discarded.
+WARNING - map: IO buffer missing for top level port gn[27:0](1)...logic will be
+     discarded.
+WARNING - map: IO buffer missing for top level port gn[27:0](0)...logic will be
+     discarded.
+WARNING - map: IO buffer missing for top level port audio_l[3:0](3)...logic will
+     be discarded.
+WARNING - map: IO buffer missing for top level port audio_l[3:0](2)...logic will
+     be discarded.
+WARNING - map: IO buffer missing for top level port audio_l[3:0](1)...logic will
+     be discarded.
+WARNING - map: IO buffer missing for top level port audio_l[3:0](0)...logic will
+     be discarded.
+WARNING - map: IO buffer missing for top level port audio_r[3:0](3)...logic will
+     be discarded.
+WARNING - map: IO buffer missing for top level port audio_r[3:0](2)...logic will
+     be discarded.
+WARNING - map: IO buffer missing for top level port audio_r[3:0](1)...logic will
+     be discarded.
+WARNING - map: IO buffer missing for top level port audio_r[3:0](0)...logic will
+     be discarded.
+WARNING - map: IO buffer missing for top level port audio_v[3:0](3)...logic will
+     be discarded.
+WARNING - map: IO buffer missing for top level port audio_v[3:0](2)...logic will
+     be discarded.
+WARNING - map: IO buffer missing for top level port audio_v[3:0](1)...logic will
+     be discarded.
+WARNING - map: IO buffer missing for top level port audio_v[3:0](0)...logic will
+     be discarded.
+WARNING - map: IO buffer missing for top level port sd_d[3:0](3)...logic will be
+     discarded.
+WARNING - map: IO buffer missing for top level port sd_d[3:0](2)...logic will be
+     discarded.
+WARNING - map: IO buffer missing for top level port sd_d[3:0](1)...logic will be
+     discarded.
+WARNING - map: IO buffer missing for top level port sd_cdn...logic will be
+     discarded.
+WARNING - map: IO buffer missing for top level port sd_wp...logic will be
+     discarded.
+
+IO (PIO) Attributes
+-------------------
+
++---------------------+-----------+-----------+------------+
+| IO Name             | Direction | Levelmode | IO         |
+|                     |           |  IO_TYPE  | Register   |
++---------------------+-----------+-----------+------------+
+| wifi_gpio16         | INPUT     | LVCMOS33  |            |
+
+                                   Page 21
+
+
+
+
+Design:  ulx3s_passthru_wifi                           Date:  03/01/19  12:58:00
+
+IO (PIO) Attributes (cont)
+--------------------------
++---------------------+-----------+-----------+------------+
+| wifi_en             | OUTPUT    | LVCMOS33  |            |
++---------------------+-----------+-----------+------------+
+| ftdi_ndtr           | INPUT     | LVCMOS33  |            |
++---------------------+-----------+-----------+------------+
+| wifi_txd            | INPUT     | LVCMOS33  |            |
++---------------------+-----------+-----------+------------+
+| ftdi_nrts           | INPUT     | LVCMOS33  |            |
++---------------------+-----------+-----------+------------+
+| wifi_rxd            | OUTPUT    | LVCMOS33  |            |
++---------------------+-----------+-----------+------------+
+| clk_25mhz           | INPUT     | LVCMOS33  |            |
++---------------------+-----------+-----------+------------+
+| ftdi_rxd            | OUTPUT    | LVCMOS33  |            |
++---------------------+-----------+-----------+------------+
+| ftdi_txd            | INPUT     | LVCMOS33  |            |
++---------------------+-----------+-----------+------------+
+| led[7]              | OUTPUT    | LVCMOS33  |            |
++---------------------+-----------+-----------+------------+
+| wifi_gpio0          | OUTPUT    | LVCMOS33  |            |
++---------------------+-----------+-----------+------------+
+| sd_d[0]             | OUTPUT    | LVCMOS33  |            |
++---------------------+-----------+-----------+------------+
+| flash_wpn           | OUTPUT    | LVCMOS33  |            |
++---------------------+-----------+-----------+------------+
+| flash_holdn         | OUTPUT    | LVCMOS33  |            |
++---------------------+-----------+-----------+------------+
+| shutdown            | OUTPUT    | LVCMOS33  |            |
++---------------------+-----------+-----------+------------+
+| oled_resn           | OUTPUT    | LVCMOS33  |            |
++---------------------+-----------+-----------+------------+
+| oled_dc             | OUTPUT    | LVCMOS33  |            |
++---------------------+-----------+-----------+------------+
+| oled_mosi           | OUTPUT    | LVCMOS33  |            |
++---------------------+-----------+-----------+------------+
+| oled_clk            | OUTPUT    | LVCMOS33  |            |
++---------------------+-----------+-----------+------------+
+| oled_csn            | OUTPUT    | LVCMOS33  |            |
++---------------------+-----------+-----------+------------+
+| led[0]              | OUTPUT    | LVCMOS33  |            |
++---------------------+-----------+-----------+------------+
+| led[1]              | OUTPUT    | LVCMOS33  |            |
++---------------------+-----------+-----------+------------+
+| led[2]              | OUTPUT    | LVCMOS33  |            |
++---------------------+-----------+-----------+------------+
+| led[3]              | OUTPUT    | LVCMOS33  |            |
++---------------------+-----------+-----------+------------+
+| led[4]              | OUTPUT    | LVCMOS33  |            |
++---------------------+-----------+-----------+------------+
+| led[5]              | OUTPUT    | LVCMOS33  |            |
++---------------------+-----------+-----------+------------+
+| led[6]              | OUTPUT    | LVCMOS33  |            |
++---------------------+-----------+-----------+------------+
+| wifi_gpio17         | INPUT     | LVCMOS33  |            |
++---------------------+-----------+-----------+------------+
+| btn[6]              | INPUT     | LVCMOS33  |            |
+
+                                   Page 22
+
+
+
+
+Design:  ulx3s_passthru_wifi                           Date:  03/01/19  12:58:00
+
+IO (PIO) Attributes (cont)
+--------------------------
++---------------------+-----------+-----------+------------+
+| btn[5]              | INPUT     | LVCMOS33  |            |
++---------------------+-----------+-----------+------------+
+| btn[4]              | INPUT     | LVCMOS33  |            |
++---------------------+-----------+-----------+------------+
+| btn[3]              | INPUT     | LVCMOS33  |            |
++---------------------+-----------+-----------+------------+
+| btn[2]              | INPUT     | LVCMOS33  |            |
++---------------------+-----------+-----------+------------+
+| btn[1]              | INPUT     | LVCMOS33  |            |
++---------------------+-----------+-----------+------------+
+| btn[0]              | INPUT     | LVCMOS33  |            |
++---------------------+-----------+-----------+------------+
+| gp[11]              | INPUT     | LVCMOS33  |            |
++---------------------+-----------+-----------+------------+
+| sd_cmd              | INPUT     | LVCMOS33  |            |
++---------------------+-----------+-----------+------------+
+| sd_clk              | INPUT     | LVCMOS33  |            |
++---------------------+-----------+-----------+------------+
+
+Removed logic
+-------------
+
+Signal wifi_gpio17_N_23 was merged into signal oled_csn_c_c
+Signal VCC_net undriven or does not drive anything - clipped.
+Signal _add_1_add_4_19/S1 undriven or does not drive anything - clipped.
+Signal _add_1_add_4_19/CO undriven or does not drive anything - clipped.
+Signal _add_1_add_4_1/S0 undriven or does not drive anything - clipped.
+Signal _add_1_add_4_1/CI undriven or does not drive anything - clipped.
+Block wifi_gpio17_I_0_62_1_lut was optimized away.
+Block i2 was optimized away.
+
+Memory Usage
+------------
+
+
+     
+
+GSR Usage
+---------
+
+GSR Component:
+   The Global Set Reset (GSR) resource has been used to implement a global reset
+        of the design. The reset signal used for GSR control is 'oled_csn_c_c'.
+        
+
+     GSR Property:
+   The design components with GSR property set to ENABLED will respond to global
+        set reset while the components with GSR property set to DISABLED will
+        not.
+        
+
+     Components with disabled GSR Property
+-------------------------------------
+
+     These components have the GSR property set to DISABLED. The components will
+
+                                   Page 23
+
+
+
+
+Design:  ulx3s_passthru_wifi                           Date:  03/01/19  12:58:00
+
+GSR Usage (cont)
+----------------
+     not respond to the reset signal 'oled_csn_c_c' via the GSR component.
+
+     Type and number of components of the type: 
+   Register = 34 
+
+     Type and instance name of component: 
+   Register : R_prog_in_i0
+   Register : R_spi_miso_i0_104_105_reset
+   Register : R_spi_miso_i0_104_105_set
+   Register : R_prog_release__i1
+   Register : R_prog_release__i2
+   Register : R_prog_release__i3
+   Register : R_prog_release__i4
+   Register : R_prog_release__i5
+   Register : R_prog_release__i6
+   Register : R_prog_release__i7
+   Register : R_prog_release__i8
+   Register : R_prog_release__i9
+   Register : R_prog_release__i10
+   Register : R_prog_release__i11
+   Register : R_prog_release__i12
+   Register : R_prog_release__i13
+   Register : R_prog_release__i14
+   Register : R_prog_release__i15
+   Register : R_prog_release__i16
+   Register : R_prog_release__i17
+   Register : R_prog_in_i1
+   Register : R_spi_miso_i1_108_109_set
+   Register : R_spi_miso_i1_108_109_reset
+   Register : R_spi_miso_i2_112_113_set
+   Register : R_spi_miso_i2_112_113_reset
+   Register : R_spi_miso_i3_116_117_set
+   Register : R_spi_miso_i3_116_117_reset
+   Register : R_spi_miso_i4_120_121_set
+   Register : R_spi_miso_i4_120_121_reset
+   Register : R_spi_miso_i5_124_125_set
+   Register : R_spi_miso_i5_124_125_reset
+   Register : R_spi_miso_i6_128_129_set
+   Register : R_spi_miso_i6_128_129_reset
+   Register : R_prog_release__i0
+
+Run Time and Memory Usage
+-------------------------
+
+   Total CPU Time: 1 secs  
+   Total REAL Time: 2 secs  
+   Peak Memory Usage: 109 MB
+        
+
+
+
+
+
+
+
+
+
+                                   Page 24
+
+
+Copyright (c) 1991-1994 by NeoCAD Inc. All rights reserved.
+     Copyright (c) 1995 AT&T Corp.   All rights reserved.
+     Copyright (c) 1995-2001 Lucent Technologies Inc.  All rights reserved.
+     Copyright (c) 2001 Agere Systems   All rights reserved.
+     Copyright (c) 2002-2017 Lattice Semiconductor Corporation,  All rights
+     reserved.

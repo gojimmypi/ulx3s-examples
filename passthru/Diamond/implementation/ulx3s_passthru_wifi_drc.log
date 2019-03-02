@@ -1,0 +1,174 @@
+Results of NGD DRC are available in ulx3s_passthru_wifi_drc.log.
+Loading NGL library 'C:/lscc/diamond/3.10_x64/ispfpga/sa5p00/data/sa5plib.ngl'...
+Loading NGL library 'C:/lscc/diamond/3.10_x64/ispfpga/xo2c00/data/xo2clib.ngl'...
+Loading NGL library 'C:/lscc/diamond/3.10_x64/ispfpga/mg5g00/data/mg5glib.ngl'...
+Loading NGL library 'C:/lscc/diamond/3.10_x64/ispfpga/or5g00/data/orc5glib.ngl'...
+
+
+Running DRC...
+
+WARNING - synthesis: logical net 'ftdi_ndsr' has no load.
+WARNING - synthesis: input pad net 'ftdi_ndsr' has no legal load.
+WARNING - synthesis: logical net 'ftdi_txden' has no load.
+WARNING - synthesis: input pad net 'ftdi_txden' has no legal load.
+WARNING - synthesis: logical net 'wifi_gpio2' has no load.
+WARNING - synthesis: input pad net 'wifi_gpio2' has no legal load.
+WARNING - synthesis: logical net 'sw[1]' has no load.
+WARNING - synthesis: input pad net 'sw[1]' has no legal load.
+WARNING - synthesis: logical net 'sw[2]' has no load.
+WARNING - synthesis: input pad net 'sw[2]' has no legal load.
+WARNING - synthesis: logical net 'sw[3]' has no load.
+WARNING - synthesis: input pad net 'sw[3]' has no legal load.
+WARNING - synthesis: logical net 'sw[4]' has no load.
+WARNING - synthesis: input pad net 'sw[4]' has no legal load.
+WARNING - synthesis: logical net 'gp[27]' has no load.
+WARNING - synthesis: input pad net 'gp[27]' has no legal load.
+WARNING - synthesis: logical net 'gp[26]' has no load.
+WARNING - synthesis: input pad net 'gp[26]' has no legal load.
+WARNING - synthesis: logical net 'gp[25]' has no load.
+WARNING - synthesis: input pad net 'gp[25]' has no legal load.
+WARNING - synthesis: logical net 'gp[24]' has no load.
+WARNING - synthesis: input pad net 'gp[24]' has no legal load.
+WARNING - synthesis: logical net 'gp[23]' has no load.
+WARNING - synthesis: input pad net 'gp[23]' has no legal load.
+WARNING - synthesis: logical net 'gp[22]' has no load.
+WARNING - synthesis: input pad net 'gp[22]' has no legal load.
+WARNING - synthesis: logical net 'gp[21]' has no load.
+WARNING - synthesis: input pad net 'gp[21]' has no legal load.
+WARNING - synthesis: logical net 'gp[20]' has no load.
+WARNING - synthesis: input pad net 'gp[20]' has no legal load.
+WARNING - synthesis: logical net 'gp[19]' has no load.
+WARNING - synthesis: input pad net 'gp[19]' has no legal load.
+WARNING - synthesis: logical net 'gp[18]' has no load.
+WARNING - synthesis: input pad net 'gp[18]' has no legal load.
+WARNING - synthesis: logical net 'gp[17]' has no load.
+WARNING - synthesis: input pad net 'gp[17]' has no legal load.
+WARNING - synthesis: logical net 'gp[16]' has no load.
+WARNING - synthesis: input pad net 'gp[16]' has no legal load.
+WARNING - synthesis: logical net 'gp[15]' has no load.
+WARNING - synthesis: input pad net 'gp[15]' has no legal load.
+WARNING - synthesis: logical net 'gp[14]' has no load.
+WARNING - synthesis: input pad net 'gp[14]' has no legal load.
+WARNING - synthesis: logical net 'gp[13]' has no load.
+WARNING - synthesis: input pad net 'gp[13]' has no legal load.
+WARNING - synthesis: logical net 'gp[12]' has no load.
+WARNING - synthesis: input pad net 'gp[12]' has no legal load.
+WARNING - synthesis: logical net 'gp[10]' has no load.
+WARNING - synthesis: input pad net 'gp[10]' has no legal load.
+WARNING - synthesis: logical net 'gp[9]' has no load.
+WARNING - synthesis: input pad net 'gp[9]' has no legal load.
+WARNING - synthesis: logical net 'gp[8]' has no load.
+WARNING - synthesis: input pad net 'gp[8]' has no legal load.
+WARNING - synthesis: logical net 'gp[7]' has no load.
+WARNING - synthesis: input pad net 'gp[7]' has no legal load.
+WARNING - synthesis: logical net 'gp[6]' has no load.
+WARNING - synthesis: input pad net 'gp[6]' has no legal load.
+WARNING - synthesis: logical net 'gp[5]' has no load.
+WARNING - synthesis: input pad net 'gp[5]' has no legal load.
+WARNING - synthesis: logical net 'gp[4]' has no load.
+WARNING - synthesis: input pad net 'gp[4]' has no legal load.
+WARNING - synthesis: logical net 'gp[3]' has no load.
+WARNING - synthesis: input pad net 'gp[3]' has no legal load.
+WARNING - synthesis: logical net 'gp[2]' has no load.
+WARNING - synthesis: input pad net 'gp[2]' has no legal load.
+WARNING - synthesis: logical net 'gp[1]' has no load.
+WARNING - synthesis: input pad net 'gp[1]' has no legal load.
+WARNING - synthesis: logical net 'gp[0]' has no load.
+WARNING - synthesis: input pad net 'gp[0]' has no legal load.
+WARNING - synthesis: logical net 'gn[27]' has no load.
+WARNING - synthesis: input pad net 'gn[27]' has no legal load.
+WARNING - synthesis: logical net 'gn[26]' has no load.
+WARNING - synthesis: input pad net 'gn[26]' has no legal load.
+WARNING - synthesis: logical net 'gn[25]' has no load.
+WARNING - synthesis: input pad net 'gn[25]' has no legal load.
+WARNING - synthesis: logical net 'gn[24]' has no load.
+WARNING - synthesis: input pad net 'gn[24]' has no legal load.
+WARNING - synthesis: logical net 'gn[23]' has no load.
+WARNING - synthesis: input pad net 'gn[23]' has no legal load.
+WARNING - synthesis: logical net 'gn[22]' has no load.
+WARNING - synthesis: input pad net 'gn[22]' has no legal load.
+WARNING - synthesis: logical net 'gn[21]' has no load.
+WARNING - synthesis: input pad net 'gn[21]' has no legal load.
+WARNING - synthesis: logical net 'gn[20]' has no load.
+WARNING - synthesis: input pad net 'gn[20]' has no legal load.
+WARNING - synthesis: logical net 'gn[19]' has no load.
+WARNING - synthesis: input pad net 'gn[19]' has no legal load.
+WARNING - synthesis: logical net 'gn[18]' has no load.
+WARNING - synthesis: input pad net 'gn[18]' has no legal load.
+WARNING - synthesis: logical net 'gn[17]' has no load.
+WARNING - synthesis: input pad net 'gn[17]' has no legal load.
+WARNING - synthesis: logical net 'gn[16]' has no load.
+WARNING - synthesis: input pad net 'gn[16]' has no legal load.
+WARNING - synthesis: logical net 'gn[15]' has no load.
+WARNING - synthesis: input pad net 'gn[15]' has no legal load.
+WARNING - synthesis: logical net 'gn[14]' has no load.
+WARNING - synthesis: input pad net 'gn[14]' has no legal load.
+WARNING - synthesis: logical net 'gn[13]' has no load.
+WARNING - synthesis: input pad net 'gn[13]' has no legal load.
+WARNING - synthesis: logical net 'gn[12]' has no load.
+WARNING - synthesis: input pad net 'gn[12]' has no legal load.
+WARNING - synthesis: logical net 'gn[11]' has no load.
+WARNING - synthesis: input pad net 'gn[11]' has no legal load.
+WARNING - synthesis: logical net 'gn[10]' has no load.
+WARNING - synthesis: input pad net 'gn[10]' has no legal load.
+WARNING - synthesis: logical net 'gn[9]' has no load.
+WARNING - synthesis: input pad net 'gn[9]' has no legal load.
+WARNING - synthesis: logical net 'gn[8]' has no load.
+WARNING - synthesis: input pad net 'gn[8]' has no legal load.
+WARNING - synthesis: logical net 'gn[7]' has no load.
+WARNING - synthesis: input pad net 'gn[7]' has no legal load.
+WARNING - synthesis: logical net 'gn[6]' has no load.
+WARNING - synthesis: input pad net 'gn[6]' has no legal load.
+WARNING - synthesis: logical net 'gn[5]' has no load.
+WARNING - synthesis: input pad net 'gn[5]' has no legal load.
+WARNING - synthesis: logical net 'gn[4]' has no load.
+WARNING - synthesis: input pad net 'gn[4]' has no legal load.
+WARNING - synthesis: logical net 'gn[3]' has no load.
+WARNING - synthesis: input pad net 'gn[3]' has no legal load.
+WARNING - synthesis: logical net 'gn[2]' has no load.
+WARNING - synthesis: input pad net 'gn[2]' has no legal load.
+WARNING - synthesis: logical net 'gn[1]' has no load.
+WARNING - synthesis: input pad net 'gn[1]' has no legal load.
+WARNING - synthesis: logical net 'gn[0]' has no load.
+WARNING - synthesis: input pad net 'gn[0]' has no legal load.
+WARNING - synthesis: logical net 'audio_l[3]' has no load.
+WARNING - synthesis: input pad net 'audio_l[3]' has no legal load.
+WARNING - synthesis: logical net 'audio_l[2]' has no load.
+WARNING - synthesis: input pad net 'audio_l[2]' has no legal load.
+WARNING - synthesis: logical net 'audio_l[1]' has no load.
+WARNING - synthesis: input pad net 'audio_l[1]' has no legal load.
+WARNING - synthesis: logical net 'audio_l[0]' has no load.
+WARNING - synthesis: input pad net 'audio_l[0]' has no legal load.
+WARNING - synthesis: logical net 'audio_r[3]' has no load.
+WARNING - synthesis: input pad net 'audio_r[3]' has no legal load.
+WARNING - synthesis: logical net 'audio_r[2]' has no load.
+WARNING - synthesis: input pad net 'audio_r[2]' has no legal load.
+WARNING - synthesis: logical net 'audio_r[1]' has no load.
+WARNING - synthesis: input pad net 'audio_r[1]' has no legal load.
+WARNING - synthesis: logical net 'audio_r[0]' has no load.
+WARNING - synthesis: input pad net 'audio_r[0]' has no legal load.
+WARNING - synthesis: logical net 'audio_v[3]' has no load.
+WARNING - synthesis: input pad net 'audio_v[3]' has no legal load.
+WARNING - synthesis: logical net 'audio_v[2]' has no load.
+WARNING - synthesis: input pad net 'audio_v[2]' has no legal load.
+WARNING - synthesis: logical net 'audio_v[1]' has no load.
+WARNING - synthesis: input pad net 'audio_v[1]' has no legal load.
+WARNING - synthesis: logical net 'audio_v[0]' has no load.
+WARNING - synthesis: input pad net 'audio_v[0]' has no legal load.
+WARNING - synthesis: logical net 'sd_d[3]' has no load.
+WARNING - synthesis: input pad net 'sd_d[3]' has no legal load.
+WARNING - synthesis: logical net 'sd_d[2]' has no load.
+WARNING - synthesis: input pad net 'sd_d[2]' has no legal load.
+WARNING - synthesis: logical net 'sd_d[1]' has no load.
+WARNING - synthesis: input pad net 'sd_d[1]' has no legal load.
+WARNING - synthesis: logical net 'sd_cdn' has no load.
+WARNING - synthesis: input pad net 'sd_cdn' has no legal load.
+WARNING - synthesis: logical net 'sd_wp' has no load.
+WARNING - synthesis: input pad net 'sd_wp' has no legal load.
+WARNING - synthesis: DRC complete with 158 warnings.
+
+Design Results:
+    124 blocks expanded
+completed the first expansion
+All blocks are expanded and NGD expansion is successful.
+Writing NGD file passthru_implementation.ngd.

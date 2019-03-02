@@ -1,0 +1,17 @@
+----------------------------------------------------------------------
+Report for cell ulx3s_passthru_wifi.TECH
+Register bits:  35 of 12687 (0.276%)
+I/O cells:      38
+                                  Cell usage:
+                               cell     count   Res Usage(%)
+                              CCU2C        10          100.0
+                            FD1P3IX        18          100.0
+                            FD1S3AX         3          100.0
+                            FD1S3BX         7          100.0
+                            FD1S3DX         7          100.0
+                                GSR         1          100.0
+                                 IB        17          100.0
+                               LUT4        37          100.0
+                                 OB        20          100.0
+                                OBZ         1          100.0
+                              TOTAL       121

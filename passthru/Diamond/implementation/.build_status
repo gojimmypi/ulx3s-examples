@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<BuildStatus>
+    <Strategy name="Strategy1">
+        <Milestone name="Export" build_result="0" build_time="0">
+            <Task name="IBIS" build_result="0" update_result="3" update_time="0"/>
+            <Task name="TimingSimFileVlg" build_result="0" update_result="3" update_time="0"/>
+            <Task name="TimingSimFileVHD" build_result="0" update_result="3" update_time="0"/>
+            <Task name="Bitgen" build_result="2" update_result="0" update_time="1551473908"/>
+            <Task name="Promgen" build_result="0" update_result="3" update_time="0"/>
+        </Milestone>
+        <Milestone name="Map" build_result="2" build_time="1551473884">
+            <Task name="Map" build_result="2" update_result="0" update_time="1551473884"/>
+            <Task name="MapTrace" build_result="0" update_result="3" update_time="0"/>
+            <Task name="MapVerilogSimFile" build_result="0" update_result="3" update_time="0"/>
+            <Task name="MapVHDLSimFile" build_result="0" update_result="3" update_time="0"/>
+        </Milestone>
+        <Milestone name="PAR" build_result="2" build_time="1551473902">
+            <Task name="PAR" build_result="2" update_result="0" update_time="1551473902"/>
+            <Task name="PARTrace" build_result="0" update_result="3" update_time="0"/>
+            <Task name="IOTiming" build_result="0" update_result="3" update_time="0"/>
+        </Milestone>
+        <Milestone name="Synthesis" build_result="2" build_time="1551473880">
+            <Task name="Lattice_Synthesis" build_result="2" update_result="0" update_time="1551473880"/>
+            <Task name="LSE_Compile" build_result="2" update_result="0" update_time="1551473908"/>
+        </Milestone>
+        <Report name=".vdbs/passthru_implementation_map.vdb" last_build_time="1551473884" last_build_size="58510"/>
+        <Report name="passthru_implementation.bgn" last_build_time="1551473908" last_build_size="4372"/>
+        <Report name="passthru_implementation.bit" last_build_time="1551473908" last_build_size="100399"/>
+        <Report name="passthru_implementation.lsedata" last_build_time="1551473879" last_build_size="50109"/>
+        <Report name="passthru_implementation.ncd" last_build_time="1551473902" last_build_size="99691"/>
+        <Report name="passthru_implementation.ngd" last_build_time="1551473880" last_build_size="82443"/>
+        <Report name="passthru_implementation_map.ncd" last_build_time="1551473882" last_build_size="79094"/>
+    </Strategy>
+</BuildStatus>

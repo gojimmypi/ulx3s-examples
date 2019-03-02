@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<BaliMessageLog>
+    <Task name="Lattice_Synthesis">
+        <Message>
+            <ID>35002000</ID>
+            <Severity>Info</Severity>
+        </Message>
+        <Message>
+            <ID>35001781</ID>
+            <Severity>Info</Severity>
+        </Message>
+        <Message>
+            <ID>35901137</ID>
+            <Severity>Error</Severity>
+            <Dynamic>c:/workspace/ulx3s/examples/passthru/diamondverilog/passthru.v(71): </Dynamic>
+            <Dynamic>S_prog_out</Dynamic>
+            <Navigation>c:/workspace/ulx3s/examples/passthru/diamondverilog/passthru.v</Navigation>
+            <Navigation>71</Navigation>
+        </Message>
+    </Task>
+</BaliMessageLog>

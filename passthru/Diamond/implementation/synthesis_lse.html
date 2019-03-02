@@ -1,0 +1,625 @@
+<HTML>
+<HEAD><TITLE>Synthesis and Ngdbuild Report</TITLE>
+<STYLE TYPE="text/css">
+<!--
+ body,pre{    font-family:'Courier New', monospace;    color: #000000;    font-size:88%;    background-color: #ffffff;}h1 {    font-weight: bold;    margin-top: 24px;    margin-bottom: 10px;    border-bottom: 3px solid #000;    font-size: 1em;}h2 {    font-weight: bold;    margin-top: 18px;    margin-bottom: 5px;    font-size: 0.90em;}h3 {    font-weight: bold;    margin-top: 12px;    margin-bottom: 5px;    font-size: 0.80em;}p {    font-size:78%;}P.Table {    margin-top: 4px;    margin-bottom: 4px;    margin-right: 4px;    margin-left: 4px;}table{    border-width: 1px 1px 1px 1px;    border-style: solid solid solid solid;    border-color: black black black black;    border-collapse: collapse;}th {    font-weight:bold;    padding: 4px;    border-width: 1px 1px 1px 1px;    border-style: solid solid solid solid;    border-color: black black black black;    vertical-align:top;    text-align:left;    font-size:78%;}td {    padding: 4px;    border-width: 1px 1px 1px 1px;    border-style: solid solid solid solid;    border-color: black black black black;    vertical-align:top;    font-size:78%;}a {    color:#013C9A;    text-decoration:none;}a:visited {    color:#013C9A;}a:hover, a:active {    text-decoration:underline;    color:#5BAFD4;}.pass{background-color: #00ff00;}.fail{background-color: #ff0000;}.comment{    font-size: 90%;    font-style: italic;}
+-->
+</STYLE>
+</HEAD>
+<PRE><A name="Syn"></A><B><U><big>Synthesis and Ngdbuild  Report</big></U></B>
+synthesis:  version Diamond (64-bit) 3.10.3.144
+
+Copyright (c) 1991-1994 by NeoCAD Inc. All rights reserved.
+Copyright (c) 1995 AT&T Corp.   All rights reserved.
+Copyright (c) 1995-2001 Lucent Technologies Inc.  All rights reserved.
+Copyright (c) 2001 Agere Systems   All rights reserved.
+Copyright (c) 2002-2017 Lattice Semiconductor Corporation,  All rights reserved.
+Fri Mar 01 12:57:58 2019
+
+
+Command Line:  synthesis -f passthru_implementation_lattice.synproj -gui 
+
+Synthesis options:
+The -a option is ECP5U.
+The -s option is 6.
+The -t option is CABGA381.
+The -d option is LFE5U-12F.
+Using package CABGA381.
+Using performance grade 6.
+                                                          
+
+##########################################################
+
+### Lattice Family : ECP5U
+
+### Device  : LFE5U-12F
+
+### Package : CABGA381
+
+### Speed   : 6
+
+##########################################################
+
+                                                          
+
+INFO - synthesis: User-Selected Strategy Settings
+Optimization goal = Timing
+Top-level module name = ulx3s_passthru_wifi.
+Target frequency = 200.000000 MHz.
+Maximum fanout = 1000.
+Timing path count = 3
+BRAM utilization = 100.000000 %
+DSP usage = true
+DSP utilization = 100.000000 %
+fsm_encoding_style = auto
+resolve_mixed_drivers = 0
+fix_gated_clocks = 1
+
+Mux style = Auto
+Use Carry Chain = true
+carry_chain_length = 0
+Loop Limit = 1950.
+Use IO Insertion = TRUE
+Use IO Reg = AUTO
+
+Resource Sharing = TRUE
+Propagate Constants = TRUE
+Remove Duplicate Registers = TRUE
+force_gsr = auto
+ROM style = auto
+RAM style = auto
+The -comp option is FALSE.
+The -syn option is FALSE.
+-p C:/lscc/diamond/3.10_x64/ispfpga/sa5p00/data (searchpath added)
+-p C:/workspace/ulx3s/examples/passthru/Diamond/implementation (searchpath added)
+-p C:/workspace/ulx3s/examples/passthru/Diamond (searchpath added)
+VHDL library = work
+VHDL design file = C:/workspace/ulx3s/examples/passthru/Diamond/passthru.vhd
+NGD file = passthru_implementation.ngd
+-sdc option: SDC file input not used.
+-lpf option: Output file option is ON.
+Hardtimer checking is enabled (default). The -dt option is not used.
+The -r option is OFF. [ Remove LOC Properties is OFF. ]
+Technology check ok...
+
+Analyzing Verilog file C:/lscc/diamond/3.10_x64/ispfpga/userware/NT/SYNTHESIS_HEADERS/ecp5u.v. VERI-1482
+Compile design.
+Compile Design Begin
+INFO - synthesis: The default VHDL library search path is now "C:/workspace/ulx3s/examples/passthru/Diamond/implementation". VHDL-1504
+Analyzing VHDL file c:/workspace/ulx3s/examples/passthru/diamond/passthru.vhd. VHDL-1481
+INFO - synthesis: c:/workspace/ulx3s/examples/passthru/diamond/passthru.vhd(15): analyzing entity ulx3s_passthru_wifi. VHDL-1012
+INFO - synthesis: c:/workspace/ulx3s/examples/passthru/diamond/passthru.vhd(73): analyzing architecture behavioral. VHDL-1010
+unit ulx3s_passthru_wifi is not yet analyzed. VHDL-1485
+unit ulx3s_passthru_wifi is not yet analyzed. VHDL-1485
+c:/workspace/ulx3s/examples/passthru/diamond/passthru.vhd(15): executing ulx3s_passthru_wifi(Behavioral)
+
+WARNING - synthesis: c:/workspace/ulx3s/examples/passthru/diamond/passthru.vhd(149): btn should be on the sensitivity list of the process. VHDL-1251
+WARNING - synthesis: c:/workspace/ulx3s/examples/passthru/diamond/passthru.vhd(155): incomplete sensitivity list specified, assuming completeness. VHDL-1613
+WARNING - synthesis: c:/workspace/ulx3s/examples/passthru/diamond/passthru.vhd(71): replacing existing netlist ulx3s_passthru_wifi(Behavioral). VHDL-1205
+Top module name (VHDL): ulx3s_passthru_wifi
+Loading NGL library 'C:/lscc/diamond/3.10_x64/ispfpga/sa5p00/data/sa5plib.ngl'...
+Loading NGL library 'C:/lscc/diamond/3.10_x64/ispfpga/xo2c00/data/xo2clib.ngl'...
+Loading NGL library 'C:/lscc/diamond/3.10_x64/ispfpga/mg5g00/data/mg5glib.ngl'...
+Loading NGL library 'C:/lscc/diamond/3.10_x64/ispfpga/or5g00/data/orc5glib.ngl'...
+Loading device for application map from file 'sa5p25.nph' in environment: C:/lscc/diamond/3.10_x64/ispfpga.
+Package Status:                     Final          Version 1.33.
+Top-level module name = ulx3s_passthru_wifi.
+WARNING - synthesis: Initial value found on net wifi_en will be ignored due to unrecognized driver type
+WARNING - synthesis: Initial value found on net wifi_gpio0 will be ignored due to unrecognized driver type
+WARNING - synthesis: I/O Port ftdi_rxd 's net has no driver and is unused.
+WARNING - synthesis: I/O Port ftdi_txd 's net has no driver and is unused.
+######## Converting I/O port ftdi_ndtr to input.
+######## Converting I/O port ftdi_ndsr to input.
+######## Converting I/O port ftdi_nrts to input.
+######## Converting I/O port ftdi_txden to input.
+WARNING - synthesis: I/O Port wifi_rxd 's net has no driver and is unused.
+WARNING - synthesis: I/O Port wifi_txd 's net has no driver and is unused.
+######## Converting I/O port wifi_en to output.
+######## Converting I/O port wifi_gpio0 to output.
+######## Converting I/O port wifi_gpio2 to input.
+######## Converting I/O port wifi_gpio16 to input.
+######## Converting I/O port wifi_gpio17 to input.
+WARNING - synthesis: I/O Port led[5] 's net has no driver and is unused.
+WARNING - synthesis: I/O Port led[4] 's net has no driver and is unused.
+WARNING - synthesis: I/O Port led[3] 's net has no driver and is unused.
+WARNING - synthesis: I/O Port led[2] 's net has no driver and is unused.
+WARNING - synthesis: I/O Port led[1] 's net has no driver and is unused.
+WARNING - synthesis: I/O Port led[0] 's net has no driver and is unused.
+WARNING - synthesis: I/O Port sw[1] 's net has no driver and is unused.
+WARNING - synthesis: I/O Port sw[2] 's net has no driver and is unused.
+WARNING - synthesis: I/O Port sw[3] 's net has no driver and is unused.
+WARNING - synthesis: I/O Port sw[4] 's net has no driver and is unused.
+WARNING - synthesis: I/O Port oled_mosi 's net has no driver and is unused.
+WARNING - synthesis: I/O Port oled_dc 's net has no driver and is unused.
+WARNING - synthesis: I/O Port oled_resn 's net has no driver and is unused.
+######## Converting I/O port gp[27] to input.
+######## Converting I/O port gp[26] to input.
+######## Converting I/O port gp[25] to input.
+######## Converting I/O port gp[24] to input.
+######## Converting I/O port gp[23] to input.
+######## Converting I/O port gp[22] to input.
+######## Converting I/O port gp[21] to input.
+######## Converting I/O port gp[20] to input.
+######## Converting I/O port gp[19] to input.
+######## Converting I/O port gp[18] to input.
+######## Converting I/O port gp[17] to input.
+######## Converting I/O port gp[16] to input.
+######## Converting I/O port gp[15] to input.
+######## Converting I/O port gp[14] to input.
+######## Converting I/O port gp[13] to input.
+######## Converting I/O port gp[12] to input.
+######## Converting I/O port gp[11] to input.
+######## Converting I/O port gp[10] to input.
+######## Converting I/O port gp[9] to input.
+######## Converting I/O port gp[8] to input.
+######## Converting I/O port gp[7] to input.
+######## Converting I/O port gp[6] to input.
+######## Converting I/O port gp[5] to input.
+######## Converting I/O port gp[4] to input.
+######## Converting I/O port gp[3] to input.
+######## Converting I/O port gp[2] to input.
+######## Converting I/O port gp[1] to input.
+######## Converting I/O port gp[0] to input.
+######## Converting I/O port gn[27] to input.
+######## Converting I/O port gn[26] to input.
+######## Converting I/O port gn[25] to input.
+######## Converting I/O port gn[24] to input.
+######## Converting I/O port gn[23] to input.
+######## Converting I/O port gn[22] to input.
+######## Converting I/O port gn[21] to input.
+######## Converting I/O port gn[20] to input.
+######## Converting I/O port gn[19] to input.
+######## Converting I/O port gn[18] to input.
+######## Converting I/O port gn[17] to input.
+######## Converting I/O port gn[16] to input.
+######## Converting I/O port gn[15] to input.
+######## Converting I/O port gn[14] to input.
+######## Converting I/O port gn[13] to input.
+######## Converting I/O port gn[12] to input.
+######## Converting I/O port gn[11] to input.
+######## Converting I/O port gn[10] to input.
+######## Converting I/O port gn[9] to input.
+######## Converting I/O port gn[8] to input.
+######## Converting I/O port gn[7] to input.
+######## Converting I/O port gn[6] to input.
+######## Converting I/O port gn[5] to input.
+######## Converting I/O port gn[4] to input.
+######## Converting I/O port gn[3] to input.
+######## Converting I/O port gn[2] to input.
+######## Converting I/O port gn[1] to input.
+######## Converting I/O port gn[0] to input.
+WARNING - synthesis: I/O Port shutdown 's net has no driver and is unused.
+######## Converting I/O port audio_l[3] to input.
+######## Converting I/O port audio_l[2] to input.
+######## Converting I/O port audio_l[1] to input.
+######## Converting I/O port audio_l[0] to input.
+######## Converting I/O port audio_r[3] to input.
+######## Converting I/O port audio_r[2] to input.
+######## Converting I/O port audio_r[1] to input.
+######## Converting I/O port audio_r[0] to input.
+######## Converting I/O port audio_v[3] to input.
+######## Converting I/O port audio_v[2] to input.
+######## Converting I/O port audio_v[1] to input.
+######## Converting I/O port audio_v[0] to input.
+WARNING - synthesis: I/O Port flash_holdn 's net has no driver and is unused.
+WARNING - synthesis: I/O Port flash_wpn 's net has no driver and is unused.
+######## Converting I/O port sd_d[3] to input.
+######## Converting I/O port sd_d[2] to input.
+######## Converting I/O port sd_d[1] to input.
+######## Converting I/O port sd_d[0] to output.
+WARNING - synthesis: I/O Port sd_cmd 's net has no driver and is unused.
+WARNING - synthesis: I/O Port sd_cdn 's net has no driver and is unused.
+WARNING - synthesis: I/O Port sd_wp 's net has no driver and is unused.
+######## Missing driver on net led[5]. Patching with GND.
+######## Missing driver on net led[4]. Patching with GND.
+######## Missing driver on net led[3]. Patching with GND.
+######## Missing driver on net led[2]. Patching with GND.
+######## Missing driver on net led[1]. Patching with GND.
+######## Missing driver on net led[0]. Patching with GND.
+######## Missing driver on net shutdown. Patching with GND.
+######## Missing driver on net flash_holdn. Patching with GND.
+######## Missing driver on net flash_wpn. Patching with GND.
+
+
+
+WARNING - synthesis: I/O Port ftdi_rxd 's net has no driver and is unused.
+WARNING - synthesis: I/O Port ftdi_txd 's net has no driver and is unused.
+WARNING - synthesis: I/O Port ftdi_ndsr 's net has no driver and is unused.
+WARNING - synthesis: I/O Port ftdi_txden 's net has no driver and is unused.
+WARNING - synthesis: I/O Port wifi_rxd 's net has no driver and is unused.
+WARNING - synthesis: I/O Port wifi_txd 's net has no driver and is unused.
+WARNING - synthesis: I/O Port wifi_gpio2 's net has no driver and is unused.
+WARNING - synthesis: I/O Port wifi_gpio16 's net has no driver and is unused.
+WARNING - synthesis: I/O Port sw[1] 's net has no driver and is unused.
+WARNING - synthesis: I/O Port sw[2] 's net has no driver and is unused.
+WARNING - synthesis: I/O Port sw[3] 's net has no driver and is unused.
+WARNING - synthesis: I/O Port sw[4] 's net has no driver and is unused.
+WARNING - synthesis: I/O Port oled_mosi 's net has no driver and is unused.
+WARNING - synthesis: I/O Port oled_dc 's net has no driver and is unused.
+WARNING - synthesis: I/O Port oled_resn 's net has no driver and is unused.
+WARNING - synthesis: I/O Port gp[27] 's net has no driver and is unused.
+WARNING - synthesis: I/O Port gp[26] 's net has no driver and is unused.
+WARNING - synthesis: I/O Port gp[25] 's net has no driver and is unused.
+WARNING - synthesis: I/O Port gp[24] 's net has no driver and is unused.
+WARNING - synthesis: I/O Port gp[23] 's net has no driver and is unused.
+WARNING - synthesis: I/O Port gp[22] 's net has no driver and is unused.
+WARNING - synthesis: I/O Port gp[21] 's net has no driver and is unused.
+WARNING - synthesis: I/O Port gp[20] 's net has no driver and is unused.
+WARNING - synthesis: I/O Port gp[19] 's net has no driver and is unused.
+WARNING - synthesis: I/O Port gp[18] 's net has no driver and is unused.
+WARNING - synthesis: I/O Port gp[17] 's net has no driver and is unused.
+WARNING - synthesis: I/O Port gp[16] 's net has no driver and is unused.
+WARNING - synthesis: I/O Port gp[15] 's net has no driver and is unused.
+WARNING - synthesis: I/O Port gp[14] 's net has no driver and is unused.
+WARNING - synthesis: I/O Port gp[13] 's net has no driver and is unused.
+WARNING - synthesis: I/O Port gp[12] 's net has no driver and is unused.
+WARNING - synthesis: I/O Port gp[11] 's net has no driver and is unused.
+WARNING - synthesis: I/O Port gp[10] 's net has no driver and is unused.
+WARNING - synthesis: I/O Port gp[9] 's net has no driver and is unused.
+WARNING - synthesis: I/O Port gp[8] 's net has no driver and is unused.
+WARNING - synthesis: I/O Port gp[7] 's net has no driver and is unused.
+WARNING - synthesis: I/O Port gp[6] 's net has no driver and is unused.
+WARNING - synthesis: I/O Port gp[5] 's net has no driver and is unused.
+WARNING - synthesis: I/O Port gp[4] 's net has no driver and is unused.
+WARNING - synthesis: I/O Port gp[3] 's net has no driver and is unused.
+WARNING - synthesis: I/O Port gp[2] 's net has no driver and is unused.
+WARNING - synthesis: I/O Port gp[1] 's net has no driver and is unused.
+WARNING - synthesis: I/O Port gp[0] 's net has no driver and is unused.
+WARNING - synthesis: I/O Port gn[27] 's net has no driver and is unused.
+WARNING - synthesis: I/O Port gn[26] 's net has no driver and is unused.
+WARNING - synthesis: I/O Port gn[25] 's net has no driver and is unused.
+WARNING - synthesis: I/O Port gn[24] 's net has no driver and is unused.
+WARNING - synthesis: I/O Port gn[23] 's net has no driver and is unused.
+WARNING - synthesis: I/O Port gn[22] 's net has no driver and is unused.
+WARNING - synthesis: I/O Port gn[21] 's net has no driver and is unused.
+WARNING - synthesis: I/O Port gn[20] 's net has no driver and is unused.
+WARNING - synthesis: I/O Port gn[19] 's net has no driver and is unused.
+WARNING - synthesis: I/O Port gn[18] 's net has no driver and is unused.
+WARNING - synthesis: I/O Port gn[17] 's net has no driver and is unused.
+WARNING - synthesis: I/O Port gn[16] 's net has no driver and is unused.
+WARNING - synthesis: I/O Port gn[15] 's net has no driver and is unused.
+WARNING - synthesis: I/O Port gn[14] 's net has no driver and is unused.
+WARNING - synthesis: I/O Port gn[13] 's net has no driver and is unused.
+WARNING - synthesis: I/O Port gn[12] 's net has no driver and is unused.
+WARNING - synthesis: I/O Port gn[11] 's net has no driver and is unused.
+WARNING - synthesis: I/O Port gn[10] 's net has no driver and is unused.
+WARNING - synthesis: I/O Port gn[9] 's net has no driver and is unused.
+WARNING - synthesis: I/O Port gn[8] 's net has no driver and is unused.
+WARNING - synthesis: I/O Port gn[7] 's net has no driver and is unused.
+WARNING - synthesis: I/O Port gn[6] 's net has no driver and is unused.
+WARNING - synthesis: I/O Port gn[5] 's net has no driver and is unused.
+WARNING - synthesis: I/O Port gn[4] 's net has no driver and is unused.
+WARNING - synthesis: I/O Port gn[3] 's net has no driver and is unused.
+WARNING - synthesis: I/O Port gn[2] 's net has no driver and is unused.
+WARNING - synthesis: I/O Port gn[1] 's net has no driver and is unused.
+WARNING - synthesis: I/O Port gn[0] 's net has no driver and is unused.
+WARNING - synthesis: I/O Port audio_l[3] 's net has no driver and is unused.
+WARNING - synthesis: I/O Port audio_l[2] 's net has no driver and is unused.
+WARNING - synthesis: I/O Port audio_l[1] 's net has no driver and is unused.
+WARNING - synthesis: I/O Port audio_l[0] 's net has no driver and is unused.
+WARNING - synthesis: I/O Port audio_r[3] 's net has no driver and is unused.
+WARNING - synthesis: I/O Port audio_r[2] 's net has no driver and is unused.
+WARNING - synthesis: I/O Port audio_r[1] 's net has no driver and is unused.
+WARNING - synthesis: I/O Port audio_r[0] 's net has no driver and is unused.
+WARNING - synthesis: I/O Port audio_v[3] 's net has no driver and is unused.
+WARNING - synthesis: I/O Port audio_v[2] 's net has no driver and is unused.
+WARNING - synthesis: I/O Port audio_v[1] 's net has no driver and is unused.
+WARNING - synthesis: I/O Port audio_v[0] 's net has no driver and is unused.
+WARNING - synthesis: I/O Port sd_d[3] 's net has no driver and is unused.
+WARNING - synthesis: I/O Port sd_d[2] 's net has no driver and is unused.
+WARNING - synthesis: I/O Port sd_d[1] 's net has no driver and is unused.
+WARNING - synthesis: I/O Port sd_cmd 's net has no driver and is unused.
+WARNING - synthesis: I/O Port sd_cdn 's net has no driver and is unused.
+WARNING - synthesis: I/O Port sd_wp 's net has no driver and is unused.
+GSR instance connected to net wifi_gpio17_N_23.
+WARNING - synthesis: Initial value found on instance R_prog_release__i0 will be ignored.
+WARNING - synthesis: Initial value found on instance R_prog_release__i1 will be ignored.
+WARNING - synthesis: Initial value found on instance R_prog_release__i2 will be ignored.
+WARNING - synthesis: Initial value found on instance R_prog_release__i3 will be ignored.
+WARNING - synthesis: Initial value found on instance R_prog_release__i4 will be ignored.
+WARNING - synthesis: Initial value found on instance R_prog_release__i5 will be ignored.
+WARNING - synthesis: Initial value found on instance R_prog_release__i6 will be ignored.
+WARNING - synthesis: Initial value found on instance R_prog_release__i7 will be ignored.
+WARNING - synthesis: Initial value found on instance R_prog_release__i8 will be ignored.
+WARNING - synthesis: Initial value found on instance R_prog_release__i9 will be ignored.
+WARNING - synthesis: Initial value found on instance R_prog_release__i10 will be ignored.
+WARNING - synthesis: Initial value found on instance R_prog_release__i11 will be ignored.
+WARNING - synthesis: Initial value found on instance R_prog_release__i12 will be ignored.
+WARNING - synthesis: Initial value found on instance R_prog_release__i13 will be ignored.
+WARNING - synthesis: Initial value found on instance R_prog_release__i14 will be ignored.
+WARNING - synthesis: Initial value found on instance R_prog_release__i15 will be ignored.
+WARNING - synthesis: Initial value found on instance R_prog_release__i16 will be ignored.
+WARNING - synthesis: Initial value found on instance R_prog_release__i17 will be ignored.
+Applying 200.000000 MHz constraint to all clocks
+
+WARNING - synthesis: Mapping latch i107 to logic since no latches found in device. Possible simulation mismatch. Please check if or case statements
+WARNING - synthesis: Mapping latch i103 to logic since no latches found in device. Possible simulation mismatch. Please check if or case statements
+WARNING - synthesis: Mapping latch i111 to logic since no latches found in device. Possible simulation mismatch. Please check if or case statements
+WARNING - synthesis: Mapping latch i115 to logic since no latches found in device. Possible simulation mismatch. Please check if or case statements
+WARNING - synthesis: Mapping latch i119 to logic since no latches found in device. Possible simulation mismatch. Please check if or case statements
+WARNING - synthesis: Mapping latch i123 to logic since no latches found in device. Possible simulation mismatch. Please check if or case statements
+WARNING - synthesis: Mapping latch i127 to logic since no latches found in device. Possible simulation mismatch. Please check if or case statements
+WARNING - synthesis: No user .sdc file.
+Results of NGD DRC are available in ulx3s_passthru_wifi_drc.log.
+Loading NGL library 'C:/lscc/diamond/3.10_x64/ispfpga/sa5p00/data/sa5plib.ngl'...
+Loading NGL library 'C:/lscc/diamond/3.10_x64/ispfpga/xo2c00/data/xo2clib.ngl'...
+Loading NGL library 'C:/lscc/diamond/3.10_x64/ispfpga/mg5g00/data/mg5glib.ngl'...
+Loading NGL library 'C:/lscc/diamond/3.10_x64/ispfpga/or5g00/data/orc5glib.ngl'...
+WARNING - synthesis: logical net 'ftdi_ndsr' has no load.
+WARNING - synthesis: input pad net 'ftdi_ndsr' has no legal load.
+WARNING - synthesis: logical net 'ftdi_txden' has no load.
+WARNING - synthesis: input pad net 'ftdi_txden' has no legal load.
+WARNING - synthesis: logical net 'wifi_gpio2' has no load.
+WARNING - synthesis: input pad net 'wifi_gpio2' has no legal load.
+WARNING - synthesis: logical net 'sw[1]' has no load.
+WARNING - synthesis: input pad net 'sw[1]' has no legal load.
+WARNING - synthesis: logical net 'sw[2]' has no load.
+WARNING - synthesis: input pad net 'sw[2]' has no legal load.
+WARNING - synthesis: logical net 'sw[3]' has no load.
+WARNING - synthesis: input pad net 'sw[3]' has no legal load.
+WARNING - synthesis: logical net 'sw[4]' has no load.
+WARNING - synthesis: input pad net 'sw[4]' has no legal load.
+WARNING - synthesis: logical net 'gp[27]' has no load.
+WARNING - synthesis: input pad net 'gp[27]' has no legal load.
+WARNING - synthesis: logical net 'gp[26]' has no load.
+WARNING - synthesis: input pad net 'gp[26]' has no legal load.
+WARNING - synthesis: logical net 'gp[25]' has no load.
+WARNING - synthesis: input pad net 'gp[25]' has no legal load.
+WARNING - synthesis: logical net 'gp[24]' has no load.
+WARNING - synthesis: input pad net 'gp[24]' has no legal load.
+WARNING - synthesis: logical net 'gp[23]' has no load.
+WARNING - synthesis: input pad net 'gp[23]' has no legal load.
+WARNING - synthesis: logical net 'gp[22]' has no load.
+WARNING - synthesis: input pad net 'gp[22]' has no legal load.
+WARNING - synthesis: logical net 'gp[21]' has no load.
+WARNING - synthesis: input pad net 'gp[21]' has no legal load.
+WARNING - synthesis: logical net 'gp[20]' has no load.
+WARNING - synthesis: input pad net 'gp[20]' has no legal load.
+WARNING - synthesis: logical net 'gp[19]' has no load.
+WARNING - synthesis: input pad net 'gp[19]' has no legal load.
+WARNING - synthesis: logical net 'gp[18]' has no load.
+WARNING - synthesis: input pad net 'gp[18]' has no legal load.
+WARNING - synthesis: logical net 'gp[17]' has no load.
+WARNING - synthesis: input pad net 'gp[17]' has no legal load.
+WARNING - synthesis: logical net 'gp[16]' has no load.
+WARNING - synthesis: input pad net 'gp[16]' has no legal load.
+WARNING - synthesis: logical net 'gp[15]' has no load.
+WARNING - synthesis: input pad net 'gp[15]' has no legal load.
+WARNING - synthesis: logical net 'gp[14]' has no load.
+WARNING - synthesis: input pad net 'gp[14]' has no legal load.
+WARNING - synthesis: logical net 'gp[13]' has no load.
+WARNING - synthesis: input pad net 'gp[13]' has no legal load.
+WARNING - synthesis: logical net 'gp[12]' has no load.
+WARNING - synthesis: input pad net 'gp[12]' has no legal load.
+WARNING - synthesis: logical net 'gp[10]' has no load.
+WARNING - synthesis: input pad net 'gp[10]' has no legal load.
+WARNING - synthesis: logical net 'gp[9]' has no load.
+WARNING - synthesis: input pad net 'gp[9]' has no legal load.
+WARNING - synthesis: logical net 'gp[8]' has no load.
+WARNING - synthesis: input pad net 'gp[8]' has no legal load.
+WARNING - synthesis: logical net 'gp[7]' has no load.
+WARNING - synthesis: input pad net 'gp[7]' has no legal load.
+WARNING - synthesis: logical net 'gp[6]' has no load.
+WARNING - synthesis: input pad net 'gp[6]' has no legal load.
+WARNING - synthesis: logical net 'gp[5]' has no load.
+WARNING - synthesis: input pad net 'gp[5]' has no legal load.
+WARNING - synthesis: logical net 'gp[4]' has no load.
+WARNING - synthesis: input pad net 'gp[4]' has no legal load.
+WARNING - synthesis: logical net 'gp[3]' has no load.
+WARNING - synthesis: input pad net 'gp[3]' has no legal load.
+WARNING - synthesis: logical net 'gp[2]' has no load.
+WARNING - synthesis: input pad net 'gp[2]' has no legal load.
+WARNING - synthesis: logical net 'gp[1]' has no load.
+WARNING - synthesis: input pad net 'gp[1]' has no legal load.
+WARNING - synthesis: logical net 'gp[0]' has no load.
+WARNING - synthesis: input pad net 'gp[0]' has no legal load.
+WARNING - synthesis: logical net 'gn[27]' has no load.
+WARNING - synthesis: input pad net 'gn[27]' has no legal load.
+WARNING - synthesis: logical net 'gn[26]' has no load.
+WARNING - synthesis: input pad net 'gn[26]' has no legal load.
+WARNING - synthesis: logical net 'gn[25]' has no load.
+WARNING - synthesis: input pad net 'gn[25]' has no legal load.
+WARNING - synthesis: logical net 'gn[24]' has no load.
+WARNING - synthesis: input pad net 'gn[24]' has no legal load.
+WARNING - synthesis: logical net 'gn[23]' has no load.
+WARNING - synthesis: input pad net 'gn[23]' has no legal load.
+WARNING - synthesis: logical net 'gn[22]' has no load.
+WARNING - synthesis: input pad net 'gn[22]' has no legal load.
+WARNING - synthesis: logical net 'gn[21]' has no load.
+WARNING - synthesis: input pad net 'gn[21]' has no legal load.
+WARNING - synthesis: logical net 'gn[20]' has no load.
+WARNING - synthesis: input pad net 'gn[20]' has no legal load.
+WARNING - synthesis: logical net 'gn[19]' has no load.
+WARNING - synthesis: input pad net 'gn[19]' has no legal load.
+WARNING - synthesis: logical net 'gn[18]' has no load.
+WARNING - synthesis: input pad net 'gn[18]' has no legal load.
+WARNING - synthesis: logical net 'gn[17]' has no load.
+WARNING - synthesis: input pad net 'gn[17]' has no legal load.
+WARNING - synthesis: logical net 'gn[16]' has no load.
+WARNING - synthesis: input pad net 'gn[16]' has no legal load.
+WARNING - synthesis: logical net 'gn[15]' has no load.
+WARNING - synthesis: input pad net 'gn[15]' has no legal load.
+WARNING - synthesis: logical net 'gn[14]' has no load.
+WARNING - synthesis: input pad net 'gn[14]' has no legal load.
+WARNING - synthesis: logical net 'gn[13]' has no load.
+WARNING - synthesis: input pad net 'gn[13]' has no legal load.
+WARNING - synthesis: logical net 'gn[12]' has no load.
+WARNING - synthesis: input pad net 'gn[12]' has no legal load.
+WARNING - synthesis: logical net 'gn[11]' has no load.
+WARNING - synthesis: input pad net 'gn[11]' has no legal load.
+WARNING - synthesis: logical net 'gn[10]' has no load.
+WARNING - synthesis: input pad net 'gn[10]' has no legal load.
+WARNING - synthesis: logical net 'gn[9]' has no load.
+WARNING - synthesis: input pad net 'gn[9]' has no legal load.
+WARNING - synthesis: logical net 'gn[8]' has no load.
+WARNING - synthesis: input pad net 'gn[8]' has no legal load.
+WARNING - synthesis: logical net 'gn[7]' has no load.
+WARNING - synthesis: input pad net 'gn[7]' has no legal load.
+WARNING - synthesis: logical net 'gn[6]' has no load.
+WARNING - synthesis: input pad net 'gn[6]' has no legal load.
+WARNING - synthesis: logical net 'gn[5]' has no load.
+WARNING - synthesis: input pad net 'gn[5]' has no legal load.
+WARNING - synthesis: logical net 'gn[4]' has no load.
+WARNING - synthesis: input pad net 'gn[4]' has no legal load.
+WARNING - synthesis: logical net 'gn[3]' has no load.
+WARNING - synthesis: input pad net 'gn[3]' has no legal load.
+WARNING - synthesis: logical net 'gn[2]' has no load.
+WARNING - synthesis: input pad net 'gn[2]' has no legal load.
+WARNING - synthesis: logical net 'gn[1]' has no load.
+WARNING - synthesis: input pad net 'gn[1]' has no legal load.
+WARNING - synthesis: logical net 'gn[0]' has no load.
+WARNING - synthesis: input pad net 'gn[0]' has no legal load.
+WARNING - synthesis: logical net 'audio_l[3]' has no load.
+WARNING - synthesis: input pad net 'audio_l[3]' has no legal load.
+WARNING - synthesis: logical net 'audio_l[2]' has no load.
+WARNING - synthesis: input pad net 'audio_l[2]' has no legal load.
+WARNING - synthesis: logical net 'audio_l[1]' has no load.
+WARNING - synthesis: input pad net 'audio_l[1]' has no legal load.
+WARNING - synthesis: logical net 'audio_l[0]' has no load.
+WARNING - synthesis: input pad net 'audio_l[0]' has no legal load.
+WARNING - synthesis: logical net 'audio_r[3]' has no load.
+WARNING - synthesis: input pad net 'audio_r[3]' has no legal load.
+WARNING - synthesis: logical net 'audio_r[2]' has no load.
+WARNING - synthesis: input pad net 'audio_r[2]' has no legal load.
+WARNING - synthesis: logical net 'audio_r[1]' has no load.
+WARNING - synthesis: input pad net 'audio_r[1]' has no legal load.
+WARNING - synthesis: logical net 'audio_r[0]' has no load.
+WARNING - synthesis: input pad net 'audio_r[0]' has no legal load.
+WARNING - synthesis: logical net 'audio_v[3]' has no load.
+WARNING - synthesis: input pad net 'audio_v[3]' has no legal load.
+WARNING - synthesis: logical net 'audio_v[2]' has no load.
+WARNING - synthesis: input pad net 'audio_v[2]' has no legal load.
+WARNING - synthesis: logical net 'audio_v[1]' has no load.
+WARNING - synthesis: input pad net 'audio_v[1]' has no legal load.
+WARNING - synthesis: logical net 'audio_v[0]' has no load.
+WARNING - synthesis: input pad net 'audio_v[0]' has no legal load.
+WARNING - synthesis: logical net 'sd_d[3]' has no load.
+WARNING - synthesis: input pad net 'sd_d[3]' has no legal load.
+WARNING - synthesis: logical net 'sd_d[2]' has no load.
+WARNING - synthesis: input pad net 'sd_d[2]' has no legal load.
+WARNING - synthesis: logical net 'sd_d[1]' has no load.
+WARNING - synthesis: input pad net 'sd_d[1]' has no legal load.
+WARNING - synthesis: logical net 'sd_cdn' has no load.
+WARNING - synthesis: input pad net 'sd_cdn' has no legal load.
+WARNING - synthesis: logical net 'sd_wp' has no load.
+WARNING - synthesis: input pad net 'sd_wp' has no legal load.
+WARNING - synthesis: DRC complete with 158 warnings.
+All blocks are expanded and NGD expansion is successful.
+Writing NGD file passthru_implementation.ngd.
+
+################### Begin Area Report (ulx3s_passthru_wifi)######################
+Number of register bits => 35 of 12687 (0 % )
+CCU2C => 10
+FD1P3IX => 18
+FD1S3AX => 3
+FD1S3BX => 7
+FD1S3DX => 7
+GSR => 1
+IB => 17
+LUT4 => 37
+OB => 20
+OBZ => 1
+################### End Area Report ##################
+
+################### Begin Clock Report ######################
+Clock Nets
+Number of Clocks: 2
+  Net : clk_25mhz_c, loads : 20
+  Net : oled_clk_c_c, loads : 16
+Clock Enable Nets
+Number of Clock Enables: 1
+Top 1 highest fanout Clock Enables:
+  Net : clk_25mhz_c_enable_18, loads : 18
+Highest fanout non-clock nets
+Top 10 highest fanout non-clock nets:
+  Net : oled_csn_c_c, loads : 24
+  Net : R_prog_release_17__N_74, loads : 18
+  Net : clk_25mhz_c_enable_18, loads : 18
+  Net : ftdi_ndtr_c, loads : 6
+  Net : ftdi_nrts_c, loads : 6
+  Net : R_prog_release_17, loads : 5
+  Net : btn_c_0, loads : 4
+  Net : btn_c_6, loads : 3
+  Net : btn_c_5, loads : 3
+  Net : btn_c_4, loads : 3
+################### End Clock Report ##################
+
+<A name="lse_trs"></A><B><U><big>Timing Report Summary</big></U></B>
+--------------
+--------------------------------------------------------------------------------
+Constraint                              |   Constraint|       Actual|Levels
+--------------------------------------------------------------------------------
+                                        |             |             |
+create_clock -period 5.000000 -name     |             |             |
+clk1 [get_nets oled_clk_c_c]            |  200.000 MHz|  382.409 MHz|     2  
+                                        |             |             |
+create_clock -period 5.000000 -name     |             |             |
+clk0 [get_nets clk_25mhz_c]             |  200.000 MHz|  222.519 MHz|     3  
+                                        |             |             |
+--------------------------------------------------------------------------------
+
+
+All constraints were met.
+
+
+Peak Memory Usage: 90.105  MB
+
+--------------------------------------------------------------
+Elapsed CPU time for LSE flow : 1.375  secs
+--------------------------------------------------------------
+
+
+
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+</PRE></FONT>
+</BODY>
+</HTML>
