@@ -28,3 +28,12 @@ implementation/
 /passthru/OpenSource/obj_dir
 /blinky/OpenSource/blinky.vcd
 /blinky/OpenSource/blinky_tb
+/passthru/DiamondVerilog/passthru_tcr.dir
+reportview.xml
+promote.xml
+.run_manager.ini
+/passthru/OpenSource/ulx3s.bit
+passthru_tcr.dir
+*.sty
+.setting.ini
+passthru_tcr.dir
