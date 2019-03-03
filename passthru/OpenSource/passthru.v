@@ -26,6 +26,10 @@
 // use work.f32c_pack.all;
 // no timescale needed
 
+`include "debouncer.v"
+
+
+
 module passthru(
 /* verilator lint_off UNUSED */		 
 /* verilator lint_off UNDRIVEN */
@@ -89,7 +93,16 @@ module passthru(
 /* verilator lint_on UNUSED */
 /* verilator lint_off UNDRIVEN */
 );
-	reg  [7:0] button_press;
+	wire [7:0] button_press;
+	wire [7:0] button_debug;
+	
+	debouncer #(8) my_switch(
+		.i_clk (clk_25MHz), // input
+		.i_in  (btn),       // input
+		.o_debounced (button_press),  // output
+		.o_debug     (button_debug)   // output
+		);
+	
 	parameter [31:0] C_dummy_constant=0;
 	assign shutdown = 0;
 	wire [1:0] S_prog_in; 
@@ -162,7 +175,6 @@ module passthru(
 
 	// programming release counter
 	always @(posedge clk_25MHz) begin
-		button_press = {1'b0,btn};
 		R_prog_in <= S_prog_in;
 		if (S_prog_out == 2'b01 && R_prog_in == 2'b11) begin
 			R_prog_release <= 0; // was converted as: <= {(((C_prog_release_timeout))-((0))+1){1'b0}};
@@ -177,7 +189,7 @@ module passthru(
 	always @(posedge sd_clk, posedge wifi_gpio17) begin : P1
 		// gpio17 is OLED CSn
 		if(wifi_gpio17 == 1'b1) begin
-			R_spi_miso <= button_press; // sample button state during csn=1
+			R_spi_miso[0] <= { {(32-8){1'b0}}, button_press }; //  ; // sample button state during csn=1
 			end 
 		else begin
 		 // R_spi_miso <= {R_spi_miso[((7)) - 1:0],R_spi_miso[(7)]}; // shift to the left

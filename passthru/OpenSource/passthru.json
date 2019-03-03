@@ -14307,7 +14307,7 @@
     "passthru": {
       "attributes": {
         "top": 1,
-        "src": "passthru.v:29"
+        "src": "passthru.v:33"
       },
       "ports": {
         "clk_25MHz": {
@@ -14440,11 +14440,11 @@
         }
       },
       "cells": {
-        "$abc$772$auto$blifparse.cc:492:parse_blif$773": {
+        "$abc$1361$auto$blifparse.cc:492:parse_blif$1362": {
           "hide_name": 1,
           "type": "LUT4",
           "parameters": {
-            "INIT": 208
+            "INIT": 144
           },
           "attributes": {
             "module_not_derived": 1,
@@ -14458,18 +14458,68 @@
             "Z": "output"
           },
           "connections": {
-            "A": [ 6 ],
-            "B": [ 5 ],
-            "C": [ 13 ],
+            "A": [ 93 ],
+            "B": [ 94 ],
+            "C": [ 95 ],
             "D": [ "0" ],
-            "Z": [ 9 ]
+            "Z": [ 96 ]
           }
         },
-        "$abc$772$auto$blifparse.cc:492:parse_blif$774": {
+        "$abc$1361$auto$blifparse.cc:492:parse_blif$1363": {
           "hide_name": 1,
           "type": "LUT4",
           "parameters": {
-            "INIT": 11
+            "INIT": 36873
+          },
+          "attributes": {
+            "module_not_derived": 1,
+            "src": "/usr/local/bin/../share/yosys/ecp5/cells_map.v:72"
+          },
+          "port_directions": {
+            "A": "input",
+            "B": "input",
+            "C": "input",
+            "D": "input",
+            "Z": "output"
+          },
+          "connections": {
+            "A": [ 97 ],
+            "B": [ 98 ],
+            "C": [ 99 ],
+            "D": [ 100 ],
+            "Z": [ 95 ]
+          }
+        },
+        "$abc$1361$auto$blifparse.cc:492:parse_blif$1364": {
+          "hide_name": 1,
+          "type": "LUT4",
+          "parameters": {
+            "INIT": 36873
+          },
+          "attributes": {
+            "module_not_derived": 1,
+            "src": "/usr/local/bin/../share/yosys/ecp5/cells_map.v:72"
+          },
+          "port_directions": {
+            "A": "input",
+            "B": "input",
+            "C": "input",
+            "D": "input",
+            "Z": "output"
+          },
+          "connections": {
+            "A": [ 101 ],
+            "B": [ 102 ],
+            "C": [ 103 ],
+            "D": [ 104 ],
+            "Z": [ 105 ]
+          }
+        },
+        "$abc$1361$auto$blifparse.cc:492:parse_blif$1365": {
+          "hide_name": 1,
+          "type": "LUT4",
+          "parameters": {
+            "INIT": 8
           },
           "attributes": {
             "module_not_derived": 1,
@@ -14483,14 +14533,239 @@
             "Z": "output"
           },
           "connections": {
-            "A": [ 6 ],
-            "B": [ 5 ],
+            "A": [ 106 ],
+            "B": [ 11 ],
             "C": [ "0" ],
             "D": [ "0" ],
-            "Z": [ 8 ]
+            "Z": [ 107 ]
           }
         },
-        "$abc$772$auto$blifparse.cc:492:parse_blif$775": {
+        "$abc$1361$auto$blifparse.cc:492:parse_blif$1366": {
+          "hide_name": 1,
+          "type": "LUT4",
+          "parameters": {
+            "INIT": 2820
+          },
+          "attributes": {
+            "module_not_derived": 1,
+            "src": "/usr/local/bin/../share/yosys/ecp5/cells_map.v:72"
+          },
+          "port_directions": {
+            "A": "input",
+            "B": "input",
+            "C": "input",
+            "D": "input",
+            "Z": "output"
+          },
+          "connections": {
+            "A": [ 108 ],
+            "B": [ 109 ],
+            "C": [ 110 ],
+            "D": [ 111 ],
+            "Z": [ 112 ]
+          }
+        },
+        "$abc$1361$auto$blifparse.cc:492:parse_blif$1367": {
+          "hide_name": 1,
+          "type": "LUT4",
+          "parameters": {
+            "INIT": 256
+          },
+          "attributes": {
+            "module_not_derived": 1,
+            "src": "/usr/local/bin/../share/yosys/ecp5/cells_map.v:72"
+          },
+          "port_directions": {
+            "A": "input",
+            "B": "input",
+            "C": "input",
+            "D": "input",
+            "Z": "output"
+          },
+          "connections": {
+            "A": [ 113 ],
+            "B": [ 114 ],
+            "C": [ 115 ],
+            "D": [ 116 ],
+            "Z": [ 109 ]
+          }
+        },
+        "$abc$1361$auto$blifparse.cc:492:parse_blif$1368": {
+          "hide_name": 1,
+          "type": "LUT4",
+          "parameters": {
+            "INIT": 256
+          },
+          "attributes": {
+            "module_not_derived": 1,
+            "src": "/usr/local/bin/../share/yosys/ecp5/cells_map.v:72"
+          },
+          "port_directions": {
+            "A": "input",
+            "B": "input",
+            "C": "input",
+            "D": "input",
+            "Z": "output"
+          },
+          "connections": {
+            "A": [ 117 ],
+            "B": [ 118 ],
+            "C": [ 119 ],
+            "D": [ 120 ],
+            "Z": [ 116 ]
+          }
+        },
+        "$abc$1361$auto$blifparse.cc:492:parse_blif$1369": {
+          "hide_name": 1,
+          "type": "LUT4",
+          "parameters": {
+            "INIT": 1
+          },
+          "attributes": {
+            "module_not_derived": 1,
+            "src": "/usr/local/bin/../share/yosys/ecp5/cells_map.v:72"
+          },
+          "port_directions": {
+            "A": "input",
+            "B": "input",
+            "C": "input",
+            "D": "input",
+            "Z": "output"
+          },
+          "connections": {
+            "A": [ 121 ],
+            "B": [ 122 ],
+            "C": [ 123 ],
+            "D": [ 124 ],
+            "Z": [ 120 ]
+          }
+        },
+        "$abc$1361$auto$blifparse.cc:492:parse_blif$1370": {
+          "hide_name": 1,
+          "type": "LUT4",
+          "parameters": {
+            "INIT": 20
+          },
+          "attributes": {
+            "module_not_derived": 1,
+            "src": "/usr/local/bin/../share/yosys/ecp5/cells_map.v:68"
+          },
+          "port_directions": {
+            "A": "input",
+            "B": "input",
+            "C": "input",
+            "D": "input",
+            "Z": "output"
+          },
+          "connections": {
+            "A": [ 110 ],
+            "B": [ 125 ],
+            "C": [ 115 ],
+            "D": [ "0" ],
+            "Z": [ 126 ]
+          }
+        },
+        "$abc$1361$auto$blifparse.cc:492:parse_blif$1371": {
+          "hide_name": 1,
+          "type": "LUT4",
+          "parameters": {
+            "INIT": 16
+          },
+          "attributes": {
+            "module_not_derived": 1,
+            "src": "/usr/local/bin/../share/yosys/ecp5/cells_map.v:68"
+          },
+          "port_directions": {
+            "A": "input",
+            "B": "input",
+            "C": "input",
+            "D": "input",
+            "Z": "output"
+          },
+          "connections": {
+            "A": [ 113 ],
+            "B": [ 114 ],
+            "C": [ 116 ],
+            "D": [ "0" ],
+            "Z": [ 125 ]
+          }
+        },
+        "$abc$1361$auto$blifparse.cc:492:parse_blif$1372": {
+          "hide_name": 1,
+          "type": "LUT4",
+          "parameters": {
+            "INIT": 2820
+          },
+          "attributes": {
+            "module_not_derived": 1,
+            "src": "/usr/local/bin/../share/yosys/ecp5/cells_map.v:72"
+          },
+          "port_directions": {
+            "A": "input",
+            "B": "input",
+            "C": "input",
+            "D": "input",
+            "Z": "output"
+          },
+          "connections": {
+            "A": [ 114 ],
+            "B": [ 116 ],
+            "C": [ 110 ],
+            "D": [ 113 ],
+            "Z": [ 127 ]
+          }
+        },
+        "$abc$1361$auto$blifparse.cc:492:parse_blif$1373": {
+          "hide_name": 1,
+          "type": "LUT4",
+          "parameters": {
+            "INIT": 8
+          },
+          "attributes": {
+            "module_not_derived": 1,
+            "src": "/usr/local/bin/../share/yosys/ecp5/cells_map.v:64"
+          },
+          "port_directions": {
+            "A": "input",
+            "B": "input",
+            "C": "input",
+            "D": "input",
+            "Z": "output"
+          },
+          "connections": {
+            "A": [ 11 ],
+            "B": [ 128 ],
+            "C": [ "0" ],
+            "D": [ "0" ],
+            "Z": [ 129 ]
+          }
+        },
+        "$abc$1361$auto$blifparse.cc:492:parse_blif$1374": {
+          "hide_name": 1,
+          "type": "LUT4",
+          "parameters": {
+            "INIT": 4
+          },
+          "attributes": {
+            "module_not_derived": 1,
+            "src": "/usr/local/bin/../share/yosys/ecp5/cells_map.v:64"
+          },
+          "port_directions": {
+            "A": "input",
+            "B": "input",
+            "C": "input",
+            "D": "input",
+            "Z": "output"
+          },
+          "connections": {
+            "A": [ 130 ],
+            "B": [ 11 ],
+            "C": [ "0" ],
+            "D": [ "0" ],
+            "Z": [ 131 ]
+          }
+        },
+        "$abc$1361$auto$blifparse.cc:492:parse_blif$1375": {
           "hide_name": 1,
           "type": "LUT4",
           "parameters": {
@@ -14510,66 +14785,16 @@
           "connections": {
             "A": [ 5 ],
             "B": [ 6 ],
-            "C": [ 93 ],
-            "D": [ 94 ],
+            "C": [ 132 ],
+            "D": [ 133 ],
             "Z": [ 90 ]
           }
         },
-        "$abc$772$auto$blifparse.cc:492:parse_blif$776": {
+        "$abc$1361$auto$blifparse.cc:492:parse_blif$1376": {
           "hide_name": 1,
           "type": "LUT4",
           "parameters": {
-            "INIT": 8
-          },
-          "attributes": {
-            "module_not_derived": 1,
-            "src": "/usr/local/bin/../share/yosys/ecp5/cells_map.v:64"
-          },
-          "port_directions": {
-            "A": "input",
-            "B": "input",
-            "C": "input",
-            "D": "input",
-            "Z": "output"
-          },
-          "connections": {
-            "A": [ 95 ],
-            "B": [ 11 ],
-            "C": [ "0" ],
-            "D": [ "0" ],
-            "Z": [ 96 ]
-          }
-        },
-        "$abc$772$auto$blifparse.cc:492:parse_blif$777": {
-          "hide_name": 1,
-          "type": "LUT4",
-          "parameters": {
-            "INIT": 4
-          },
-          "attributes": {
-            "module_not_derived": 1,
-            "src": "/usr/local/bin/../share/yosys/ecp5/cells_map.v:64"
-          },
-          "port_directions": {
-            "A": "input",
-            "B": "input",
-            "C": "input",
-            "D": "input",
-            "Z": "output"
-          },
-          "connections": {
-            "A": [ 97 ],
-            "B": [ 11 ],
-            "C": [ "0" ],
-            "D": [ "0" ],
-            "Z": [ 98 ]
-          }
-        },
-        "$abc$772$auto$blifparse.cc:492:parse_blif$778": {
-          "hide_name": 1,
-          "type": "LUT4",
-          "parameters": {
-            "INIT": 120
+            "INIT": 20
           },
           "attributes": {
             "module_not_derived": 1,
@@ -14583,514 +14808,39 @@
             "Z": "output"
           },
           "connections": {
-            "A": [ 99 ],
-            "B": [ 100 ],
-            "C": [ 101 ],
-            "D": [ "0" ],
-            "Z": [ 102 ]
-          }
-        },
-        "$abc$772$auto$blifparse.cc:492:parse_blif$779": {
-          "hide_name": 1,
-          "type": "LUT4",
-          "parameters": {
-            "INIT": 32640
-          },
-          "attributes": {
-            "module_not_derived": 1,
-            "src": "/usr/local/bin/../share/yosys/ecp5/cells_map.v:72"
-          },
-          "port_directions": {
-            "A": "input",
-            "B": "input",
-            "C": "input",
-            "D": "input",
-            "Z": "output"
-          },
-          "connections": {
-            "A": [ 99 ],
-            "B": [ 100 ],
-            "C": [ 101 ],
-            "D": [ 103 ],
-            "Z": [ 104 ]
-          }
-        },
-        "$abc$772$auto$blifparse.cc:492:parse_blif$780": {
-          "hide_name": 1,
-          "type": "LUT4",
-          "parameters": {
-            "INIT": 6
-          },
-          "attributes": {
-            "module_not_derived": 1,
-            "src": "/usr/local/bin/../share/yosys/ecp5/cells_map.v:64"
-          },
-          "port_directions": {
-            "A": "input",
-            "B": "input",
-            "C": "input",
-            "D": "input",
-            "Z": "output"
-          },
-          "connections": {
-            "A": [ 105 ],
-            "B": [ 106 ],
-            "C": [ "0" ],
-            "D": [ "0" ],
-            "Z": [ 107 ]
-          }
-        },
-        "$abc$772$auto$blifparse.cc:492:parse_blif$781": {
-          "hide_name": 1,
-          "type": "LUT4",
-          "parameters": {
-            "INIT": 32768
-          },
-          "attributes": {
-            "module_not_derived": 1,
-            "src": "/usr/local/bin/../share/yosys/ecp5/cells_map.v:72"
-          },
-          "port_directions": {
-            "A": "input",
-            "B": "input",
-            "C": "input",
-            "D": "input",
-            "Z": "output"
-          },
-          "connections": {
-            "A": [ 99 ],
-            "B": [ 100 ],
-            "C": [ 101 ],
-            "D": [ 103 ],
-            "Z": [ 105 ]
-          }
-        },
-        "$abc$772$auto$blifparse.cc:492:parse_blif$782": {
-          "hide_name": 1,
-          "type": "LUT4",
-          "parameters": {
-            "INIT": 120
-          },
-          "attributes": {
-            "module_not_derived": 1,
-            "src": "/usr/local/bin/../share/yosys/ecp5/cells_map.v:68"
-          },
-          "port_directions": {
-            "A": "input",
-            "B": "input",
-            "C": "input",
-            "D": "input",
-            "Z": "output"
-          },
-          "connections": {
-            "A": [ 105 ],
-            "B": [ 106 ],
-            "C": [ 108 ],
-            "D": [ "0" ],
-            "Z": [ 109 ]
-          }
-        },
-        "$abc$772$auto$blifparse.cc:492:parse_blif$783": {
-          "hide_name": 1,
-          "type": "LUT4",
-          "parameters": {
-            "INIT": 32640
-          },
-          "attributes": {
-            "module_not_derived": 1,
-            "src": "/usr/local/bin/../share/yosys/ecp5/cells_map.v:72"
-          },
-          "port_directions": {
-            "A": "input",
-            "B": "input",
-            "C": "input",
-            "D": "input",
-            "Z": "output"
-          },
-          "connections": {
-            "A": [ 105 ],
-            "B": [ 108 ],
-            "C": [ 106 ],
-            "D": [ 110 ],
-            "Z": [ 111 ]
-          }
-        },
-        "$abc$772$auto$blifparse.cc:492:parse_blif$784": {
-          "hide_name": 1,
-          "type": "LUT4",
-          "parameters": {
-            "INIT": 6
-          },
-          "attributes": {
-            "module_not_derived": 1,
-            "src": "/usr/local/bin/../share/yosys/ecp5/cells_map.v:64"
-          },
-          "port_directions": {
-            "A": "input",
-            "B": "input",
-            "C": "input",
-            "D": "input",
-            "Z": "output"
-          },
-          "connections": {
-            "A": [ 112 ],
-            "B": [ 113 ],
-            "C": [ "0" ],
-            "D": [ "0" ],
-            "Z": [ 114 ]
-          }
-        },
-        "$abc$772$auto$blifparse.cc:492:parse_blif$785": {
-          "hide_name": 1,
-          "type": "LUT4",
-          "parameters": {
-            "INIT": 32768
-          },
-          "attributes": {
-            "module_not_derived": 1,
-            "src": "/usr/local/bin/../share/yosys/ecp5/cells_map.v:72"
-          },
-          "port_directions": {
-            "A": "input",
-            "B": "input",
-            "C": "input",
-            "D": "input",
-            "Z": "output"
-          },
-          "connections": {
-            "A": [ 105 ],
-            "B": [ 108 ],
-            "C": [ 106 ],
-            "D": [ 110 ],
-            "Z": [ 112 ]
-          }
-        },
-        "$abc$772$auto$blifparse.cc:492:parse_blif$786": {
-          "hide_name": 1,
-          "type": "LUT4",
-          "parameters": {
-            "INIT": 120
-          },
-          "attributes": {
-            "module_not_derived": 1,
-            "src": "/usr/local/bin/../share/yosys/ecp5/cells_map.v:68"
-          },
-          "port_directions": {
-            "A": "input",
-            "B": "input",
-            "C": "input",
-            "D": "input",
-            "Z": "output"
-          },
-          "connections": {
-            "A": [ 112 ],
-            "B": [ 113 ],
-            "C": [ 115 ],
-            "D": [ "0" ],
-            "Z": [ 116 ]
-          }
-        },
-        "$abc$772$auto$blifparse.cc:492:parse_blif$787": {
-          "hide_name": 1,
-          "type": "LUT4",
-          "parameters": {
-            "INIT": 32640
-          },
-          "attributes": {
-            "module_not_derived": 1,
-            "src": "/usr/local/bin/../share/yosys/ecp5/cells_map.v:72"
-          },
-          "port_directions": {
-            "A": "input",
-            "B": "input",
-            "C": "input",
-            "D": "input",
-            "Z": "output"
-          },
-          "connections": {
-            "A": [ 112 ],
-            "B": [ 113 ],
-            "C": [ 115 ],
-            "D": [ 117 ],
-            "Z": [ 118 ]
-          }
-        },
-        "$abc$772$auto$blifparse.cc:492:parse_blif$788": {
-          "hide_name": 1,
-          "type": "LUT4",
-          "parameters": {
-            "INIT": 6
-          },
-          "attributes": {
-            "module_not_derived": 1,
-            "src": "/usr/local/bin/../share/yosys/ecp5/cells_map.v:64"
-          },
-          "port_directions": {
-            "A": "input",
-            "B": "input",
-            "C": "input",
-            "D": "input",
-            "Z": "output"
-          },
-          "connections": {
-            "A": [ 119 ],
-            "B": [ 120 ],
-            "C": [ "0" ],
-            "D": [ "0" ],
-            "Z": [ 121 ]
-          }
-        },
-        "$abc$772$auto$blifparse.cc:492:parse_blif$789": {
-          "hide_name": 1,
-          "type": "LUT4",
-          "parameters": {
-            "INIT": 32768
-          },
-          "attributes": {
-            "module_not_derived": 1,
-            "src": "/usr/local/bin/../share/yosys/ecp5/cells_map.v:72"
-          },
-          "port_directions": {
-            "A": "input",
-            "B": "input",
-            "C": "input",
-            "D": "input",
-            "Z": "output"
-          },
-          "connections": {
-            "A": [ 112 ],
-            "B": [ 113 ],
-            "C": [ 115 ],
-            "D": [ 117 ],
-            "Z": [ 119 ]
-          }
-        },
-        "$abc$772$auto$blifparse.cc:492:parse_blif$790": {
-          "hide_name": 1,
-          "type": "LUT4",
-          "parameters": {
-            "INIT": 120
-          },
-          "attributes": {
-            "module_not_derived": 1,
-            "src": "/usr/local/bin/../share/yosys/ecp5/cells_map.v:68"
-          },
-          "port_directions": {
-            "A": "input",
-            "B": "input",
-            "C": "input",
-            "D": "input",
-            "Z": "output"
-          },
-          "connections": {
-            "A": [ 119 ],
-            "B": [ 120 ],
-            "C": [ 122 ],
-            "D": [ "0" ],
-            "Z": [ 123 ]
-          }
-        },
-        "$abc$772$auto$blifparse.cc:492:parse_blif$791": {
-          "hide_name": 1,
-          "type": "LUT4",
-          "parameters": {
-            "INIT": 32640
-          },
-          "attributes": {
-            "module_not_derived": 1,
-            "src": "/usr/local/bin/../share/yosys/ecp5/cells_map.v:72"
-          },
-          "port_directions": {
-            "A": "input",
-            "B": "input",
-            "C": "input",
-            "D": "input",
-            "Z": "output"
-          },
-          "connections": {
-            "A": [ 119 ],
-            "B": [ 120 ],
-            "C": [ 122 ],
-            "D": [ 124 ],
-            "Z": [ 125 ]
-          }
-        },
-        "$abc$772$auto$blifparse.cc:492:parse_blif$792": {
-          "hide_name": 1,
-          "type": "LUT4",
-          "parameters": {
-            "INIT": 6
-          },
-          "attributes": {
-            "module_not_derived": 1,
-            "src": "/usr/local/bin/../share/yosys/ecp5/cells_map.v:64"
-          },
-          "port_directions": {
-            "A": "input",
-            "B": "input",
-            "C": "input",
-            "D": "input",
-            "Z": "output"
-          },
-          "connections": {
-            "A": [ 126 ],
-            "B": [ 127 ],
-            "C": [ "0" ],
-            "D": [ "0" ],
-            "Z": [ 128 ]
-          }
-        },
-        "$abc$772$auto$blifparse.cc:492:parse_blif$793": {
-          "hide_name": 1,
-          "type": "LUT4",
-          "parameters": {
-            "INIT": 32768
-          },
-          "attributes": {
-            "module_not_derived": 1,
-            "src": "/usr/local/bin/../share/yosys/ecp5/cells_map.v:72"
-          },
-          "port_directions": {
-            "A": "input",
-            "B": "input",
-            "C": "input",
-            "D": "input",
-            "Z": "output"
-          },
-          "connections": {
-            "A": [ 119 ],
-            "B": [ 120 ],
-            "C": [ 122 ],
-            "D": [ 124 ],
-            "Z": [ 126 ]
-          }
-        },
-        "$abc$772$auto$blifparse.cc:492:parse_blif$794": {
-          "hide_name": 1,
-          "type": "LUT4",
-          "parameters": {
-            "INIT": 120
-          },
-          "attributes": {
-            "module_not_derived": 1,
-            "src": "/usr/local/bin/../share/yosys/ecp5/cells_map.v:68"
-          },
-          "port_directions": {
-            "A": "input",
-            "B": "input",
-            "C": "input",
-            "D": "input",
-            "Z": "output"
-          },
-          "connections": {
-            "A": [ 126 ],
-            "B": [ 127 ],
-            "C": [ 129 ],
-            "D": [ "0" ],
-            "Z": [ 130 ]
-          }
-        },
-        "$abc$772$auto$blifparse.cc:492:parse_blif$795": {
-          "hide_name": 1,
-          "type": "LUT4",
-          "parameters": {
-            "INIT": 32640
-          },
-          "attributes": {
-            "module_not_derived": 1,
-            "src": "/usr/local/bin/../share/yosys/ecp5/cells_map.v:72"
-          },
-          "port_directions": {
-            "A": "input",
-            "B": "input",
-            "C": "input",
-            "D": "input",
-            "Z": "output"
-          },
-          "connections": {
-            "A": [ 126 ],
-            "B": [ 127 ],
-            "C": [ 129 ],
-            "D": [ 131 ],
-            "Z": [ 132 ]
-          }
-        },
-        "$abc$772$auto$blifparse.cc:492:parse_blif$796": {
-          "hide_name": 1,
-          "type": "LUT4",
-          "parameters": {
-            "INIT": 6
-          },
-          "attributes": {
-            "module_not_derived": 1,
-            "src": "/usr/local/bin/../share/yosys/ecp5/cells_map.v:64"
-          },
-          "port_directions": {
-            "A": "input",
-            "B": "input",
-            "C": "input",
-            "D": "input",
-            "Z": "output"
-          },
-          "connections": {
-            "A": [ 133 ],
+            "A": [ 110 ],
             "B": [ 134 ],
-            "C": [ "0" ],
-            "D": [ "0" ],
-            "Z": [ 135 ]
-          }
-        },
-        "$abc$772$auto$blifparse.cc:492:parse_blif$797": {
-          "hide_name": 1,
-          "type": "LUT4",
-          "parameters": {
-            "INIT": 32768
-          },
-          "attributes": {
-            "module_not_derived": 1,
-            "src": "/usr/local/bin/../share/yosys/ecp5/cells_map.v:72"
-          },
-          "port_directions": {
-            "A": "input",
-            "B": "input",
-            "C": "input",
-            "D": "input",
-            "Z": "output"
-          },
-          "connections": {
-            "A": [ 126 ],
-            "B": [ 127 ],
-            "C": [ 129 ],
-            "D": [ 131 ],
-            "Z": [ 133 ]
-          }
-        },
-        "$abc$772$auto$blifparse.cc:492:parse_blif$798": {
-          "hide_name": 1,
-          "type": "LUT4",
-          "parameters": {
-            "INIT": 120
-          },
-          "attributes": {
-            "module_not_derived": 1,
-            "src": "/usr/local/bin/../share/yosys/ecp5/cells_map.v:68"
-          },
-          "port_directions": {
-            "A": "input",
-            "B": "input",
-            "C": "input",
-            "D": "input",
-            "Z": "output"
-          },
-          "connections": {
-            "A": [ 133 ],
-            "B": [ 134 ],
-            "C": [ 94 ],
+            "C": [ 135 ],
             "D": [ "0" ],
             "Z": [ 136 ]
           }
         },
-        "$abc$772$auto$blifparse.cc:492:parse_blif$799": {
+        "$abc$1361$auto$blifparse.cc:492:parse_blif$1377": {
+          "hide_name": 1,
+          "type": "LUT4",
+          "parameters": {
+            "INIT": 16
+          },
+          "attributes": {
+            "module_not_derived": 1,
+            "src": "/usr/local/bin/../share/yosys/ecp5/cells_map.v:68"
+          },
+          "port_directions": {
+            "A": "input",
+            "B": "input",
+            "C": "input",
+            "D": "input",
+            "Z": "output"
+          },
+          "connections": {
+            "A": [ 108 ],
+            "B": [ 111 ],
+            "C": [ 109 ],
+            "D": [ "0" ],
+            "Z": [ 134 ]
+          }
+        },
+        "$abc$1361$auto$blifparse.cc:492:parse_blif$1378": {
           "hide_name": 1,
           "type": "LUT4",
           "parameters": {
@@ -15108,14 +14858,14 @@
             "Z": "output"
           },
           "connections": {
-            "A": [ 11 ],
+            "A": [ 110 ],
             "B": [ 137 ],
             "C": [ "0" ],
             "D": [ "0" ],
             "Z": [ 138 ]
           }
         },
-        "$abc$772$auto$blifparse.cc:492:parse_blif$800": {
+        "$abc$1361$auto$blifparse.cc:492:parse_blif$1379": {
           "hide_name": 1,
           "type": "LUT4",
           "parameters": {
@@ -15133,22 +14883,22 @@
             "Z": "output"
           },
           "connections": {
-            "A": [ 137 ],
+            "A": [ 139 ],
             "B": [ 11 ],
             "C": [ "0" ],
             "D": [ "0" ],
-            "Z": [ 139 ]
+            "Z": [ 140 ]
           }
         },
-        "$abc$772$auto$blifparse.cc:492:parse_blif$801": {
+        "$abc$1361$auto$blifparse.cc:492:parse_blif$1380": {
           "hide_name": 1,
           "type": "LUT4",
           "parameters": {
-            "INIT": 4
+            "INIT": 20
           },
           "attributes": {
             "module_not_derived": 1,
-            "src": "/usr/local/bin/../share/yosys/ecp5/cells_map.v:64"
+            "src": "/usr/local/bin/../share/yosys/ecp5/cells_map.v:68"
           },
           "port_directions": {
             "A": "input",
@@ -15158,39 +14908,39 @@
             "Z": "output"
           },
           "connections": {
-            "A": [ 140 ],
-            "B": [ 11 ],
-            "C": [ "0" ],
-            "D": [ "0" ],
-            "Z": [ 141 ]
-          }
-        },
-        "$abc$772$auto$blifparse.cc:492:parse_blif$802": {
-          "hide_name": 1,
-          "type": "LUT4",
-          "parameters": {
-            "INIT": 4
-          },
-          "attributes": {
-            "module_not_derived": 1,
-            "src": "/usr/local/bin/../share/yosys/ecp5/cells_map.v:64"
-          },
-          "port_directions": {
-            "A": "input",
-            "B": "input",
-            "C": "input",
-            "D": "input",
-            "Z": "output"
-          },
-          "connections": {
-            "A": [ 142 ],
-            "B": [ 11 ],
-            "C": [ "0" ],
+            "A": [ 110 ],
+            "B": [ 141 ],
+            "C": [ 142 ],
             "D": [ "0" ],
             "Z": [ 143 ]
           }
         },
-        "$abc$772$auto$blifparse.cc:492:parse_blif$803": {
+        "$abc$1361$auto$blifparse.cc:492:parse_blif$1381": {
+          "hide_name": 1,
+          "type": "LUT4",
+          "parameters": {
+            "INIT": 256
+          },
+          "attributes": {
+            "module_not_derived": 1,
+            "src": "/usr/local/bin/../share/yosys/ecp5/cells_map.v:72"
+          },
+          "port_directions": {
+            "A": "input",
+            "B": "input",
+            "C": "input",
+            "D": "input",
+            "Z": "output"
+          },
+          "connections": {
+            "A": [ 135 ],
+            "B": [ 108 ],
+            "C": [ 111 ],
+            "D": [ 109 ],
+            "Z": [ 141 ]
+          }
+        },
+        "$abc$1361$auto$blifparse.cc:492:parse_blif$1382": {
           "hide_name": 1,
           "type": "LUT4",
           "parameters": {
@@ -15215,7 +14965,82 @@
             "Z": [ 145 ]
           }
         },
-        "$abc$772$auto$blifparse.cc:492:parse_blif$804": {
+        "$abc$1361$auto$blifparse.cc:492:parse_blif$1383": {
+          "hide_name": 1,
+          "type": "LUT4",
+          "parameters": {
+            "INIT": 2820
+          },
+          "attributes": {
+            "module_not_derived": 1,
+            "src": "/usr/local/bin/../share/yosys/ecp5/cells_map.v:72"
+          },
+          "port_directions": {
+            "A": "input",
+            "B": "input",
+            "C": "input",
+            "D": "input",
+            "Z": "output"
+          },
+          "connections": {
+            "A": [ 142 ],
+            "B": [ 141 ],
+            "C": [ 110 ],
+            "D": [ 146 ],
+            "Z": [ 147 ]
+          }
+        },
+        "$abc$1361$auto$blifparse.cc:492:parse_blif$1384": {
+          "hide_name": 1,
+          "type": "LUT4",
+          "parameters": {
+            "INIT": 1
+          },
+          "attributes": {
+            "module_not_derived": 1,
+            "src": "/usr/local/bin/../share/yosys/ecp5/cells_map.v:64"
+          },
+          "port_directions": {
+            "A": "input",
+            "B": "input",
+            "C": "input",
+            "D": "input",
+            "Z": "output"
+          },
+          "connections": {
+            "A": [ 148 ],
+            "B": [ 110 ],
+            "C": [ "0" ],
+            "D": [ "0" ],
+            "Z": [ 149 ]
+          }
+        },
+        "$abc$1361$auto$blifparse.cc:492:parse_blif$1385": {
+          "hide_name": 1,
+          "type": "LUT4",
+          "parameters": {
+            "INIT": 4335
+          },
+          "attributes": {
+            "module_not_derived": 1,
+            "src": "/usr/local/bin/../share/yosys/ecp5/cells_map.v:72"
+          },
+          "port_directions": {
+            "A": "input",
+            "B": "input",
+            "C": "input",
+            "D": "input",
+            "Z": "output"
+          },
+          "connections": {
+            "A": [ 146 ],
+            "B": [ 142 ],
+            "C": [ 141 ],
+            "D": [ 150 ],
+            "Z": [ 148 ]
+          }
+        },
+        "$abc$1361$auto$blifparse.cc:492:parse_blif$1386": {
           "hide_name": 1,
           "type": "LUT4",
           "parameters": {
@@ -15234,13 +15059,188 @@
           },
           "connections": {
             "A": [ 11 ],
-            "B": [ 146 ],
+            "B": [ 151 ],
             "C": [ "0" ],
             "D": [ "0" ],
-            "Z": [ 147 ]
+            "Z": [ 152 ]
           }
         },
-        "$abc$772$auto$blifparse.cc:492:parse_blif$805": {
+        "$abc$1361$auto$blifparse.cc:492:parse_blif$1387": {
+          "hide_name": 1,
+          "type": "LUT4",
+          "parameters": {
+            "INIT": 8
+          },
+          "attributes": {
+            "module_not_derived": 1,
+            "src": "/usr/local/bin/../share/yosys/ecp5/cells_map.v:64"
+          },
+          "port_directions": {
+            "A": "input",
+            "B": "input",
+            "C": "input",
+            "D": "input",
+            "Z": "output"
+          },
+          "connections": {
+            "A": [ 153 ],
+            "B": [ 11 ],
+            "C": [ "0" ],
+            "D": [ "0" ],
+            "Z": [ 154 ]
+          }
+        },
+        "$abc$1361$auto$blifparse.cc:492:parse_blif$1388": {
+          "hide_name": 1,
+          "type": "LUT4",
+          "parameters": {
+            "INIT": 248
+          },
+          "attributes": {
+            "module_not_derived": 1,
+            "src": "/usr/local/bin/../share/yosys/ecp5/cells_map.v:68"
+          },
+          "port_directions": {
+            "A": "input",
+            "B": "input",
+            "C": "input",
+            "D": "input",
+            "Z": "output"
+          },
+          "connections": {
+            "A": [ 155 ],
+            "B": [ 156 ],
+            "C": [ 110 ],
+            "D": [ "0" ],
+            "Z": [ 157 ]
+          }
+        },
+        "$abc$1361$auto$blifparse.cc:492:parse_blif$1389": {
+          "hide_name": 1,
+          "type": "LUT4",
+          "parameters": {
+            "INIT": 4096
+          },
+          "attributes": {
+            "module_not_derived": 1,
+            "src": "/usr/local/bin/../share/yosys/ecp5/cells_map.v:72"
+          },
+          "port_directions": {
+            "A": "input",
+            "B": "input",
+            "C": "input",
+            "D": "input",
+            "Z": "output"
+          },
+          "connections": {
+            "A": [ 135 ],
+            "B": [ 118 ],
+            "C": [ 158 ],
+            "D": [ 159 ],
+            "Z": [ 156 ]
+          }
+        },
+        "$abc$1361$auto$blifparse.cc:492:parse_blif$1390": {
+          "hide_name": 1,
+          "type": "LUT4",
+          "parameters": {
+            "INIT": 16
+          },
+          "attributes": {
+            "module_not_derived": 1,
+            "src": "/usr/local/bin/../share/yosys/ecp5/cells_map.v:68"
+          },
+          "port_directions": {
+            "A": "input",
+            "B": "input",
+            "C": "input",
+            "D": "input",
+            "Z": "output"
+          },
+          "connections": {
+            "A": [ 146 ],
+            "B": [ 124 ],
+            "C": [ 160 ],
+            "D": [ "0" ],
+            "Z": [ 158 ]
+          }
+        },
+        "$abc$1361$auto$blifparse.cc:492:parse_blif$1391": {
+          "hide_name": 1,
+          "type": "LUT4",
+          "parameters": {
+            "INIT": 1
+          },
+          "attributes": {
+            "module_not_derived": 1,
+            "src": "/usr/local/bin/../share/yosys/ecp5/cells_map.v:72"
+          },
+          "port_directions": {
+            "A": "input",
+            "B": "input",
+            "C": "input",
+            "D": "input",
+            "Z": "output"
+          },
+          "connections": {
+            "A": [ 108 ],
+            "B": [ 113 ],
+            "C": [ 117 ],
+            "D": [ 121 ],
+            "Z": [ 160 ]
+          }
+        },
+        "$abc$1361$auto$blifparse.cc:492:parse_blif$1392": {
+          "hide_name": 1,
+          "type": "LUT4",
+          "parameters": {
+            "INIT": 1
+          },
+          "attributes": {
+            "module_not_derived": 1,
+            "src": "/usr/local/bin/../share/yosys/ecp5/cells_map.v:72"
+          },
+          "port_directions": {
+            "A": "input",
+            "B": "input",
+            "C": "input",
+            "D": "input",
+            "Z": "output"
+          },
+          "connections": {
+            "A": [ 111 ],
+            "B": [ 142 ],
+            "C": [ 150 ],
+            "D": [ 161 ],
+            "Z": [ 159 ]
+          }
+        },
+        "$abc$1361$auto$blifparse.cc:492:parse_blif$1393": {
+          "hide_name": 1,
+          "type": "LUT4",
+          "parameters": {
+            "INIT": 1
+          },
+          "attributes": {
+            "module_not_derived": 1,
+            "src": "/usr/local/bin/../share/yosys/ecp5/cells_map.v:72"
+          },
+          "port_directions": {
+            "A": "input",
+            "B": "input",
+            "C": "input",
+            "D": "input",
+            "Z": "output"
+          },
+          "connections": {
+            "A": [ 123 ],
+            "B": [ 119 ],
+            "C": [ 114 ],
+            "D": [ 115 ],
+            "Z": [ 155 ]
+          }
+        },
+        "$abc$1361$auto$blifparse.cc:492:parse_blif$1394": {
           "hide_name": 1,
           "type": "LUT4",
           "parameters": {
@@ -15258,14 +15258,264 @@
             "Z": "output"
           },
           "connections": {
-            "A": [ 148 ],
+            "A": [ 151 ],
             "B": [ 11 ],
             "C": [ "0" ],
             "D": [ "0" ],
-            "Z": [ 149 ]
+            "Z": [ 162 ]
           }
         },
-        "$abc$772$auto$blifparse.cc:492:parse_blif$806": {
+        "$abc$1361$auto$blifparse.cc:492:parse_blif$1395": {
+          "hide_name": 1,
+          "type": "LUT4",
+          "parameters": {
+            "INIT": 14
+          },
+          "attributes": {
+            "module_not_derived": 1,
+            "src": "/usr/local/bin/../share/yosys/ecp5/cells_map.v:64"
+          },
+          "port_directions": {
+            "A": "input",
+            "B": "input",
+            "C": "input",
+            "D": "input",
+            "Z": "output"
+          },
+          "connections": {
+            "A": [ 163 ],
+            "B": [ 164 ],
+            "C": [ "0" ],
+            "D": [ "0" ],
+            "Z": [ 165 ]
+          }
+        },
+        "$abc$1361$auto$blifparse.cc:492:parse_blif$1396": {
+          "hide_name": 1,
+          "type": "LUT4",
+          "parameters": {
+            "INIT": 2820
+          },
+          "attributes": {
+            "module_not_derived": 1,
+            "src": "/usr/local/bin/../share/yosys/ecp5/cells_map.v:72"
+          },
+          "port_directions": {
+            "A": "input",
+            "B": "input",
+            "C": "input",
+            "D": "input",
+            "Z": "output"
+          },
+          "connections": {
+            "A": [ 118 ],
+            "B": [ 120 ],
+            "C": [ 110 ],
+            "D": [ 119 ],
+            "Z": [ 166 ]
+          }
+        },
+        "$abc$1361$auto$blifparse.cc:492:parse_blif$1397": {
+          "hide_name": 1,
+          "type": "LUT4",
+          "parameters": {
+            "INIT": 20
+          },
+          "attributes": {
+            "module_not_derived": 1,
+            "src": "/usr/local/bin/../share/yosys/ecp5/cells_map.v:68"
+          },
+          "port_directions": {
+            "A": "input",
+            "B": "input",
+            "C": "input",
+            "D": "input",
+            "Z": "output"
+          },
+          "connections": {
+            "A": [ 110 ],
+            "B": [ 120 ],
+            "C": [ 118 ],
+            "D": [ "0" ],
+            "Z": [ 167 ]
+          }
+        },
+        "$abc$1361$auto$blifparse.cc:492:parse_blif$1398": {
+          "hide_name": 1,
+          "type": "LUT4",
+          "parameters": {
+            "INIT": 208
+          },
+          "attributes": {
+            "module_not_derived": 1,
+            "src": "/usr/local/bin/../share/yosys/ecp5/cells_map.v:68"
+          },
+          "port_directions": {
+            "A": "input",
+            "B": "input",
+            "C": "input",
+            "D": "input",
+            "Z": "output"
+          },
+          "connections": {
+            "A": [ 6 ],
+            "B": [ 5 ],
+            "C": [ 13 ],
+            "D": [ "0" ],
+            "Z": [ 9 ]
+          }
+        },
+        "$abc$1361$auto$blifparse.cc:492:parse_blif$1399": {
+          "hide_name": 1,
+          "type": "LUT4",
+          "parameters": {
+            "INIT": 8
+          },
+          "attributes": {
+            "module_not_derived": 1,
+            "src": "/usr/local/bin/../share/yosys/ecp5/cells_map.v:64"
+          },
+          "port_directions": {
+            "A": "input",
+            "B": "input",
+            "C": "input",
+            "D": "input",
+            "Z": "output"
+          },
+          "connections": {
+            "A": [ 11 ],
+            "B": [ 139 ],
+            "C": [ "0" ],
+            "D": [ "0" ],
+            "Z": [ 168 ]
+          }
+        },
+        "$abc$1361$auto$blifparse.cc:492:parse_blif$1400": {
+          "hide_name": 1,
+          "type": "LUT4",
+          "parameters": {
+            "INIT": 11
+          },
+          "attributes": {
+            "module_not_derived": 1,
+            "src": "/usr/local/bin/../share/yosys/ecp5/cells_map.v:64"
+          },
+          "port_directions": {
+            "A": "input",
+            "B": "input",
+            "C": "input",
+            "D": "input",
+            "Z": "output"
+          },
+          "connections": {
+            "A": [ 6 ],
+            "B": [ 5 ],
+            "C": [ "0" ],
+            "D": [ "0" ],
+            "Z": [ 8 ]
+          }
+        },
+        "$abc$1361$auto$blifparse.cc:492:parse_blif$1401": {
+          "hide_name": 1,
+          "type": "LUT4",
+          "parameters": {
+            "INIT": 4
+          },
+          "attributes": {
+            "module_not_derived": 1,
+            "src": "/usr/local/bin/../share/yosys/ecp5/cells_map.v:64"
+          },
+          "port_directions": {
+            "A": "input",
+            "B": "input",
+            "C": "input",
+            "D": "input",
+            "Z": "output"
+          },
+          "connections": {
+            "A": [ 106 ],
+            "B": [ 11 ],
+            "C": [ "0" ],
+            "D": [ "0" ],
+            "Z": [ 169 ]
+          }
+        },
+        "$abc$1361$auto$blifparse.cc:492:parse_blif$1402": {
+          "hide_name": 1,
+          "type": "LUT4",
+          "parameters": {
+            "INIT": 65
+          },
+          "attributes": {
+            "module_not_derived": 1,
+            "src": "/usr/local/bin/../share/yosys/ecp5/cells_map.v:68"
+          },
+          "port_directions": {
+            "A": "input",
+            "B": "input",
+            "C": "input",
+            "D": "input",
+            "Z": "output"
+          },
+          "connections": {
+            "A": [ 110 ],
+            "B": [ 123 ],
+            "C": [ 122 ],
+            "D": [ "0" ],
+            "Z": [ 170 ]
+          }
+        },
+        "$abc$1361$auto$blifparse.cc:492:parse_blif$1403": {
+          "hide_name": 1,
+          "type": "LUT4",
+          "parameters": {
+            "INIT": 4
+          },
+          "attributes": {
+            "module_not_derived": 1,
+            "src": "/usr/local/bin/../share/yosys/ecp5/cells_map.v:64"
+          },
+          "port_directions": {
+            "A": "input",
+            "B": "input",
+            "C": "input",
+            "D": "input",
+            "Z": "output"
+          },
+          "connections": {
+            "A": [ 171 ],
+            "B": [ 11 ],
+            "C": [ "0" ],
+            "D": [ "0" ],
+            "Z": [ 172 ]
+          }
+        },
+        "$abc$1361$auto$blifparse.cc:492:parse_blif$1404": {
+          "hide_name": 1,
+          "type": "LUT4",
+          "parameters": {
+            "INIT": 4
+          },
+          "attributes": {
+            "module_not_derived": 1,
+            "src": "/usr/local/bin/../share/yosys/ecp5/cells_map.v:64"
+          },
+          "port_directions": {
+            "A": "input",
+            "B": "input",
+            "C": "input",
+            "D": "input",
+            "Z": "output"
+          },
+          "connections": {
+            "A": [ 128 ],
+            "B": [ 11 ],
+            "C": [ "0" ],
+            "D": [ "0" ],
+            "Z": [ 173 ]
+          }
+        },
+        "$abc$1361$auto$blifparse.cc:492:parse_blif$1405": {
           "hide_name": 1,
           "type": "LUT4",
           "parameters": {
@@ -15287,10 +15537,710 @@
             "B": [ 144 ],
             "C": [ "0" ],
             "D": [ "0" ],
-            "Z": [ 150 ]
+            "Z": [ 174 ]
           }
         },
-        "$abc$772$auto$blifparse.cc:492:parse_blif$807": {
+        "$abc$1361$auto$blifparse.cc:492:parse_blif$1406": {
+          "hide_name": 1,
+          "type": "LUT4",
+          "parameters": {
+            "INIT": 8
+          },
+          "attributes": {
+            "module_not_derived": 1,
+            "src": "/usr/local/bin/../share/yosys/ecp5/cells_map.v:64"
+          },
+          "port_directions": {
+            "A": "input",
+            "B": "input",
+            "C": "input",
+            "D": "input",
+            "Z": "output"
+          },
+          "connections": {
+            "A": [ 171 ],
+            "B": [ 11 ],
+            "C": [ "0" ],
+            "D": [ "0" ],
+            "Z": [ 175 ]
+          }
+        },
+        "$abc$1361$auto$blifparse.cc:492:parse_blif$1407": {
+          "hide_name": 1,
+          "type": "LUT4",
+          "parameters": {
+            "INIT": 20
+          },
+          "attributes": {
+            "module_not_derived": 1,
+            "src": "/usr/local/bin/../share/yosys/ecp5/cells_map.v:68"
+          },
+          "port_directions": {
+            "A": "input",
+            "B": "input",
+            "C": "input",
+            "D": "input",
+            "Z": "output"
+          },
+          "connections": {
+            "A": [ 110 ],
+            "B": [ 176 ],
+            "C": [ 161 ],
+            "D": [ "0" ],
+            "Z": [ 177 ]
+          }
+        },
+        "$abc$1361$auto$blifparse.cc:492:parse_blif$1408": {
+          "hide_name": 1,
+          "type": "LUT4",
+          "parameters": {
+            "INIT": 256
+          },
+          "attributes": {
+            "module_not_derived": 1,
+            "src": "/usr/local/bin/../share/yosys/ecp5/cells_map.v:72"
+          },
+          "port_directions": {
+            "A": "input",
+            "B": "input",
+            "C": "input",
+            "D": "input",
+            "Z": "output"
+          },
+          "connections": {
+            "A": [ 146 ],
+            "B": [ 142 ],
+            "C": [ 150 ],
+            "D": [ 141 ],
+            "Z": [ 176 ]
+          }
+        },
+        "$abc$1361$auto$blifparse.cc:492:parse_blif$1409": {
+          "hide_name": 1,
+          "type": "LUT4",
+          "parameters": {
+            "INIT": 20
+          },
+          "attributes": {
+            "module_not_derived": 1,
+            "src": "/usr/local/bin/../share/yosys/ecp5/cells_map.v:68"
+          },
+          "port_directions": {
+            "A": "input",
+            "B": "input",
+            "C": "input",
+            "D": "input",
+            "Z": "output"
+          },
+          "connections": {
+            "A": [ 110 ],
+            "B": [ 178 ],
+            "C": [ 117 ],
+            "D": [ "0" ],
+            "Z": [ 179 ]
+          }
+        },
+        "$abc$1361$auto$blifparse.cc:492:parse_blif$1410": {
+          "hide_name": 1,
+          "type": "LUT4",
+          "parameters": {
+            "INIT": 16
+          },
+          "attributes": {
+            "module_not_derived": 1,
+            "src": "/usr/local/bin/../share/yosys/ecp5/cells_map.v:68"
+          },
+          "port_directions": {
+            "A": "input",
+            "B": "input",
+            "C": "input",
+            "D": "input",
+            "Z": "output"
+          },
+          "connections": {
+            "A": [ 118 ],
+            "B": [ 119 ],
+            "C": [ 120 ],
+            "D": [ "0" ],
+            "Z": [ 178 ]
+          }
+        },
+        "$abc$1361$auto$blifparse.cc:492:parse_blif$1411": {
+          "hide_name": 1,
+          "type": "LUT4",
+          "parameters": {
+            "INIT": 3585
+          },
+          "attributes": {
+            "module_not_derived": 1,
+            "src": "/usr/local/bin/../share/yosys/ecp5/cells_map.v:72"
+          },
+          "port_directions": {
+            "A": "input",
+            "B": "input",
+            "C": "input",
+            "D": "input",
+            "Z": "output"
+          },
+          "connections": {
+            "A": [ 122 ],
+            "B": [ 123 ],
+            "C": [ 110 ],
+            "D": [ 121 ],
+            "Z": [ 180 ]
+          }
+        },
+        "$abc$1361$auto$blifparse.cc:492:parse_blif$1412": {
+          "hide_name": 1,
+          "type": "LUT4",
+          "parameters": {
+            "INIT": 20
+          },
+          "attributes": {
+            "module_not_derived": 1,
+            "src": "/usr/local/bin/../share/yosys/ecp5/cells_map.v:68"
+          },
+          "port_directions": {
+            "A": "input",
+            "B": "input",
+            "C": "input",
+            "D": "input",
+            "Z": "output"
+          },
+          "connections": {
+            "A": [ 110 ],
+            "B": [ 116 ],
+            "C": [ 114 ],
+            "D": [ "0" ],
+            "Z": [ 181 ]
+          }
+        },
+        "$abc$1361$auto$blifparse.cc:492:parse_blif$1413": {
+          "hide_name": 1,
+          "type": "LUT4",
+          "parameters": {
+            "INIT": 120
+          },
+          "attributes": {
+            "module_not_derived": 1,
+            "src": "/usr/local/bin/../share/yosys/ecp5/cells_map.v:68"
+          },
+          "port_directions": {
+            "A": "input",
+            "B": "input",
+            "C": "input",
+            "D": "input",
+            "Z": "output"
+          },
+          "connections": {
+            "A": [ 163 ],
+            "B": [ 164 ],
+            "C": [ 182 ],
+            "D": [ "0" ],
+            "Z": [ 183 ]
+          }
+        },
+        "$abc$1361$auto$blifparse.cc:492:parse_blif$1414": {
+          "hide_name": 1,
+          "type": "LUT4",
+          "parameters": {
+            "INIT": 32640
+          },
+          "attributes": {
+            "module_not_derived": 1,
+            "src": "/usr/local/bin/../share/yosys/ecp5/cells_map.v:72"
+          },
+          "port_directions": {
+            "A": "input",
+            "B": "input",
+            "C": "input",
+            "D": "input",
+            "Z": "output"
+          },
+          "connections": {
+            "A": [ 163 ],
+            "B": [ 164 ],
+            "C": [ 182 ],
+            "D": [ 184 ],
+            "Z": [ 185 ]
+          }
+        },
+        "$abc$1361$auto$blifparse.cc:492:parse_blif$1415": {
+          "hide_name": 1,
+          "type": "LUT4",
+          "parameters": {
+            "INIT": 6
+          },
+          "attributes": {
+            "module_not_derived": 1,
+            "src": "/usr/local/bin/../share/yosys/ecp5/cells_map.v:64"
+          },
+          "port_directions": {
+            "A": "input",
+            "B": "input",
+            "C": "input",
+            "D": "input",
+            "Z": "output"
+          },
+          "connections": {
+            "A": [ 186 ],
+            "B": [ 187 ],
+            "C": [ "0" ],
+            "D": [ "0" ],
+            "Z": [ 188 ]
+          }
+        },
+        "$abc$1361$auto$blifparse.cc:492:parse_blif$1416": {
+          "hide_name": 1,
+          "type": "LUT4",
+          "parameters": {
+            "INIT": 32768
+          },
+          "attributes": {
+            "module_not_derived": 1,
+            "src": "/usr/local/bin/../share/yosys/ecp5/cells_map.v:72"
+          },
+          "port_directions": {
+            "A": "input",
+            "B": "input",
+            "C": "input",
+            "D": "input",
+            "Z": "output"
+          },
+          "connections": {
+            "A": [ 163 ],
+            "B": [ 164 ],
+            "C": [ 182 ],
+            "D": [ 184 ],
+            "Z": [ 186 ]
+          }
+        },
+        "$abc$1361$auto$blifparse.cc:492:parse_blif$1417": {
+          "hide_name": 1,
+          "type": "LUT4",
+          "parameters": {
+            "INIT": 120
+          },
+          "attributes": {
+            "module_not_derived": 1,
+            "src": "/usr/local/bin/../share/yosys/ecp5/cells_map.v:68"
+          },
+          "port_directions": {
+            "A": "input",
+            "B": "input",
+            "C": "input",
+            "D": "input",
+            "Z": "output"
+          },
+          "connections": {
+            "A": [ 186 ],
+            "B": [ 187 ],
+            "C": [ 189 ],
+            "D": [ "0" ],
+            "Z": [ 190 ]
+          }
+        },
+        "$abc$1361$auto$blifparse.cc:492:parse_blif$1418": {
+          "hide_name": 1,
+          "type": "LUT4",
+          "parameters": {
+            "INIT": 32640
+          },
+          "attributes": {
+            "module_not_derived": 1,
+            "src": "/usr/local/bin/../share/yosys/ecp5/cells_map.v:72"
+          },
+          "port_directions": {
+            "A": "input",
+            "B": "input",
+            "C": "input",
+            "D": "input",
+            "Z": "output"
+          },
+          "connections": {
+            "A": [ 186 ],
+            "B": [ 187 ],
+            "C": [ 189 ],
+            "D": [ 191 ],
+            "Z": [ 192 ]
+          }
+        },
+        "$abc$1361$auto$blifparse.cc:492:parse_blif$1419": {
+          "hide_name": 1,
+          "type": "LUT4",
+          "parameters": {
+            "INIT": 6
+          },
+          "attributes": {
+            "module_not_derived": 1,
+            "src": "/usr/local/bin/../share/yosys/ecp5/cells_map.v:64"
+          },
+          "port_directions": {
+            "A": "input",
+            "B": "input",
+            "C": "input",
+            "D": "input",
+            "Z": "output"
+          },
+          "connections": {
+            "A": [ 193 ],
+            "B": [ 194 ],
+            "C": [ "0" ],
+            "D": [ "0" ],
+            "Z": [ 195 ]
+          }
+        },
+        "$abc$1361$auto$blifparse.cc:492:parse_blif$1420": {
+          "hide_name": 1,
+          "type": "LUT4",
+          "parameters": {
+            "INIT": 32768
+          },
+          "attributes": {
+            "module_not_derived": 1,
+            "src": "/usr/local/bin/../share/yosys/ecp5/cells_map.v:72"
+          },
+          "port_directions": {
+            "A": "input",
+            "B": "input",
+            "C": "input",
+            "D": "input",
+            "Z": "output"
+          },
+          "connections": {
+            "A": [ 186 ],
+            "B": [ 187 ],
+            "C": [ 189 ],
+            "D": [ 191 ],
+            "Z": [ 193 ]
+          }
+        },
+        "$abc$1361$auto$blifparse.cc:492:parse_blif$1421": {
+          "hide_name": 1,
+          "type": "LUT4",
+          "parameters": {
+            "INIT": 120
+          },
+          "attributes": {
+            "module_not_derived": 1,
+            "src": "/usr/local/bin/../share/yosys/ecp5/cells_map.v:68"
+          },
+          "port_directions": {
+            "A": "input",
+            "B": "input",
+            "C": "input",
+            "D": "input",
+            "Z": "output"
+          },
+          "connections": {
+            "A": [ 193 ],
+            "B": [ 194 ],
+            "C": [ 196 ],
+            "D": [ "0" ],
+            "Z": [ 197 ]
+          }
+        },
+        "$abc$1361$auto$blifparse.cc:492:parse_blif$1422": {
+          "hide_name": 1,
+          "type": "LUT4",
+          "parameters": {
+            "INIT": 32640
+          },
+          "attributes": {
+            "module_not_derived": 1,
+            "src": "/usr/local/bin/../share/yosys/ecp5/cells_map.v:72"
+          },
+          "port_directions": {
+            "A": "input",
+            "B": "input",
+            "C": "input",
+            "D": "input",
+            "Z": "output"
+          },
+          "connections": {
+            "A": [ 193 ],
+            "B": [ 194 ],
+            "C": [ 196 ],
+            "D": [ 198 ],
+            "Z": [ 199 ]
+          }
+        },
+        "$abc$1361$auto$blifparse.cc:492:parse_blif$1423": {
+          "hide_name": 1,
+          "type": "LUT4",
+          "parameters": {
+            "INIT": 6
+          },
+          "attributes": {
+            "module_not_derived": 1,
+            "src": "/usr/local/bin/../share/yosys/ecp5/cells_map.v:64"
+          },
+          "port_directions": {
+            "A": "input",
+            "B": "input",
+            "C": "input",
+            "D": "input",
+            "Z": "output"
+          },
+          "connections": {
+            "A": [ 200 ],
+            "B": [ 201 ],
+            "C": [ "0" ],
+            "D": [ "0" ],
+            "Z": [ 202 ]
+          }
+        },
+        "$abc$1361$auto$blifparse.cc:492:parse_blif$1424": {
+          "hide_name": 1,
+          "type": "LUT4",
+          "parameters": {
+            "INIT": 32768
+          },
+          "attributes": {
+            "module_not_derived": 1,
+            "src": "/usr/local/bin/../share/yosys/ecp5/cells_map.v:72"
+          },
+          "port_directions": {
+            "A": "input",
+            "B": "input",
+            "C": "input",
+            "D": "input",
+            "Z": "output"
+          },
+          "connections": {
+            "A": [ 193 ],
+            "B": [ 194 ],
+            "C": [ 196 ],
+            "D": [ 198 ],
+            "Z": [ 200 ]
+          }
+        },
+        "$abc$1361$auto$blifparse.cc:492:parse_blif$1425": {
+          "hide_name": 1,
+          "type": "LUT4",
+          "parameters": {
+            "INIT": 120
+          },
+          "attributes": {
+            "module_not_derived": 1,
+            "src": "/usr/local/bin/../share/yosys/ecp5/cells_map.v:68"
+          },
+          "port_directions": {
+            "A": "input",
+            "B": "input",
+            "C": "input",
+            "D": "input",
+            "Z": "output"
+          },
+          "connections": {
+            "A": [ 200 ],
+            "B": [ 201 ],
+            "C": [ 203 ],
+            "D": [ "0" ],
+            "Z": [ 204 ]
+          }
+        },
+        "$abc$1361$auto$blifparse.cc:492:parse_blif$1426": {
+          "hide_name": 1,
+          "type": "LUT4",
+          "parameters": {
+            "INIT": 32640
+          },
+          "attributes": {
+            "module_not_derived": 1,
+            "src": "/usr/local/bin/../share/yosys/ecp5/cells_map.v:72"
+          },
+          "port_directions": {
+            "A": "input",
+            "B": "input",
+            "C": "input",
+            "D": "input",
+            "Z": "output"
+          },
+          "connections": {
+            "A": [ 200 ],
+            "B": [ 201 ],
+            "C": [ 203 ],
+            "D": [ 205 ],
+            "Z": [ 206 ]
+          }
+        },
+        "$abc$1361$auto$blifparse.cc:492:parse_blif$1427": {
+          "hide_name": 1,
+          "type": "LUT4",
+          "parameters": {
+            "INIT": 6
+          },
+          "attributes": {
+            "module_not_derived": 1,
+            "src": "/usr/local/bin/../share/yosys/ecp5/cells_map.v:64"
+          },
+          "port_directions": {
+            "A": "input",
+            "B": "input",
+            "C": "input",
+            "D": "input",
+            "Z": "output"
+          },
+          "connections": {
+            "A": [ 207 ],
+            "B": [ 208 ],
+            "C": [ "0" ],
+            "D": [ "0" ],
+            "Z": [ 209 ]
+          }
+        },
+        "$abc$1361$auto$blifparse.cc:492:parse_blif$1428": {
+          "hide_name": 1,
+          "type": "LUT4",
+          "parameters": {
+            "INIT": 32768
+          },
+          "attributes": {
+            "module_not_derived": 1,
+            "src": "/usr/local/bin/../share/yosys/ecp5/cells_map.v:72"
+          },
+          "port_directions": {
+            "A": "input",
+            "B": "input",
+            "C": "input",
+            "D": "input",
+            "Z": "output"
+          },
+          "connections": {
+            "A": [ 200 ],
+            "B": [ 201 ],
+            "C": [ 203 ],
+            "D": [ 205 ],
+            "Z": [ 207 ]
+          }
+        },
+        "$abc$1361$auto$blifparse.cc:492:parse_blif$1429": {
+          "hide_name": 1,
+          "type": "LUT4",
+          "parameters": {
+            "INIT": 120
+          },
+          "attributes": {
+            "module_not_derived": 1,
+            "src": "/usr/local/bin/../share/yosys/ecp5/cells_map.v:68"
+          },
+          "port_directions": {
+            "A": "input",
+            "B": "input",
+            "C": "input",
+            "D": "input",
+            "Z": "output"
+          },
+          "connections": {
+            "A": [ 207 ],
+            "B": [ 208 ],
+            "C": [ 210 ],
+            "D": [ "0" ],
+            "Z": [ 211 ]
+          }
+        },
+        "$abc$1361$auto$blifparse.cc:492:parse_blif$1430": {
+          "hide_name": 1,
+          "type": "LUT4",
+          "parameters": {
+            "INIT": 32640
+          },
+          "attributes": {
+            "module_not_derived": 1,
+            "src": "/usr/local/bin/../share/yosys/ecp5/cells_map.v:72"
+          },
+          "port_directions": {
+            "A": "input",
+            "B": "input",
+            "C": "input",
+            "D": "input",
+            "Z": "output"
+          },
+          "connections": {
+            "A": [ 207 ],
+            "B": [ 208 ],
+            "C": [ 210 ],
+            "D": [ 212 ],
+            "Z": [ 213 ]
+          }
+        },
+        "$abc$1361$auto$blifparse.cc:492:parse_blif$1431": {
+          "hide_name": 1,
+          "type": "LUT4",
+          "parameters": {
+            "INIT": 6
+          },
+          "attributes": {
+            "module_not_derived": 1,
+            "src": "/usr/local/bin/../share/yosys/ecp5/cells_map.v:64"
+          },
+          "port_directions": {
+            "A": "input",
+            "B": "input",
+            "C": "input",
+            "D": "input",
+            "Z": "output"
+          },
+          "connections": {
+            "A": [ 214 ],
+            "B": [ 215 ],
+            "C": [ "0" ],
+            "D": [ "0" ],
+            "Z": [ 216 ]
+          }
+        },
+        "$abc$1361$auto$blifparse.cc:492:parse_blif$1432": {
+          "hide_name": 1,
+          "type": "LUT4",
+          "parameters": {
+            "INIT": 32768
+          },
+          "attributes": {
+            "module_not_derived": 1,
+            "src": "/usr/local/bin/../share/yosys/ecp5/cells_map.v:72"
+          },
+          "port_directions": {
+            "A": "input",
+            "B": "input",
+            "C": "input",
+            "D": "input",
+            "Z": "output"
+          },
+          "connections": {
+            "A": [ 207 ],
+            "B": [ 208 ],
+            "C": [ 210 ],
+            "D": [ 212 ],
+            "Z": [ 214 ]
+          }
+        },
+        "$abc$1361$auto$blifparse.cc:492:parse_blif$1433": {
+          "hide_name": 1,
+          "type": "LUT4",
+          "parameters": {
+            "INIT": 120
+          },
+          "attributes": {
+            "module_not_derived": 1,
+            "src": "/usr/local/bin/../share/yosys/ecp5/cells_map.v:68"
+          },
+          "port_directions": {
+            "A": "input",
+            "B": "input",
+            "C": "input",
+            "D": "input",
+            "Z": "output"
+          },
+          "connections": {
+            "A": [ 214 ],
+            "B": [ 215 ],
+            "C": [ 133 ],
+            "D": [ "0" ],
+            "Z": [ 217 ]
+          }
+        },
+        "$abc$1361$auto$blifparse.cc:492:parse_blif$1434": {
           "hide_name": 1,
           "type": "LUT4",
           "parameters": {
@@ -15309,38 +16259,13 @@
           },
           "connections": {
             "A": [ 8 ],
-            "B": [ 151 ],
-            "C": [ 152 ],
+            "B": [ 218 ],
+            "C": [ 219 ],
             "D": [ "0" ],
-            "Z": [ 153 ]
+            "Z": [ 220 ]
           }
         },
-        "$abc$772$auto$blifparse.cc:492:parse_blif$808": {
-          "hide_name": 1,
-          "type": "LUT4",
-          "parameters": {
-            "INIT": 8
-          },
-          "attributes": {
-            "module_not_derived": 1,
-            "src": "/usr/local/bin/../share/yosys/ecp5/cells_map.v:64"
-          },
-          "port_directions": {
-            "A": "input",
-            "B": "input",
-            "C": "input",
-            "D": "input",
-            "Z": "output"
-          },
-          "connections": {
-            "A": [ 11 ],
-            "B": [ 148 ],
-            "C": [ "0" ],
-            "D": [ "0" ],
-            "Z": [ 154 ]
-          }
-        },
-        "$abc$772$auto$blifparse.cc:492:parse_blif$809": {
+        "$abc$1361$auto$blifparse.cc:492:parse_blif$1435": {
           "hide_name": 1,
           "type": "LUT4",
           "parameters": {
@@ -15358,14 +16283,14 @@
             "Z": "output"
           },
           "connections": {
-            "A": [ 95 ],
+            "A": [ 153 ],
             "B": [ 11 ],
             "C": [ "0" ],
             "D": [ "0" ],
-            "Z": [ 155 ]
+            "Z": [ 221 ]
           }
         },
-        "$abc$772$auto$blifparse.cc:492:parse_blif$810": {
+        "$abc$1361$auto$blifparse.cc:492:parse_blif$1436": {
           "hide_name": 1,
           "type": "LUT4",
           "parameters": {
@@ -15384,17 +16309,17 @@
           },
           "connections": {
             "A": [ 11 ],
-            "B": [ 142 ],
+            "B": [ 130 ],
             "C": [ "0" ],
             "D": [ "0" ],
-            "Z": [ 156 ]
+            "Z": [ 222 ]
           }
         },
-        "$abc$772$auto$blifparse.cc:492:parse_blif$811": {
+        "$abc$1361$auto$blifparse.cc:492:parse_blif$1437": {
           "hide_name": 1,
           "type": "LUT4",
           "parameters": {
-            "INIT": 8
+            "INIT": 1
           },
           "attributes": {
             "module_not_derived": 1,
@@ -15408,22 +16333,22 @@
             "Z": "output"
           },
           "connections": {
-            "A": [ 11 ],
-            "B": [ 97 ],
+            "A": [ 122 ],
+            "B": [ 110 ],
             "C": [ "0" ],
             "D": [ "0" ],
-            "Z": [ 157 ]
+            "Z": [ 223 ]
           }
         },
-        "$abc$772$auto$blifparse.cc:492:parse_blif$812": {
+        "$abc$1361$auto$blifparse.cc:492:parse_blif$1438": {
           "hide_name": 1,
           "type": "LUT4",
           "parameters": {
-            "INIT": 8
+            "INIT": 20
           },
           "attributes": {
             "module_not_derived": 1,
-            "src": "/usr/local/bin/../share/yosys/ecp5/cells_map.v:64"
+            "src": "/usr/local/bin/../share/yosys/ecp5/cells_map.v:68"
           },
           "port_directions": {
             "A": "input",
@@ -15433,22 +16358,22 @@
             "Z": "output"
           },
           "connections": {
-            "A": [ 11 ],
-            "B": [ 140 ],
-            "C": [ "0" ],
+            "A": [ 110 ],
+            "B": [ 224 ],
+            "C": [ 124 ],
             "D": [ "0" ],
-            "Z": [ 158 ]
+            "Z": [ 225 ]
           }
         },
-        "$abc$772$auto$blifparse.cc:492:parse_blif$813": {
+        "$abc$1361$auto$blifparse.cc:492:parse_blif$1439": {
           "hide_name": 1,
           "type": "LUT4",
           "parameters": {
-            "INIT": 14
+            "INIT": 1
           },
           "attributes": {
             "module_not_derived": 1,
-            "src": "/usr/local/bin/../share/yosys/ecp5/cells_map.v:64"
+            "src": "/usr/local/bin/../share/yosys/ecp5/cells_map.v:68"
           },
           "port_directions": {
             "A": "input",
@@ -15458,22 +16383,22 @@
             "Z": "output"
           },
           "connections": {
-            "A": [ 99 ],
-            "B": [ 100 ],
-            "C": [ "0" ],
+            "A": [ 121 ],
+            "B": [ 122 ],
+            "C": [ 123 ],
             "D": [ "0" ],
-            "Z": [ 159 ]
+            "Z": [ 224 ]
           }
         },
-        "$abc$772$auto$blifparse.cc:492:parse_blif$814": {
+        "$abc$1361$auto$blifparse.cc:492:parse_blif$1440": {
           "hide_name": 1,
           "type": "LUT4",
           "parameters": {
-            "INIT": 4
+            "INIT": 20
           },
           "attributes": {
             "module_not_derived": 1,
-            "src": "/usr/local/bin/../share/yosys/ecp5/cells_map.v:64"
+            "src": "/usr/local/bin/../share/yosys/ecp5/cells_map.v:68"
           },
           "port_directions": {
             "A": "input",
@@ -15483,14 +16408,14 @@
             "Z": "output"
           },
           "connections": {
-            "A": [ 146 ],
-            "B": [ 11 ],
-            "C": [ "0" ],
+            "A": [ 110 ],
+            "B": [ 109 ],
+            "C": [ 108 ],
             "D": [ "0" ],
-            "Z": [ 160 ]
+            "Z": [ 226 ]
           }
         },
-        "$abc$772$auto$blifparse.cc:492:parse_blif$815": {
+        "$abc$1361$auto$blifparse.cc:492:parse_blif$1441": {
           "hide_name": 1,
           "type": "LUT4",
           "parameters": {
@@ -15508,14 +16433,14 @@
             "Z": "output"
           },
           "connections": {
-            "A": [ 99 ],
+            "A": [ 164 ],
             "B": [ "0" ],
             "C": [ "0" ],
             "D": [ "0" ],
-            "Z": [ 161 ]
+            "Z": [ 227 ]
           }
         },
-        "$abc$772$auto$blifparse.cc:492:parse_blif$816": {
+        "$abc$1361$auto$blifparse.cc:492:parse_blif$1442": {
           "hide_name": 1,
           "type": "LUT4",
           "parameters": {
@@ -15533,39 +16458,14 @@
             "Z": "output"
           },
           "connections": {
-            "A": [ 100 ],
-            "B": [ "0" ],
-            "C": [ "0" ],
-            "D": [ "0" ],
-            "Z": [ 162 ]
-          }
-        },
-        "$abc$772$auto$blifparse.cc:492:parse_blif$817": {
-          "hide_name": 1,
-          "type": "LUT4",
-          "parameters": {
-            "INIT": 1
-          },
-          "attributes": {
-            "module_not_derived": 1,
-            "src": "/usr/local/bin/../share/yosys/ecp5/cells_map.v:60"
-          },
-          "port_directions": {
-            "A": "input",
-            "B": "input",
-            "C": "input",
-            "D": "input",
-            "Z": "output"
-          },
-          "connections": {
-            "A": [ 94 ],
+            "A": [ 133 ],
             "B": [ "0" ],
             "C": [ "0" ],
             "D": [ "0" ],
             "Z": [ 12 ]
           }
         },
-        "$abc$772$auto$blifparse.cc:492:parse_blif$818": {
+        "$abc$1361$auto$blifparse.cc:492:parse_blif$1443": {
           "hide_name": 1,
           "type": "LUT4",
           "parameters": {
@@ -15583,14 +16483,14 @@
             "Z": "output"
           },
           "connections": {
-            "A": [ 99 ],
+            "A": [ 163 ],
             "B": [ "0" ],
             "C": [ "0" ],
             "D": [ "0" ],
-            "Z": [ 163 ]
+            "Z": [ 228 ]
           }
         },
-        "$abc$772$auto$blifparse.cc:492:parse_blif$819": {
+        "$abc$1361$auto$blifparse.cc:492:parse_blif$1444": {
           "hide_name": 1,
           "type": "LUT4",
           "parameters": {
@@ -15608,14 +16508,14 @@
             "Z": "output"
           },
           "connections": {
-            "A": [ 99 ],
+            "A": [ 164 ],
             "B": [ "0" ],
             "C": [ "0" ],
             "D": [ "0" ],
-            "Z": [ 164 ]
+            "Z": [ 229 ]
           }
         },
-        "$abc$772$auto$blifparse.cc:492:parse_blif$820": {
+        "$abc$1361$auto$blifparse.cc:492:parse_blif$1445": {
           "hide_name": 1,
           "type": "LUT4",
           "parameters": {
@@ -15633,14 +16533,14 @@
             "Z": "output"
           },
           "connections": {
-            "A": [ 99 ],
+            "A": [ 164 ],
             "B": [ "0" ],
             "C": [ "0" ],
             "D": [ "0" ],
-            "Z": [ 165 ]
+            "Z": [ 230 ]
           }
         },
-        "$abc$772$auto$blifparse.cc:492:parse_blif$821": {
+        "$abc$1361$auto$blifparse.cc:492:parse_blif$1446": {
           "hide_name": 1,
           "type": "LUT4",
           "parameters": {
@@ -15658,14 +16558,14 @@
             "Z": "output"
           },
           "connections": {
-            "A": [ 99 ],
+            "A": [ 164 ],
             "B": [ "0" ],
             "C": [ "0" ],
             "D": [ "0" ],
-            "Z": [ 166 ]
+            "Z": [ 231 ]
           }
         },
-        "$abc$772$auto$blifparse.cc:492:parse_blif$822": {
+        "$abc$1361$auto$blifparse.cc:492:parse_blif$1447": {
           "hide_name": 1,
           "type": "LUT4",
           "parameters": {
@@ -15683,14 +16583,14 @@
             "Z": "output"
           },
           "connections": {
-            "A": [ 99 ],
+            "A": [ 164 ],
             "B": [ "0" ],
             "C": [ "0" ],
             "D": [ "0" ],
-            "Z": [ 167 ]
+            "Z": [ 232 ]
           }
         },
-        "$abc$772$auto$blifparse.cc:492:parse_blif$823": {
+        "$abc$1361$auto$blifparse.cc:492:parse_blif$1448": {
           "hide_name": 1,
           "type": "LUT4",
           "parameters": {
@@ -15708,14 +16608,14 @@
             "Z": "output"
           },
           "connections": {
-            "A": [ 99 ],
+            "A": [ 164 ],
             "B": [ "0" ],
             "C": [ "0" ],
             "D": [ "0" ],
-            "Z": [ 168 ]
+            "Z": [ 233 ]
           }
         },
-        "$abc$772$auto$blifparse.cc:492:parse_blif$824": {
+        "$abc$1361$auto$blifparse.cc:492:parse_blif$1449": {
           "hide_name": 1,
           "type": "LUT4",
           "parameters": {
@@ -15733,14 +16633,14 @@
             "Z": "output"
           },
           "connections": {
-            "A": [ 99 ],
+            "A": [ 164 ],
             "B": [ "0" ],
             "C": [ "0" ],
             "D": [ "0" ],
-            "Z": [ 169 ]
+            "Z": [ 234 ]
           }
         },
-        "$abc$772$auto$blifparse.cc:492:parse_blif$825": {
+        "$abc$1361$auto$blifparse.cc:492:parse_blif$1450": {
           "hide_name": 1,
           "type": "LUT4",
           "parameters": {
@@ -15758,14 +16658,14 @@
             "Z": "output"
           },
           "connections": {
-            "A": [ 99 ],
+            "A": [ 164 ],
             "B": [ "0" ],
             "C": [ "0" ],
             "D": [ "0" ],
-            "Z": [ 170 ]
+            "Z": [ 235 ]
           }
         },
-        "$abc$772$auto$blifparse.cc:492:parse_blif$826": {
+        "$abc$1361$auto$blifparse.cc:492:parse_blif$1451": {
           "hide_name": 1,
           "type": "LUT4",
           "parameters": {
@@ -15783,14 +16683,14 @@
             "Z": "output"
           },
           "connections": {
-            "A": [ 99 ],
+            "A": [ 164 ],
             "B": [ "0" ],
             "C": [ "0" ],
             "D": [ "0" ],
-            "Z": [ 171 ]
+            "Z": [ 236 ]
           }
         },
-        "$abc$772$auto$blifparse.cc:492:parse_blif$827": {
+        "$abc$1361$auto$blifparse.cc:492:parse_blif$1452": {
           "hide_name": 1,
           "type": "LUT4",
           "parameters": {
@@ -15808,14 +16708,14 @@
             "Z": "output"
           },
           "connections": {
-            "A": [ 99 ],
+            "A": [ 164 ],
             "B": [ "0" ],
             "C": [ "0" ],
             "D": [ "0" ],
-            "Z": [ 172 ]
+            "Z": [ 237 ]
           }
         },
-        "$abc$772$auto$blifparse.cc:492:parse_blif$828": {
+        "$abc$1361$auto$blifparse.cc:492:parse_blif$1453": {
           "hide_name": 1,
           "type": "LUT4",
           "parameters": {
@@ -15833,14 +16733,14 @@
             "Z": "output"
           },
           "connections": {
-            "A": [ 99 ],
+            "A": [ 164 ],
             "B": [ "0" ],
             "C": [ "0" ],
             "D": [ "0" ],
-            "Z": [ 173 ]
+            "Z": [ 238 ]
           }
         },
-        "$abc$772$auto$blifparse.cc:492:parse_blif$829": {
+        "$abc$1361$auto$blifparse.cc:492:parse_blif$1454": {
           "hide_name": 1,
           "type": "LUT4",
           "parameters": {
@@ -15858,14 +16758,14 @@
             "Z": "output"
           },
           "connections": {
-            "A": [ 99 ],
+            "A": [ 164 ],
             "B": [ "0" ],
             "C": [ "0" ],
             "D": [ "0" ],
-            "Z": [ 174 ]
+            "Z": [ 239 ]
           }
         },
-        "$abc$772$auto$blifparse.cc:492:parse_blif$830": {
+        "$abc$1361$auto$blifparse.cc:492:parse_blif$1455": {
           "hide_name": 1,
           "type": "LUT4",
           "parameters": {
@@ -15883,14 +16783,14 @@
             "Z": "output"
           },
           "connections": {
-            "A": [ 99 ],
+            "A": [ 164 ],
             "B": [ "0" ],
             "C": [ "0" ],
             "D": [ "0" ],
-            "Z": [ 175 ]
+            "Z": [ 240 ]
           }
         },
-        "$abc$772$auto$blifparse.cc:492:parse_blif$831": {
+        "$abc$1361$auto$blifparse.cc:492:parse_blif$1456": {
           "hide_name": 1,
           "type": "LUT4",
           "parameters": {
@@ -15908,14 +16808,14 @@
             "Z": "output"
           },
           "connections": {
-            "A": [ 99 ],
+            "A": [ 164 ],
             "B": [ "0" ],
             "C": [ "0" ],
             "D": [ "0" ],
-            "Z": [ 176 ]
+            "Z": [ 241 ]
           }
         },
-        "$abc$772$auto$blifparse.cc:492:parse_blif$832": {
+        "$abc$1361$auto$blifparse.cc:492:parse_blif$1457": {
           "hide_name": 1,
           "type": "LUT4",
           "parameters": {
@@ -15933,14 +16833,14 @@
             "Z": "output"
           },
           "connections": {
-            "A": [ 99 ],
+            "A": [ 164 ],
             "B": [ "0" ],
             "C": [ "0" ],
             "D": [ "0" ],
-            "Z": [ 177 ]
+            "Z": [ 242 ]
           }
         },
-        "$abc$772$auto$blifparse.cc:492:parse_blif$833": {
+        "$abc$1361$auto$blifparse.cc:492:parse_blif$1458": {
           "hide_name": 1,
           "type": "LUT4",
           "parameters": {
@@ -15958,14 +16858,144 @@
             "Z": "output"
           },
           "connections": {
-            "A": [ 99 ],
+            "A": [ 164 ],
             "B": [ "0" ],
             "C": [ "0" ],
             "D": [ "0" ],
-            "Z": [ 178 ]
+            "Z": [ 243 ]
           }
         },
-        "$auto$simplemap.cc:420:simplemap_dff$303": {
+        "$abc$1361$auto$blifparse.cc:492:parse_blif$1459": {
+          "hide_name": 1,
+          "type": "LUT4",
+          "parameters": {
+            "INIT": 1
+          },
+          "attributes": {
+            "module_not_derived": 1,
+            "src": "/usr/local/bin/../share/yosys/ecp5/cells_map.v:60"
+          },
+          "port_directions": {
+            "A": "input",
+            "B": "input",
+            "C": "input",
+            "D": "input",
+            "Z": "output"
+          },
+          "connections": {
+            "A": [ 164 ],
+            "B": [ "0" ],
+            "C": [ "0" ],
+            "D": [ "0" ],
+            "Z": [ 244 ]
+          }
+        },
+        "$abc$1361$auto$blifparse.cc:492:parse_blif$1460": {
+          "hide_name": 1,
+          "type": "LUT4",
+          "parameters": {
+            "INIT": 45067
+          },
+          "attributes": {
+            "module_not_derived": 1,
+            "src": "/usr/local/bin/../share/yosys/ecp5/cells_map.v:72"
+          },
+          "port_directions": {
+            "A": "input",
+            "B": "input",
+            "C": "input",
+            "D": "input",
+            "Z": "output"
+          },
+          "connections": {
+            "A": [ 110 ],
+            "B": [ 137 ],
+            "C": [ 245 ],
+            "D": [ 144 ],
+            "Z": [ 246 ]
+          }
+        },
+        "$abc$1361$auto$blifparse.cc:492:parse_blif$1461": {
+          "hide_name": 1,
+          "type": "LUT4",
+          "parameters": {
+            "INIT": 36873
+          },
+          "attributes": {
+            "module_not_derived": 1,
+            "src": "/usr/local/bin/../share/yosys/ecp5/cells_map.v:72"
+          },
+          "port_directions": {
+            "A": "input",
+            "B": "input",
+            "C": "input",
+            "D": "input",
+            "Z": "output"
+          },
+          "connections": {
+            "A": [ 247 ],
+            "B": [ 248 ],
+            "C": [ 249 ],
+            "D": [ 250 ],
+            "Z": [ 251 ]
+          }
+        },
+        "$abc$1361$auto$blifparse.cc:492:parse_blif$1462": {
+          "hide_name": 1,
+          "type": "LUT4",
+          "parameters": {
+            "INIT": 32767
+          },
+          "attributes": {
+            "module_not_derived": 1,
+            "src": "/usr/local/bin/../share/yosys/ecp5/cells_map.v:72"
+          },
+          "port_directions": {
+            "A": "input",
+            "B": "input",
+            "C": "input",
+            "D": "input",
+            "Z": "output"
+          },
+          "connections": {
+            "A": [ 246 ],
+            "B": [ 251 ],
+            "C": [ 96 ],
+            "D": [ 105 ],
+            "Z": [ 252 ]
+          }
+        },
+        "$auto$simplemap.cc:420:simplemap_dff$275": {
+          "hide_name": 1,
+          "type": "TRELLIS_FF",
+          "parameters": {
+            "CEMUX": "CE",
+            "CLKMUX": "CLK",
+            "GSR": "DISABLED",
+            "LSRMUX": "LSR",
+            "REGSET": "RESET",
+            "SRMODE": "LSR_OVER_CE"
+          },
+          "attributes": {
+            "module_not_derived": 1,
+            "src": "passthru.v:177|/usr/local/bin/../share/yosys/ecp5/cells_map.v:47"
+          },
+          "port_directions": {
+            "CE": "input",
+            "CLK": "input",
+            "DI": "input",
+            "LSR": "input",
+            "Q": "output"
+          },
+          "connections": {
+            "CE": [ 234 ],
+            "CLK": [ 2 ],
+            "DI": [ 228 ],
+            "LSR": [ 220 ],
+            "Q": [ 163 ]
+          }
+        },
+        "$auto$simplemap.cc:420:simplemap_dff$276": {
           "hide_name": 1,
           "type": "TRELLIS_FF",
           "parameters": {
@@ -15973,11 +17003,12 @@
             "CLKMUX": "CLK",
             "GSR": "DISABLED",
             "LSRMUX": "LSR",
-            "REGSET": "RESET"
+            "REGSET": "RESET",
+            "SRMODE": "LSR_OVER_CE"
           },
           "attributes": {
             "module_not_derived": 1,
-            "src": "passthru.v:166|/usr/local/bin/../share/yosys/ecp5/cells_map.v:2"
+            "src": "passthru.v:177|/usr/local/bin/../share/yosys/ecp5/cells_map.v:27"
           },
           "port_directions": {
             "CLK": "input",
@@ -15987,201 +17018,492 @@
           },
           "connections": {
             "CLK": [ 2 ],
-            "DI": [ 13 ],
-            "LSR": [ "0" ],
-            "Q": [ 137 ]
+            "DI": [ 165 ],
+            "LSR": [ 220 ],
+            "Q": [ 164 ]
           }
         },
-        "$auto$simplemap.cc:420:simplemap_dff$304": {
+        "$auto$simplemap.cc:420:simplemap_dff$277": {
           "hide_name": 1,
           "type": "TRELLIS_FF",
           "parameters": {
-            "CEMUX": "1",
+            "CEMUX": "CE",
             "CLKMUX": "CLK",
             "GSR": "DISABLED",
             "LSRMUX": "LSR",
-            "REGSET": "RESET"
+            "REGSET": "RESET",
+            "SRMODE": "LSR_OVER_CE"
           },
           "attributes": {
             "module_not_derived": 1,
-            "src": "passthru.v:166|/usr/local/bin/../share/yosys/ecp5/cells_map.v:2"
+            "src": "passthru.v:177|/usr/local/bin/../share/yosys/ecp5/cells_map.v:47"
           },
           "port_directions": {
+            "CE": "input",
             "CLK": "input",
             "DI": "input",
             "LSR": "input",
             "Q": "output"
           },
           "connections": {
+            "CE": [ 232 ],
             "CLK": [ 2 ],
-            "DI": [ 14 ],
-            "LSR": [ "0" ],
-            "Q": [ 146 ]
+            "DI": [ 183 ],
+            "LSR": [ 220 ],
+            "Q": [ 182 ]
           }
         },
-        "$auto$simplemap.cc:420:simplemap_dff$305": {
+        "$auto$simplemap.cc:420:simplemap_dff$278": {
           "hide_name": 1,
           "type": "TRELLIS_FF",
           "parameters": {
-            "CEMUX": "1",
+            "CEMUX": "CE",
             "CLKMUX": "CLK",
             "GSR": "DISABLED",
             "LSRMUX": "LSR",
-            "REGSET": "RESET"
+            "REGSET": "RESET",
+            "SRMODE": "LSR_OVER_CE"
           },
           "attributes": {
             "module_not_derived": 1,
-            "src": "passthru.v:166|/usr/local/bin/../share/yosys/ecp5/cells_map.v:2"
+            "src": "passthru.v:177|/usr/local/bin/../share/yosys/ecp5/cells_map.v:47"
           },
           "port_directions": {
+            "CE": "input",
             "CLK": "input",
             "DI": "input",
             "LSR": "input",
             "Q": "output"
           },
           "connections": {
+            "CE": [ 242 ],
             "CLK": [ 2 ],
-            "DI": [ 15 ],
-            "LSR": [ "0" ],
-            "Q": [ 148 ]
+            "DI": [ 185 ],
+            "LSR": [ 220 ],
+            "Q": [ 184 ]
           }
         },
-        "$auto$simplemap.cc:420:simplemap_dff$306": {
+        "$auto$simplemap.cc:420:simplemap_dff$279": {
           "hide_name": 1,
           "type": "TRELLIS_FF",
           "parameters": {
-            "CEMUX": "1",
+            "CEMUX": "CE",
             "CLKMUX": "CLK",
             "GSR": "DISABLED",
             "LSRMUX": "LSR",
-            "REGSET": "RESET"
+            "REGSET": "RESET",
+            "SRMODE": "LSR_OVER_CE"
           },
           "attributes": {
             "module_not_derived": 1,
-            "src": "passthru.v:166|/usr/local/bin/../share/yosys/ecp5/cells_map.v:2"
+            "src": "passthru.v:177|/usr/local/bin/../share/yosys/ecp5/cells_map.v:47"
           },
           "port_directions": {
+            "CE": "input",
             "CLK": "input",
             "DI": "input",
             "LSR": "input",
             "Q": "output"
           },
           "connections": {
+            "CE": [ 238 ],
             "CLK": [ 2 ],
-            "DI": [ 16 ],
-            "LSR": [ "0" ],
-            "Q": [ 142 ]
+            "DI": [ 188 ],
+            "LSR": [ 220 ],
+            "Q": [ 187 ]
           }
         },
-        "$auto$simplemap.cc:420:simplemap_dff$307": {
+        "$auto$simplemap.cc:420:simplemap_dff$280": {
           "hide_name": 1,
           "type": "TRELLIS_FF",
           "parameters": {
-            "CEMUX": "1",
+            "CEMUX": "CE",
             "CLKMUX": "CLK",
             "GSR": "DISABLED",
             "LSRMUX": "LSR",
-            "REGSET": "RESET"
+            "REGSET": "RESET",
+            "SRMODE": "LSR_OVER_CE"
           },
           "attributes": {
             "module_not_derived": 1,
-            "src": "passthru.v:166|/usr/local/bin/../share/yosys/ecp5/cells_map.v:2"
+            "src": "passthru.v:177|/usr/local/bin/../share/yosys/ecp5/cells_map.v:47"
           },
           "port_directions": {
+            "CE": "input",
             "CLK": "input",
             "DI": "input",
             "LSR": "input",
             "Q": "output"
           },
           "connections": {
+            "CE": [ 235 ],
             "CLK": [ 2 ],
-            "DI": [ 17 ],
-            "LSR": [ "0" ],
-            "Q": [ 97 ]
+            "DI": [ 190 ],
+            "LSR": [ 220 ],
+            "Q": [ 189 ]
           }
         },
-        "$auto$simplemap.cc:420:simplemap_dff$308": {
+        "$auto$simplemap.cc:420:simplemap_dff$281": {
           "hide_name": 1,
           "type": "TRELLIS_FF",
           "parameters": {
-            "CEMUX": "1",
+            "CEMUX": "CE",
             "CLKMUX": "CLK",
             "GSR": "DISABLED",
             "LSRMUX": "LSR",
-            "REGSET": "RESET"
+            "REGSET": "RESET",
+            "SRMODE": "LSR_OVER_CE"
           },
           "attributes": {
             "module_not_derived": 1,
-            "src": "passthru.v:166|/usr/local/bin/../share/yosys/ecp5/cells_map.v:2"
+            "src": "passthru.v:177|/usr/local/bin/../share/yosys/ecp5/cells_map.v:47"
           },
           "port_directions": {
+            "CE": "input",
             "CLK": "input",
             "DI": "input",
             "LSR": "input",
             "Q": "output"
           },
           "connections": {
+            "CE": [ 231 ],
             "CLK": [ 2 ],
-            "DI": [ 18 ],
-            "LSR": [ "0" ],
-            "Q": [ 140 ]
+            "DI": [ 192 ],
+            "LSR": [ 220 ],
+            "Q": [ 191 ]
           }
         },
-        "$auto$simplemap.cc:420:simplemap_dff$309": {
+        "$auto$simplemap.cc:420:simplemap_dff$282": {
           "hide_name": 1,
           "type": "TRELLIS_FF",
           "parameters": {
-            "CEMUX": "1",
+            "CEMUX": "CE",
             "CLKMUX": "CLK",
             "GSR": "DISABLED",
             "LSRMUX": "LSR",
-            "REGSET": "RESET"
+            "REGSET": "RESET",
+            "SRMODE": "LSR_OVER_CE"
           },
           "attributes": {
             "module_not_derived": 1,
-            "src": "passthru.v:166|/usr/local/bin/../share/yosys/ecp5/cells_map.v:2"
+            "src": "passthru.v:177|/usr/local/bin/../share/yosys/ecp5/cells_map.v:47"
           },
           "port_directions": {
+            "CE": "input",
             "CLK": "input",
             "DI": "input",
             "LSR": "input",
             "Q": "output"
           },
           "connections": {
+            "CE": [ 230 ],
             "CLK": [ 2 ],
-            "DI": [ 19 ],
-            "LSR": [ "0" ],
-            "Q": [ 144 ]
+            "DI": [ 195 ],
+            "LSR": [ 220 ],
+            "Q": [ 194 ]
           }
         },
-        "$auto$simplemap.cc:420:simplemap_dff$310": {
+        "$auto$simplemap.cc:420:simplemap_dff$283": {
           "hide_name": 1,
           "type": "TRELLIS_FF",
           "parameters": {
-            "CEMUX": "1",
+            "CEMUX": "CE",
             "CLKMUX": "CLK",
             "GSR": "DISABLED",
             "LSRMUX": "LSR",
-            "REGSET": "RESET"
+            "REGSET": "RESET",
+            "SRMODE": "LSR_OVER_CE"
           },
           "attributes": {
             "module_not_derived": 1,
-            "src": "passthru.v:166|/usr/local/bin/../share/yosys/ecp5/cells_map.v:2"
+            "src": "passthru.v:177|/usr/local/bin/../share/yosys/ecp5/cells_map.v:47"
           },
           "port_directions": {
+            "CE": "input",
             "CLK": "input",
             "DI": "input",
             "LSR": "input",
             "Q": "output"
           },
           "connections": {
+            "CE": [ 241 ],
             "CLK": [ 2 ],
-            "DI": [ "0" ],
-            "LSR": [ "0" ],
-            "Q": [ 95 ]
+            "DI": [ 197 ],
+            "LSR": [ 220 ],
+            "Q": [ 196 ]
           }
         },
-        "$auto$simplemap.cc:420:simplemap_dff$311": {
+        "$auto$simplemap.cc:420:simplemap_dff$284": {
+          "hide_name": 1,
+          "type": "TRELLIS_FF",
+          "parameters": {
+            "CEMUX": "CE",
+            "CLKMUX": "CLK",
+            "GSR": "DISABLED",
+            "LSRMUX": "LSR",
+            "REGSET": "RESET",
+            "SRMODE": "LSR_OVER_CE"
+          },
+          "attributes": {
+            "module_not_derived": 1,
+            "src": "passthru.v:177|/usr/local/bin/../share/yosys/ecp5/cells_map.v:47"
+          },
+          "port_directions": {
+            "CE": "input",
+            "CLK": "input",
+            "DI": "input",
+            "LSR": "input",
+            "Q": "output"
+          },
+          "connections": {
+            "CE": [ 237 ],
+            "CLK": [ 2 ],
+            "DI": [ 199 ],
+            "LSR": [ 220 ],
+            "Q": [ 198 ]
+          }
+        },
+        "$auto$simplemap.cc:420:simplemap_dff$285": {
+          "hide_name": 1,
+          "type": "TRELLIS_FF",
+          "parameters": {
+            "CEMUX": "CE",
+            "CLKMUX": "CLK",
+            "GSR": "DISABLED",
+            "LSRMUX": "LSR",
+            "REGSET": "RESET",
+            "SRMODE": "LSR_OVER_CE"
+          },
+          "attributes": {
+            "module_not_derived": 1,
+            "src": "passthru.v:177|/usr/local/bin/../share/yosys/ecp5/cells_map.v:47"
+          },
+          "port_directions": {
+            "CE": "input",
+            "CLK": "input",
+            "DI": "input",
+            "LSR": "input",
+            "Q": "output"
+          },
+          "connections": {
+            "CE": [ 243 ],
+            "CLK": [ 2 ],
+            "DI": [ 202 ],
+            "LSR": [ 220 ],
+            "Q": [ 201 ]
+          }
+        },
+        "$auto$simplemap.cc:420:simplemap_dff$286": {
+          "hide_name": 1,
+          "type": "TRELLIS_FF",
+          "parameters": {
+            "CEMUX": "CE",
+            "CLKMUX": "CLK",
+            "GSR": "DISABLED",
+            "LSRMUX": "LSR",
+            "REGSET": "RESET",
+            "SRMODE": "LSR_OVER_CE"
+          },
+          "attributes": {
+            "module_not_derived": 1,
+            "src": "passthru.v:177|/usr/local/bin/../share/yosys/ecp5/cells_map.v:47"
+          },
+          "port_directions": {
+            "CE": "input",
+            "CLK": "input",
+            "DI": "input",
+            "LSR": "input",
+            "Q": "output"
+          },
+          "connections": {
+            "CE": [ 240 ],
+            "CLK": [ 2 ],
+            "DI": [ 204 ],
+            "LSR": [ 220 ],
+            "Q": [ 203 ]
+          }
+        },
+        "$auto$simplemap.cc:420:simplemap_dff$287": {
+          "hide_name": 1,
+          "type": "TRELLIS_FF",
+          "parameters": {
+            "CEMUX": "CE",
+            "CLKMUX": "CLK",
+            "GSR": "DISABLED",
+            "LSRMUX": "LSR",
+            "REGSET": "RESET",
+            "SRMODE": "LSR_OVER_CE"
+          },
+          "attributes": {
+            "module_not_derived": 1,
+            "src": "passthru.v:177|/usr/local/bin/../share/yosys/ecp5/cells_map.v:47"
+          },
+          "port_directions": {
+            "CE": "input",
+            "CLK": "input",
+            "DI": "input",
+            "LSR": "input",
+            "Q": "output"
+          },
+          "connections": {
+            "CE": [ 233 ],
+            "CLK": [ 2 ],
+            "DI": [ 206 ],
+            "LSR": [ 220 ],
+            "Q": [ 205 ]
+          }
+        },
+        "$auto$simplemap.cc:420:simplemap_dff$288": {
+          "hide_name": 1,
+          "type": "TRELLIS_FF",
+          "parameters": {
+            "CEMUX": "CE",
+            "CLKMUX": "CLK",
+            "GSR": "DISABLED",
+            "LSRMUX": "LSR",
+            "REGSET": "RESET",
+            "SRMODE": "LSR_OVER_CE"
+          },
+          "attributes": {
+            "module_not_derived": 1,
+            "src": "passthru.v:177|/usr/local/bin/../share/yosys/ecp5/cells_map.v:47"
+          },
+          "port_directions": {
+            "CE": "input",
+            "CLK": "input",
+            "DI": "input",
+            "LSR": "input",
+            "Q": "output"
+          },
+          "connections": {
+            "CE": [ 236 ],
+            "CLK": [ 2 ],
+            "DI": [ 209 ],
+            "LSR": [ 220 ],
+            "Q": [ 208 ]
+          }
+        },
+        "$auto$simplemap.cc:420:simplemap_dff$289": {
+          "hide_name": 1,
+          "type": "TRELLIS_FF",
+          "parameters": {
+            "CEMUX": "CE",
+            "CLKMUX": "CLK",
+            "GSR": "DISABLED",
+            "LSRMUX": "LSR",
+            "REGSET": "RESET",
+            "SRMODE": "LSR_OVER_CE"
+          },
+          "attributes": {
+            "module_not_derived": 1,
+            "src": "passthru.v:177|/usr/local/bin/../share/yosys/ecp5/cells_map.v:47"
+          },
+          "port_directions": {
+            "CE": "input",
+            "CLK": "input",
+            "DI": "input",
+            "LSR": "input",
+            "Q": "output"
+          },
+          "connections": {
+            "CE": [ 229 ],
+            "CLK": [ 2 ],
+            "DI": [ 211 ],
+            "LSR": [ 220 ],
+            "Q": [ 210 ]
+          }
+        },
+        "$auto$simplemap.cc:420:simplemap_dff$290": {
+          "hide_name": 1,
+          "type": "TRELLIS_FF",
+          "parameters": {
+            "CEMUX": "CE",
+            "CLKMUX": "CLK",
+            "GSR": "DISABLED",
+            "LSRMUX": "LSR",
+            "REGSET": "RESET",
+            "SRMODE": "LSR_OVER_CE"
+          },
+          "attributes": {
+            "module_not_derived": 1,
+            "src": "passthru.v:177|/usr/local/bin/../share/yosys/ecp5/cells_map.v:47"
+          },
+          "port_directions": {
+            "CE": "input",
+            "CLK": "input",
+            "DI": "input",
+            "LSR": "input",
+            "Q": "output"
+          },
+          "connections": {
+            "CE": [ 244 ],
+            "CLK": [ 2 ],
+            "DI": [ 213 ],
+            "LSR": [ 220 ],
+            "Q": [ 212 ]
+          }
+        },
+        "$auto$simplemap.cc:420:simplemap_dff$291": {
+          "hide_name": 1,
+          "type": "TRELLIS_FF",
+          "parameters": {
+            "CEMUX": "CE",
+            "CLKMUX": "CLK",
+            "GSR": "DISABLED",
+            "LSRMUX": "LSR",
+            "REGSET": "RESET",
+            "SRMODE": "LSR_OVER_CE"
+          },
+          "attributes": {
+            "module_not_derived": 1,
+            "src": "passthru.v:177|/usr/local/bin/../share/yosys/ecp5/cells_map.v:47"
+          },
+          "port_directions": {
+            "CE": "input",
+            "CLK": "input",
+            "DI": "input",
+            "LSR": "input",
+            "Q": "output"
+          },
+          "connections": {
+            "CE": [ 227 ],
+            "CLK": [ 2 ],
+            "DI": [ 216 ],
+            "LSR": [ 220 ],
+            "Q": [ 215 ]
+          }
+        },
+        "$auto$simplemap.cc:420:simplemap_dff$292": {
+          "hide_name": 1,
+          "type": "TRELLIS_FF",
+          "parameters": {
+            "CEMUX": "CE",
+            "CLKMUX": "CLK",
+            "GSR": "DISABLED",
+            "LSRMUX": "LSR",
+            "REGSET": "RESET",
+            "SRMODE": "LSR_OVER_CE"
+          },
+          "attributes": {
+            "module_not_derived": 1,
+            "src": "passthru.v:177|/usr/local/bin/../share/yosys/ecp5/cells_map.v:47"
+          },
+          "port_directions": {
+            "CE": "input",
+            "CLK": "input",
+            "DI": "input",
+            "LSR": "input",
+            "Q": "output"
+          },
+          "connections": {
+            "CE": [ 239 ],
+            "CLK": [ 2 ],
+            "DI": [ 217 ],
+            "LSR": [ 220 ],
+            "Q": [ 133 ]
+          }
+        },
+        "$auto$simplemap.cc:420:simplemap_dff$293": {
           "hide_name": 1,
           "type": "TRELLIS_FF",
           "parameters": {
@@ -16193,7 +17515,7 @@
           },
           "attributes": {
             "module_not_derived": 1,
-            "src": "passthru.v:166|/usr/local/bin/../share/yosys/ecp5/cells_map.v:2"
+            "src": "passthru.v:177|/usr/local/bin/../share/yosys/ecp5/cells_map.v:2"
           },
           "port_directions": {
             "CLK": "input",
@@ -16205,10 +17527,10 @@
             "CLK": [ 2 ],
             "DI": [ 6 ],
             "LSR": [ "0" ],
-            "Q": [ 151 ]
+            "Q": [ 218 ]
           }
         },
-        "$auto$simplemap.cc:420:simplemap_dff$312": {
+        "$auto$simplemap.cc:420:simplemap_dff$294": {
           "hide_name": 1,
           "type": "TRELLIS_FF",
           "parameters": {
@@ -16220,7 +17542,7 @@
           },
           "attributes": {
             "module_not_derived": 1,
-            "src": "passthru.v:166|/usr/local/bin/../share/yosys/ecp5/cells_map.v:2"
+            "src": "passthru.v:177|/usr/local/bin/../share/yosys/ecp5/cells_map.v:2"
           },
           "port_directions": {
             "CLK": "input",
@@ -16232,40 +17554,1134 @@
             "CLK": [ 2 ],
             "DI": [ 5 ],
             "LSR": [ "0" ],
-            "Q": [ 152 ]
+            "Q": [ 219 ]
           }
         },
-        "$auto$simplemap.cc:420:simplemap_dff$313": {
+        "$auto$simplemap.cc:420:simplemap_dff$410": {
           "hide_name": 1,
           "type": "TRELLIS_FF",
           "parameters": {
-            "CEMUX": "CE",
+            "CEMUX": "1",
             "CLKMUX": "CLK",
             "GSR": "DISABLED",
             "LSRMUX": "LSR",
-            "REGSET": "RESET",
-            "SRMODE": "LSR_OVER_CE"
+            "REGSET": "RESET"
           },
           "attributes": {
             "module_not_derived": 1,
-            "src": "passthru.v:166|/usr/local/bin/../share/yosys/ecp5/cells_map.v:47"
+            "src": "passthru.v:99|debouncer.v:92|/usr/local/bin/../share/yosys/ecp5/cells_map.v:2"
           },
           "port_directions": {
-            "CE": "input",
             "CLK": "input",
             "DI": "input",
             "LSR": "input",
             "Q": "output"
           },
           "connections": {
-            "CE": [ 167 ],
             "CLK": [ 2 ],
-            "DI": [ 162 ],
-            "LSR": [ 153 ],
-            "Q": [ 100 ]
+            "DI": [ 253 ],
+            "LSR": [ "0" ],
+            "Q": [ 245 ]
           }
         },
-        "$auto$simplemap.cc:420:simplemap_dff$314": {
+        "$auto$simplemap.cc:420:simplemap_dff$411": {
+          "hide_name": 1,
+          "type": "TRELLIS_FF",
+          "parameters": {
+            "CEMUX": "1",
+            "CLKMUX": "CLK",
+            "GSR": "DISABLED",
+            "LSRMUX": "LSR",
+            "REGSET": "RESET"
+          },
+          "attributes": {
+            "module_not_derived": 1,
+            "src": "passthru.v:99|debouncer.v:92|/usr/local/bin/../share/yosys/ecp5/cells_map.v:2"
+          },
+          "port_directions": {
+            "CLK": "input",
+            "DI": "input",
+            "LSR": "input",
+            "Q": "output"
+          },
+          "connections": {
+            "CLK": [ 2 ],
+            "DI": [ 254 ],
+            "LSR": [ "0" ],
+            "Q": [ 247 ]
+          }
+        },
+        "$auto$simplemap.cc:420:simplemap_dff$412": {
+          "hide_name": 1,
+          "type": "TRELLIS_FF",
+          "parameters": {
+            "CEMUX": "1",
+            "CLKMUX": "CLK",
+            "GSR": "DISABLED",
+            "LSRMUX": "LSR",
+            "REGSET": "RESET"
+          },
+          "attributes": {
+            "module_not_derived": 1,
+            "src": "passthru.v:99|debouncer.v:92|/usr/local/bin/../share/yosys/ecp5/cells_map.v:2"
+          },
+          "port_directions": {
+            "CLK": "input",
+            "DI": "input",
+            "LSR": "input",
+            "Q": "output"
+          },
+          "connections": {
+            "CLK": [ 2 ],
+            "DI": [ 255 ],
+            "LSR": [ "0" ],
+            "Q": [ 97 ]
+          }
+        },
+        "$auto$simplemap.cc:420:simplemap_dff$413": {
+          "hide_name": 1,
+          "type": "TRELLIS_FF",
+          "parameters": {
+            "CEMUX": "1",
+            "CLKMUX": "CLK",
+            "GSR": "DISABLED",
+            "LSRMUX": "LSR",
+            "REGSET": "RESET"
+          },
+          "attributes": {
+            "module_not_derived": 1,
+            "src": "passthru.v:99|debouncer.v:92|/usr/local/bin/../share/yosys/ecp5/cells_map.v:2"
+          },
+          "port_directions": {
+            "CLK": "input",
+            "DI": "input",
+            "LSR": "input",
+            "Q": "output"
+          },
+          "connections": {
+            "CLK": [ 2 ],
+            "DI": [ 256 ],
+            "LSR": [ "0" ],
+            "Q": [ 249 ]
+          }
+        },
+        "$auto$simplemap.cc:420:simplemap_dff$414": {
+          "hide_name": 1,
+          "type": "TRELLIS_FF",
+          "parameters": {
+            "CEMUX": "1",
+            "CLKMUX": "CLK",
+            "GSR": "DISABLED",
+            "LSRMUX": "LSR",
+            "REGSET": "RESET"
+          },
+          "attributes": {
+            "module_not_derived": 1,
+            "src": "passthru.v:99|debouncer.v:92|/usr/local/bin/../share/yosys/ecp5/cells_map.v:2"
+          },
+          "port_directions": {
+            "CLK": "input",
+            "DI": "input",
+            "LSR": "input",
+            "Q": "output"
+          },
+          "connections": {
+            "CLK": [ 2 ],
+            "DI": [ 257 ],
+            "LSR": [ "0" ],
+            "Q": [ 101 ]
+          }
+        },
+        "$auto$simplemap.cc:420:simplemap_dff$415": {
+          "hide_name": 1,
+          "type": "TRELLIS_FF",
+          "parameters": {
+            "CEMUX": "1",
+            "CLKMUX": "CLK",
+            "GSR": "DISABLED",
+            "LSRMUX": "LSR",
+            "REGSET": "RESET"
+          },
+          "attributes": {
+            "module_not_derived": 1,
+            "src": "passthru.v:99|debouncer.v:92|/usr/local/bin/../share/yosys/ecp5/cells_map.v:2"
+          },
+          "port_directions": {
+            "CLK": "input",
+            "DI": "input",
+            "LSR": "input",
+            "Q": "output"
+          },
+          "connections": {
+            "CLK": [ 2 ],
+            "DI": [ 258 ],
+            "LSR": [ "0" ],
+            "Q": [ 103 ]
+          }
+        },
+        "$auto$simplemap.cc:420:simplemap_dff$416": {
+          "hide_name": 1,
+          "type": "TRELLIS_FF",
+          "parameters": {
+            "CEMUX": "1",
+            "CLKMUX": "CLK",
+            "GSR": "DISABLED",
+            "LSRMUX": "LSR",
+            "REGSET": "RESET"
+          },
+          "attributes": {
+            "module_not_derived": 1,
+            "src": "passthru.v:99|debouncer.v:92|/usr/local/bin/../share/yosys/ecp5/cells_map.v:2"
+          },
+          "port_directions": {
+            "CLK": "input",
+            "DI": "input",
+            "LSR": "input",
+            "Q": "output"
+          },
+          "connections": {
+            "CLK": [ 2 ],
+            "DI": [ 259 ],
+            "LSR": [ "0" ],
+            "Q": [ 93 ]
+          }
+        },
+        "$auto$simplemap.cc:420:simplemap_dff$417": {
+          "hide_name": 1,
+          "type": "TRELLIS_FF",
+          "parameters": {
+            "CEMUX": "1",
+            "CLKMUX": "CLK",
+            "GSR": "DISABLED",
+            "LSRMUX": "LSR",
+            "REGSET": "RESET"
+          },
+          "attributes": {
+            "module_not_derived": 1,
+            "src": "passthru.v:99|debouncer.v:92|/usr/local/bin/../share/yosys/ecp5/cells_map.v:2"
+          },
+          "port_directions": {
+            "CLK": "input",
+            "DI": "input",
+            "LSR": "input",
+            "Q": "output"
+          },
+          "connections": {
+            "CLK": [ 2 ],
+            "DI": [ 260 ],
+            "LSR": [ "0" ],
+            "Q": [ 99 ]
+          }
+        },
+        "$auto$simplemap.cc:420:simplemap_dff$418": {
+          "hide_name": 1,
+          "type": "TRELLIS_FF",
+          "parameters": {
+            "CEMUX": "1",
+            "CLKMUX": "CLK",
+            "GSR": "DISABLED",
+            "LSRMUX": "LSR",
+            "REGSET": "RESET"
+          },
+          "attributes": {
+            "module_not_derived": 1,
+            "src": "passthru.v:99|debouncer.v:90|/usr/local/bin/../share/yosys/ecp5/cells_map.v:2"
+          },
+          "port_directions": {
+            "CLK": "input",
+            "DI": "input",
+            "LSR": "input",
+            "Q": "output"
+          },
+          "connections": {
+            "CLK": [ 2 ],
+            "DI": [ 13 ],
+            "LSR": [ "0" ],
+            "Q": [ 253 ]
+          }
+        },
+        "$auto$simplemap.cc:420:simplemap_dff$419": {
+          "hide_name": 1,
+          "type": "TRELLIS_FF",
+          "parameters": {
+            "CEMUX": "1",
+            "CLKMUX": "CLK",
+            "GSR": "DISABLED",
+            "LSRMUX": "LSR",
+            "REGSET": "RESET"
+          },
+          "attributes": {
+            "module_not_derived": 1,
+            "src": "passthru.v:99|debouncer.v:90|/usr/local/bin/../share/yosys/ecp5/cells_map.v:2"
+          },
+          "port_directions": {
+            "CLK": "input",
+            "DI": "input",
+            "LSR": "input",
+            "Q": "output"
+          },
+          "connections": {
+            "CLK": [ 2 ],
+            "DI": [ 14 ],
+            "LSR": [ "0" ],
+            "Q": [ 254 ]
+          }
+        },
+        "$auto$simplemap.cc:420:simplemap_dff$420": {
+          "hide_name": 1,
+          "type": "TRELLIS_FF",
+          "parameters": {
+            "CEMUX": "1",
+            "CLKMUX": "CLK",
+            "GSR": "DISABLED",
+            "LSRMUX": "LSR",
+            "REGSET": "RESET"
+          },
+          "attributes": {
+            "module_not_derived": 1,
+            "src": "passthru.v:99|debouncer.v:90|/usr/local/bin/../share/yosys/ecp5/cells_map.v:2"
+          },
+          "port_directions": {
+            "CLK": "input",
+            "DI": "input",
+            "LSR": "input",
+            "Q": "output"
+          },
+          "connections": {
+            "CLK": [ 2 ],
+            "DI": [ 15 ],
+            "LSR": [ "0" ],
+            "Q": [ 255 ]
+          }
+        },
+        "$auto$simplemap.cc:420:simplemap_dff$421": {
+          "hide_name": 1,
+          "type": "TRELLIS_FF",
+          "parameters": {
+            "CEMUX": "1",
+            "CLKMUX": "CLK",
+            "GSR": "DISABLED",
+            "LSRMUX": "LSR",
+            "REGSET": "RESET"
+          },
+          "attributes": {
+            "module_not_derived": 1,
+            "src": "passthru.v:99|debouncer.v:90|/usr/local/bin/../share/yosys/ecp5/cells_map.v:2"
+          },
+          "port_directions": {
+            "CLK": "input",
+            "DI": "input",
+            "LSR": "input",
+            "Q": "output"
+          },
+          "connections": {
+            "CLK": [ 2 ],
+            "DI": [ 16 ],
+            "LSR": [ "0" ],
+            "Q": [ 256 ]
+          }
+        },
+        "$auto$simplemap.cc:420:simplemap_dff$422": {
+          "hide_name": 1,
+          "type": "TRELLIS_FF",
+          "parameters": {
+            "CEMUX": "1",
+            "CLKMUX": "CLK",
+            "GSR": "DISABLED",
+            "LSRMUX": "LSR",
+            "REGSET": "RESET"
+          },
+          "attributes": {
+            "module_not_derived": 1,
+            "src": "passthru.v:99|debouncer.v:90|/usr/local/bin/../share/yosys/ecp5/cells_map.v:2"
+          },
+          "port_directions": {
+            "CLK": "input",
+            "DI": "input",
+            "LSR": "input",
+            "Q": "output"
+          },
+          "connections": {
+            "CLK": [ 2 ],
+            "DI": [ 17 ],
+            "LSR": [ "0" ],
+            "Q": [ 257 ]
+          }
+        },
+        "$auto$simplemap.cc:420:simplemap_dff$423": {
+          "hide_name": 1,
+          "type": "TRELLIS_FF",
+          "parameters": {
+            "CEMUX": "1",
+            "CLKMUX": "CLK",
+            "GSR": "DISABLED",
+            "LSRMUX": "LSR",
+            "REGSET": "RESET"
+          },
+          "attributes": {
+            "module_not_derived": 1,
+            "src": "passthru.v:99|debouncer.v:90|/usr/local/bin/../share/yosys/ecp5/cells_map.v:2"
+          },
+          "port_directions": {
+            "CLK": "input",
+            "DI": "input",
+            "LSR": "input",
+            "Q": "output"
+          },
+          "connections": {
+            "CLK": [ 2 ],
+            "DI": [ 18 ],
+            "LSR": [ "0" ],
+            "Q": [ 258 ]
+          }
+        },
+        "$auto$simplemap.cc:420:simplemap_dff$424": {
+          "hide_name": 1,
+          "type": "TRELLIS_FF",
+          "parameters": {
+            "CEMUX": "1",
+            "CLKMUX": "CLK",
+            "GSR": "DISABLED",
+            "LSRMUX": "LSR",
+            "REGSET": "RESET"
+          },
+          "attributes": {
+            "module_not_derived": 1,
+            "src": "passthru.v:99|debouncer.v:90|/usr/local/bin/../share/yosys/ecp5/cells_map.v:2"
+          },
+          "port_directions": {
+            "CLK": "input",
+            "DI": "input",
+            "LSR": "input",
+            "Q": "output"
+          },
+          "connections": {
+            "CLK": [ 2 ],
+            "DI": [ 19 ],
+            "LSR": [ "0" ],
+            "Q": [ 259 ]
+          }
+        },
+        "$auto$simplemap.cc:420:simplemap_dff$425": {
+          "hide_name": 1,
+          "type": "TRELLIS_FF",
+          "parameters": {
+            "CEMUX": "1",
+            "CLKMUX": "CLK",
+            "GSR": "DISABLED",
+            "LSRMUX": "LSR",
+            "REGSET": "RESET"
+          },
+          "attributes": {
+            "module_not_derived": 1,
+            "src": "passthru.v:99|debouncer.v:90|/usr/local/bin/../share/yosys/ecp5/cells_map.v:2"
+          },
+          "port_directions": {
+            "CLK": "input",
+            "DI": "input",
+            "LSR": "input",
+            "Q": "output"
+          },
+          "connections": {
+            "CLK": [ 2 ],
+            "DI": [ "0" ],
+            "LSR": [ "0" ],
+            "Q": [ 260 ]
+          }
+        },
+        "$auto$simplemap.cc:420:simplemap_dff$426": {
+          "hide_name": 1,
+          "type": "TRELLIS_FF",
+          "parameters": {
+            "CEMUX": "1",
+            "CLKMUX": "CLK",
+            "GSR": "DISABLED",
+            "LSRMUX": "LSR",
+            "REGSET": "RESET"
+          },
+          "attributes": {
+            "module_not_derived": 1,
+            "src": "passthru.v:99|debouncer.v:96|/usr/local/bin/../share/yosys/ecp5/cells_map.v:2"
+          },
+          "port_directions": {
+            "CLK": "input",
+            "DI": "input",
+            "LSR": "input",
+            "Q": "output"
+          },
+          "connections": {
+            "CLK": [ 2 ],
+            "DI": [ 245 ],
+            "LSR": [ "0" ],
+            "Q": [ 261 ]
+          }
+        },
+        "$auto$simplemap.cc:420:simplemap_dff$427": {
+          "hide_name": 1,
+          "type": "TRELLIS_FF",
+          "parameters": {
+            "CEMUX": "1",
+            "CLKMUX": "CLK",
+            "GSR": "DISABLED",
+            "LSRMUX": "LSR",
+            "REGSET": "RESET"
+          },
+          "attributes": {
+            "module_not_derived": 1,
+            "src": "passthru.v:99|debouncer.v:96|/usr/local/bin/../share/yosys/ecp5/cells_map.v:2"
+          },
+          "port_directions": {
+            "CLK": "input",
+            "DI": "input",
+            "LSR": "input",
+            "Q": "output"
+          },
+          "connections": {
+            "CLK": [ 2 ],
+            "DI": [ 247 ],
+            "LSR": [ "0" ],
+            "Q": [ 262 ]
+          }
+        },
+        "$auto$simplemap.cc:420:simplemap_dff$428": {
+          "hide_name": 1,
+          "type": "TRELLIS_FF",
+          "parameters": {
+            "CEMUX": "1",
+            "CLKMUX": "CLK",
+            "GSR": "DISABLED",
+            "LSRMUX": "LSR",
+            "REGSET": "RESET"
+          },
+          "attributes": {
+            "module_not_derived": 1,
+            "src": "passthru.v:99|debouncer.v:96|/usr/local/bin/../share/yosys/ecp5/cells_map.v:2"
+          },
+          "port_directions": {
+            "CLK": "input",
+            "DI": "input",
+            "LSR": "input",
+            "Q": "output"
+          },
+          "connections": {
+            "CLK": [ 2 ],
+            "DI": [ 97 ],
+            "LSR": [ "0" ],
+            "Q": [ 263 ]
+          }
+        },
+        "$auto$simplemap.cc:420:simplemap_dff$429": {
+          "hide_name": 1,
+          "type": "TRELLIS_FF",
+          "parameters": {
+            "CEMUX": "1",
+            "CLKMUX": "CLK",
+            "GSR": "DISABLED",
+            "LSRMUX": "LSR",
+            "REGSET": "RESET"
+          },
+          "attributes": {
+            "module_not_derived": 1,
+            "src": "passthru.v:99|debouncer.v:96|/usr/local/bin/../share/yosys/ecp5/cells_map.v:2"
+          },
+          "port_directions": {
+            "CLK": "input",
+            "DI": "input",
+            "LSR": "input",
+            "Q": "output"
+          },
+          "connections": {
+            "CLK": [ 2 ],
+            "DI": [ 249 ],
+            "LSR": [ "0" ],
+            "Q": [ 264 ]
+          }
+        },
+        "$auto$simplemap.cc:420:simplemap_dff$430": {
+          "hide_name": 1,
+          "type": "TRELLIS_FF",
+          "parameters": {
+            "CEMUX": "1",
+            "CLKMUX": "CLK",
+            "GSR": "DISABLED",
+            "LSRMUX": "LSR",
+            "REGSET": "RESET"
+          },
+          "attributes": {
+            "module_not_derived": 1,
+            "src": "passthru.v:99|debouncer.v:96|/usr/local/bin/../share/yosys/ecp5/cells_map.v:2"
+          },
+          "port_directions": {
+            "CLK": "input",
+            "DI": "input",
+            "LSR": "input",
+            "Q": "output"
+          },
+          "connections": {
+            "CLK": [ 2 ],
+            "DI": [ 101 ],
+            "LSR": [ "0" ],
+            "Q": [ 265 ]
+          }
+        },
+        "$auto$simplemap.cc:420:simplemap_dff$431": {
+          "hide_name": 1,
+          "type": "TRELLIS_FF",
+          "parameters": {
+            "CEMUX": "1",
+            "CLKMUX": "CLK",
+            "GSR": "DISABLED",
+            "LSRMUX": "LSR",
+            "REGSET": "RESET"
+          },
+          "attributes": {
+            "module_not_derived": 1,
+            "src": "passthru.v:99|debouncer.v:96|/usr/local/bin/../share/yosys/ecp5/cells_map.v:2"
+          },
+          "port_directions": {
+            "CLK": "input",
+            "DI": "input",
+            "LSR": "input",
+            "Q": "output"
+          },
+          "connections": {
+            "CLK": [ 2 ],
+            "DI": [ 103 ],
+            "LSR": [ "0" ],
+            "Q": [ 266 ]
+          }
+        },
+        "$auto$simplemap.cc:420:simplemap_dff$432": {
+          "hide_name": 1,
+          "type": "TRELLIS_FF",
+          "parameters": {
+            "CEMUX": "1",
+            "CLKMUX": "CLK",
+            "GSR": "DISABLED",
+            "LSRMUX": "LSR",
+            "REGSET": "RESET"
+          },
+          "attributes": {
+            "module_not_derived": 1,
+            "src": "passthru.v:99|debouncer.v:96|/usr/local/bin/../share/yosys/ecp5/cells_map.v:2"
+          },
+          "port_directions": {
+            "CLK": "input",
+            "DI": "input",
+            "LSR": "input",
+            "Q": "output"
+          },
+          "connections": {
+            "CLK": [ 2 ],
+            "DI": [ 93 ],
+            "LSR": [ "0" ],
+            "Q": [ 267 ]
+          }
+        },
+        "$auto$simplemap.cc:420:simplemap_dff$433": {
+          "hide_name": 1,
+          "type": "TRELLIS_FF",
+          "parameters": {
+            "CEMUX": "1",
+            "CLKMUX": "CLK",
+            "GSR": "DISABLED",
+            "LSRMUX": "LSR",
+            "REGSET": "RESET"
+          },
+          "attributes": {
+            "module_not_derived": 1,
+            "src": "passthru.v:99|debouncer.v:96|/usr/local/bin/../share/yosys/ecp5/cells_map.v:2"
+          },
+          "port_directions": {
+            "CLK": "input",
+            "DI": "input",
+            "LSR": "input",
+            "Q": "output"
+          },
+          "connections": {
+            "CLK": [ 2 ],
+            "DI": [ 99 ],
+            "LSR": [ "0" ],
+            "Q": [ 268 ]
+          }
+        },
+        "$auto$simplemap.cc:420:simplemap_dff$434": {
+          "hide_name": 1,
+          "type": "TRELLIS_FF",
+          "parameters": {
+            "CEMUX": "1",
+            "CLKMUX": "CLK",
+            "GSR": "DISABLED",
+            "LSRMUX": "LSR",
+            "REGSET": "SET",
+            "SRMODE": "LSR_OVER_CE"
+          },
+          "attributes": {
+            "module_not_derived": 1,
+            "src": "passthru.v:99|debouncer.v:112|/usr/local/bin/../share/yosys/ecp5/cells_map.v:28"
+          },
+          "port_directions": {
+            "CLK": "input",
+            "DI": "input",
+            "LSR": "input",
+            "Q": "output"
+          },
+          "connections": {
+            "CLK": [ 2 ],
+            "DI": [ 223 ],
+            "LSR": [ 138 ],
+            "Q": [ 122 ]
+          }
+        },
+        "$auto$simplemap.cc:420:simplemap_dff$435": {
+          "hide_name": 1,
+          "type": "TRELLIS_FF",
+          "parameters": {
+            "CEMUX": "1",
+            "CLKMUX": "CLK",
+            "GSR": "DISABLED",
+            "LSRMUX": "LSR",
+            "REGSET": "SET",
+            "SRMODE": "LSR_OVER_CE"
+          },
+          "attributes": {
+            "module_not_derived": 1,
+            "src": "passthru.v:99|debouncer.v:112|/usr/local/bin/../share/yosys/ecp5/cells_map.v:28"
+          },
+          "port_directions": {
+            "CLK": "input",
+            "DI": "input",
+            "LSR": "input",
+            "Q": "output"
+          },
+          "connections": {
+            "CLK": [ 2 ],
+            "DI": [ 170 ],
+            "LSR": [ 138 ],
+            "Q": [ 123 ]
+          }
+        },
+        "$auto$simplemap.cc:420:simplemap_dff$436": {
+          "hide_name": 1,
+          "type": "TRELLIS_FF",
+          "parameters": {
+            "CEMUX": "1",
+            "CLKMUX": "CLK",
+            "GSR": "DISABLED",
+            "LSRMUX": "LSR",
+            "REGSET": "SET",
+            "SRMODE": "LSR_OVER_CE"
+          },
+          "attributes": {
+            "module_not_derived": 1,
+            "src": "passthru.v:99|debouncer.v:112|/usr/local/bin/../share/yosys/ecp5/cells_map.v:28"
+          },
+          "port_directions": {
+            "CLK": "input",
+            "DI": "input",
+            "LSR": "input",
+            "Q": "output"
+          },
+          "connections": {
+            "CLK": [ 2 ],
+            "DI": [ 180 ],
+            "LSR": [ 138 ],
+            "Q": [ 121 ]
+          }
+        },
+        "$auto$simplemap.cc:420:simplemap_dff$437": {
+          "hide_name": 1,
+          "type": "TRELLIS_FF",
+          "parameters": {
+            "CEMUX": "1",
+            "CLKMUX": "CLK",
+            "GSR": "DISABLED",
+            "LSRMUX": "LSR",
+            "REGSET": "SET",
+            "SRMODE": "LSR_OVER_CE"
+          },
+          "attributes": {
+            "module_not_derived": 1,
+            "src": "passthru.v:99|debouncer.v:112|/usr/local/bin/../share/yosys/ecp5/cells_map.v:28"
+          },
+          "port_directions": {
+            "CLK": "input",
+            "DI": "input",
+            "LSR": "input",
+            "Q": "output"
+          },
+          "connections": {
+            "CLK": [ 2 ],
+            "DI": [ 225 ],
+            "LSR": [ 138 ],
+            "Q": [ 124 ]
+          }
+        },
+        "$auto$simplemap.cc:420:simplemap_dff$438": {
+          "hide_name": 1,
+          "type": "TRELLIS_FF",
+          "parameters": {
+            "CEMUX": "1",
+            "CLKMUX": "CLK",
+            "GSR": "DISABLED",
+            "LSRMUX": "LSR",
+            "REGSET": "SET",
+            "SRMODE": "LSR_OVER_CE"
+          },
+          "attributes": {
+            "module_not_derived": 1,
+            "src": "passthru.v:99|debouncer.v:112|/usr/local/bin/../share/yosys/ecp5/cells_map.v:28"
+          },
+          "port_directions": {
+            "CLK": "input",
+            "DI": "input",
+            "LSR": "input",
+            "Q": "output"
+          },
+          "connections": {
+            "CLK": [ 2 ],
+            "DI": [ 167 ],
+            "LSR": [ 138 ],
+            "Q": [ 118 ]
+          }
+        },
+        "$auto$simplemap.cc:420:simplemap_dff$439": {
+          "hide_name": 1,
+          "type": "TRELLIS_FF",
+          "parameters": {
+            "CEMUX": "1",
+            "CLKMUX": "CLK",
+            "GSR": "DISABLED",
+            "LSRMUX": "LSR",
+            "REGSET": "SET",
+            "SRMODE": "LSR_OVER_CE"
+          },
+          "attributes": {
+            "module_not_derived": 1,
+            "src": "passthru.v:99|debouncer.v:112|/usr/local/bin/../share/yosys/ecp5/cells_map.v:28"
+          },
+          "port_directions": {
+            "CLK": "input",
+            "DI": "input",
+            "LSR": "input",
+            "Q": "output"
+          },
+          "connections": {
+            "CLK": [ 2 ],
+            "DI": [ 166 ],
+            "LSR": [ 138 ],
+            "Q": [ 119 ]
+          }
+        },
+        "$auto$simplemap.cc:420:simplemap_dff$440": {
+          "hide_name": 1,
+          "type": "TRELLIS_FF",
+          "parameters": {
+            "CEMUX": "1",
+            "CLKMUX": "CLK",
+            "GSR": "DISABLED",
+            "LSRMUX": "LSR",
+            "REGSET": "SET",
+            "SRMODE": "LSR_OVER_CE"
+          },
+          "attributes": {
+            "module_not_derived": 1,
+            "src": "passthru.v:99|debouncer.v:112|/usr/local/bin/../share/yosys/ecp5/cells_map.v:28"
+          },
+          "port_directions": {
+            "CLK": "input",
+            "DI": "input",
+            "LSR": "input",
+            "Q": "output"
+          },
+          "connections": {
+            "CLK": [ 2 ],
+            "DI": [ 179 ],
+            "LSR": [ 138 ],
+            "Q": [ 117 ]
+          }
+        },
+        "$auto$simplemap.cc:420:simplemap_dff$441": {
+          "hide_name": 1,
+          "type": "TRELLIS_FF",
+          "parameters": {
+            "CEMUX": "1",
+            "CLKMUX": "CLK",
+            "GSR": "DISABLED",
+            "LSRMUX": "LSR",
+            "REGSET": "SET",
+            "SRMODE": "LSR_OVER_CE"
+          },
+          "attributes": {
+            "module_not_derived": 1,
+            "src": "passthru.v:99|debouncer.v:112|/usr/local/bin/../share/yosys/ecp5/cells_map.v:28"
+          },
+          "port_directions": {
+            "CLK": "input",
+            "DI": "input",
+            "LSR": "input",
+            "Q": "output"
+          },
+          "connections": {
+            "CLK": [ 2 ],
+            "DI": [ 181 ],
+            "LSR": [ 138 ],
+            "Q": [ 114 ]
+          }
+        },
+        "$auto$simplemap.cc:420:simplemap_dff$442": {
+          "hide_name": 1,
+          "type": "TRELLIS_FF",
+          "parameters": {
+            "CEMUX": "1",
+            "CLKMUX": "CLK",
+            "GSR": "DISABLED",
+            "LSRMUX": "LSR",
+            "REGSET": "SET",
+            "SRMODE": "LSR_OVER_CE"
+          },
+          "attributes": {
+            "module_not_derived": 1,
+            "src": "passthru.v:99|debouncer.v:112|/usr/local/bin/../share/yosys/ecp5/cells_map.v:28"
+          },
+          "port_directions": {
+            "CLK": "input",
+            "DI": "input",
+            "LSR": "input",
+            "Q": "output"
+          },
+          "connections": {
+            "CLK": [ 2 ],
+            "DI": [ 127 ],
+            "LSR": [ 138 ],
+            "Q": [ 113 ]
+          }
+        },
+        "$auto$simplemap.cc:420:simplemap_dff$443": {
+          "hide_name": 1,
+          "type": "TRELLIS_FF",
+          "parameters": {
+            "CEMUX": "1",
+            "CLKMUX": "CLK",
+            "GSR": "DISABLED",
+            "LSRMUX": "LSR",
+            "REGSET": "SET",
+            "SRMODE": "LSR_OVER_CE"
+          },
+          "attributes": {
+            "module_not_derived": 1,
+            "src": "passthru.v:99|debouncer.v:112|/usr/local/bin/../share/yosys/ecp5/cells_map.v:28"
+          },
+          "port_directions": {
+            "CLK": "input",
+            "DI": "input",
+            "LSR": "input",
+            "Q": "output"
+          },
+          "connections": {
+            "CLK": [ 2 ],
+            "DI": [ 126 ],
+            "LSR": [ 138 ],
+            "Q": [ 115 ]
+          }
+        },
+        "$auto$simplemap.cc:420:simplemap_dff$444": {
+          "hide_name": 1,
+          "type": "TRELLIS_FF",
+          "parameters": {
+            "CEMUX": "1",
+            "CLKMUX": "CLK",
+            "GSR": "DISABLED",
+            "LSRMUX": "LSR",
+            "REGSET": "SET",
+            "SRMODE": "LSR_OVER_CE"
+          },
+          "attributes": {
+            "module_not_derived": 1,
+            "src": "passthru.v:99|debouncer.v:112|/usr/local/bin/../share/yosys/ecp5/cells_map.v:28"
+          },
+          "port_directions": {
+            "CLK": "input",
+            "DI": "input",
+            "LSR": "input",
+            "Q": "output"
+          },
+          "connections": {
+            "CLK": [ 2 ],
+            "DI": [ 226 ],
+            "LSR": [ 138 ],
+            "Q": [ 108 ]
+          }
+        },
+        "$auto$simplemap.cc:420:simplemap_dff$445": {
+          "hide_name": 1,
+          "type": "TRELLIS_FF",
+          "parameters": {
+            "CEMUX": "1",
+            "CLKMUX": "CLK",
+            "GSR": "DISABLED",
+            "LSRMUX": "LSR",
+            "REGSET": "SET",
+            "SRMODE": "LSR_OVER_CE"
+          },
+          "attributes": {
+            "module_not_derived": 1,
+            "src": "passthru.v:99|debouncer.v:112|/usr/local/bin/../share/yosys/ecp5/cells_map.v:28"
+          },
+          "port_directions": {
+            "CLK": "input",
+            "DI": "input",
+            "LSR": "input",
+            "Q": "output"
+          },
+          "connections": {
+            "CLK": [ 2 ],
+            "DI": [ 112 ],
+            "LSR": [ 138 ],
+            "Q": [ 111 ]
+          }
+        },
+        "$auto$simplemap.cc:420:simplemap_dff$446": {
+          "hide_name": 1,
+          "type": "TRELLIS_FF",
+          "parameters": {
+            "CEMUX": "1",
+            "CLKMUX": "CLK",
+            "GSR": "DISABLED",
+            "LSRMUX": "LSR",
+            "REGSET": "SET",
+            "SRMODE": "LSR_OVER_CE"
+          },
+          "attributes": {
+            "module_not_derived": 1,
+            "src": "passthru.v:99|debouncer.v:112|/usr/local/bin/../share/yosys/ecp5/cells_map.v:28"
+          },
+          "port_directions": {
+            "CLK": "input",
+            "DI": "input",
+            "LSR": "input",
+            "Q": "output"
+          },
+          "connections": {
+            "CLK": [ 2 ],
+            "DI": [ 136 ],
+            "LSR": [ 138 ],
+            "Q": [ 135 ]
+          }
+        },
+        "$auto$simplemap.cc:420:simplemap_dff$447": {
+          "hide_name": 1,
+          "type": "TRELLIS_FF",
+          "parameters": {
+            "CEMUX": "1",
+            "CLKMUX": "CLK",
+            "GSR": "DISABLED",
+            "LSRMUX": "LSR",
+            "REGSET": "SET",
+            "SRMODE": "LSR_OVER_CE"
+          },
+          "attributes": {
+            "module_not_derived": 1,
+            "src": "passthru.v:99|debouncer.v:112|/usr/local/bin/../share/yosys/ecp5/cells_map.v:28"
+          },
+          "port_directions": {
+            "CLK": "input",
+            "DI": "input",
+            "LSR": "input",
+            "Q": "output"
+          },
+          "connections": {
+            "CLK": [ 2 ],
+            "DI": [ 143 ],
+            "LSR": [ 138 ],
+            "Q": [ 142 ]
+          }
+        },
+        "$auto$simplemap.cc:420:simplemap_dff$448": {
+          "hide_name": 1,
+          "type": "TRELLIS_FF",
+          "parameters": {
+            "CEMUX": "1",
+            "CLKMUX": "CLK",
+            "GSR": "DISABLED",
+            "LSRMUX": "LSR",
+            "REGSET": "SET",
+            "SRMODE": "LSR_OVER_CE"
+          },
+          "attributes": {
+            "module_not_derived": 1,
+            "src": "passthru.v:99|debouncer.v:112|/usr/local/bin/../share/yosys/ecp5/cells_map.v:28"
+          },
+          "port_directions": {
+            "CLK": "input",
+            "DI": "input",
+            "LSR": "input",
+            "Q": "output"
+          },
+          "connections": {
+            "CLK": [ 2 ],
+            "DI": [ 147 ],
+            "LSR": [ 138 ],
+            "Q": [ 146 ]
+          }
+        },
+        "$auto$simplemap.cc:420:simplemap_dff$449": {
+          "hide_name": 1,
+          "type": "TRELLIS_FF",
+          "parameters": {
+            "CEMUX": "1",
+            "CLKMUX": "CLK",
+            "GSR": "DISABLED",
+            "LSRMUX": "LSR",
+            "REGSET": "SET",
+            "SRMODE": "LSR_OVER_CE"
+          },
+          "attributes": {
+            "module_not_derived": 1,
+            "src": "passthru.v:99|debouncer.v:112|/usr/local/bin/../share/yosys/ecp5/cells_map.v:28"
+          },
+          "port_directions": {
+            "CLK": "input",
+            "DI": "input",
+            "LSR": "input",
+            "Q": "output"
+          },
+          "connections": {
+            "CLK": [ 2 ],
+            "DI": [ 149 ],
+            "LSR": [ 138 ],
+            "Q": [ 150 ]
+          }
+        },
+        "$auto$simplemap.cc:420:simplemap_dff$450": {
+          "hide_name": 1,
+          "type": "TRELLIS_FF",
+          "parameters": {
+            "CEMUX": "1",
+            "CLKMUX": "CLK",
+            "GSR": "DISABLED",
+            "LSRMUX": "LSR",
+            "REGSET": "SET",
+            "SRMODE": "LSR_OVER_CE"
+          },
+          "attributes": {
+            "module_not_derived": 1,
+            "src": "passthru.v:99|debouncer.v:112|/usr/local/bin/../share/yosys/ecp5/cells_map.v:28"
+          },
+          "port_directions": {
+            "CLK": "input",
+            "DI": "input",
+            "LSR": "input",
+            "Q": "output"
+          },
+          "connections": {
+            "CLK": [ 2 ],
+            "DI": [ 177 ],
+            "LSR": [ 138 ],
+            "Q": [ 161 ]
+          }
+        },
+        "$auto$simplemap.cc:420:simplemap_dff$451": {
           "hide_name": 1,
           "type": "TRELLIS_FF",
           "parameters": {
@@ -16278,7 +18694,7 @@
           },
           "attributes": {
             "module_not_derived": 1,
-            "src": "passthru.v:166|/usr/local/bin/../share/yosys/ecp5/cells_map.v:27"
+            "src": "passthru.v:99|debouncer.v:112|/usr/local/bin/../share/yosys/ecp5/cells_map.v:27"
           },
           "port_directions": {
             "CLK": "input",
@@ -16288,192 +18704,39 @@
           },
           "connections": {
             "CLK": [ 2 ],
-            "DI": [ 159 ],
-            "LSR": [ 153 ],
-            "Q": [ 99 ]
-          }
-        },
-        "$auto$simplemap.cc:420:simplemap_dff$315": {
-          "hide_name": 1,
-          "type": "TRELLIS_FF",
-          "parameters": {
-            "CEMUX": "CE",
-            "CLKMUX": "CLK",
-            "GSR": "DISABLED",
-            "LSRMUX": "LSR",
-            "REGSET": "RESET",
-            "SRMODE": "LSR_OVER_CE"
-          },
-          "attributes": {
-            "module_not_derived": 1,
-            "src": "passthru.v:166|/usr/local/bin/../share/yosys/ecp5/cells_map.v:47"
-          },
-          "port_directions": {
-            "CE": "input",
-            "CLK": "input",
-            "DI": "input",
-            "LSR": "input",
-            "Q": "output"
-          },
-          "connections": {
-            "CE": [ 173 ],
-            "CLK": [ 2 ],
-            "DI": [ 102 ],
-            "LSR": [ 153 ],
-            "Q": [ 101 ]
-          }
-        },
-        "$auto$simplemap.cc:420:simplemap_dff$316": {
-          "hide_name": 1,
-          "type": "TRELLIS_FF",
-          "parameters": {
-            "CEMUX": "CE",
-            "CLKMUX": "CLK",
-            "GSR": "DISABLED",
-            "LSRMUX": "LSR",
-            "REGSET": "RESET",
-            "SRMODE": "LSR_OVER_CE"
-          },
-          "attributes": {
-            "module_not_derived": 1,
-            "src": "passthru.v:166|/usr/local/bin/../share/yosys/ecp5/cells_map.v:47"
-          },
-          "port_directions": {
-            "CE": "input",
-            "CLK": "input",
-            "DI": "input",
-            "LSR": "input",
-            "Q": "output"
-          },
-          "connections": {
-            "CE": [ 177 ],
-            "CLK": [ 2 ],
-            "DI": [ 104 ],
-            "LSR": [ 153 ],
-            "Q": [ 103 ]
-          }
-        },
-        "$auto$simplemap.cc:420:simplemap_dff$317": {
-          "hide_name": 1,
-          "type": "TRELLIS_FF",
-          "parameters": {
-            "CEMUX": "CE",
-            "CLKMUX": "CLK",
-            "GSR": "DISABLED",
-            "LSRMUX": "LSR",
-            "REGSET": "RESET",
-            "SRMODE": "LSR_OVER_CE"
-          },
-          "attributes": {
-            "module_not_derived": 1,
-            "src": "passthru.v:166|/usr/local/bin/../share/yosys/ecp5/cells_map.v:47"
-          },
-          "port_directions": {
-            "CE": "input",
-            "CLK": "input",
-            "DI": "input",
-            "LSR": "input",
-            "Q": "output"
-          },
-          "connections": {
-            "CE": [ 171 ],
-            "CLK": [ 2 ],
-            "DI": [ 107 ],
-            "LSR": [ 153 ],
-            "Q": [ 106 ]
-          }
-        },
-        "$auto$simplemap.cc:420:simplemap_dff$318": {
-          "hide_name": 1,
-          "type": "TRELLIS_FF",
-          "parameters": {
-            "CEMUX": "CE",
-            "CLKMUX": "CLK",
-            "GSR": "DISABLED",
-            "LSRMUX": "LSR",
-            "REGSET": "RESET",
-            "SRMODE": "LSR_OVER_CE"
-          },
-          "attributes": {
-            "module_not_derived": 1,
-            "src": "passthru.v:166|/usr/local/bin/../share/yosys/ecp5/cells_map.v:47"
-          },
-          "port_directions": {
-            "CE": "input",
-            "CLK": "input",
-            "DI": "input",
-            "LSR": "input",
-            "Q": "output"
-          },
-          "connections": {
-            "CE": [ 166 ],
-            "CLK": [ 2 ],
-            "DI": [ 109 ],
-            "LSR": [ 153 ],
-            "Q": [ 108 ]
-          }
-        },
-        "$auto$simplemap.cc:420:simplemap_dff$319": {
-          "hide_name": 1,
-          "type": "TRELLIS_FF",
-          "parameters": {
-            "CEMUX": "CE",
-            "CLKMUX": "CLK",
-            "GSR": "DISABLED",
-            "LSRMUX": "LSR",
-            "REGSET": "RESET",
-            "SRMODE": "LSR_OVER_CE"
-          },
-          "attributes": {
-            "module_not_derived": 1,
-            "src": "passthru.v:166|/usr/local/bin/../share/yosys/ecp5/cells_map.v:47"
-          },
-          "port_directions": {
-            "CE": "input",
-            "CLK": "input",
-            "DI": "input",
-            "LSR": "input",
-            "Q": "output"
-          },
-          "connections": {
-            "CE": [ 176 ],
-            "CLK": [ 2 ],
-            "DI": [ 111 ],
-            "LSR": [ 153 ],
+            "DI": [ 157 ],
+            "LSR": [ 138 ],
             "Q": [ 110 ]
           }
         },
-        "$auto$simplemap.cc:420:simplemap_dff$320": {
+        "$auto$simplemap.cc:420:simplemap_dff$452": {
           "hide_name": 1,
           "type": "TRELLIS_FF",
           "parameters": {
-            "CEMUX": "CE",
+            "CEMUX": "1",
             "CLKMUX": "CLK",
             "GSR": "DISABLED",
             "LSRMUX": "LSR",
-            "REGSET": "RESET",
-            "SRMODE": "LSR_OVER_CE"
+            "REGSET": "RESET"
           },
           "attributes": {
             "module_not_derived": 1,
-            "src": "passthru.v:166|/usr/local/bin/../share/yosys/ecp5/cells_map.v:47"
+            "src": "passthru.v:99|debouncer.v:132|/usr/local/bin/../share/yosys/ecp5/cells_map.v:2"
           },
           "port_directions": {
-            "CE": "input",
             "CLK": "input",
             "DI": "input",
             "LSR": "input",
             "Q": "output"
           },
           "connections": {
-            "CE": [ 175 ],
             "CLK": [ 2 ],
-            "DI": [ 114 ],
-            "LSR": [ 153 ],
-            "Q": [ 113 ]
+            "DI": [ 252 ],
+            "LSR": [ "0" ],
+            "Q": [ 137 ]
           }
         },
-        "$auto$simplemap.cc:420:simplemap_dff$321": {
+        "$auto$simplemap.cc:420:simplemap_dff$453": {
           "hide_name": 1,
           "type": "TRELLIS_FF",
           "parameters": {
@@ -16481,12 +18744,11 @@
             "CLKMUX": "CLK",
             "GSR": "DISABLED",
             "LSRMUX": "LSR",
-            "REGSET": "RESET",
-            "SRMODE": "LSR_OVER_CE"
+            "REGSET": "RESET"
           },
           "attributes": {
             "module_not_derived": 1,
-            "src": "passthru.v:166|/usr/local/bin/../share/yosys/ecp5/cells_map.v:47"
+            "src": "passthru.v:99|debouncer.v:139|/usr/local/bin/../share/yosys/ecp5/cells_map.v:8"
           },
           "port_directions": {
             "CE": "input",
@@ -16496,14 +18758,14 @@
             "Q": "output"
           },
           "connections": {
-            "CE": [ 170 ],
+            "CE": [ 110 ],
             "CLK": [ 2 ],
-            "DI": [ 116 ],
-            "LSR": [ 153 ],
-            "Q": [ 115 ]
+            "DI": [ 261 ],
+            "LSR": [ "0" ],
+            "Q": [ 144 ]
           }
         },
-        "$auto$simplemap.cc:420:simplemap_dff$322": {
+        "$auto$simplemap.cc:420:simplemap_dff$454": {
           "hide_name": 1,
           "type": "TRELLIS_FF",
           "parameters": {
@@ -16511,12 +18773,11 @@
             "CLKMUX": "CLK",
             "GSR": "DISABLED",
             "LSRMUX": "LSR",
-            "REGSET": "RESET",
-            "SRMODE": "LSR_OVER_CE"
+            "REGSET": "RESET"
           },
           "attributes": {
             "module_not_derived": 1,
-            "src": "passthru.v:166|/usr/local/bin/../share/yosys/ecp5/cells_map.v:47"
+            "src": "passthru.v:99|debouncer.v:139|/usr/local/bin/../share/yosys/ecp5/cells_map.v:8"
           },
           "port_directions": {
             "CE": "input",
@@ -16526,14 +18787,14 @@
             "Q": "output"
           },
           "connections": {
-            "CE": [ 165 ],
+            "CE": [ 110 ],
             "CLK": [ 2 ],
-            "DI": [ 118 ],
-            "LSR": [ 153 ],
-            "Q": [ 117 ]
+            "DI": [ 262 ],
+            "LSR": [ "0" ],
+            "Q": [ 248 ]
           }
         },
-        "$auto$simplemap.cc:420:simplemap_dff$323": {
+        "$auto$simplemap.cc:420:simplemap_dff$455": {
           "hide_name": 1,
           "type": "TRELLIS_FF",
           "parameters": {
@@ -16541,12 +18802,11 @@
             "CLKMUX": "CLK",
             "GSR": "DISABLED",
             "LSRMUX": "LSR",
-            "REGSET": "RESET",
-            "SRMODE": "LSR_OVER_CE"
+            "REGSET": "RESET"
           },
           "attributes": {
             "module_not_derived": 1,
-            "src": "passthru.v:166|/usr/local/bin/../share/yosys/ecp5/cells_map.v:47"
+            "src": "passthru.v:99|debouncer.v:139|/usr/local/bin/../share/yosys/ecp5/cells_map.v:8"
           },
           "port_directions": {
             "CE": "input",
@@ -16556,14 +18816,14 @@
             "Q": "output"
           },
           "connections": {
-            "CE": [ 172 ],
+            "CE": [ 110 ],
             "CLK": [ 2 ],
-            "DI": [ 121 ],
-            "LSR": [ 153 ],
-            "Q": [ 120 ]
+            "DI": [ 263 ],
+            "LSR": [ "0" ],
+            "Q": [ 98 ]
           }
         },
-        "$auto$simplemap.cc:420:simplemap_dff$324": {
+        "$auto$simplemap.cc:420:simplemap_dff$456": {
           "hide_name": 1,
           "type": "TRELLIS_FF",
           "parameters": {
@@ -16571,12 +18831,11 @@
             "CLKMUX": "CLK",
             "GSR": "DISABLED",
             "LSRMUX": "LSR",
-            "REGSET": "RESET",
-            "SRMODE": "LSR_OVER_CE"
+            "REGSET": "RESET"
           },
           "attributes": {
             "module_not_derived": 1,
-            "src": "passthru.v:166|/usr/local/bin/../share/yosys/ecp5/cells_map.v:47"
+            "src": "passthru.v:99|debouncer.v:139|/usr/local/bin/../share/yosys/ecp5/cells_map.v:8"
           },
           "port_directions": {
             "CE": "input",
@@ -16586,14 +18845,14 @@
             "Q": "output"
           },
           "connections": {
-            "CE": [ 169 ],
+            "CE": [ 110 ],
             "CLK": [ 2 ],
-            "DI": [ 123 ],
-            "LSR": [ 153 ],
-            "Q": [ 122 ]
+            "DI": [ 264 ],
+            "LSR": [ "0" ],
+            "Q": [ 250 ]
           }
         },
-        "$auto$simplemap.cc:420:simplemap_dff$325": {
+        "$auto$simplemap.cc:420:simplemap_dff$457": {
           "hide_name": 1,
           "type": "TRELLIS_FF",
           "parameters": {
@@ -16601,12 +18860,11 @@
             "CLKMUX": "CLK",
             "GSR": "DISABLED",
             "LSRMUX": "LSR",
-            "REGSET": "RESET",
-            "SRMODE": "LSR_OVER_CE"
+            "REGSET": "RESET"
           },
           "attributes": {
             "module_not_derived": 1,
-            "src": "passthru.v:166|/usr/local/bin/../share/yosys/ecp5/cells_map.v:47"
+            "src": "passthru.v:99|debouncer.v:139|/usr/local/bin/../share/yosys/ecp5/cells_map.v:8"
           },
           "port_directions": {
             "CE": "input",
@@ -16616,14 +18874,14 @@
             "Q": "output"
           },
           "connections": {
-            "CE": [ 164 ],
+            "CE": [ 110 ],
             "CLK": [ 2 ],
-            "DI": [ 125 ],
-            "LSR": [ 153 ],
-            "Q": [ 124 ]
+            "DI": [ 265 ],
+            "LSR": [ "0" ],
+            "Q": [ 102 ]
           }
         },
-        "$auto$simplemap.cc:420:simplemap_dff$326": {
+        "$auto$simplemap.cc:420:simplemap_dff$458": {
           "hide_name": 1,
           "type": "TRELLIS_FF",
           "parameters": {
@@ -16631,12 +18889,11 @@
             "CLKMUX": "CLK",
             "GSR": "DISABLED",
             "LSRMUX": "LSR",
-            "REGSET": "RESET",
-            "SRMODE": "LSR_OVER_CE"
+            "REGSET": "RESET"
           },
           "attributes": {
             "module_not_derived": 1,
-            "src": "passthru.v:166|/usr/local/bin/../share/yosys/ecp5/cells_map.v:47"
+            "src": "passthru.v:99|debouncer.v:139|/usr/local/bin/../share/yosys/ecp5/cells_map.v:8"
           },
           "port_directions": {
             "CE": "input",
@@ -16646,14 +18903,14 @@
             "Q": "output"
           },
           "connections": {
-            "CE": [ 163 ],
+            "CE": [ 110 ],
             "CLK": [ 2 ],
-            "DI": [ 128 ],
-            "LSR": [ 153 ],
-            "Q": [ 127 ]
+            "DI": [ 266 ],
+            "LSR": [ "0" ],
+            "Q": [ 104 ]
           }
         },
-        "$auto$simplemap.cc:420:simplemap_dff$327": {
+        "$auto$simplemap.cc:420:simplemap_dff$459": {
           "hide_name": 1,
           "type": "TRELLIS_FF",
           "parameters": {
@@ -16661,12 +18918,11 @@
             "CLKMUX": "CLK",
             "GSR": "DISABLED",
             "LSRMUX": "LSR",
-            "REGSET": "RESET",
-            "SRMODE": "LSR_OVER_CE"
+            "REGSET": "RESET"
           },
           "attributes": {
             "module_not_derived": 1,
-            "src": "passthru.v:166|/usr/local/bin/../share/yosys/ecp5/cells_map.v:47"
+            "src": "passthru.v:99|debouncer.v:139|/usr/local/bin/../share/yosys/ecp5/cells_map.v:8"
           },
           "port_directions": {
             "CE": "input",
@@ -16676,101 +18932,40 @@
             "Q": "output"
           },
           "connections": {
-            "CE": [ 161 ],
+            "CE": [ 110 ],
             "CLK": [ 2 ],
-            "DI": [ 130 ],
-            "LSR": [ 153 ],
-            "Q": [ 129 ]
-          }
-        },
-        "$auto$simplemap.cc:420:simplemap_dff$328": {
-          "hide_name": 1,
-          "type": "TRELLIS_FF",
-          "parameters": {
-            "CEMUX": "CE",
-            "CLKMUX": "CLK",
-            "GSR": "DISABLED",
-            "LSRMUX": "LSR",
-            "REGSET": "RESET",
-            "SRMODE": "LSR_OVER_CE"
-          },
-          "attributes": {
-            "module_not_derived": 1,
-            "src": "passthru.v:166|/usr/local/bin/../share/yosys/ecp5/cells_map.v:47"
-          },
-          "port_directions": {
-            "CE": "input",
-            "CLK": "input",
-            "DI": "input",
-            "LSR": "input",
-            "Q": "output"
-          },
-          "connections": {
-            "CE": [ 174 ],
-            "CLK": [ 2 ],
-            "DI": [ 132 ],
-            "LSR": [ 153 ],
-            "Q": [ 131 ]
-          }
-        },
-        "$auto$simplemap.cc:420:simplemap_dff$329": {
-          "hide_name": 1,
-          "type": "TRELLIS_FF",
-          "parameters": {
-            "CEMUX": "CE",
-            "CLKMUX": "CLK",
-            "GSR": "DISABLED",
-            "LSRMUX": "LSR",
-            "REGSET": "RESET",
-            "SRMODE": "LSR_OVER_CE"
-          },
-          "attributes": {
-            "module_not_derived": 1,
-            "src": "passthru.v:166|/usr/local/bin/../share/yosys/ecp5/cells_map.v:47"
-          },
-          "port_directions": {
-            "CE": "input",
-            "CLK": "input",
-            "DI": "input",
-            "LSR": "input",
-            "Q": "output"
-          },
-          "connections": {
-            "CE": [ 178 ],
-            "CLK": [ 2 ],
-            "DI": [ 135 ],
-            "LSR": [ 153 ],
-            "Q": [ 134 ]
-          }
-        },
-        "$auto$simplemap.cc:420:simplemap_dff$330": {
-          "hide_name": 1,
-          "type": "TRELLIS_FF",
-          "parameters": {
-            "CEMUX": "CE",
-            "CLKMUX": "CLK",
-            "GSR": "DISABLED",
-            "LSRMUX": "LSR",
-            "REGSET": "RESET",
-            "SRMODE": "LSR_OVER_CE"
-          },
-          "attributes": {
-            "module_not_derived": 1,
-            "src": "passthru.v:166|/usr/local/bin/../share/yosys/ecp5/cells_map.v:47"
-          },
-          "port_directions": {
-            "CE": "input",
-            "CLK": "input",
-            "DI": "input",
-            "LSR": "input",
-            "Q": "output"
-          },
-          "connections": {
-            "CE": [ 168 ],
-            "CLK": [ 2 ],
-            "DI": [ 136 ],
-            "LSR": [ 153 ],
+            "DI": [ 267 ],
+            "LSR": [ "0" ],
             "Q": [ 94 ]
+          }
+        },
+        "$auto$simplemap.cc:420:simplemap_dff$460": {
+          "hide_name": 1,
+          "type": "TRELLIS_FF",
+          "parameters": {
+            "CEMUX": "CE",
+            "CLKMUX": "CLK",
+            "GSR": "DISABLED",
+            "LSRMUX": "LSR",
+            "REGSET": "RESET"
+          },
+          "attributes": {
+            "module_not_derived": 1,
+            "src": "passthru.v:99|debouncer.v:139|/usr/local/bin/../share/yosys/ecp5/cells_map.v:8"
+          },
+          "port_directions": {
+            "CE": "input",
+            "CLK": "input",
+            "DI": "input",
+            "LSR": "input",
+            "Q": "output"
+          },
+          "connections": {
+            "CE": [ 110 ],
+            "CLK": [ 2 ],
+            "DI": [ 268 ],
+            "LSR": [ "0" ],
+            "Q": [ 100 ]
           }
         },
         "$auto$simplemap.cc:467:simplemap_dffsr$295": {
@@ -16779,7 +18974,7 @@
           "parameters": {
           },
           "attributes": {
-            "src": "passthru.v:179"
+            "src": "passthru.v:189"
           },
           "port_directions": {
             "C": "input",
@@ -16790,10 +18985,10 @@
           },
           "connections": {
             "C": [ 20 ],
-            "D": [ 179 ],
-            "Q": [ 93 ],
-            "R": [ 139 ],
-            "S": [ 138 ]
+            "D": [ 171 ],
+            "Q": [ 132 ],
+            "R": [ 145 ],
+            "S": [ 174 ]
           }
         },
         "$auto$simplemap.cc:467:simplemap_dffsr$296": {
@@ -16802,7 +18997,7 @@
           "parameters": {
           },
           "attributes": {
-            "src": "passthru.v:179"
+            "src": "passthru.v:189"
           },
           "port_directions": {
             "C": "input",
@@ -16813,10 +19008,10 @@
           },
           "connections": {
             "C": [ 20 ],
-            "D": [ 93 ],
-            "Q": [ 180 ],
-            "R": [ 160 ],
-            "S": [ 147 ]
+            "D": [ 132 ],
+            "Q": [ 130 ],
+            "R": [ 131 ],
+            "S": [ 222 ]
           }
         },
         "$auto$simplemap.cc:467:simplemap_dffsr$297": {
@@ -16825,7 +19020,7 @@
           "parameters": {
           },
           "attributes": {
-            "src": "passthru.v:179"
+            "src": "passthru.v:189"
           },
           "port_directions": {
             "C": "input",
@@ -16836,10 +19031,10 @@
           },
           "connections": {
             "C": [ 20 ],
-            "D": [ 180 ],
-            "Q": [ 181 ],
-            "R": [ 149 ],
-            "S": [ 154 ]
+            "D": [ 130 ],
+            "Q": [ 106 ],
+            "R": [ 169 ],
+            "S": [ 107 ]
           }
         },
         "$auto$simplemap.cc:467:simplemap_dffsr$298": {
@@ -16848,7 +19043,7 @@
           "parameters": {
           },
           "attributes": {
-            "src": "passthru.v:179"
+            "src": "passthru.v:189"
           },
           "port_directions": {
             "C": "input",
@@ -16859,10 +19054,10 @@
           },
           "connections": {
             "C": [ 20 ],
-            "D": [ 181 ],
-            "Q": [ 182 ],
-            "R": [ 143 ],
-            "S": [ 156 ]
+            "D": [ 106 ],
+            "Q": [ 128 ],
+            "R": [ 173 ],
+            "S": [ 129 ]
           }
         },
         "$auto$simplemap.cc:467:simplemap_dffsr$299": {
@@ -16871,7 +19066,7 @@
           "parameters": {
           },
           "attributes": {
-            "src": "passthru.v:179"
+            "src": "passthru.v:189"
           },
           "port_directions": {
             "C": "input",
@@ -16882,10 +19077,10 @@
           },
           "connections": {
             "C": [ 20 ],
-            "D": [ 182 ],
-            "Q": [ 183 ],
-            "R": [ 98 ],
-            "S": [ 157 ]
+            "D": [ 128 ],
+            "Q": [ 153 ],
+            "R": [ 221 ],
+            "S": [ 154 ]
           }
         },
         "$auto$simplemap.cc:467:simplemap_dffsr$300": {
@@ -16894,7 +19089,7 @@
           "parameters": {
           },
           "attributes": {
-            "src": "passthru.v:179"
+            "src": "passthru.v:189"
           },
           "port_directions": {
             "C": "input",
@@ -16905,10 +19100,10 @@
           },
           "connections": {
             "C": [ 20 ],
-            "D": [ 183 ],
-            "Q": [ 184 ],
-            "R": [ 141 ],
-            "S": [ 158 ]
+            "D": [ 153 ],
+            "Q": [ 151 ],
+            "R": [ 162 ],
+            "S": [ 152 ]
           }
         },
         "$auto$simplemap.cc:467:simplemap_dffsr$301": {
@@ -16917,7 +19112,7 @@
           "parameters": {
           },
           "attributes": {
-            "src": "passthru.v:179"
+            "src": "passthru.v:189"
           },
           "port_directions": {
             "C": "input",
@@ -16928,10 +19123,10 @@
           },
           "connections": {
             "C": [ 20 ],
-            "D": [ 184 ],
-            "Q": [ 185 ],
-            "R": [ 145 ],
-            "S": [ 150 ]
+            "D": [ 151 ],
+            "Q": [ 139 ],
+            "R": [ 140 ],
+            "S": [ 168 ]
           }
         },
         "$auto$simplemap.cc:467:simplemap_dffsr$302": {
@@ -16940,7 +19135,7 @@
           "parameters": {
           },
           "attributes": {
-            "src": "passthru.v:179"
+            "src": "passthru.v:189"
           },
           "port_directions": {
             "C": "input",
@@ -16951,430 +19146,677 @@
           },
           "connections": {
             "C": [ 20 ],
-            "D": [ 185 ],
-            "Q": [ 179 ],
-            "R": [ 155 ],
-            "S": [ 96 ]
+            "D": [ 139 ],
+            "Q": [ 171 ],
+            "R": [ 172 ],
+            "S": [ 175 ]
           }
         }
       },
       "netnames": {
-        "$abc$772$n100": {
+        "$abc$1361$n130": {
           "hide_name": 1,
-          "bits": [ 138 ],
+          "bits": [ 230 ],
           "attributes": {
           }
         },
-        "$abc$772$n102": {
+        "$abc$1361$n140": {
           "hide_name": 1,
-          "bits": [ 139 ],
+          "bits": [ 252 ],
           "attributes": {
           }
         },
-        "$abc$772$n103": {
-          "hide_name": 1,
-          "bits": [ 112 ],
-          "attributes": {
-          }
-        },
-        "$abc$772$n104": {
-          "hide_name": 1,
-          "bits": [ 141 ],
-          "attributes": {
-          }
-        },
-        "$abc$772$n106": {
-          "hide_name": 1,
-          "bits": [ 143 ],
-          "attributes": {
-          }
-        },
-        "$abc$772$n107_1": {
-          "hide_name": 1,
-          "bits": [ 119 ],
-          "attributes": {
-          }
-        },
-        "$abc$772$n111": {
-          "hide_name": 1,
-          "bits": [ 126 ],
-          "attributes": {
-          }
-        },
-        "$abc$772$n114": {
-          "hide_name": 1,
-          "bits": [ 174 ],
-          "attributes": {
-          }
-        },
-        "$abc$772$n115": {
-          "hide_name": 1,
-          "bits": [ 133 ],
-          "attributes": {
-          }
-        },
-        "$abc$772$n116": {
-          "hide_name": 1,
-          "bits": [ 145 ],
-          "attributes": {
-          }
-        },
-        "$abc$772$n118": {
-          "hide_name": 1,
-          "bits": [ 147 ],
-          "attributes": {
-          }
-        },
-        "$abc$772$n12": {
-          "hide_name": 1,
-          "bits": [ 164 ],
-          "attributes": {
-          }
-        },
-        "$abc$772$n120": {
-          "hide_name": 1,
-          "bits": [ 149 ],
-          "attributes": {
-          }
-        },
-        "$abc$772$n122": {
-          "hide_name": 1,
-          "bits": [ 175 ],
-          "attributes": {
-          }
-        },
-        "$abc$772$n124": {
-          "hide_name": 1,
-          "bits": [ 150 ],
-          "attributes": {
-          }
-        },
-        "$abc$772$n137": {
-          "hide_name": 1,
-          "bits": [ 176 ],
-          "attributes": {
-          }
-        },
-        "$abc$772$n138": {
-          "hide_name": 1,
-          "bits": [ 177 ],
-          "attributes": {
-          }
-        },
-        "$abc$772$n139": {
-          "hide_name": 1,
-          "bits": [ 153 ],
-          "attributes": {
-          }
-        },
-        "$abc$772$n142": {
-          "hide_name": 1,
-          "bits": [ 154 ],
-          "attributes": {
-          }
-        },
-        "$abc$772$n144": {
-          "hide_name": 1,
-          "bits": [ 155 ],
-          "attributes": {
-          }
-        },
-        "$abc$772$n145": {
-          "hide_name": 1,
-          "bits": [ 178 ],
-          "attributes": {
-          }
-        },
-        "$abc$772$n147": {
-          "hide_name": 1,
-          "bits": [ 156 ],
-          "attributes": {
-          }
-        },
-        "$abc$772$n150": {
-          "hide_name": 1,
-          "bits": [ 157 ],
-          "attributes": {
-          }
-        },
-        "$abc$772$n153": {
-          "hide_name": 1,
-          "bits": [ 158 ],
-          "attributes": {
-          }
-        },
-        "$abc$772$n154": {
-          "hide_name": 1,
-          "bits": [ 159 ],
-          "attributes": {
-          }
-        },
-        "$abc$772$n156": {
-          "hide_name": 1,
-          "bits": [ 160 ],
-          "attributes": {
-          }
-        },
-        "$abc$772$n18": {
-          "hide_name": 1,
-          "bits": [ 162 ],
-          "attributes": {
-          }
-        },
-        "$abc$772$n19": {
-          "hide_name": 1,
-          "bits": [ 165 ],
-          "attributes": {
-          }
-        },
-        "$abc$772$n2": {
-          "hide_name": 1,
-          "bits": [ 161 ],
-          "attributes": {
-          }
-        },
-        "$abc$772$n20": {
-          "hide_name": 1,
-          "bits": [ 166 ],
-          "attributes": {
-          }
-        },
-        "$abc$772$n33": {
-          "hide_name": 1,
-          "bits": [ 96 ],
-          "attributes": {
-          }
-        },
-        "$abc$772$n35": {
-          "hide_name": 1,
-          "bits": [ 98 ],
-          "attributes": {
-          }
-        },
-        "$abc$772$n36": {
-          "hide_name": 1,
-          "bits": [ 167 ],
-          "attributes": {
-          }
-        },
-        "$abc$772$n46": {
-          "hide_name": 1,
-          "bits": [ 168 ],
-          "attributes": {
-          }
-        },
-        "$abc$772$n47": {
-          "hide_name": 1,
-          "bits": [ 169 ],
-          "attributes": {
-          }
-        },
-        "$abc$772$n50": {
-          "hide_name": 1,
-          "bits": [ 102 ],
-          "attributes": {
-          }
-        },
-        "$abc$772$n53": {
-          "hide_name": 1,
-          "bits": [ 104 ],
-          "attributes": {
-          }
-        },
-        "$abc$772$n56": {
+        "$abc$1361$n144": {
           "hide_name": 1,
           "bits": [ 107 ],
           "attributes": {
           }
         },
-        "$abc$772$n58": {
+        "$abc$1361$n146": {
           "hide_name": 1,
-          "bits": [ 109 ],
+          "bits": [ 96 ],
           "attributes": {
           }
         },
-        "$abc$772$n61": {
+        "$abc$1361$n147_1": {
           "hide_name": 1,
-          "bits": [ 111 ],
+          "bits": [ 95 ],
           "attributes": {
           }
         },
-        "$abc$772$n63": {
-          "hide_name": 1,
-          "bits": [ 114 ],
-          "attributes": {
-          }
-        },
-        "$abc$772$n66": {
-          "hide_name": 1,
-          "bits": [ 116 ],
-          "attributes": {
-          }
-        },
-        "$abc$772$n69": {
-          "hide_name": 1,
-          "bits": [ 118 ],
-          "attributes": {
-          }
-        },
-        "$abc$772$n7": {
-          "hide_name": 1,
-          "bits": [ 163 ],
-          "attributes": {
-          }
-        },
-        "$abc$772$n72": {
-          "hide_name": 1,
-          "bits": [ 121 ],
-          "attributes": {
-          }
-        },
-        "$abc$772$n75": {
-          "hide_name": 1,
-          "bits": [ 123 ],
-          "attributes": {
-          }
-        },
-        "$abc$772$n78": {
-          "hide_name": 1,
-          "bits": [ 125 ],
-          "attributes": {
-          }
-        },
-        "$abc$772$n81": {
-          "hide_name": 1,
-          "bits": [ 128 ],
-          "attributes": {
-          }
-        },
-        "$abc$772$n84": {
-          "hide_name": 1,
-          "bits": [ 130 ],
-          "attributes": {
-          }
-        },
-        "$abc$772$n87": {
-          "hide_name": 1,
-          "bits": [ 132 ],
-          "attributes": {
-          }
-        },
-        "$abc$772$n89": {
-          "hide_name": 1,
-          "bits": [ 135 ],
-          "attributes": {
-          }
-        },
-        "$abc$772$n91": {
-          "hide_name": 1,
-          "bits": [ 136 ],
-          "attributes": {
-          }
-        },
-        "$abc$772$n92": {
-          "hide_name": 1,
-          "bits": [ 170 ],
-          "attributes": {
-          }
-        },
-        "$abc$772$n93": {
-          "hide_name": 1,
-          "bits": [ 171 ],
-          "attributes": {
-          }
-        },
-        "$abc$772$n96": {
-          "hide_name": 1,
-          "bits": [ 172 ],
-          "attributes": {
-          }
-        },
-        "$abc$772$n97": {
-          "hide_name": 1,
-          "bits": [ 173 ],
-          "attributes": {
-          }
-        },
-        "$abc$772$n99_1": {
+        "$abc$1361$n150_1": {
           "hide_name": 1,
           "bits": [ 105 ],
           "attributes": {
           }
         },
+        "$abc$1361$n151": {
+          "hide_name": 1,
+          "bits": [ 112 ],
+          "attributes": {
+          }
+        },
+        "$abc$1361$n154": {
+          "hide_name": 1,
+          "bits": [ 109 ],
+          "attributes": {
+          }
+        },
+        "$abc$1361$n155": {
+          "hide_name": 1,
+          "bits": [ 116 ],
+          "attributes": {
+          }
+        },
+        "$abc$1361$n156": {
+          "hide_name": 1,
+          "bits": [ 120 ],
+          "attributes": {
+          }
+        },
+        "$abc$1361$n158": {
+          "hide_name": 1,
+          "bits": [ 126 ],
+          "attributes": {
+          }
+        },
+        "$abc$1361$n158_1": {
+          "hide_name": 1,
+          "bits": [ 125 ],
+          "attributes": {
+          }
+        },
+        "$abc$1361$n162": {
+          "hide_name": 1,
+          "bits": [ 127 ],
+          "attributes": {
+          }
+        },
+        "$abc$1361$n164": {
+          "hide_name": 1,
+          "bits": [ 134 ],
+          "attributes": {
+          }
+        },
+        "$abc$1361$n168": {
+          "hide_name": 1,
+          "bits": [ 141 ],
+          "attributes": {
+          }
+        },
+        "$abc$1361$n172": {
+          "hide_name": 1,
+          "bits": [ 148 ],
+          "attributes": {
+          }
+        },
+        "$abc$1361$n176": {
+          "hide_name": 1,
+          "bits": [ 156 ],
+          "attributes": {
+          }
+        },
+        "$abc$1361$n177": {
+          "hide_name": 1,
+          "bits": [ 158 ],
+          "attributes": {
+          }
+        },
+        "$abc$1361$n178": {
+          "hide_name": 1,
+          "bits": [ 160 ],
+          "attributes": {
+          }
+        },
+        "$abc$1361$n179": {
+          "hide_name": 1,
+          "bits": [ 159 ],
+          "attributes": {
+          }
+        },
+        "$abc$1361$n180": {
+          "hide_name": 1,
+          "bits": [ 155 ],
+          "attributes": {
+          }
+        },
+        "$abc$1361$n185": {
+          "hide_name": 1,
+          "bits": [ 231 ],
+          "attributes": {
+          }
+        },
+        "$abc$1361$n186": {
+          "hide_name": 1,
+          "bits": [ 232 ],
+          "attributes": {
+          }
+        },
+        "$abc$1361$n195": {
+          "hide_name": 1,
+          "bits": [ 129 ],
+          "attributes": {
+          }
+        },
+        "$abc$1361$n195_1": {
+          "hide_name": 1,
+          "bits": [ 176 ],
+          "attributes": {
+          }
+        },
+        "$abc$1361$n196": {
+          "hide_name": 1,
+          "bits": [ 131 ],
+          "attributes": {
+          }
+        },
+        "$abc$1361$n197": {
+          "hide_name": 1,
+          "bits": [ 178 ],
+          "attributes": {
+          }
+        },
+        "$abc$1361$n201": {
+          "hide_name": 1,
+          "bits": [ 136 ],
+          "attributes": {
+          }
+        },
+        "$abc$1361$n202": {
+          "hide_name": 1,
+          "bits": [ 138 ],
+          "attributes": {
+          }
+        },
+        "$abc$1361$n203": {
+          "hide_name": 1,
+          "bits": [ 186 ],
+          "attributes": {
+          }
+        },
+        "$abc$1361$n204": {
+          "hide_name": 1,
+          "bits": [ 140 ],
+          "attributes": {
+          }
+        },
+        "$abc$1361$n206": {
+          "hide_name": 1,
+          "bits": [ 143 ],
+          "attributes": {
+          }
+        },
+        "$abc$1361$n207": {
+          "hide_name": 1,
+          "bits": [ 193 ],
+          "attributes": {
+          }
+        },
+        "$abc$1361$n208": {
+          "hide_name": 1,
+          "bits": [ 145 ],
+          "attributes": {
+          }
+        },
+        "$abc$1361$n210": {
+          "hide_name": 1,
+          "bits": [ 147 ],
+          "attributes": {
+          }
+        },
+        "$abc$1361$n211": {
+          "hide_name": 1,
+          "bits": [ 200 ],
+          "attributes": {
+          }
+        },
+        "$abc$1361$n212": {
+          "hide_name": 1,
+          "bits": [ 149 ],
+          "attributes": {
+          }
+        },
+        "$abc$1361$n214": {
+          "hide_name": 1,
+          "bits": [ 152 ],
+          "attributes": {
+          }
+        },
+        "$abc$1361$n215": {
+          "hide_name": 1,
+          "bits": [ 207 ],
+          "attributes": {
+          }
+        },
+        "$abc$1361$n218": {
+          "hide_name": 1,
+          "bits": [ 154 ],
+          "attributes": {
+          }
+        },
+        "$abc$1361$n219": {
+          "hide_name": 1,
+          "bits": [ 157 ],
+          "attributes": {
+          }
+        },
+        "$abc$1361$n219_1": {
+          "hide_name": 1,
+          "bits": [ 214 ],
+          "attributes": {
+          }
+        },
+        "$abc$1361$n226": {
+          "hide_name": 1,
+          "bits": [ 162 ],
+          "attributes": {
+          }
+        },
+        "$abc$1361$n226_1": {
+          "hide_name": 1,
+          "bits": [ 224 ],
+          "attributes": {
+          }
+        },
+        "$abc$1361$n228": {
+          "hide_name": 1,
+          "bits": [ 165 ],
+          "attributes": {
+          }
+        },
+        "$abc$1361$n230": {
+          "hide_name": 1,
+          "bits": [ 166 ],
+          "attributes": {
+          }
+        },
+        "$abc$1361$n232": {
+          "hide_name": 1,
+          "bits": [ 167 ],
+          "attributes": {
+          }
+        },
+        "$abc$1361$n242": {
+          "hide_name": 1,
+          "bits": [ 233 ],
+          "attributes": {
+          }
+        },
+        "$abc$1361$n247": {
+          "hide_name": 1,
+          "bits": [ 246 ],
+          "attributes": {
+          }
+        },
+        "$abc$1361$n248_1": {
+          "hide_name": 1,
+          "bits": [ 251 ],
+          "attributes": {
+          }
+        },
+        "$abc$1361$n269": {
+          "hide_name": 1,
+          "bits": [ 234 ],
+          "attributes": {
+          }
+        },
+        "$abc$1361$n282": {
+          "hide_name": 1,
+          "bits": [ 235 ],
+          "attributes": {
+          }
+        },
+        "$abc$1361$n284": {
+          "hide_name": 1,
+          "bits": [ 168 ],
+          "attributes": {
+          }
+        },
+        "$abc$1361$n286": {
+          "hide_name": 1,
+          "bits": [ 236 ],
+          "attributes": {
+          }
+        },
+        "$abc$1361$n288": {
+          "hide_name": 1,
+          "bits": [ 169 ],
+          "attributes": {
+          }
+        },
+        "$abc$1361$n289": {
+          "hide_name": 1,
+          "bits": [ 170 ],
+          "attributes": {
+          }
+        },
+        "$abc$1361$n291": {
+          "hide_name": 1,
+          "bits": [ 172 ],
+          "attributes": {
+          }
+        },
+        "$abc$1361$n292": {
+          "hide_name": 1,
+          "bits": [ 228 ],
+          "attributes": {
+          }
+        },
+        "$abc$1361$n293": {
+          "hide_name": 1,
+          "bits": [ 237 ],
+          "attributes": {
+          }
+        },
+        "$abc$1361$n294": {
+          "hide_name": 1,
+          "bits": [ 238 ],
+          "attributes": {
+          }
+        },
+        "$abc$1361$n296": {
+          "hide_name": 1,
+          "bits": [ 173 ],
+          "attributes": {
+          }
+        },
+        "$abc$1361$n297": {
+          "hide_name": 1,
+          "bits": [ 174 ],
+          "attributes": {
+          }
+        },
+        "$abc$1361$n298": {
+          "hide_name": 1,
+          "bits": [ 175 ],
+          "attributes": {
+          }
+        },
+        "$abc$1361$n300": {
+          "hide_name": 1,
+          "bits": [ 177 ],
+          "attributes": {
+          }
+        },
+        "$abc$1361$n301": {
+          "hide_name": 1,
+          "bits": [ 179 ],
+          "attributes": {
+          }
+        },
+        "$abc$1361$n302": {
+          "hide_name": 1,
+          "bits": [ 180 ],
+          "attributes": {
+          }
+        },
+        "$abc$1361$n303": {
+          "hide_name": 1,
+          "bits": [ 181 ],
+          "attributes": {
+          }
+        },
+        "$abc$1361$n304": {
+          "hide_name": 1,
+          "bits": [ 239 ],
+          "attributes": {
+          }
+        },
+        "$abc$1361$n305": {
+          "hide_name": 1,
+          "bits": [ 240 ],
+          "attributes": {
+          }
+        },
+        "$abc$1361$n306": {
+          "hide_name": 1,
+          "bits": [ 183 ],
+          "attributes": {
+          }
+        },
+        "$abc$1361$n307": {
+          "hide_name": 1,
+          "bits": [ 185 ],
+          "attributes": {
+          }
+        },
+        "$abc$1361$n308": {
+          "hide_name": 1,
+          "bits": [ 188 ],
+          "attributes": {
+          }
+        },
+        "$abc$1361$n309": {
+          "hide_name": 1,
+          "bits": [ 190 ],
+          "attributes": {
+          }
+        },
+        "$abc$1361$n310": {
+          "hide_name": 1,
+          "bits": [ 192 ],
+          "attributes": {
+          }
+        },
+        "$abc$1361$n311": {
+          "hide_name": 1,
+          "bits": [ 195 ],
+          "attributes": {
+          }
+        },
+        "$abc$1361$n312": {
+          "hide_name": 1,
+          "bits": [ 197 ],
+          "attributes": {
+          }
+        },
+        "$abc$1361$n313": {
+          "hide_name": 1,
+          "bits": [ 199 ],
+          "attributes": {
+          }
+        },
+        "$abc$1361$n314": {
+          "hide_name": 1,
+          "bits": [ 202 ],
+          "attributes": {
+          }
+        },
+        "$abc$1361$n315": {
+          "hide_name": 1,
+          "bits": [ 204 ],
+          "attributes": {
+          }
+        },
+        "$abc$1361$n316": {
+          "hide_name": 1,
+          "bits": [ 206 ],
+          "attributes": {
+          }
+        },
+        "$abc$1361$n317": {
+          "hide_name": 1,
+          "bits": [ 209 ],
+          "attributes": {
+          }
+        },
+        "$abc$1361$n318": {
+          "hide_name": 1,
+          "bits": [ 211 ],
+          "attributes": {
+          }
+        },
+        "$abc$1361$n319": {
+          "hide_name": 1,
+          "bits": [ 213 ],
+          "attributes": {
+          }
+        },
+        "$abc$1361$n320": {
+          "hide_name": 1,
+          "bits": [ 216 ],
+          "attributes": {
+          }
+        },
+        "$abc$1361$n321": {
+          "hide_name": 1,
+          "bits": [ 217 ],
+          "attributes": {
+          }
+        },
+        "$abc$1361$n322": {
+          "hide_name": 1,
+          "bits": [ 241 ],
+          "attributes": {
+          }
+        },
+        "$abc$1361$n323": {
+          "hide_name": 1,
+          "bits": [ 242 ],
+          "attributes": {
+          }
+        },
+        "$abc$1361$n326": {
+          "hide_name": 1,
+          "bits": [ 220 ],
+          "attributes": {
+          }
+        },
+        "$abc$1361$n327": {
+          "hide_name": 1,
+          "bits": [ 221 ],
+          "attributes": {
+          }
+        },
+        "$abc$1361$n328": {
+          "hide_name": 1,
+          "bits": [ 222 ],
+          "attributes": {
+          }
+        },
+        "$abc$1361$n329": {
+          "hide_name": 1,
+          "bits": [ 243 ],
+          "attributes": {
+          }
+        },
+        "$abc$1361$n330": {
+          "hide_name": 1,
+          "bits": [ 223 ],
+          "attributes": {
+          }
+        },
+        "$abc$1361$n331": {
+          "hide_name": 1,
+          "bits": [ 225 ],
+          "attributes": {
+          }
+        },
+        "$abc$1361$n332": {
+          "hide_name": 1,
+          "bits": [ 226 ],
+          "attributes": {
+          }
+        },
+        "$abc$1361$n333": {
+          "hide_name": 1,
+          "bits": [ 244 ],
+          "attributes": {
+          }
+        },
+        "$abc$1361$n74": {
+          "hide_name": 1,
+          "bits": [ 227 ],
+          "attributes": {
+          }
+        },
+        "$abc$1361$n97": {
+          "hide_name": 1,
+          "bits": [ 229 ],
+          "attributes": {
+          }
+        },
         "R_prog_in": {
           "hide_name": 0,
-          "bits": [ 151, 152 ],
+          "bits": [ 218, 219 ],
           "attributes": {
-            "src": "passthru.v:98"
+            "src": "passthru.v:109"
           }
         },
         "R_prog_release": {
           "hide_name": 0,
-          "bits": [ 100, 99, 101, 103, 106, 108, 110, 113, 115, 117, 120, 122, 124, 127, 129, 131, 134, 94 ],
+          "bits": [ 163, 164, 182, 184, 187, 189, 191, 194, 196, 198, 201, 203, 205, 208, 210, 212, 215, 133 ],
           "attributes": {
             "init": 1,
-            "src": "passthru.v:103"
+            "src": "passthru.v:114"
           }
         },
         "R_spi_miso": {
           "hide_name": 0,
-          "bits": [ 93, 180, 181, 182, 183, 184, 185, 179 ],
+          "bits": [ 132, 130, 106, 128, 153, 151, 139, 171 ],
           "attributes": {
-            "src": "passthru.v:100"
+            "src": "passthru.v:111"
           }
         },
         "S_oled_csn": {
           "hide_name": 0,
           "bits": [ 11 ],
           "attributes": {
-            "src": "passthru.v:101"
+            "src": "passthru.v:112"
           }
         },
         "S_prog_in": {
           "hide_name": 0,
           "bits": [ 6, 5 ],
           "attributes": {
-            "src": "passthru.v:97"
+            "src": "passthru.v:108"
           }
         },
         "S_prog_out": {
           "hide_name": 0,
-          "bits": [ 186, 8 ],
+          "bits": [ 269, 8 ],
           "attributes": {
-            "src": "passthru.v:99"
+            "src": "passthru.v:110"
           }
         },
         "audio_l": {
           "hide_name": 0,
           "bits": [ 78, 79, 80, 81 ],
           "attributes": {
-            "src": "passthru.v:75"
+            "src": "passthru.v:79"
           }
         },
         "audio_r": {
           "hide_name": 0,
           "bits": [ 82, 83, 84, 85 ],
           "attributes": {
-            "src": "passthru.v:76"
+            "src": "passthru.v:80"
           }
         },
         "audio_v": {
           "hide_name": 0,
           "bits": [ 86, 87, 88, 89 ],
           "attributes": {
-            "src": "passthru.v:77"
+            "src": "passthru.v:81"
           }
         },
         "btn": {
           "hide_name": 0,
           "bits": [ 13, 14, 15, 16, 17, 18, 19 ],
           "attributes": {
-            "src": "passthru.v:58"
+            "src": "passthru.v:62"
+          }
+        },
+        "button_debug": {
+          "hide_name": 0,
+          "bits": [ 245, 247, 97, 249, 101, 103, 93, 99 ],
+          "attributes": {
+            "src": "passthru.v:97"
           }
         },
         "button_press": {
           "hide_name": 0,
-          "bits": [ 137, 146, 148, 142, 97, 140, 144, 95 ],
+          "bits": [ 144, 248, 98, 250, 102, 104, 94, 100 ],
           "attributes": {
             "src": "passthru.v:96"
           }
@@ -17383,196 +19825,279 @@
           "hide_name": 0,
           "bits": [ 2 ],
           "attributes": {
-            "src": "passthru.v:33"
+            "src": "passthru.v:37"
           }
         },
         "flash_holdn": {
           "hide_name": 0,
           "bits": [ "x" ],
           "attributes": {
-            "src": "passthru.v:80"
+            "src": "passthru.v:84"
           }
         },
         "flash_wpn": {
           "hide_name": 0,
           "bits": [ "x" ],
           "attributes": {
-            "src": "passthru.v:81"
+            "src": "passthru.v:85"
           }
         },
         "ftdi_ndtr": {
           "hide_name": 0,
           "bits": [ 5 ],
           "attributes": {
-            "src": "passthru.v:40"
+            "src": "passthru.v:44"
           }
         },
         "ftdi_nrts": {
           "hide_name": 0,
           "bits": [ 6 ],
           "attributes": {
-            "src": "passthru.v:42"
+            "src": "passthru.v:46"
           }
         },
         "ftdi_rxd": {
           "hide_name": 0,
           "bits": [ 3 ],
           "attributes": {
-            "src": "passthru.v:36"
+            "src": "passthru.v:40"
           }
         },
         "ftdi_txd": {
           "hide_name": 0,
           "bits": [ 4 ],
           "attributes": {
-            "src": "passthru.v:37"
+            "src": "passthru.v:41"
           }
         },
         "ftdi_txden": {
           "hide_name": 0,
           "bits": [ 7 ],
           "attributes": {
-            "src": "passthru.v:43"
+            "src": "passthru.v:47"
           }
         },
         "gn": {
           "hide_name": 0,
           "bits": [ 50, 51, 52, 53, 54, 55, 56, 57, 58, 59, 60, 61, 62, 63, 64, 65, 66, 67, 68, 69, 70, 71, 72, 73, 74, 75, 76, 77 ],
           "attributes": {
-            "src": "passthru.v:69"
+            "src": "passthru.v:73"
           }
         },
         "gp": {
           "hide_name": 0,
           "bits": [ 23, 24, 25, 26, 27, 28, 29, 30, 31, 32, 33, 22, 34, 35, 36, 37, 38, 39, 40, 41, 42, 43, 44, 45, 46, 47, 48, 49 ],
           "attributes": {
-            "src": "passthru.v:68"
+            "src": "passthru.v:72"
           }
         },
         "led": {
           "hide_name": 0,
           "bits": [ "x", "x", "x", "x", "x", "x", 8, 12 ],
           "attributes": {
-            "src": "passthru.v:57"
+            "src": "passthru.v:61"
+          }
+        },
+        "my_switch.debug": {
+          "hide_name": 0,
+          "bits": [ 245, 247, 97, 249, 101, 103, 93, 99, "0", "0", "0", "0", "0", "0", 144, 248, 98, 250, 102, 104, 94, 100, "0", "0", "0", "0", "0", "0", "0", "0", 110 ],
+          "attributes": {
+            "src": "passthru.v:99|debouncer.v:154"
+          }
+        },
+        "my_switch.different": {
+          "hide_name": 0,
+          "bits": [ 137 ],
+          "attributes": {
+            "init": 0,
+            "src": "passthru.v:99|debouncer.v:82"
+          }
+        },
+        "my_switch.i_clk": {
+          "hide_name": 0,
+          "bits": [ 2 ],
+          "attributes": {
+            "src": "passthru.v:99|debouncer.v:77"
+          }
+        },
+        "my_switch.i_in": {
+          "hide_name": 0,
+          "bits": [ 13, 14, 15, 16, 17, 18, 19, "0" ],
+          "attributes": {
+            "src": "passthru.v:99|debouncer.v:78"
+          }
+        },
+        "my_switch.o_debounced": {
+          "hide_name": 0,
+          "bits": [ 144, 248, 98, 250, 102, 104, 94, 100 ],
+          "attributes": {
+            "init": 0,
+            "src": "passthru.v:99|debouncer.v:79"
+          }
+        },
+        "my_switch.o_debug": {
+          "hide_name": 0,
+          "bits": [ 245, 247, 97, 249, 101, 103, 93, 99, "0", "0", "0", "0", "0", "0", 144, 248, 98, 250, 102, 104, 94, 100, "0", "0", "0", "0", "0", "0", "0", "0", 110 ],
+          "attributes": {
+            "src": "passthru.v:99|debouncer.v:80"
+          }
+        },
+        "my_switch.q_in": {
+          "hide_name": 0,
+          "bits": [ 253, 254, 255, 256, 257, 258, 259, 260 ],
+          "attributes": {
+            "init": 0,
+            "src": "passthru.v:99|debouncer.v:83"
+          }
+        },
+        "my_switch.r_in": {
+          "hide_name": 0,
+          "bits": [ 245, 247, 97, 249, 101, 103, 93, 99 ],
+          "attributes": {
+            "init": 0,
+            "src": "passthru.v:99|debouncer.v:83"
+          }
+        },
+        "my_switch.r_last": {
+          "hide_name": 0,
+          "bits": [ 261, 262, 263, 264, 265, 266, 267, 268 ],
+          "attributes": {
+            "src": "passthru.v:99|debouncer.v:83"
+          }
+        },
+        "my_switch.timer": {
+          "hide_name": 0,
+          "bits": [ 122, 123, 121, 124, 118, 119, 117, 114, 113, 115, 108, 111, 135, 142, 146, 150, 161 ],
+          "attributes": {
+            "init": 0,
+            "src": "passthru.v:99|debouncer.v:84"
+          }
+        },
+        "my_switch.ztimer": {
+          "hide_name": 0,
+          "bits": [ 110 ],
+          "attributes": {
+            "init": 1,
+            "src": "passthru.v:99|debouncer.v:82"
           }
         },
         "oled_clk": {
           "hide_name": 0,
           "bits": [ 20 ],
           "attributes": {
-            "src": "passthru.v:62"
+            "src": "passthru.v:66"
           }
         },
         "oled_csn": {
           "hide_name": 0,
           "bits": [ 11 ],
           "attributes": {
-            "src": "passthru.v:61"
+            "src": "passthru.v:65"
           }
         },
         "oled_dc": {
           "hide_name": 0,
           "bits": [ 10 ],
           "attributes": {
-            "src": "passthru.v:64"
+            "src": "passthru.v:68"
           }
         },
         "oled_mosi": {
           "hide_name": 0,
           "bits": [ 21 ],
           "attributes": {
-            "src": "passthru.v:63"
+            "src": "passthru.v:67"
           }
         },
         "oled_resn": {
           "hide_name": 0,
           "bits": [ 22 ],
           "attributes": {
-            "src": "passthru.v:65"
+            "src": "passthru.v:69"
           }
         },
         "sd_cdn": {
           "hide_name": 0,
           "bits": [ 91 ],
           "attributes": {
-            "src": "passthru.v:87"
+            "src": "passthru.v:91"
           }
         },
         "sd_clk": {
           "hide_name": 0,
           "bits": [ 20 ],
           "attributes": {
-            "src": "passthru.v:86"
+            "src": "passthru.v:90"
           }
         },
         "sd_cmd": {
           "hide_name": 0,
           "bits": [ 21 ],
           "attributes": {
-            "src": "passthru.v:85"
+            "src": "passthru.v:89"
           }
         },
         "sd_d": {
           "hide_name": 0,
           "bits": [ 90, "x", "x", "x" ],
           "attributes": {
-            "src": "passthru.v:84"
+            "src": "passthru.v:88"
           }
         },
         "sd_wp": {
           "hide_name": 0,
           "bits": [ 92 ],
           "attributes": {
-            "src": "passthru.v:88"
+            "src": "passthru.v:92"
           }
         },
         "shutdown": {
           "hide_name": 0,
           "bits": [ "0" ],
           "attributes": {
-            "src": "passthru.v:72"
+            "src": "passthru.v:76"
           }
         },
         "wifi_en": {
           "hide_name": 0,
           "bits": [ 8 ],
           "attributes": {
-            "src": "passthru.v:50"
+            "src": "passthru.v:54"
           }
         },
         "wifi_gpio0": {
           "hide_name": 0,
           "bits": [ 9 ],
           "attributes": {
-            "src": "passthru.v:51"
+            "src": "passthru.v:55"
           }
         },
         "wifi_gpio16": {
           "hide_name": 0,
           "bits": [ 10 ],
           "attributes": {
-            "src": "passthru.v:53"
+            "src": "passthru.v:57"
           }
         },
         "wifi_gpio17": {
           "hide_name": 0,
           "bits": [ 11 ],
           "attributes": {
-            "src": "passthru.v:54"
+            "src": "passthru.v:58"
           }
         },
         "wifi_rxd": {
           "hide_name": 0,
           "bits": [ 4 ],
           "attributes": {
-            "src": "passthru.v:46"
+            "src": "passthru.v:50"
           }
         },
         "wifi_txd": {
           "hide_name": 0,
           "bits": [ 3 ],
           "attributes": {
-            "src": "passthru.v:47"
+            "src": "passthru.v:51"
           }
         }
       }
