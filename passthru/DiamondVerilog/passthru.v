@@ -27,148 +27,158 @@
 // no timescale needed
 
 module ulx3s_passthru_wifi(
-	input  wire clk_25mhz,
-	output wire ftdi_rxd,
-	input  wire ftdi_txd,
-	inout  wire ftdi_ndtr,
-	inout  wire ftdi_ndsr,
-	inout wire ftdi_nrts,
-	inout wire ftdi_txden,
-	output wire wifi_rxd,
-	input wire wifi_txd,
-	inout wire wifi_en,
-	inout wire wifi_gpio0,
-	inout wire wifi_gpio2,
-	inout wire wifi_gpio16,
-	inout wire wifi_gpio17,
-	output wire [7:0] led,
-	input wire [6:0] btn,
-	input wire [1:4] sw,
-	output wire oled_csn,
-	output wire oled_clk,
-	output wire oled_mosi,
-	output wire oled_dc,
-	output wire oled_resn,
-	inout wire [27:0] gp,
-	inout wire [27:0] gn,
-	output wire shutdown,
-	inout wire [3:0] audio_l,
-	inout wire [3:0] audio_r,
-	inout wire [3:0] audio_v,
-	output wire flash_holdn,
-	output wire flash_wpn,
-	inout wire [3:0] sd_d,
-	input wire sd_cmd,
-	input wire sd_clk,
-	input wire sd_cdn,
-	input wire sd_wp
+		input  wire clk_25MHz, // -- main clock input from 25MHz clock source must be lowercase
+
+		// UART0 (FTDI USB slave serial)
+		output wire ftdi_rxd,
+		input  wire ftdi_txd,
+	
+		// FTDI additional signaling
+		inout  wire ftdi_ndtr,
+		inout  wire ftdi_ndsr,
+		inout  wire ftdi_nrts,
+		inout  wire ftdi_txden,
+	
+		// UART1 (WiFi serial)
+		output wire wifi_rxd,
+		input  wire wifi_txd,
+	
+		// WiFi additional signaling
+		inout  wire wifi_en,
+		inout  wire wifi_gpio0,
+		inout  wire wifi_gpio2,
+		inout  wire wifi_gpio16,
+		inout  wire wifi_gpio17,
+	
+		// Onboard blinky
+		output wire [7:0] led,
+		input  wire [6:0] btn,
+		input  wire [1:4] sw,
+	
+		output wire oled_csn,
+		output wire oled_clk,
+		output wire oled_mosi,
+		output wire oled_dc,
+		output wire oled_resn,
+	
+		// GPIO (some are shared with wifi and adc)
+		inout  wire [27:0] gp,
+		inout  wire [27:0] gn,
+	
+		// SHUTDOWN: logic '1' here will shutdown power on PCB >= v1.7.5
+		output wire shutdown,
+	
+		// Audio jack 3.5mm
+		inout  wire [3:0] audio_l,
+		inout  wire [3:0] audio_r,
+		inout  wire [3:0] audio_v,
+	
+		// Flash ROM (SPI0)
+		output wire flash_holdn,
+		output wire flash_wpn,
+
+		// SD card (SPI1)
+		inout  wire [3:0] sd_d,
+		input  wire sd_cmd,
+		input  wire sd_clk,
+		input  wire sd_cdn,
+		input  wire sd_wp
 );
 
-parameter [31:0] C_dummy_constant=0;
-// main clock input from 25MHz clock source must be lowercase
-// UART0 (FTDI USB slave serial)
-// FTDI additional signaling
-// UART1 (WiFi serial)
-// WiFi additional signaling
-// '0' will disable wifi by default
-// Onboard blinky
-// GPIO (some are shared with wifi and adc)
-// SHUTDOWN: logic '1' here will shutdown power on PCB >= v1.7.5
-// Audio jack 3.5mm
-// Digital Video (differential outputs)
-//gpdi_dp, gpdi_dn: out std_logic_vector(2 downto 0);
-//gpdi_clkp, gpdi_clkn: out std_logic;
-// Flash ROM (SPI0)
-//flash_miso   : in      std_logic;
-//flash_mosi   : out     std_logic;
-//flash_clk    : out     std_logic;
-//flash_csn    : out     std_logic;
-// SD card (SPI1)
-// wifi_gpio 13,12,4,2
-// wifi_gpio15
-// wifi_gpio14
+	parameter [31:0] C_dummy_constant=0;
 
+	wire [1:0] S_prog_in; 
+	reg  [1:0] R_prog_in; 
+	wire [1:0] S_prog_out;
+	reg  [7:0] R_spi_miso;
+	wire S_oled_csn;
+	parameter C_prog_release_timeout = 17;  // default 17 2^n * 25MHz timeout for initialization phase
+	reg [C_prog_release_timeout:0] R_prog_release = 1'b1;  // timeout that holds lines for reliable entering programming mode
 
+	// TX/RX passthru
+	assign ftdi_rxd = wifi_txd;
+	assign wifi_rxd = ftdi_txd;
+	// Programming logic
+	// SERIAL  ->  ESP32
+	// DTR RTS -> EN IO0
+	//  1   1     1   1
+	//  0   0     1   1
+	//  1   0     0   1
+	//  0   1     1   0
+	assign S_prog_in[1] = ftdi_ndtr;
+	assign S_prog_in[0] = ftdi_nrts;
+	assign S_prog_out = S_prog_in == 2'b10 ? 2'b01 : S_prog_in == 2'b01 ? 2'b10 : 2'b11;
 
-wire [1:0] S_prog_in; 
-reg  [1:0] R_prog_in; 
-wire [1:0] S_prog_out;
-reg  [7:0] R_spi_miso;
-wire S_oled_csn;
-parameter C_prog_release_timeout = 17;  // default 17 2^n * 25MHz timeout for initialization phase
-reg [C_prog_release_timeout:0] R_prog_release = 1'b1;  // timeout that holds lines for reliable entering programming mode
+	assign wifi_en = S_prog_out[1];
+	assign wifi_gpio0 = S_prog_out[0] & btn[0];
+	// holding BTN0 will hold gpio0 LOW, signal for ESP32 to take control
+	//
+	// assign sd_d[0] = wifi_gpio0 == 1'b0 ? 1'b0 : 1'bZ; // sd_d(0) <= '0' when wifi_gpio0 = '0' else 'Z'; -- gpio2 together with gpio0 to 0
+	// assign sd_d[2] = wifi_gpio0 == 1'b0 ? 1'b0 : 1'bZ; // sd_d(2) <= '0' when wifi_gpio0 = '0' else 'Z'; -- wifi gpio12
 
-  // TX/RX passthru
-  assign ftdi_rxd = wifi_txd;
-  assign wifi_rxd = ftdi_txd;
-  // Programming logic
-  // SERIAL  ->  ESP32
-  // DTR RTS -> EN IO0
-  //  1   1     1   1
-  //  0   0     1   1
-  //  1   0     0   1
-  //  0   1     1   0
-  assign S_prog_in[1] = ftdi_ndtr;
-  assign S_prog_in[0] = ftdi_nrts;
-  assign S_prog_out = S_prog_in == 2'b10 ? 2'b01 : S_prog_in == 2'b01 ? 2'b10 : 2'b11;
-  assign wifi_en = S_prog_out[1];
-  assign wifi_gpio0 = S_prog_out[0] & btn[0];
-  // holding BTN0 will hold gpio0 LOW, signal for ESP32 to take control
-  //sd_d(0) <= '0' when wifi_gpio0 = '0' else 'Z'; -- gpio2 together with gpio0 to 0
-  //sd_d(2) <= '0' when wifi_gpio0 = '0' else 'Z'; -- wifi gpio12
-  assign sd_d[0] = R_prog_release[(C_prog_release_timeout)] == 1'b0 ? S_prog_out[0] : S_oled_csn == 1'b0 ? R_spi_miso[0] : 1'bZ;
-  // gpio2 to 0 during programming init
-  // sd_d(2) <= '0' when (S_prog_in(0) xor S_prog_in(1)) = '1' else 'Z'; -- wifi gpio12
-  // sd_d(2) <= '0' when R_prog_release(R_prog_release'high) = '0' else 'Z'; -- wifi gpio12
-  // sd_d(3) <= '1' when R_prog_release(R_prog_release'high) = '0' else 'Z';
-  // sd_clk <= clk_25mhz when R_prog_release(R_prog_release'high) = '0' else 'Z';
-  // permanent flashing mode
-  // wifi_en <= ftdi_nrts;
-  // wifi_gpio0 <= ftdi_ndtr;
-  assign S_oled_csn = wifi_gpio17;
-  assign oled_csn = S_oled_csn;
-  assign oled_clk = sd_clk;
-  // wifi_gpio14
-  assign oled_mosi = sd_cmd;
-  // wifi_gpio15
-  assign oled_dc = wifi_gpio16;
-  assign oled_resn = gp[11];
-  // wifi_gpio25
-  // show OLED signals on the LEDs
-  // show SD signals on the LEDs
-  // led(7 downto 0) <= S_oled_csn & R_spi_miso(0) & sd_clk & sd_d(2) & sd_d(3) & sd_cmd & sd_d(0) & sd_d(1); -- beautiful but makes core unreliable
-  assign led[7] =  ~R_prog_release[(C_prog_release_timeout)];
-  // ESP32 programming start: blinks too short to be visible
-  assign led[6] = S_prog_out[1];
-  // green LED indicates ESP32 disabled
-  //led(3) <= sd_d(3); -- sd_d(3) is sd_cs, pullup=NONE in constraints otherwise SD card will prevents esp32 from entering programming mode...
-  //led(2) <= sd_d(2);
-  //led(1) <= sd_d(1);
-  //led(0) <= sd_d(0);
-  // programming release counter
-  always @(posedge clk_25mhz) begin
-    R_prog_in <= S_prog_in;
-    if(S_prog_out == 2'b01 && R_prog_in == 2'b11) begin
-      R_prog_release <= {(((C_prog_release_timeout))-((0))+1){1'b0}};
-    end
-    else begin
-      if(R_prog_release[(C_prog_release_timeout)] == 1'b0) begin
-        R_prog_release <= R_prog_release + 1;
-      end
-    end
-  end
+	assign sd_d[0] = R_prog_release[(C_prog_release_timeout)] == 1'b0 ? S_prog_out[0] : S_oled_csn == 1'b0 ? R_spi_miso[0] : 1'bZ;
 
-  always @(posedge sd_clk, posedge wifi_gpio17) begin : P1
-  // gpio17 is OLED CSn
+	// gpio2 to 0 during programming init
+	// assign sd_d[2] = (S_prog_in[0] ^ S_prog_in[1]) == 1'b1 ? 1'b0 : 1'bZ; // sd_d(2) <= '0' when (S_prog_in(0) xor S_prog_in(1)) = '1' else 'Z'; -- wifi gpio12
+	// assign sd_d[2] = R_prog_release[(C_prog_release_timeout)] == 1'b0 ? 1'b0 : 1'bZ; // sd_d(2) <= '0' when R_prog_release(R_prog_release'high) = '0' else 'Z'; -- wifi gpio12
+	// assign sd_d[3] = R_prog_release[(C_prog_release_timeout)] == 1'b0 ? 1'b1 : 1'bZ; // sd_d(3) <= '1' when R_prog_release(R_prog_release'high) = '0' else 'Z';
+	// assign sd_clk = R_prog_release[(C_prog_release_timeout)] == 1'b0 ? clk_25mhz : 1'bZ; // sd_clk <= clk_25mhz when R_prog_release(R_prog_release'high) = '0' else 'Z';
 
-    if(wifi_gpio17 == 1'b1) begin
-      R_spi_miso <= {1'b0,btn};
-      // sample button state during csn=1
-    end else begin
-      R_spi_miso <= {R_spi_miso[((7)) - 1:0],R_spi_miso[(7)]};
-      // shift to the left
-    end
-  end
+	// permanent flashing mode
+	// assign wifi_en = ftdi_nrts; // wifi_en <= ftdi_nrts;
+	// assign wifi_gpio0 = ftdi_ndtr; // wifi_gpio0 <= ftdi_ndtr;
+
+	assign S_oled_csn = wifi_gpio17;
+	assign oled_csn = S_oled_csn;
+	assign oled_clk = sd_clk;
+
+	// wifi_gpio14
+	assign oled_mosi = sd_cmd;
+
+	// wifi_gpio15
+	assign oled_dc = wifi_gpio16;
+	assign oled_resn = gp[11];
+
+	// wifi_gpio25
+	// show OLED signals on the LEDs
+	// show SD signals on the LEDs
+	// assign led[7:0] = {S_oled_csn,R_spi_miso[0],sd_clk,sd_d[2],sd_d[3],sd_cmd,sd_d[0],sd_d[1]}; // led(7 downto 0) <= S_oled_csn & R_spi_miso(0) & sd_clk & sd_d(2) & sd_d(3) & sd_cmd & sd_d(0) & sd_d(1); -- beautiful but makes core unreliable
+
+	assign led[7] =  ~R_prog_release[(C_prog_release_timeout)];
+
+	// ESP32 programming start: blinks too short to be visible
+	assign led[6] = S_prog_out[1];
+
+	// green LED indicates ESP32 disabled
+	// assign led[3] = sd_d[3]; //led(3) <= sd_d(3); -- sd_d(3) is sd_cs, pullup=NONE in constraints otherwise SD card will prevents esp32 from entering programming mode...
+	// assign led[2] = sd_d[2]; //led(2) <= sd_d(2);
+	// assign led[1] = sd_d[1]; //led(1) <= sd_d(1);
+	// assign led[0] = sd_d[0]; //led(0) <= sd_d(0);
+
+	// programming release counter
+	always @(posedge clk_25MHz) begin
+		R_prog_in <= S_prog_in;
+		if (S_prog_out == 2'b01 && R_prog_in == 2'b11) begin
+			R_prog_release <= 0; // was converted as: <= {(((C_prog_release_timeout))-((0))+1){1'b0}};
+			end
+		else begin
+			if (R_prog_release[1] == 1'b0) begin
+			R_prog_release <= R_prog_release + 1;
+			end
+		end // else
+	end // always
+
+	always @(posedge sd_clk, posedge wifi_gpio17) begin : P1
+		// gpio17 is OLED CSn
+
+		if(wifi_gpio17 == 1'b1) begin
+			R_spi_miso <= {1'b0,btn}; // sample button state during csn=1
+			end 
+		else begin
+		 // R_spi_miso <= {R_spi_miso[((7)) - 1:0],R_spi_miso[(7)]}; // shift to the left
+			R_spi_miso <= {R_spi_miso[6:0],R_spi_miso[(7)]}; // shift to the left
+		end // else wifi_gpio17 is zero
+	end
 
 
 endmodule
