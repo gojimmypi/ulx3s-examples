@@ -14,13 +14,25 @@ Info: Importing module passthru
 Info: Rule checker, verifying imported design
 Info: Checksum: 0x06b9ae23
 
-Info: constraining clock net 'clk_25MHz' to 25.00 MHz
-SYSCONFIG CONFIG_IOVOLTAGE=3.3 COMPRESS_CONFIG=ON MCCLK_FREQ=62 MASTER_SPI_PORT=ENABLE SLAVE_SPI_PORT=DISABLE SLAVE_PARALLEL_PORT=DISABLE' (on line 12)
-ERROR: IO 'ftdi_ndsr' is unconstrained in LPF (override this error with --lpf-allow-unconstrained)
+Info: Annotating ports with timing budgets for target frequency 12.00 MHz
+ERROR: cell type '$_DFFSR_PPP_' is unsupported (instantiated as '$auto$simplemap.cc:467:simplemap_dffsr$300')
 1 warning, 1 error
 Makefile.12F:74: recipe for target 'ulx3s_out.config' failed
 make: *** [ulx3s_out.config] Error 255
 ```
+
+Note that an error such as:
+
+```
+ERROR: cell type '$_DFFSR_PPP_' is unsupported (instantiated as '$auto$simplemap.cc:467:simplemap_dffsr$300')
+```
+
+means:
+
+_Sounds like you have both an async set and reset, which isn't supported because it doesn't map to ECP5 registers
+you can't asynchronously load a value_ 
+-- @@daveshah1
+
 
 See [Diamond PassThru](../Diamond/README.md)
 
