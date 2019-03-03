@@ -1,4 +1,4 @@
-# Diamond for Windows passthru
+# Diamond for Windows passthru (VHDL)
 
 This FPGA passthru app, needed to program the ESP32 since is it not directly accessible, is written in VHDL.
 
@@ -23,4 +23,4 @@ ujprog.exe Diamond_Blinky_Implementation.bit
 
 For a more detailed example using Diamond, see the [Diamond Blinky Example](../../blinky/Diamond/README.md)
 
-See also [other examples](../../README.md)
+See also [other examples](../../README.md), as well as the [Verilog Passthru](../DiamondVerilog/README.md)
