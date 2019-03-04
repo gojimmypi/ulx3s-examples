@@ -1,0 +1,30 @@
+*~
+# intermediate generate netlist file
+ulx3s.net
+# intermediate files of the freeroute
+ulx3s.dsn
+ulx3s.bin
+ulx3s.ses
+ulx3s.rules
+.vs/
+.vdbs/
+/blinky/Diamond/Blinky_Implementation
+/blinky/Diamond/Diamond_tcr.dir
+/blinky/Diamond/.run_manager.ini
+/blinky/Diamond/promote.xml
+/blinky/Diamond/reportview.xml
+implementation/
+/passthru/Diamond/passthru_implementation
+/passthru/Diamond/.setting.ini
+/passthru/Diamond/.recovery
+/passthru/Diamond/passthru1.sty
+
+/passthru/DiamondVerilog/implementation
+/passthru/DiamondVerilog/.recovery
+/passthru/DiamondVerilog/fullconvert.v
+/passthru/DiamondVerilog/fullconvert.vhdl
+/passthru/DiamondVerilog/passthru1.sty
+/blinky/OpenSource/obj_dir
+/passthru/OpenSource/obj_dir
+/blinky/OpenSource/blinky.vcd
+/blinky/OpenSource/blinky_tb
