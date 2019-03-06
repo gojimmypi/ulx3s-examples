@@ -12,3 +12,4 @@ As shown in the [schematics](../../doc/schematics.pdf) (page 7), the ESP32 pins 
 
 [PassThru using Open Source](./OpenSource/README.md)
 
+For additional passthru info, see https://github.com/emard/ulx3s-passthru
