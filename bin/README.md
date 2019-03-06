@@ -13,7 +13,3 @@ To get started quickly, see the [upload_passthru.sh](./upload_passthru.sh) to up
 For other binaries see [https://github.com/emard/ulx3s-bin](https://github.com/emard/ulx3s-bin)
 
 See also [other examples](../README.md)
-
-
- 
-
