@@ -6,10 +6,14 @@ Note: The linux-compiled `ujprog` does not work in WSL as native USB drivers are
 
 `ujprog.exe` - compiled for Windows / WSL
 
-`passthru_implementation_12F.bit` - prebuilt 12F passthru (see [PassThru example](../../examples/passthru/README.md) )
+`passthru_implementation_12F.bit` - prebuilt 12F passthru (see [PassThru example](../../passthru/README.md) )
 
 To get started quickly, see the [upload_passthru.sh](./upload_passthru.sh) to upload the FPGA passthru code and [ESP32/upload_blinky.sh](./ESP32/upload_blinky.sh) for the ESP32 blinky.
 
 For other binaries see [https://github.com/emard/ulx3s-bin](https://github.com/emard/ulx3s-bin)
 
 See also [other examples](../README.md)
+
+
+ 
+
