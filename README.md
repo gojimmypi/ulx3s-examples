@@ -1,6 +1,6 @@
 # ULX3S Examples
 
-Collection of various ulx3s examples
+Collection of various ulx3s examples:
 
 [ESP 32 Blinky](./blinky/ESP32/README.md)
 
@@ -12,4 +12,6 @@ Collection of various ulx3s examples
 
 [PassThru using Open Source](./passthru/OpenSource/README.md)
 
-See also: [binaries](./bin/README.md)
+See also: [binaries](./bin/README.md), [hardware](https://github.com/emard/ulx3s), [f32c/tools/ujprog](https://github.com/f32c/tools/tree/master/ujprog)
+
+

@@ -100,4 +100,4 @@ python esptool.py --chip esp32                    \
 
 See the quick start [upload_blinky.sh](./upload_blinky.sh) and [upload_blinky.bat](./upload_blinky.bat)
 
-See also [other examples](../README.md)
+See also [other ESP32 examples](../README.md) and [other ULX3S examples](../../README.md) 
