@@ -4,7 +4,7 @@ This blinky is based on the [ULX3S-Blinky project](https://github.com/DoctorWkt/
 
 It is assumed the yosys, nextpnr toolchain has been already installed. If not, see [instructions here](../../OpenSource-toolchain/README.md)
 
-Optionally copy a fresh [ulx3s_v20.lpf constraint file](../../../doc/constraints/ulx3s_v20.lpf).
+Optionally copy a fresh [ulx3s_v20.lpf constraint file](../../doc/constraints/ulx3s_v20.lpf).
 
 ```
 cp -f ../../doc/constraints/ulx3s_v20.lpf ./ # optionally copy an updated lpf file
