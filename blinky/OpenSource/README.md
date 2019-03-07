@@ -7,7 +7,7 @@ It is assumed the yosys, nextpnr toolchain has been already installed. If not, s
 Optionally copy a fresh [ulx3s_v20.lpf constraint file](../../../doc/constraints/ulx3s_v20.lpf).
 
 ```
-cp -f ../../../doc/constraints/ulx3s_v20.lpf ./ # optionally copy an updated lpf file
+cp -f ../../doc/constraints/ulx3s_v20.lpf ./ # optionally copy an updated lpf file
 ```
 
 On linux, the regular `ujprog` can be used:
