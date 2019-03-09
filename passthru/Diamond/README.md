@@ -23,4 +23,4 @@ ujprog.exe Diamond_Blinky_Implementation.bit
 
 For a more detailed example using Diamond, see the [Diamond Blinky Example](../../blinky/Diamond/README.md)
 
-See also [other examples](../../README.md), as well as the [Verilog Passthru](../DiamondVerilog/README.md)
+See also [other examples](../../README.md), as well as the [Verilog Passthru](../DiamondVerilog/README.md) that was converted with [vhd2vl](https://github.com/ldoolitt/vhd2vl)
