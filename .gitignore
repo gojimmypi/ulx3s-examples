@@ -31,3 +31,14 @@ implementation/
 /blinky/OpenSource/blinky.json
 /blinky/OpenSource/ulx3s.bit
 /blinky/OpenSource/ulx3s_out.config
+/passthru/DiamondDebounce/passthru_tcr.dir
+/passthru/DiamondDebounce/reportview.xml
+/passthru/DiamondDebounce/promote.xml
+/passthru/DiamondDebounce/passthru1.sty
+/passthru/DiamondDebounce/.setting.ini
+/passthru/DiamondDebounce/.run_manager.ini
+/passthru/DiamondVerilog/passthru_tcr.dir
+/passthru/DiamondVerilog/reportview.xml
+/passthru/DiamondVerilog/promote.xml
+/passthru/DiamondVerilog/.run_manager.ini
+/passthru/OpenSource/ulx3s.bit
