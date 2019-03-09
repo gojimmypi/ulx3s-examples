@@ -186,8 +186,9 @@ module passthru(
 		end // else
 	end // always
 
-	always @(posedge sd_clk, posedge wifi_gpio17) begin : P1
-		// gpio17 is OLED CSn
+//	always @(posedge sd_clk, posedge wifi_gpio17) begin : P1
+	always @(posedge sd_clk) begin : P1
+	    // gpio17 is OLED CSn
 		if(wifi_gpio17 == 1'b1) begin
 			R_spi_miso[0] <= { {(32-8){1'b0}}, button_press }; //  ; // sample button state during csn=1
 			end 
