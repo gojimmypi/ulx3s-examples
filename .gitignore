@@ -28,3 +28,6 @@ implementation/
 /passthru/OpenSource/obj_dir
 /blinky/OpenSource/blinky.vcd
 /blinky/OpenSource/blinky_tb
+/blinky/OpenSource/blinky.json
+/blinky/OpenSource/ulx3s.bit
+/blinky/OpenSource/ulx3s_out.config
