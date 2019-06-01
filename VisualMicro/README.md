@@ -1,4 +1,4 @@
-#Using Visual Micro to program the ULX3S ESP32
+# Using Visual Micro to program the ULX3S ESP32
 
 Similar to the [Arduino Blinky for the ESP32](../blinky/ESP32), this example uses the Visual Micro IDE.
 
@@ -6,7 +6,9 @@ Similar to the [Arduino Blinky for the ESP32](../blinky/ESP32), this example use
 
 or install the [Arduino IDE from the Visual Studio Marketplace](https://marketplace.visualstudio.com/items?itemName=VisualMicro.ArduinoIDEforVisualStudio)
 
-Ensure the [FPGA pass-thru](../passthru/) code is loaded onto the FPGA.
+Ensure the [FPGA pass-thru](../passthru/) code is loaded onto the FPGA, as the ESP32 sits behind the iCE40:
+
+![ESP32-on-ULX3S](./images/ESP32-on-ULX3S.PNG )
 
 ## Windows commandline / DOS prompt
 ```
@@ -31,7 +33,9 @@ cd /mnt/c/workspace/ulx3s-examples/VisualMicro/bin/
 # ./ujprog.exe -j FLASH passthru.bit # optionally write to flash
 ./ujprog.exe passthru.bit
 ```
+Here are some key settings in Visual Micro:
 
+![ESP32-on-ULX3S-settings](./images/VisualMicro_ULX3S_settings.png )
 
 See also: 
 * [gojimmypi blog on Using Visual Micro to program the ULX3S ESP32]()
