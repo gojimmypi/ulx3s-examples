@@ -22,7 +22,7 @@ Here is a collection of various ulx3s examples to get started:
 
 * [PassThru using Open Source](./passthru/OpenSource/README.md)
 
-* [Using Visual Micro to program the ESP32(./VisualMicro/README.md)]
+* [Using Visual Micro to program the ESP32](./VisualMicro/README.md)
 
 * [More links to RadionaOrg ULX3S examples](https://github.com/RadionaOrg/ulx3s-links/blob/master/README.md) 
 
