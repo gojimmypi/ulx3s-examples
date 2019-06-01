@@ -42,3 +42,7 @@ implementation/
 /passthru/DiamondVerilog/promote.xml
 /passthru/DiamondVerilog/.run_manager.ini
 /passthru/OpenSource/ulx3s.bit
+/VisualMicro/__vm/Upload.vmps.xml
+/VisualMicro/__vm/Configuration.Debug.vmps.xml
+/VisualMicro/__vm/Compile.vmps.xml
+/VisualMicro/Debug
