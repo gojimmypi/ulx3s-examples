@@ -8,7 +8,7 @@ or install the [Arduino IDE from the Visual Studio Marketplace](https://marketpl
 
 Ensure the [FPGA pass-thru](../passthru/) code is loaded onto the FPGA, as the ESP32 sits behind the iCE40:
 
-![ESP32-on-ULX3S](./images/ESP32-on-ULX3S.PNG )
+![ESP32-on-ULX3S](./images/ESP32_on_ULX3S.png )
 
 ## Windows commandline / DOS prompt
 ```
