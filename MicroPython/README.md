@@ -13,7 +13,7 @@ cd \workspace\ulx3s-examples\bin\
 .\ujprog.exe passthru.bit
 ```
 
-## WSL
+## WSL - load FPGA passthru
 There is still no native USB driver support in WSL, so we expect an error message such as:
 ```
 ULX2S / ULX3S JTAG programmer v 3.0.92 (built Jun  1 2019 15:29:22)
@@ -30,7 +30,7 @@ cd /mnt/c/workspace/ulx3s-examples/bin/
 
 Examples assume the ULX3S is found on COM13
 
-## Windows/DOS - the easy way
+## Windows/DOS - the easy way to load MicroPython onto the ULX3S
 ```
 if NOT EXIST c:\workspace mkdir c:\workspace
 git clone https://github.com/gojimmypi/ulx3s-examples.git c:\workspace\ulx3s-examples
@@ -84,7 +84,7 @@ Enabling default SPI flash mode...
 A fatal error occurred: Timed out waiting for packet header
 ```
 
-## WSL with Windows EXE 
+## WSL with Windows EXE to load MicroPython onto the ULX3S
 Note when calling EXE files in WSL, we need to use COM port refrerences and not /dev/ttySnn !)
 ```
 cd /mnt/c/workspace/ulx3s-examples/MicroPython/bin/
