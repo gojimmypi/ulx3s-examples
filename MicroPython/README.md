@@ -84,26 +84,13 @@ Enabling default SPI flash mode...
 A fatal error occurred: Timed out waiting for packet header
 ```
 
-## WSL with Windows EXE (also fails)
+## WSL with Windows EXE 
+Note when calling EXE files in WSL, we need to use COM port refrerences and not /dev/ttySnn !)
 ```
- ./esptool.exe --chip esp32 --port /dev/ttyS13 --baud 460800 write_flash -z 0x1000 esp32-20190529-v1.11.bin
+cd /mnt/c/workspace/ulx3s-examples/MicroPython/bin/
+./esptool.exe --chip esp32 --port COM13 --baud 460800 write_flash -z 0x1000 esp32-20190529-v1.11.bin
 ```
 
-WSL Windows EXE failure message (same EXE that works with DOS command prompt, above):
-```
-$ ./esptool.exe --chip esp32 --port /dev/ttyS13 --baud 460800 write_flash -z 0x1000 esp32-20190529-v1.11.bin
-esptool.py v2.6-beta1
-Serial port /dev/ttyS13
-Traceback (most recent call last):
-  File "esptool.py", line 2865, in <module>
-  File "esptool.py", line 2858, in _main
-  File "esptool.py", line 2565, in main
-  File "esptool.py", line 213, in __init__
-  File "site-packages\serial\__init__.py", line 88, in serial_for_url
-  File "site-packages\serial\serialwin32.py", line 62, in open
-serial.serialutil.SerialException: could not open port '/dev/ttyS13': WindowsError(3, 'The system cannot find the path specified.')
-Failed to execute script esptool
-```
  
 See files in:
 ```
