@@ -6,7 +6,7 @@ Similar to the [Arduino Blinky for the ESP32](../blinky/ESP32) using the [Arduin
 
 or install the [Arduino IDE from the Visual Studio Marketplace](https://marketplace.visualstudio.com/items?itemName=VisualMicro.ArduinoIDEforVisualStudio)
 
-Ensure the [FPGA pass-thru](../passthru/) code is loaded onto the FPGA, as the ESP32 sits behind the iCE40:
+Ensure the [FPGA pass-thru](../passthru/) code is loaded onto the FPGA, as the ESP32 sits behind the ECP5 FPGA chip:
 
 ![ESP32-on-ULX3S](./images/ESP32_on_ULX3S.png )
 
@@ -15,7 +15,7 @@ Ensure the [FPGA pass-thru](../passthru/) code is loaded onto the FPGA, as the E
 if NOT EXIST c:\workspace mkdir c:\workspace
 git clone https://github.com/gojimmypi/ulx3s-examples.git c:\workspace\ulx3s-examples
 c:
-cd \workspace\ulx3s-examples\VisualMicro\bin\
+cd \workspace\ulx3s-examples\bin\
 .\ujprog.exe passthru.bit
 ```
 
@@ -29,7 +29,7 @@ We can call the Windows version from the Linux prompt. Note that for some unknow
 ```
 mkdir -p /mnt/c/workspace/  # this is actually C:\workspace\ to Windows
 git clone https://github.com/gojimmypi/ulx3s-examples.git /mnt/c/workspace/ulx3s-examples
-cd /mnt/c/workspace/ulx3s-examples/VisualMicro/bin/
+cd /mnt/c/workspace/ulx3s-examples/bin/
 # ./ujprog.exe -j FLASH passthru.bit # optionally write to flash
 ./ujprog.exe passthru.bit
 ```

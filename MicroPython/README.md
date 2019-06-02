@@ -4,6 +4,30 @@ Ensure the [FPGA pass-thru](../passthru/) code is loaded onto the FPGA, as the E
 
 ![ESP32-on-ULX3S](./images/ESP32_on_ULX3S.png )
 
+## Windows commandline / DOS prompt to load FPGA passthru to program the ESP32
+```
+if NOT EXIST c:\workspace mkdir c:\workspace
+git clone https://github.com/gojimmypi/ulx3s-examples.git c:\workspace\ulx3s-examples
+c:
+cd \workspace\ulx3s-examples\bin\
+.\ujprog.exe passthru.bit
+```
+
+## WSL
+There is still not native USB driver support in WSL, so we expect an error message such as:
+```
+ULX2S / ULX3S JTAG programmer v 3.0.92 (built Jun  1 2019 15:29:22)
+Cannot find JTAG cable.
+```
+We can call the Windows version from the Linux prompt. Note that for some unknown reason, it needs to be called from the Windows file system and not the Linux one. (e.g. not `~/workspace/`). Symptoms of running the Windows executable from the WSL filesystem is that no output at all is returned from `ujprog.exe`.
+```
+mkdir -p /mnt/c/workspace/  # this is actually C:\workspace\ to Windows
+git clone https://github.com/gojimmypi/ulx3s-examples.git /mnt/c/workspace/ulx3s-examples
+cd /mnt/c/workspace/ulx3s-examples/bin/
+# ./ujprog.exe -j FLASH passthru.bit # optionally write to flash
+./ujprog.exe passthru.bit
+```
+
 Examples assume the ULX3S is found on COM13
 
 ## Windows/DOS - the easy way
@@ -92,4 +116,7 @@ See also:
 
 https://github.com/espressif/esptool
 https://micropython.org/download#esp32
+https://github.com/Microsoft/WSL/issues/1929
+https://discourse.tinyfpga.com/t/recognizing-tinyfpga-bx-in-wsl/849/10
+
 
