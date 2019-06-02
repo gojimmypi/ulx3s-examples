@@ -10,6 +10,9 @@ Ensure the [FPGA pass-thru](../passthru/) code is loaded onto the FPGA, as the E
 
 ![ESP32-on-ULX3S](./images/ESP32_on_ULX3S.png )
 
+## Quick Start FPGA passthru
+See [bin/upload_passthru.sh](../bin/upload_passthru.sh) or  [bin/upload_passthru.bat](../bin/upload_passthru.bat)
+
 ## Windows commandline / DOS prompt
 ```
 if NOT EXIST c:\workspace mkdir c:\workspace
