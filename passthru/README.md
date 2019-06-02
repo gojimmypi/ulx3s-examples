@@ -12,4 +12,6 @@ As shown in the [schematics](../doc/schematics.pdf) (page 7), the ESP32 pins are
 
 [PassThru using Open Source](./OpenSource/README.md)
 
+## Quick start
+See [bin/upload_passthru.sh](../bin/upload_passthru.sh) or  [bin/upload_passthru.bat](../bin/upload_passthru.bat)
 For additional passthru info, see https://github.com/emard/ulx3s-passthru
