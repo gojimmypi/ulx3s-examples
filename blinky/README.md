@@ -1,6 +1,6 @@
 # ULX3S Examples
 
-# FPGA Blinky
+## FPGA Blinky
 
 Note when programming the ULX3S in Windows, Lattice Diamond does not recognized the FT232 as a programmer, so `ujprog` is needed to send the bitfile. 
 
@@ -17,4 +17,4 @@ Cannot find JTAG cable.
 
 [Blinky using Open Source](./OpenSource/README.md)
 
-See also [other examples](../README.md)
+See also [other examples](../README.md) and [ESP32 Blinky with Arduino IDE() and [Visual Micro Arduino IDE for Visual Studio](../VisualMicro/README.md)

@@ -22,8 +22,19 @@ Here is a collection of various ulx3s examples to get started:
 
 * [PassThru using Open Source](./passthru/OpenSource/README.md)
 
+* [Using Visual Micro to program the ESP32](./VisualMicro/README.md)
+
 * [More links to RadionaOrg ULX3S examples](https://github.com/RadionaOrg/ulx3s-links/blob/master/README.md) 
 
 See also: [binaries](./bin/README.md), [hardware](https://github.com/emard/ulx3s), [f32c/tools/ujprog](https://github.com/f32c/tools/tree/master/ujprog)
 
 
+https://github.com/goran-mahovlic/fpga-odysseus/tree/master/tutorials/04-Video
+
+https://github.com/albertxie/iverilog-tutorial/blob/master/code_samples/simple_tb.v
+
+https://github.com/mmicko/cross-fpga
+
+https://github.com/jhol/otl-modem/blob/master/fw/syn/top.v
+
+http://www.clifford.at/icestorm/
