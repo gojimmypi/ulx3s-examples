@@ -1,5 +1,9 @@
 # MicroPython on the ULX3S ESP32
 
+Ensure the [FPGA pass-thru](../passthru/) code is loaded onto the FPGA, as the ESP32 sits behind the ECP5 FPGA chip:
+
+![ESP32-on-ULX3S](./images/ESP32_on_ULX3S.png )
+
 Examples assume the ULX3S is found on COM13
 
 ## Windows/DOS - the easy way
