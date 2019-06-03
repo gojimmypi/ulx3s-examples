@@ -3,7 +3,7 @@ This FOSSi toolchain was developed to run under WSL Ubuntu, but should work on s
 
 Instead of the close-source Lattice Diamond software, this toolchain allows building binary files for the ULX3S using completely open-source tools such as [yosys](https://github.com/cliffordwolf/yosys.git) and [nextpnr](https://github.com/YosysHQ/nextpnr#nextpnr-ecp5).
 
-Adapted from [gojimmypi/ULXS3_WSL_Toolchain.sh](https://gist.github.com/gojimmypi/f96cd86b2b8595b4cf3be4baf493c5a7)
+Toolchain builder from [gojimmypi/ULXS3_WSL_Toolchain.sh](https://gist.github.com/gojimmypi/f96cd86b2b8595b4cf3be4baf493c5a7)
 
 See the [ULX3S_WSL_Toolchain](./ULX3S_WSL_Toolchain) directory for [ULX3S_WSL_Toolchain.sh](./ULX3S_WSL_Toolchain/ULX3S_WSL_Toolchain.sh)
 
