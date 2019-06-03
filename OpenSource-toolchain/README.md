@@ -8,19 +8,29 @@ Toolchain builder from [gojimmypi/ULXS3_WSL_Toolchain.sh](https://gist.github.co
 
 See the [ULX3S_WSL_Toolchain](./ULX3S_WSL_Toolchain) directory for [ULX3S_WSL_Toolchain.sh](./ULX3S_WSL_Toolchain/ULX3S_WSL_Toolchain.sh)
 
-# (optional) gist from gojimmypi
+## (optional) gist from gojimmypi
 ```
 git clone https://gist.github.com/f96cd86b2b8595b4cf3be4baf493c5a7.git ULX3S_WSL_Toolchain
 ```
+## Update the system and build everything
 
-# Toolchain help
+This can take quite some time....
 
-from the `ULX3S_WSL_Toolchain` directory, see help:
+```
+./ULX3S_WSL_Toolchain.sh
+```
+
+## Toolchain Builder Help and Options 
+
+There are command line options available when you don't want to rebuild every component of the entire toolchain.
+
+For help:
 
 ```
 ./ULX3S_WSL_Toolchain.sh --help
 ```
 
+Example output:
 
 ```
 COMMIT_HASH =
@@ -50,3 +60,4 @@ Edit WORKSPACE setting to fit your needs.
   --version      : show versions of installed tools
   --yosys        : install/update yosys
   ```
+
