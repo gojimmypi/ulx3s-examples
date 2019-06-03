@@ -1,3 +1,4 @@
+# WSL Toolchain Builder
 
 This FOSSi toolchain was developed to run under WSL Ubuntu, but should work on standard Ubuntu.
 
@@ -7,11 +8,14 @@ Toolchain builder from [gojimmypi/ULXS3_WSL_Toolchain.sh](https://gist.github.co
 
 See the [ULX3S_WSL_Toolchain](./ULX3S_WSL_Toolchain) directory for [ULX3S_WSL_Toolchain.sh](./ULX3S_WSL_Toolchain/ULX3S_WSL_Toolchain.sh)
 
+# (optional) gist from gojimmypi
 ```
 git clone https://gist.github.com/f96cd86b2b8595b4cf3be4baf493c5a7.git ULX3S_WSL_Toolchain
 ```
 
-from the `ULX3S_WSL_Toolchain` directory:
+# Toolchain help
+
+from the `ULX3S_WSL_Toolchain` directory, see help:
 
 ```
 ./ULX3S_WSL_Toolchain.sh --help
@@ -44,4 +48,5 @@ Edit WORKSPACE setting to fit your needs.
   --system       : install requirements; perform apt-get update and apt-get upgrade
   --ujprog       : install/update ujprog
   --version      : show versions of installed tools
-  --yosys        : install/update yosys```
+  --yosys        : install/update yosys
+  ```
