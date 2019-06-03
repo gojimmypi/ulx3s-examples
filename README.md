@@ -10,7 +10,7 @@ You can learn more at sites such as [fpga4fun](http://www.fpga4fun.com/), [asic-
 
 Once you have your circuit logic generically defined properly in a Verilog file, the hardware-specific constraint file is used to connect the inputs and outputs of the Verilog code to physical pins on the FPGA device.
 
-Here is a collection of various ulx3s examples to get started:
+Here is a collection of various ULX3S examples to get started:
 
 * [ESP 32 Blinky](./blinky/ESP32/README.md)
 
@@ -18,11 +18,15 @@ Here is a collection of various ulx3s examples to get started:
 
 * [FPGA Blinky using Open Source](./blinky/OpenSource/README.md)
 
+* [FPGA PassThru QuickStart](./passthru/README.md#quick-start-fpga-passthru)
+
 * [PassThru in Lattice Diamond for Windows](./passthru/Diamond/README.md)
 
 * [PassThru using Open Source](./passthru/OpenSource/README.md)
 
 * [Using Visual Micro to program the ESP32](./VisualMicro/README.md)
+
+* [MicroPython on the ULX3S ESP32](./MicroPython/README.md)
 
 * [More links to RadionaOrg ULX3S examples](https://github.com/RadionaOrg/ulx3s-links/blob/master/README.md) 
 
