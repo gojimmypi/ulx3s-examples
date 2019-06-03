@@ -22,6 +22,8 @@ Here is a collection of various ULX3S examples to get started:
 
 * [PassThru in Lattice Diamond for Windows](./passthru/Diamond/README.md)
 
+* [Build Open Source Toolchain yosys/nextpnr](./OpenSource-toolchain/README.md)
+
 * [PassThru using Open Source](./passthru/OpenSource/README.md)
 
 * [Using Visual Micro to program the ESP32](./VisualMicro/README.md)
