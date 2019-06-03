@@ -95,14 +95,14 @@ cd /mnt/c/workspace/ulx3s-examples/MicroPython/bin/
 ```
 
  
-See files in:
+# See files in:
 ```
 C:\Users\%USERNAME%\AppData\Local\arduino15\packages\esp32\tools\esptool_py\2.6.0\
 C:\Users\%USERNAME%\AppData\Local\arduino15\packages\esp32\hardware\esp32\1.0.1\tools\sdk\bin\
 C:\Users\%USERNAME%\AppData\Local\arduino15\packages\esp32\hardware\esp32\1.0.1\tools\partitions\
 ```
 
-See also:
+# See also:
 
 https://github.com/espressif/esptool
 https://micropython.org/download#esp32

@@ -4,7 +4,7 @@ Similar to the [Arduino Blinky for the ESP32](../blinky/ESP32) using the [Arduin
 
 [Download the Arduino IDE for Visual Studio and Atmel Studio](https://www.visualmicro.com/page/Arduino-Visual-Studio-Downloads.aspx)
 
-or install the [Arduino IDE from the Visual Studio Marketplace](https://marketplace.visualstudio.com/items?itemName=VisualMicro.ArduinoIDEforVisualStudio)
+or install the [Arduino IDE from the Visual Studio Marketplace](https://marketplace.visualstudio.com/items?itemName=VisualMicro.ArduinoIDEforVisualStudio).
 
 Ensure the [FPGA pass-thru](../passthru/) code is loaded onto the FPGA, as the ESP32 sits behind the ECP5 FPGA chip:
 
@@ -13,7 +13,7 @@ Ensure the [FPGA pass-thru](../passthru/) code is loaded onto the FPGA, as the E
 ## Quick Start FPGA passthru
 See [bin/upload_passthru.sh](../bin/upload_passthru.sh) or  [bin/upload_passthru.bat](../bin/upload_passthru.bat)
 
-## Windows commandline / DOS prompt
+## Windows commandline / DOS prompt FPGA passthru
 ```
 if NOT EXIST c:\workspace mkdir c:\workspace
 git clone https://github.com/gojimmypi/ulx3s-examples.git c:\workspace\ulx3s-examples
@@ -22,7 +22,7 @@ cd \workspace\ulx3s-examples\bin\
 .\ujprog.exe passthru.bit
 ```
 
-## WSL
+## WSL FPGA passthru
 There is still not native USB driver support in WSL, so we expect an error message such as:
 ```
 ULX2S / ULX3S JTAG programmer v 3.0.92 (built Jun  1 2019 15:29:22)
@@ -36,12 +36,18 @@ cd /mnt/c/workspace/ulx3s-examples/bin/
 # ./ujprog.exe -j FLASH passthru.bit # optionally write to flash
 ./ujprog.exe passthru.bit
 ```
-Here are some key settings in Visual Micro:
+##  Key settings in Visual Micro for ULX3S ESP32:
+
+Note that when in debug, pressing F5 to run will typically pause the app at the first default breakpoint! Use the release configuration to avoid this.
 
 ![ESP32-on-ULX3S-settings](./images/VisualMicro_ULX3S_settings.png )
 
-See also: 
-* [gojimmypi blog on Using Visual Micro to program the ULX3S ESP32]()
+## Visual Micro Commandline Examples:
+
+[code_upload.bat](./code_upload.bat) and WSL [code_upload.sh](./code_upload.sh)
+
+## See also: 
+* [gojimmypi.blogspot.com - Using Visual Micro to program the ULX3S ESP32](https://gojimmypi.blogspot.com/2019/06/ulx3s-and-visual-micro-in-visual-studio.html)
 * https://radiona.org/ulx3s/
 * [Hackaday - ULX3S: An open-source Lattice ECP5 FPGA PCB](https://hackaday.com/2019/01/14/ulx3s-an-open-source-lattice-ecp5-fpga-pcb/)
 * [hackaday.io -  ULX3S powerful ECP5 board for open source FPGA](https://hackaday.io/project/159108-ulx3s-powerful-ecp5-board-for-open-source-fpga)

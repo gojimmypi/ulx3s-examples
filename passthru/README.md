@@ -1,4 +1,4 @@
-# FPGFA passthru 
+# FPGA passthru 
 
 FPGA passthru app allowing programming of the ESP32. 
 
