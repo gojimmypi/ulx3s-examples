@@ -4,7 +4,7 @@
 
 Note when programming the ULX3S in Windows, Lattice Diamond does not recognized the FT232 as a programmer, so `ujprog` is needed to send the bitfile. 
 
-When using WSL, `ujprog` compiled as linux app will not work due to lack of USB suppport. Instead, use the windows `ujprog.exe`  (callable from WSL). 
+When using WSL, `ujprog` compiled as linux app will not work due to [lack of USB suppport](https://github.com/Microsoft/WSL/issues/2185#issuecomment-306083436). Instead, use the windows `ujprog.exe`  (callable from WSL). 
 
 If not, `ujprog` will return a message about not being able to find the JTAG cable. 
 

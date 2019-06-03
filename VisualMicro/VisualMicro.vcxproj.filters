@@ -16,6 +16,10 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="VisualMicro.ino" />
+    <None Include="code_upload.bat">
+      <Filter>Source Files</Filter>
+    </None>
+    <None Include="code_upload.sh" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="__vm\.VisualMicro.vsarduino.h">

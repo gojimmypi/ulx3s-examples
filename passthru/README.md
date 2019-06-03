@@ -1,4 +1,4 @@
-# passthru 
+# FPGA passthru 
 
 FPGA passthru app allowing programming of the ESP32. 
 
@@ -12,4 +12,14 @@ As shown in the [schematics](../doc/schematics.pdf) (page 7), the ESP32 pins are
 
 [PassThru using Open Source](./OpenSource/README.md)
 
+## Quick Start FPGA passthru
+
+See [bin/upload_passthru.sh](../bin/upload_passthru.sh) or  [bin/upload_passthru.bat](../bin/upload_passthru.bat)
+
 For additional passthru info, see https://github.com/emard/ulx3s-passthru
+
+## See also
+
+* [VisualMicro Arduino IDE for programming the ESP32 with Visual Studio](../VisualMicro/README.md)
+* [Blinky ESP32 using Arduino IDE](../blinky/ESP32/README.md)
+* [MicroPython on the ULX3S](../MicroPython/README.md)

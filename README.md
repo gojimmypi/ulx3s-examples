@@ -10,7 +10,7 @@ You can learn more at sites such as [fpga4fun](http://www.fpga4fun.com/), [asic-
 
 Once you have your circuit logic generically defined properly in a Verilog file, the hardware-specific constraint file is used to connect the inputs and outputs of the Verilog code to physical pins on the FPGA device.
 
-Here is a collection of various ulx3s examples to get started:
+Here is a collection of various ULX3S examples to get started:
 
 * [ESP 32 Blinky](./blinky/ESP32/README.md)
 
@@ -18,23 +18,32 @@ Here is a collection of various ulx3s examples to get started:
 
 * [FPGA Blinky using Open Source](./blinky/OpenSource/README.md)
 
+* [FPGA PassThru QuickStart](./passthru/README.md#quick-start-fpga-passthru)
+
 * [PassThru in Lattice Diamond for Windows](./passthru/Diamond/README.md)
+
+* [Build Open Source Toolchain yosys/nextpnr](./OpenSource-toolchain/README.md)
 
 * [PassThru using Open Source](./passthru/OpenSource/README.md)
 
 * [Using Visual Micro to program the ESP32](./VisualMicro/README.md)
 
+* [MicroPython on the ULX3S ESP32](./MicroPython/README.md)
+
 * [More links to RadionaOrg ULX3S examples](https://github.com/RadionaOrg/ulx3s-links/blob/master/README.md) 
 
-See also: [binaries](./bin/README.md), [hardware](https://github.com/emard/ulx3s), [f32c/tools/ujprog](https://github.com/f32c/tools/tree/master/ujprog)
+# See also: 
 
+[binaries](./bin/README.md), [hardware](https://github.com/emard/ulx3s), [f32c/tools/ujprog](https://github.com/f32c/tools/tree/master/ujprog)
 
-https://github.com/goran-mahovlic/fpga-odysseus/tree/master/tutorials/04-Video
+* https://github.com/goran-mahovlic/fpga-odysseus/tree/master/tutorials/04-Video
 
-https://github.com/albertxie/iverilog-tutorial/blob/master/code_samples/simple_tb.v
+* https://github.com/albertxie/iverilog-tutorial/blob/master/code_samples/simple_tb.v
 
-https://github.com/mmicko/cross-fpga
+* https://github.com/mmicko/cross-fpga
 
-https://github.com/jhol/otl-modem/blob/master/fw/syn/top.v
+* https://github.com/jhol/otl-modem/blob/master/fw/syn/top.v
 
-http://www.clifford.at/icestorm/
+* http://www.clifford.at/icestorm/
+
+* [Windows Subsystem for Linux (WSL): what can't I do with the Ubuntu application for Microsoft Windows?](https://askubuntu.com/questions/1051525/windows-subsystem-for-linux-wsl-what-cant-i-do-with-the-ubuntu-application-f)

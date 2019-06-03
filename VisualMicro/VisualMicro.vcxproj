@@ -110,6 +110,8 @@
     <DebuggerFlavor>VisualMicroDebugger</DebuggerFlavor>
   </PropertyGroup>
   <ItemGroup>
+    <None Include="code_upload.bat" />
+    <None Include="code_upload.sh" />
     <None Include="VisualMicro.ino">
       <FileType>CppCode</FileType>
     </None>

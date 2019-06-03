@@ -10,7 +10,7 @@ cd /mnt/c/workspace/ulx3s-examples/passthru/DiamondVerilog/implementation
 /mnt/c/workspace/ulx3s-examples/bin/ujprog.exe passthru_implementation.bit
 ```
 
-Note: The linux-compiled `ujprog` does not work in WSL as native USB drivers are not supported at this time. See [#3185](https://github.com/Microsoft/WSL/issues/3185) [#1521](https://github.com/Microsoft/WSL/issues/1521) [#2287](https://github.com/Microsoft/WSL/issues/2287) [#2195](https://github.com/Microsoft/WSL/issues/2195) [#2185](https://github.com/Microsoft/WSL/issues/2185) [#412](https://github.com/Microsoft/WSL/issues/412)
+Note: The linux-compiled `ujprog` does not work in WSL as [native USB drivers are not supported](https://github.com/Microsoft/WSL/issues/2185#issuecomment-306083436) at this time. See [#3185](https://github.com/Microsoft/WSL/issues/3185) [#1521](https://github.com/Microsoft/WSL/issues/1521) [#2287](https://github.com/Microsoft/WSL/issues/2287) [#2195](https://github.com/Microsoft/WSL/issues/2195) [#2185](https://github.com/Microsoft/WSL/issues/2185) [#412](https://github.com/Microsoft/WSL/issues/412)
 
 or from DOS:
 
