@@ -30,15 +30,18 @@ Here is a collection of various ULX3S examples to get started:
 
 * [More links to RadionaOrg ULX3S examples](https://github.com/RadionaOrg/ulx3s-links/blob/master/README.md) 
 
-See also: [binaries](./bin/README.md), [hardware](https://github.com/emard/ulx3s), [f32c/tools/ujprog](https://github.com/f32c/tools/tree/master/ujprog)
+# See also: 
 
+[binaries](./bin/README.md), [hardware](https://github.com/emard/ulx3s), [f32c/tools/ujprog](https://github.com/f32c/tools/tree/master/ujprog)
 
-https://github.com/goran-mahovlic/fpga-odysseus/tree/master/tutorials/04-Video
+* https://github.com/goran-mahovlic/fpga-odysseus/tree/master/tutorials/04-Video
 
-https://github.com/albertxie/iverilog-tutorial/blob/master/code_samples/simple_tb.v
+* https://github.com/albertxie/iverilog-tutorial/blob/master/code_samples/simple_tb.v
 
-https://github.com/mmicko/cross-fpga
+* https://github.com/mmicko/cross-fpga
 
-https://github.com/jhol/otl-modem/blob/master/fw/syn/top.v
+* https://github.com/jhol/otl-modem/blob/master/fw/syn/top.v
 
-http://www.clifford.at/icestorm/
+* http://www.clifford.at/icestorm/
+
+* [Windows Subsystem for Linux (WSL): what can't I do with the Ubuntu application for Microsoft Windows?](https://askubuntu.com/questions/1051525/windows-subsystem-for-linux-wsl-what-cant-i-do-with-the-ubuntu-application-f)

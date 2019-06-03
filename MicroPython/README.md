@@ -17,7 +17,7 @@ cd \workspace\ulx3s-examples\bin\
 ```
 
 ## WSL - load FPGA passthru
-There is still no native USB driver support in WSL, so we expect an error message such as:
+There is still [no native USB driver support in WSL](https://github.com/Microsoft/WSL/issues/2185#issuecomment-306083436), so we expect an error message such as:
 ```
 ULX2S / ULX3S JTAG programmer v 3.0.92 (built Jun  1 2019 15:29:22)
 Cannot find JTAG cable.
@@ -108,5 +108,5 @@ https://github.com/espressif/esptool
 https://micropython.org/download#esp32
 https://github.com/Microsoft/WSL/issues/1929
 https://discourse.tinyfpga.com/t/recognizing-tinyfpga-bx-in-wsl/849/10
-
+https://github.com/Microsoft/WSL/issues/2185#issuecomment-306083436
 

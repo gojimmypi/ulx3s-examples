@@ -20,7 +20,7 @@ make ulx3s.bit
 ../../bin/ujprog ulx3s.bit
 ```
 
-For Windows WSL, there is no USB support so the linux `ujprog` will not work, but the Windows executable `ujprog.exe` can be used.
+For Windows WSL, there is [no USB support](https://github.com/Microsoft/WSL/issues/2185#issuecomment-306083436) so the linux `ujprog` will not work, but the Windows executable `ujprog.exe` can be used.
 
 It is important to note that `ujprog.exe` should only be executed from a non-VoIFS directory in WSL (e.g. /mnt/c/somedirectory...) see [ujprog troubleshooting](https://github.com/f32c/tools/tree/master/ujprog#troubleshooting) and the discussion [here](https://github.com/f32c/tools/pull/9#issuecomment-465693978).
 

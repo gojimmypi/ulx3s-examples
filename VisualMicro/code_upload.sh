@@ -8,7 +8,7 @@ if grep -q Microsoft /proc/version; then
   WINDOWS_USER=$(cmd.exe /c "echo %USERNAME%")  # get the host username which may be different from WSL
   WINDOWS_USER=${WINDOWS_USER//[$'\t\r\n']}     # trim any cr/lf chars
 
-  # be sure to launch from someething other than linux filesystem (TODO why does upload fail otherwise?)
+  # be sure to launch from something other than linux WSL VoIFS filesystem (TODO why does upload fail otherwise?)
   cd /mnt/c/Users/$WINDOWS_USER
 
   # Brain teaser: when calling Windows executable from WSL, use Windows path (C:\...), not WSL (/mnt/c/...) for parameters
