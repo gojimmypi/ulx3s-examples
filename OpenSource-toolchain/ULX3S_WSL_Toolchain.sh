@@ -469,7 +469,7 @@ if [[ "$1" == *"--ujprog"* ]] || [ "$1" == "" ]; then
 	  cd f32c_tools
 	  git fetch                                                      | tee -a "$THIS_LOG"
 	  git pull                                                       | tee -a "$THIS_LOG"
-	  cd f32c_tools/ujprog
+	  cd ujprog
 
 	  make clean                                                     | tee -a "$THIS_LOG"
 	  CheckForError $? "$THIS_LOG"
@@ -479,17 +479,19 @@ if [[ "$1" == *"--ujprog"* ]] || [ "$1" == "" ]; then
 	# but we can compile the Windows version, amd actually call it from WSL (call from /mnt/c... not ~/...)
 	if grep -q Microsoft /proc/version; then
 	  THIS_LOG=$LOG_DIRECTORY"/"$THIS_FILE_NAME"_ming32_64_"$LOG_SUFFIX".log"
-	  cd "$WORKSPACE"
+	  # we should still be in f32c_tools/ujprog
 
 	  echo "***************************************************************************************************"
 	  echo " ming32_64. Saving log to $THIS_LOG"
 	  echo "***************************************************************************************************"
+	  pwd
 
 	  make -f Makefile.ming32_64                                     | tee -a "$THIS_LOG"
 	  CheckForError $? "$THIS_LOG"
 
-	  sudo make -f Makefile.ming32_64 install                        | tee -a "$THIS_LOG"
-	  CheckForError $? "$THIS_LOG"
+	  echo "TODO:  Makefile.ming32_64 install"
+	  # sudo make -f Makefile.ming32_64 install                        | tee -a "$THIS_LOG"
+	  # CheckForError $? "$THIS_LOG"
 	else
 	  make -f Makefile.linux                                         | tee -a "$THIS_LOG"
 	  CheckForError $? "$THIS_LOG"
