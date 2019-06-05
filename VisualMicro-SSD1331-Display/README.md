@@ -118,7 +118,7 @@ the `INPUT_PULLUP`, or the display will not work properly:
 Two libraries can be used to vastly simplify the use display with Visual Micro or the Arduinio IDE for the ESP32:
 
 * [Adafruit_GFX](https://github.com/adafruit/Adafruit-GFX-Library) 
-* [Adafruit_SSD1331](https://github.com/adafruit/Adafruit-SSD1331-OLED-Driver-Library-for-Arduino) Libraries
+* [Adafruit_SSD1331](https://github.com/adafruit/Adafruit-SSD1331-OLED-Driver-Library-for-Arduino)
 
 These can be either installed manually from GitHub, or from the Arduino IDE. Note that when updating libraries, if
 any unexpected compile-time errors occur, ensure that the _latest_ libraries are _all_ updated. For Visual Micro
@@ -159,11 +159,11 @@ To install libraries from the Arduino IDE, click `Sketch - Include Library - Man
 Install [Adafruit_GFX](https://github.com/adafruit/Adafruit-GFX-Library) 
 
 ![ArduinoIDE-Adafruit-GFX-Library.png](../images/ArduinoIDE-Adafruit-GFX-Library.png)
-
+                                                 
 Install [Adafruit_SSD1331](https://github.com/adafruit/Adafruit-SSD1331-OLED-Driver-Library-for-Arduino)
 
-![ArduinoIDE-Adafruit-SSD1331-Library.PNG](../images/ArduinoIDE-Adafruit-SSD1331-Library.PNG)
-
+![ArduinoIDE-Adafruit-SSD1331-Library.PNG](../images/ArduinoIDE-Adafruit-SSD1331-Library.png)
+                                                     
 ## Arduino Implmentation Notes
 
 This an Arduino-style solution, suitable for use with either the [Ardunio IDE](https://www.arduino.cc/en/Main/Software), 
