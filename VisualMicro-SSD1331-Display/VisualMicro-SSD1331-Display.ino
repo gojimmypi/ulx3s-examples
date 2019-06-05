@@ -71,27 +71,28 @@ SD1331 Pin	    Arduino	ESP8266		rPi
 //#define dc   6
 
 
-// from Verilog passtrhu source, GPIO numbers:
+// from Verilog passthru source, GPIO numbers:
 //#define sclk 14
 //#define mosi 15
 //#define cs   17
 //#define rst  25
 //#define dc   16
 
+// ULX3S names and physical connector order:
+#define oled_csn  17 // aka cs
+#define oled_dc   16 // aka ds
+#define oled_resn 25 // aka rst
+#define oled_mosi 15 // aka mosi
+#define oled_clk  14 // aka sclk
 
-#define sclk 14
-#define mosi 15
-#define cs   17
-#define rst  25
-#define dc   16
-
-// from Verilog passtrhu source, pin numbers:
+// from Verilog passthru source, pin numbers: (for reference only; we use GPIO numbers~)
 //#define sclk 17 // GPIO14
 //#define mosi 21 // GPIO15
 //#define cs   27 // GPIO17
 //#define rst  14 // GPIO25
 //#define dc   25 // GPIO16
 
+// are these (NO!)
 //#define sclk 13 // GPIO14
 //#define mosi 24 // GPIO15
 //#define cs   28 // GPIO17
@@ -100,14 +101,18 @@ SD1331 Pin	    Arduino	ESP8266		rPi
 
 // Option 1: use any pins but a little slower
 //#pragma message "Using SWSPI"
-Adafruit_SSD1331 display = Adafruit_SSD1331(cs, dc, mosi, sclk, rst);
+//Adafruit_SSD1331 display = Adafruit_SSD1331(cs, dc, mosi, sclk, rst);
 
 // Option 2: must use the hardware SPI pins
 // (for UNO thats sclk = 13 and sid = 11) and pin 10 must be
 // an output. This is much faster - also required if you want
 // to use the microSD card (see the image drawing example)
+
+// for the ULX3S, the SPI object is defined in
+// %USERPROFILE%\Documents\Arduino\hardware\espressif\esp32\libraries\SPI\src
+// whene the ESP32 Dev Module is selected
 #pragma message "Using HWSPI"
-// Adafruit_SSD1331 display = Adafruit_SSD1331(&SPI, cs, dc, rst);
+Adafruit_SSD1331 display = Adafruit_SSD1331(&SPI, oled_csn, oled_dc, oled_resn);
 
 // This could also be defined as display.color(255,0,0) but those defines
 // are meant to work for adafruit_gfx backends that are lacking color()
@@ -798,15 +803,15 @@ void loop() {
 }
 
 void setup() {
-  //  pinMode(17, INPUT_PULLUP); // interrupt will monitor SD chip select
-  // pinMode(__MISO_TFT, INPUT_PULLUP); // pullup SPI shared with SD
+    // pinMode(17, INPUT_PULLUP); // interrupt will monitor SD chip select
+    // pinMode(__MISO_TFT, INPUT_PULLUP); // pullup SPI shared with SD
 	
-	pinMode(sclk, INPUT_PULLUP); // pullup SPI shared with SD
-	pinMode(mosi, INPUT_PULLUP); // pullup SPI shared with SD
-	pinMode(cs, INPUT_PULLUP); // pullup SPI
-	pinMode(rst, INPUT_PULLUP); // pullup SPI
-	pinMode(dc, INPUT_PULLUP); // pullup SPI
- 
+    // explicit pullup defintion is essential 
+    pinMode(oled_csn, INPUT_PULLUP); // pullup SPI
+    pinMode(oled_dc, INPUT_PULLUP); // pullup SPI
+    pinMode(oled_resn, INPUT_PULLUP); // pullup SPI
+    pinMode(oled_mosi, INPUT_PULLUP); // pullup SPI shared with SD
+    pinMode(oled_clk, INPUT_PULLUP); // pullup SPI shared with SD
 
 	delay(1000);
     Serial.begin(115200);
