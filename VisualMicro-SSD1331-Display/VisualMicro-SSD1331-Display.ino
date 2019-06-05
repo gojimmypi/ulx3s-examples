@@ -72,6 +72,13 @@ SD1331 Pin	    Arduino	ESP8266		rPi
 
 
 // from Verilog passtrhu source, GPIO numbers:
+//#define sclk 14
+//#define mosi 15
+//#define cs   17
+//#define rst  25
+//#define dc   16
+
+
 #define sclk 14
 #define mosi 15
 #define cs   17
@@ -85,17 +92,22 @@ SD1331 Pin	    Arduino	ESP8266		rPi
 //#define rst  14 // GPIO25
 //#define dc   25 // GPIO16
 
+//#define sclk 13 // GPIO14
+//#define mosi 24 // GPIO15
+//#define cs   28 // GPIO17
+//#define rst  10 // GPIO25
+//#define dc   27 // GPIO16
 
 // Option 1: use any pins but a little slower
 //#pragma message "Using SWSPI"
-//Adafruit_SSD1331 display = Adafruit_SSD1331(cs, dc, mosi, sclk, rst);
+Adafruit_SSD1331 display = Adafruit_SSD1331(cs, dc, mosi, sclk, rst);
 
 // Option 2: must use the hardware SPI pins
 // (for UNO thats sclk = 13 and sid = 11) and pin 10 must be
 // an output. This is much faster - also required if you want
 // to use the microSD card (see the image drawing example)
 #pragma message "Using HWSPI"
-Adafruit_SSD1331 display = Adafruit_SSD1331(&SPI, cs, dc, rst);
+// Adafruit_SSD1331 display = Adafruit_SSD1331(&SPI, cs, dc, rst);
 
 // This could also be defined as display.color(255,0,0) but those defines
 // are meant to work for adafruit_gfx backends that are lacking color()
@@ -786,7 +798,17 @@ void loop() {
 }
 
 void setup() {
-    delay(1000);
+  //  pinMode(17, INPUT_PULLUP); // interrupt will monitor SD chip select
+  // pinMode(__MISO_TFT, INPUT_PULLUP); // pullup SPI shared with SD
+	
+	pinMode(sclk, INPUT_PULLUP); // pullup SPI shared with SD
+	pinMode(mosi, INPUT_PULLUP); // pullup SPI shared with SD
+	pinMode(cs, INPUT_PULLUP); // pullup SPI
+	pinMode(rst, INPUT_PULLUP); // pullup SPI
+	pinMode(dc, INPUT_PULLUP); // pullup SPI
+ 
+
+	delay(1000);
     Serial.begin(115200);
     // Default is 40Mhz
     display.begin();
