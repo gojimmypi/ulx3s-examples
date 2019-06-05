@@ -1,0 +1,2 @@
+read_verilog SPI_driver.v
+synth_ecp5 -noccu2 -nomux -nodram -json  fpga-spi.json

@@ -1,0 +1,191 @@
+Info: Importing module SPI_driver
+Info: Rule checker, verifying imported design
+Info: Checksum: 0x4cb80706
+
+Info: constraining clock net 'clk_25mhz' to 25.00 MHz
+Warning:     ignoring unsupported LPF command 'SYSCONFIG CONFIG_IOVOLTAGE=3.3 COMPRESS_CONFIG=ON MCCLK_FREQ=62 MASTER_SPI_PORT=ENABLE SLAVE_SPI_PORT=DISABLE SLAVE_PARALLEL_PORT=DISABLE' (on line 12)
+
+Info: Packing IOs..
+Info: pin 'clk_25mhz$tr_io' constrained to Bel 'X0/Y26/PIOA'.
+Info: pin 'sck$tr_io' constrained to Bel 'X22/Y0/PIOA'.
+Info: pin 'mosi$tr_io' constrained to Bel 'X22/Y0/PIOB'.
+Info: pin 'miso$tr_io' constrained to Bel 'X18/Y0/PIOA'.
+Info: pin 'ssel$tr_io' constrained to Bel 'X18/Y0/PIOB'.
+Info: pin 'led[0]$tr_io' constrained to Bel 'X0/Y14/PIOC'.
+Info: pin 'led[1]$tr_io' constrained to Bel 'X0/Y14/PIOD'.
+Info: pin 'led[2]$tr_io' constrained to Bel 'X0/Y17/PIOA'.
+Info: pin 'led[3]$tr_io' constrained to Bel 'X0/Y17/PIOC'.
+Info: pin 'led[4]$tr_io' constrained to Bel 'X0/Y17/PIOB'.
+Info: pin 'led[5]$tr_io' constrained to Bel 'X0/Y23/PIOD'.
+Info: pin 'led[6]$tr_io' constrained to Bel 'X0/Y17/PIOD'.
+Info: pin 'led[7]$tr_io' constrained to Bel 'X0/Y20/PIOD'.
+Info: Packing constants..
+Info: Packing carries...
+Info: Finding LUTFF pairs...
+Info: Packing LUT5-7s...
+Info: Finding LUT-LUT pairs...
+Info: Packing paired LUTs into a SLICE...
+Info: Packing unpaired LUTs into a SLICE...
+Info: Packing unpaired FFs into a SLICE...
+Info: Generating derived timing constraints...
+Info: Promoting globals...
+Info:     promoting clock net clk_25mhz to global network
+Info: Checksum: 0x0cc5d81a
+
+Info: Annotating ports with timing budgets for target frequency 12.00 MHz
+Info: Checksum: 0xfaf61dda
+
+Info: Device utilisation:
+Info: 	       TRELLIS_SLICE:    42/12144     0%
+Info: 	          TRELLIS_IO:    13/  196     6%
+Info: 	                DCCA:     1/   56     1%
+Info: 	              DP16KD:     0/   56     0%
+Info: 	          MULT18X18D:     0/   28     0%
+Info: 	              ALU54B:     0/   14     0%
+Info: 	             EHXPLLL:     0/    2     0%
+Info: 	             EXTREFB:     0/    1     0%
+Info: 	                DCUA:     0/    1     0%
+Info: 	           PCSCLKDIV:     0/    2     0%
+Info: 	             IOLOGIC:     0/  128     0%
+Info: 	            SIOLOGIC:     0/   68     0%
+Info: 	                 GSR:     0/    1     0%
+Info: 	               JTAGG:     0/    1     0%
+Info: 	                OSCG:     0/    1     0%
+Info: 	               SEDGA:     0/    1     0%
+Info: 	                 DTR:     0/    1     0%
+Info: 	             USRMCLK:     0/    1     0%
+Info: 	             CLKDIVF:     0/    4     0%
+Info: 	           ECLKSYNCB:     0/    8     0%
+Info: 	             DLLDELD:     0/    8     0%
+Info: 	              DDRDLL:     0/    4     0%
+Info: 	             DQSBUFM:     0/    8     0%
+Info: 	     TRELLIS_ECLKBUF:     0/    8     0%
+
+Info: Placed 13 cells based on constraints.
+Info: Creating initial analytic placement for 41 cells, random placement wirelen = 2679.
+Info:     at initial placer iter 0, wirelen = 194
+Info:     at initial placer iter 1, wirelen = 187
+Info:     at initial placer iter 2, wirelen = 187
+Info:     at initial placer iter 3, wirelen = 187
+Info: Running main analytical placer.
+Info:     at iteration #1, type TRELLIS_SLICE: wirelen solved = 187, spread = 272, legal = 309; time = 0.00s
+Info:     at iteration #2, type TRELLIS_SLICE: wirelen solved = 187, spread = 282, legal = 288; time = 0.00s
+Info:     at iteration #3, type TRELLIS_SLICE: wirelen solved = 190, spread = 292, legal = 300; time = 0.00s
+Info:     at iteration #4, type TRELLIS_SLICE: wirelen solved = 193, spread = 274, legal = 290; time = 0.00s
+Info:     at iteration #5, type TRELLIS_SLICE: wirelen solved = 197, spread = 271, legal = 294; time = 0.00s
+Info:     at iteration #6, type TRELLIS_SLICE: wirelen solved = 203, spread = 272, legal = 318; time = 0.00s
+Info:     at iteration #7, type TRELLIS_SLICE: wirelen solved = 208, spread = 261, legal = 295; time = 0.00s
+Info: HeAP Placer Time: 0.03s
+Info:   of which solving equations: 0.02s
+Info:   of which spreading cells: 0.00s
+Info:   of which strict legalisation: 0.00s
+
+Info: Running simulated annealing placer for refinement.
+Info:   at iteration #1: temp = 0.000000, timing cost = 32, wirelen = 288
+Info:   at iteration #5: temp = 0.000000, timing cost = 20, wirelen = 254
+Info:   at iteration #7: temp = 0.000000, timing cost = 24, wirelen = 253 
+Info: SA placement time 0.01s
+
+Info: Max frequency for clock '$glbnet$clk_25mhz': 215.66 MHz (PASS at 25.00 MHz)
+
+Info: Max delay <async>                   -> posedge $glbnet$clk_25mhz: 7.39 ns
+Info: Max delay posedge $glbnet$clk_25mhz -> <async>                  : 5.99 ns
+
+Info: Slack histogram:
+Info:  legend: * represents 1 endpoint(s)
+Info:          + represents [1,1) endpoint(s)
+Info: [ 32613,  35045) |****************************** 
+Info: [ 35045,  37477) |*************************************** 
+Info: [ 37477,  39909) |******** 
+Info: [ 39909,  42341) | 
+Info: [ 42341,  44773) | 
+Info: [ 44773,  47205) | 
+Info: [ 47205,  49637) | 
+Info: [ 49637,  52069) | 
+Info: [ 52069,  54501) | 
+Info: [ 54501,  56933) | 
+Info: [ 56933,  59365) | 
+Info: [ 59365,  61797) | 
+Info: [ 61797,  64229) | 
+Info: [ 64229,  66661) | 
+Info: [ 66661,  69093) | 
+Info: [ 69093,  71525) | 
+Info: [ 71525,  73957) | 
+Info: [ 73957,  76389) | 
+Info: [ 76389,  78821) |* 
+Info: [ 78821,  81253) |******** 
+Info: Checksum: 0x6c11686a
+Info: Routing globals...
+Info:     routing clock net $glbnet$clk_25mhz using global 0
+
+Info: Routing..
+Info: Setting up routing queue.
+Info: Routing 172 arcs.
+Info:            |   (re-)routed arcs  |   delta    | remaining
+Info:    IterCnt |  w/ripup   wo/ripup |  w/r  wo/r |      arcs
+Info:        175 |        3        172 |    3   172 |         0
+Info: Routing complete.
+Info: Route time 0.13s
+Info: Checksum: 0xcc0631f5
+
+Info: Critical path report for clock '$glbnet$clk_25mhz' (posedge -> posedge):
+Info: curr total
+Info:  0.5  0.5  Source $abc$689$auto$blifparse.cc:492:parse_blif$702_SLICE.Q1
+Info:  0.8  1.4    Net spi_slave.bitcnt[0] budget 13.001000 ns (4,12) -> (4,12)
+Info:                Sink $abc$689$auto$blifparse.cc:492:parse_blif$690_SLICE.B1
+Info:  0.2  1.6  Source $abc$689$auto$blifparse.cc:492:parse_blif$690_SLICE.F1
+Info:  0.7  2.3    Net $abc$689$techmap\spi_slave.$eq$spi.v:55$17_Y budget 13.001000 ns (4,12) -> (4,11)
+Info:                Sink $abc$689$auto$blifparse.cc:492:parse_blif$713_SLICE.D1
+Info:  0.2  2.5  Source $abc$689$auto$blifparse.cc:492:parse_blif$713_SLICE.F1
+Info:  0.7  3.3    Net $abc$689$auto$dff2dffe.cc:158:make_patterns_logic$558 budget 13.001000 ns (4,11) -> (4,12)
+Info:                Sink $abc$689$auto$blifparse.cc:492:parse_blif$690_SLICE.CE
+Info:  0.0  3.3  Setup $abc$689$auto$blifparse.cc:492:parse_blif$690_SLICE.CE
+Info: 1.0 ns logic, 2.3 ns routing
+
+Info: Critical path report for cross-domain path '<async>' -> 'posedge $glbnet$clk_25mhz':
+Info: curr total
+Info:  0.0  0.0  Source ssel$tr_io.O
+Info:  2.8  2.8    Net ssel budget 19.882000 ns (18,0) -> (3,14)
+Info:                Sink $abc$689$auto$blifparse.cc:492:parse_blif$703_SLICE.A1
+Info:  0.2  3.0  Source $abc$689$auto$blifparse.cc:492:parse_blif$703_SLICE.F1
+Info:  0.8  3.8    Net dataNeeded budget 13.001000 ns (3,14) -> (3,12)
+Info:                Sink $auto$simplemap.cc:420:simplemap_dff$222_SLICE.CE
+Info:  0.0  3.8  Setup $auto$simplemap.cc:420:simplemap_dff$222_SLICE.CE
+Info: 0.2 ns logic, 3.5 ns routing
+
+Info: Critical path report for cross-domain path 'posedge $glbnet$clk_25mhz' -> '<async>':
+Info: curr total
+Info:  0.5  0.5  Source $abc$689$auto$blifparse.cc:492:parse_blif$698_SLICE.Q0
+Info:  2.3  2.9    Net miso budget 82.807999 ns (3,11) -> (18,0)
+Info:                Sink miso$tr_io.I
+Info: 0.5 ns logic, 2.3 ns routing
+
+Info: Max frequency for clock '$glbnet$clk_25mhz': 304.60 MHz (PASS at 25.00 MHz)
+
+Info: Max delay <async>                   -> posedge $glbnet$clk_25mhz: 3.79 ns
+Info: Max delay posedge $glbnet$clk_25mhz -> <async>                  : 2.87 ns
+
+Info: Slack histogram:
+Info:  legend: * represents 1 endpoint(s)
+Info:          + represents [1,1) endpoint(s)
+Info: [ 36214,  38498) |************************************************************ 
+Info: [ 38498,  40782) |***+
+Info: [ 40782,  43066) | 
+Info: [ 43066,  45350) | 
+Info: [ 45350,  47634) | 
+Info: [ 47634,  49918) | 
+Info: [ 49918,  52202) | 
+Info: [ 52202,  54486) | 
+Info: [ 54486,  56770) | 
+Info: [ 56770,  59054) | 
+Info: [ 59054,  61338) | 
+Info: [ 61338,  63622) | 
+Info: [ 63622,  65906) | 
+Info: [ 65906,  68190) | 
+Info: [ 68190,  70474) | 
+Info: [ 70474,  72758) | 
+Info: [ 72758,  75042) | 
+Info: [ 75042,  77326) | 
+Info: [ 77326,  79610) | 
+Info: [ 79610,  81894) |*******+
+1 warning, 0 errors

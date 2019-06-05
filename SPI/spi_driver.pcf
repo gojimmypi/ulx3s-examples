@@ -1,0 +1,16 @@
+set_io CLK_3_33_MHZ 13
+
+set_io sck     19
+set_io mosi    16
+set_io miso    15
+set_io ssel    100
+
+set_io leds[0] 59
+set_io leds[1] 56
+set_io leds[2] 53
+set_io leds[3] 51
+set_io leds[4] 26
+set_io leds[5] 27
+set_io leds[6] 28
+set_io leds[7] 29
+

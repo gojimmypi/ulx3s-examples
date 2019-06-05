@@ -1,0 +1,1206 @@
+
+ /----------------------------------------------------------------------------\
+ |                                                                            |
+ |  yosys -- Yosys Open SYnthesis Suite                                       |
+ |                                                                            |
+ |  Copyright (C) 2012 - 2018  Clifford Wolf <clifford@clifford.at>           |
+ |                                                                            |
+ |  Permission to use, copy, modify, and/or distribute this software for any  |
+ |  purpose with or without fee is hereby granted, provided that the above    |
+ |  copyright notice and this permission notice appear in all copies.         |
+ |                                                                            |
+ |  THE SOFTWARE IS PROVIDED "AS IS" AND THE AUTHOR DISCLAIMS ALL WARRANTIES  |
+ |  WITH REGARD TO THIS SOFTWARE INCLUDING ALL IMPLIED WARRANTIES OF          |
+ |  MERCHANTABILITY AND FITNESS. IN NO EVENT SHALL THE AUTHOR BE LIABLE FOR   |
+ |  ANY SPECIAL, DIRECT, INDIRECT, OR CONSEQUENTIAL DAMAGES OR ANY DAMAGES    |
+ |  WHATSOEVER RESULTING FROM LOSS OF USE, DATA OR PROFITS, WHETHER IN AN     |
+ |  ACTION OF CONTRACT, NEGLIGENCE OR OTHER TORTIOUS ACTION, ARISING OUT OF   |
+ |  OR IN CONNECTION WITH THE USE OR PERFORMANCE OF THIS SOFTWARE.            |
+ |                                                                            |
+ \----------------------------------------------------------------------------/
+
+ Yosys 0.8+308 (git sha1 7682629b, clang 6.0.0-1ubuntu2 -fPIC -Os)
+
+
+-- Executing script file `fpga-spi.ys' --
+
+1. Executing Verilog-2005 frontend.
+Parsing Verilog input from `SPI_driver.v' to AST representation.
+Generating RTLIL representation for module `\SPI_slave'.
+Generating RTLIL representation for module `\SPI_driver'.
+Successfully finished Verilog frontend.
+
+2. Executing SYNTH_ECP5 pass.
+
+2.1. Executing Verilog-2005 frontend.
+Parsing Verilog input from `/usr/local/bin/../share/yosys/ecp5/cells_sim.v' to AST representation.
+Lexer warning: The SystemVerilog keyword `assert' (at /usr/local/bin/../share/yosys/ecp5/cells_sim.v:419) is not recognized unless read_verilog is called with -sv!
+Lexer warning: The SystemVerilog keyword `assert' (at /usr/local/bin/../share/yosys/ecp5/cells_sim.v:420) is not recognized unless read_verilog is called with -sv!
+Lexer warning: The SystemVerilog keyword `assert' (at /usr/local/bin/../share/yosys/ecp5/cells_sim.v:421) is not recognized unless read_verilog is called with -sv!
+Lexer warning: The SystemVerilog keyword `assert' (at /usr/local/bin/../share/yosys/ecp5/cells_sim.v:422) is not recognized unless read_verilog is called with -sv!
+Generating RTLIL representation for module `\LUT4'.
+Generating RTLIL representation for module `\L6MUX21'.
+Generating RTLIL representation for module `\CCU2C'.
+Generating RTLIL representation for module `\TRELLIS_RAM16X2'.
+Generating RTLIL representation for module `\PFUMX'.
+Generating RTLIL representation for module `\TRELLIS_DPR16X4'.
+Generating RTLIL representation for module `\DPR16X4C'.
+Generating RTLIL representation for module `\LUT2'.
+Generating RTLIL representation for module `\TRELLIS_FF'.
+Generating RTLIL representation for module `\OBZ'.
+Generating RTLIL representation for module `\IB'.
+Generating RTLIL representation for module `\TRELLIS_IO'.
+Generating RTLIL representation for module `\OB'.
+Generating RTLIL representation for module `\BB'.
+Generating RTLIL representation for module `\INV'.
+Generating RTLIL representation for module `\TRELLIS_SLICE'.
+Generating RTLIL representation for module `\DP16KD'.
+Generating RTLIL representation for module `\FD1S3BX'.
+Successfully finished Verilog frontend.
+
+2.2. Executing Verilog-2005 frontend.
+Parsing Verilog input from `/usr/local/bin/../share/yosys/ecp5/cells_bb.v' to AST representation.
+Generating RTLIL representation for module `\MULT18X18D'.
+Generating RTLIL representation for module `\ALU54B'.
+Generating RTLIL representation for module `\EHXPLLL'.
+Generating RTLIL representation for module `\DTR'.
+Generating RTLIL representation for module `\OSCG'.
+Generating RTLIL representation for module `\USRMCLK'.
+Generating RTLIL representation for module `\JTAGG'.
+Generating RTLIL representation for module `\DELAYF'.
+Generating RTLIL representation for module `\DELAYG'.
+Generating RTLIL representation for module `\IDDRX1F'.
+Generating RTLIL representation for module `\IDDRX2F'.
+Generating RTLIL representation for module `\IDDR71B'.
+Generating RTLIL representation for module `\IDDRX2DQA'.
+Generating RTLIL representation for module `\ODDRX1F'.
+Generating RTLIL representation for module `\ODDRX2F'.
+Generating RTLIL representation for module `\ODDR71B'.
+Generating RTLIL representation for module `\OSHX2A'.
+Generating RTLIL representation for module `\ODDRX2DQA'.
+Generating RTLIL representation for module `\ODDRX2DQSB'.
+Generating RTLIL representation for module `\TSHX2DQA'.
+Generating RTLIL representation for module `\TSHX2DQSA'.
+Generating RTLIL representation for module `\DQSBUFM'.
+Generating RTLIL representation for module `\DDRDLLA'.
+Generating RTLIL representation for module `\CLKDIVF'.
+Generating RTLIL representation for module `\ECLKSYNCB'.
+Generating RTLIL representation for module `\DCCA'.
+Generating RTLIL representation for module `\DCUA'.
+Generating RTLIL representation for module `\EXTREFB'.
+Generating RTLIL representation for module `\PCSCLKDIV'.
+Successfully finished Verilog frontend.
+
+2.3. Executing HIERARCHY pass (managing design hierarchy).
+
+2.3.1. Finding top of design hierarchy..
+root of   1 design levels: SPI_driver          
+root of   0 design levels: SPI_slave           
+Automatically selected SPI_driver as design top module.
+
+2.3.2. Analyzing design hierarchy..
+Top module:  \SPI_driver
+Used module:     \SPI_slave
+
+2.3.3. Analyzing design hierarchy..
+Top module:  \SPI_driver
+Used module:     \SPI_slave
+Removed 0 unused modules.
+Mapping positional arguments of cell SPI_driver.spi_slave (SPI_slave).
+
+2.4. Executing PROC pass (convert processes to netlists).
+
+2.4.1. Executing PROC_CLEAN pass (remove empty switches from decision trees).
+Cleaned up 0 empty switches.
+
+2.4.2. Executing PROC_RMDEAD pass (remove dead branches from decision trees).
+Removed a total of 0 dead cases.
+
+2.4.3. Executing PROC_INIT pass (extract init attributes).
+Found init rule in `\SPI_slave.$proc$spi.v:10$21'.
+  Set init value: \receivedData = 8'00000000
+Found init rule in `\SPI_slave.$proc$spi.v:9$20'.
+  Set init value: \byteReceived = 1'0
+
+2.4.4. Executing PROC_ARST pass (detect async resets in processes).
+
+2.4.5. Executing PROC_MUX pass (convert decision trees to multiplexers).
+Creating decoders for process `\SPI_driver.$proc$SPI_driver.v:26$23'.
+     1/1: $0\dataToSend[7:0]
+Creating decoders for process `\SPI_driver.$proc$SPI_driver.v:21$22'.
+     1/1: $0\receivedDataBuffer[7:0]
+Creating decoders for process `\SPI_slave.$proc$spi.v:10$21'.
+     1/1: $1\receivedData[7:0]
+Creating decoders for process `\SPI_slave.$proc$spi.v:9$20'.
+     1/1: $1\byteReceived[0:0]
+Creating decoders for process `\SPI_slave.$proc$spi.v:52$15'.
+     1/1: $0\dataToSendBuffer[7:0]
+Creating decoders for process `\SPI_slave.$proc$spi.v:49$11'.
+     1/1: $0\byteReceived[0:0]
+Creating decoders for process `\SPI_slave.$proc$spi.v:38$8'.
+     1/2: $0\bitcnt[2:0]
+     2/2: $0\receivedData[7:0]
+Creating decoders for process `\SPI_slave.$proc$spi.v:30$6'.
+     1/1: $0\mosir[1:0]
+Creating decoders for process `\SPI_slave.$proc$spi.v:21$2'.
+     1/1: $0\sckr[1:0]
+
+2.4.6. Executing PROC_DLATCH pass (convert process syncs to latches).
+
+2.4.7. Executing PROC_DFF pass (convert process syncs to FFs).
+Creating register for signal `\SPI_driver.\dataToSend' using process `\SPI_driver.$proc$SPI_driver.v:26$23'.
+  created $dff cell `$procdff$150' with positive edge clock.
+Creating register for signal `\SPI_driver.\receivedDataBuffer' using process `\SPI_driver.$proc$SPI_driver.v:21$22'.
+  created $dff cell `$procdff$151' with positive edge clock.
+Creating register for signal `\SPI_slave.\dataToSendBuffer' using process `\SPI_slave.$proc$spi.v:52$15'.
+  created $dff cell `$procdff$152' with positive edge clock.
+Creating register for signal `\SPI_slave.\byteReceived' using process `\SPI_slave.$proc$spi.v:49$11'.
+  created $dff cell `$procdff$153' with positive edge clock.
+Creating register for signal `\SPI_slave.\receivedData' using process `\SPI_slave.$proc$spi.v:38$8'.
+  created $dff cell `$procdff$154' with positive edge clock.
+Creating register for signal `\SPI_slave.\bitcnt' using process `\SPI_slave.$proc$spi.v:38$8'.
+  created $dff cell `$procdff$155' with positive edge clock.
+Creating register for signal `\SPI_slave.\mosir' using process `\SPI_slave.$proc$spi.v:30$6'.
+  created $dff cell `$procdff$156' with positive edge clock.
+Creating register for signal `\SPI_slave.\sckr' using process `\SPI_slave.$proc$spi.v:21$2'.
+  created $dff cell `$procdff$157' with positive edge clock.
+
+2.4.8. Executing PROC_CLEAN pass (remove empty switches from decision trees).
+Found and cleaned up 1 empty switch in `\SPI_driver.$proc$SPI_driver.v:26$23'.
+Removing empty process `SPI_driver.$proc$SPI_driver.v:26$23'.
+Found and cleaned up 1 empty switch in `\SPI_driver.$proc$SPI_driver.v:21$22'.
+Removing empty process `SPI_driver.$proc$SPI_driver.v:21$22'.
+Removing empty process `SPI_slave.$proc$spi.v:10$21'.
+Removing empty process `SPI_slave.$proc$spi.v:9$20'.
+Found and cleaned up 3 empty switches in `\SPI_slave.$proc$spi.v:52$15'.
+Removing empty process `SPI_slave.$proc$spi.v:52$15'.
+Removing empty process `SPI_slave.$proc$spi.v:49$11'.
+Found and cleaned up 2 empty switches in `\SPI_slave.$proc$spi.v:38$8'.
+Removing empty process `SPI_slave.$proc$spi.v:38$8'.
+Found and cleaned up 1 empty switch in `\SPI_slave.$proc$spi.v:30$6'.
+Removing empty process `SPI_slave.$proc$spi.v:30$6'.
+Found and cleaned up 1 empty switch in `\SPI_slave.$proc$spi.v:21$2'.
+Removing empty process `SPI_slave.$proc$spi.v:21$2'.
+Cleaned up 9 empty switches.
+
+2.5. Executing FLATTEN pass (flatten design).
+Mapping SPI_driver.spi_slave using SPI_slave.
+No more expansions possible.
+Deleting now unused module SPI_slave.
+
+2.6. Executing TRIBUF pass.
+
+2.7. Executing DEMINOUT pass (demote inout ports to input or output).
+
+2.8. Executing SYNTH pass.
+
+2.8.1. Executing PROC pass (convert processes to netlists).
+
+2.8.1.1. Executing PROC_CLEAN pass (remove empty switches from decision trees).
+Cleaned up 0 empty switches.
+
+2.8.1.2. Executing PROC_RMDEAD pass (remove dead branches from decision trees).
+Removed a total of 0 dead cases.
+
+2.8.1.3. Executing PROC_INIT pass (extract init attributes).
+
+2.8.1.4. Executing PROC_ARST pass (detect async resets in processes).
+
+2.8.1.5. Executing PROC_MUX pass (convert decision trees to multiplexers).
+
+2.8.1.6. Executing PROC_DLATCH pass (convert process syncs to latches).
+
+2.8.1.7. Executing PROC_DFF pass (convert process syncs to FFs).
+
+2.8.1.8. Executing PROC_CLEAN pass (remove empty switches from decision trees).
+Cleaned up 0 empty switches.
+
+2.8.2. Executing OPT_EXPR pass (perform const folding).
+Replacing $eq cell `$techmap\spi_slave.$eq$spi.v:61$18' in module `SPI_driver' with $logic_not.
+Replacing $not cell `$techmap\spi_slave.$not$spi.v:39$9' (double_invert) in module `\SPI_driver' with constant driver `$techmap\spi_slave.$not$spi.v:39$9_Y = \ssel'.
+Replacing $not cell `$techmap\spi_slave.$not$spi.v:22$3' (double_invert) in module `\SPI_driver' with constant driver `$techmap\spi_slave.$not$spi.v:22$3_Y = \ssel'.
+Replacing $not cell `$techmap\spi_slave.$not$spi.v:31$7' (double_invert) in module `\SPI_driver' with constant driver `$techmap\spi_slave.$not$spi.v:31$7_Y = \ssel'.
+Replacing $eq cell `$techmap\spi_slave.$eq$spi.v:55$17' in module `SPI_driver' with $logic_not.
+Replacing $not cell `$techmap\spi_slave.$not$spi.v:53$16' (double_invert) in module `\SPI_driver' with constant driver `$techmap\spi_slave.$not$spi.v:53$16_Y = \ssel'.
+
+2.8.3. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module \SPI_driver..
+  removed 29 unused temporary wires.
+Removed 0 unused cells and 29 unused wires.
+
+2.8.4. Executing CHECK pass (checking for obvious problems).
+checking module SPI_driver..
+found and reported 0 problems.
+
+2.8.5. Executing OPT pass (performing simple optimizations).
+
+2.8.5.1. Executing OPT_EXPR pass (perform const folding).
+
+2.8.5.2. Executing OPT_MERGE pass (detect identical cells).
+Finding identical cells in module `\SPI_driver'.
+  Cell `$techmap\spi_slave.$eq$spi.v:61$18' is identical to cell `$techmap\spi_slave.$eq$spi.v:55$17'.
+    Redirecting output \Y: $techmap\spi_slave.$eq$spi.v:61$18_Y = $techmap\spi_slave.$eq$spi.v:55$17_Y
+    Removing $logic_not cell `$techmap\spi_slave.$eq$spi.v:61$18' from module `\SPI_driver'.
+Removed a total of 1 cells.
+
+2.8.5.3. Executing OPT_MUXTREE pass (detect dead branches in mux trees).
+Running muxtree optimizer on module \SPI_driver..
+  Creating internal representation of mux trees.
+  Evaluating internal representation of mux trees.
+    Root of a mux tree: $procmux$122 (pure)
+    Root of a mux tree: $procmux$124 (pure)
+    Root of a mux tree: $techmap\spi_slave.$procmux$132 (pure)
+    Root of a mux tree: $techmap\spi_slave.$procmux$137 (pure)
+    Root of a mux tree: $techmap\spi_slave.$procmux$142 (pure)
+    Root of a mux tree: $techmap\spi_slave.$procmux$145 (pure)
+    Root of a mux tree: $techmap\spi_slave.$procmux$148 (pure)
+  Analyzing evaluation results.
+Removed 0 multiplexer ports.
+
+2.8.5.4. Executing OPT_REDUCE pass (consolidate $*mux and $reduce_* inputs).
+  Optimizing cells in module \SPI_driver.
+Performed a total of 0 changes.
+
+2.8.5.5. Executing OPT_MERGE pass (detect identical cells).
+Finding identical cells in module `\SPI_driver'.
+Removed a total of 0 cells.
+
+2.8.5.6. Executing OPT_RMDFF pass (remove dff with constant values).
+
+2.8.5.7. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module \SPI_driver..
+  removed 1 unused temporary wires.
+Removed 0 unused cells and 30 unused wires.
+
+2.8.5.8. Executing OPT_EXPR pass (perform const folding).
+
+2.8.5.9. Finished OPT passes. (There is nothing left to do.)
+
+2.8.6. Executing WREDUCE pass (reducing word size of cells).
+Removed top 2 bits (of 3) from port B of cell SPI_driver.$techmap\spi_slave.$add$spi.v:44$10 ($add).
+Removed top 1 bits (of 2) from port B of cell SPI_driver.$techmap\spi_slave.$eq$spi.v:27$4 ($eq).
+
+2.8.7. Executing TECHMAP pass (map to technology primitives).
+
+2.8.7.1. Executing Verilog-2005 frontend.
+Parsing Verilog input from `/usr/local/bin/../share/yosys/cmp2lut.v' to AST representation.
+Generating RTLIL representation for module `\_90_lut_cmp_'.
+Successfully finished Verilog frontend.
+
+2.8.7.2. Executing AST frontend in derive mode using pre-parsed AST for module `\_90_lut_cmp_'.
+Parameter \A_SIGNED = 0
+Parameter \B_SIGNED = 0
+Parameter \A_WIDTH = 3
+Parameter \B_WIDTH = 3
+Parameter \Y_WIDTH = 1
+Parameter \_TECHMAP_CELLTYPE_ = 24'001001000110010101110001
+Parameter \_TECHMAP_CONSTMSK_A_ = 3'000
+Parameter \_TECHMAP_CONSTVAL_A_ = 3'xxx
+Parameter \_TECHMAP_CONSTMSK_B_ = 3'111
+Parameter \_TECHMAP_CONSTVAL_B_ = 3'111
+Generating RTLIL representation for module `$paramod$77ad031fce233083715243f95e3cd2547d931e42\_90_lut_cmp_'.
+Not using module `$paramod$77ad031fce233083715243f95e3cd2547d931e42\_90_lut_cmp_' from techmap as it contains a _TECHMAP_FAIL_ marker wire with non-zero value 1'1.
+
+2.8.7.3. Executing AST frontend in derive mode using pre-parsed AST for module `\_90_lut_cmp_'.
+Parameter \A_SIGNED = 0
+Parameter \B_SIGNED = 0
+Parameter \A_WIDTH = 2
+Parameter \B_WIDTH = 2
+Parameter \Y_WIDTH = 1
+Parameter \_TECHMAP_CELLTYPE_ = 24'001001000110010101110001
+Parameter \_TECHMAP_CONSTMSK_A_ = 2'00
+Parameter \_TECHMAP_CONSTVAL_A_ = 2'xx
+Parameter \_TECHMAP_CONSTMSK_B_ = 2'11
+Parameter \_TECHMAP_CONSTVAL_B_ = 2'10
+Generating RTLIL representation for module `$paramod$99e5b0ecd4c7f9fb6cd3a733593eba894c42613f\_90_lut_cmp_'.
+Not using module `$paramod$99e5b0ecd4c7f9fb6cd3a733593eba894c42613f\_90_lut_cmp_' from techmap as it contains a _TECHMAP_FAIL_ marker wire with non-zero value 1'1.
+
+2.8.7.4. Executing AST frontend in derive mode using pre-parsed AST for module `\_90_lut_cmp_'.
+Parameter \A_SIGNED = 0
+Parameter \B_SIGNED = 0
+Parameter \A_WIDTH = 2
+Parameter \B_WIDTH = 1
+Parameter \Y_WIDTH = 1
+Parameter \_TECHMAP_CELLTYPE_ = 24'001001000110010101110001
+Parameter \_TECHMAP_CONSTMSK_A_ = 2'00
+Parameter \_TECHMAP_CONSTVAL_A_ = 2'xx
+Parameter \_TECHMAP_CONSTMSK_B_ = 1'1
+Parameter \_TECHMAP_CONSTVAL_B_ = 1'1
+Generating RTLIL representation for module `$paramod$6816abac91a51b405c3de5bceb2855c03dd44485\_90_lut_cmp_'.
+Not using module `$paramod$6816abac91a51b405c3de5bceb2855c03dd44485\_90_lut_cmp_' from techmap as it contains a _TECHMAP_FAIL_ marker wire with non-zero value 1'1.
+
+2.8.7.5. Continuing TECHMAP pass.
+No more expansions possible.
+
+2.8.8. Executing ALUMACC pass (create $alu and $macc cells).
+Extracting $alu and $macc cells in module SPI_driver:
+  creating $macc model for $techmap\spi_slave.$add$spi.v:44$10 ($add).
+  creating $alu model for $macc $techmap\spi_slave.$add$spi.v:44$10.
+  creating $alu cell for $techmap\spi_slave.$add$spi.v:44$10: $auto$alumacc.cc:474:replace_alu$158
+  created 1 $alu and 0 $macc cells.
+
+2.8.9. Executing SHARE pass (SAT-based resource sharing).
+
+2.8.10. Executing OPT pass (performing simple optimizations).
+
+2.8.10.1. Executing OPT_EXPR pass (perform const folding).
+
+2.8.10.2. Executing OPT_MERGE pass (detect identical cells).
+Finding identical cells in module `\SPI_driver'.
+Removed a total of 0 cells.
+
+2.8.10.3. Executing OPT_MUXTREE pass (detect dead branches in mux trees).
+Running muxtree optimizer on module \SPI_driver..
+  Creating internal representation of mux trees.
+  Evaluating internal representation of mux trees.
+    Root of a mux tree: $procmux$122 (pure)
+    Root of a mux tree: $procmux$124 (pure)
+    Root of a mux tree: $techmap\spi_slave.$procmux$132 (pure)
+    Root of a mux tree: $techmap\spi_slave.$procmux$137 (pure)
+    Root of a mux tree: $techmap\spi_slave.$procmux$142 (pure)
+    Root of a mux tree: $techmap\spi_slave.$procmux$145 (pure)
+    Root of a mux tree: $techmap\spi_slave.$procmux$148 (pure)
+  Analyzing evaluation results.
+Removed 0 multiplexer ports.
+
+2.8.10.4. Executing OPT_REDUCE pass (consolidate $*mux and $reduce_* inputs).
+  Optimizing cells in module \SPI_driver.
+Performed a total of 0 changes.
+
+2.8.10.5. Executing OPT_MERGE pass (detect identical cells).
+Finding identical cells in module `\SPI_driver'.
+Removed a total of 0 cells.
+
+2.8.10.6. Executing OPT_RMDFF pass (remove dff with constant values).
+
+2.8.10.7. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module \SPI_driver..
+Removed 0 unused cells and 30 unused wires.
+
+2.8.10.8. Executing OPT_EXPR pass (perform const folding).
+
+2.8.10.9. Finished OPT passes. (There is nothing left to do.)
+
+2.8.11. Executing FSM pass (extract and optimize FSM).
+
+2.8.11.1. Executing FSM_DETECT pass (finding FSMs in design).
+
+2.8.11.2. Executing FSM_EXTRACT pass (extracting FSM from design).
+
+2.8.11.3. Executing FSM_OPT pass (simple optimizations of FSMs).
+
+2.8.11.4. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module \SPI_driver..
+Removed 0 unused cells and 30 unused wires.
+
+2.8.11.5. Executing FSM_OPT pass (simple optimizations of FSMs).
+
+2.8.11.6. Executing FSM_RECODE pass (re-assigning FSM state encoding).
+
+2.8.11.7. Executing FSM_INFO pass (dumping all available information on FSM cells).
+
+2.8.11.8. Executing FSM_MAP pass (mapping FSMs to basic logic).
+
+2.8.12. Executing OPT pass (performing simple optimizations).
+
+2.8.12.1. Executing OPT_EXPR pass (perform const folding).
+
+2.8.12.2. Executing OPT_MERGE pass (detect identical cells).
+Finding identical cells in module `\SPI_driver'.
+Removed a total of 0 cells.
+
+2.8.12.3. Executing OPT_RMDFF pass (remove dff with constant values).
+
+2.8.12.4. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module \SPI_driver..
+Removed 0 unused cells and 30 unused wires.
+
+2.8.12.5. Finished fast OPT passes.
+
+2.8.13. Executing MEMORY pass.
+
+2.8.13.1. Executing MEMORY_DFF pass (merging $dff cells to $memrd and $memwr).
+
+2.8.13.2. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module \SPI_driver..
+Removed 0 unused cells and 30 unused wires.
+
+2.8.13.3. Executing MEMORY_SHARE pass (consolidating $memrd/$memwr cells).
+
+2.8.13.4. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module \SPI_driver..
+Removed 0 unused cells and 30 unused wires.
+
+2.8.13.5. Executing MEMORY_COLLECT pass (generating $mem cells).
+
+2.8.14. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module \SPI_driver..
+Removed 0 unused cells and 30 unused wires.
+
+2.9. Executing MEMORY_BRAM pass (mapping $mem cells to block memories).
+
+2.10. Executing TECHMAP pass (map to technology primitives).
+
+2.10.1. Executing Verilog-2005 frontend.
+Parsing Verilog input from `/usr/local/bin/../share/yosys/ecp5/brams_map.v' to AST representation.
+Generating RTLIL representation for module `\$__ECP5_DP16KD'.
+Successfully finished Verilog frontend.
+No more expansions possible.
+
+2.11. Executing OPT pass (performing simple optimizations).
+
+2.11.1. Executing OPT_EXPR pass (perform const folding).
+
+2.11.2. Executing OPT_MERGE pass (detect identical cells).
+Finding identical cells in module `\SPI_driver'.
+Removed a total of 0 cells.
+
+2.11.3. Executing OPT_RMDFF pass (remove dff with constant values).
+
+2.11.4. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module \SPI_driver..
+Removed 0 unused cells and 30 unused wires.
+
+2.11.5. Finished fast OPT passes.
+
+2.12. Executing MEMORY_MAP pass (converting $mem cells to logic and flip-flops).
+
+2.13. Executing OPT pass (performing simple optimizations).
+
+2.13.1. Executing OPT_EXPR pass (perform const folding).
+
+2.13.2. Executing OPT_MERGE pass (detect identical cells).
+Finding identical cells in module `\SPI_driver'.
+Removed a total of 0 cells.
+
+2.13.3. Executing OPT_MUXTREE pass (detect dead branches in mux trees).
+Running muxtree optimizer on module \SPI_driver..
+  Creating internal representation of mux trees.
+  Evaluating internal representation of mux trees.
+    Root of a mux tree: $procmux$122 (pure)
+    Root of a mux tree: $procmux$124 (pure)
+    Root of a mux tree: $techmap\spi_slave.$procmux$132 (pure)
+    Root of a mux tree: $techmap\spi_slave.$procmux$137 (pure)
+    Root of a mux tree: $techmap\spi_slave.$procmux$142 (pure)
+    Root of a mux tree: $techmap\spi_slave.$procmux$145 (pure)
+    Root of a mux tree: $techmap\spi_slave.$procmux$148 (pure)
+  Analyzing evaluation results.
+Removed 0 multiplexer ports.
+
+2.13.4. Executing OPT_REDUCE pass (consolidate $*mux and $reduce_* inputs).
+  Optimizing cells in module \SPI_driver.
+Performed a total of 0 changes.
+
+2.13.5. Executing OPT_MERGE pass (detect identical cells).
+Finding identical cells in module `\SPI_driver'.
+Removed a total of 0 cells.
+
+2.13.6. Executing OPT_RMDFF pass (remove dff with constant values).
+
+2.13.7. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module \SPI_driver..
+Removed 0 unused cells and 30 unused wires.
+
+2.13.8. Executing OPT_EXPR pass (perform const folding).
+
+2.13.9. Finished OPT passes. (There is nothing left to do.)
+
+2.14. Executing TECHMAP pass (map to technology primitives).
+
+2.14.1. Executing Verilog-2005 frontend.
+Parsing Verilog input from `<techmap.v>' to AST representation.
+Generating RTLIL representation for module `\_90_simplemap_bool_ops'.
+Generating RTLIL representation for module `\_90_simplemap_reduce_ops'.
+Generating RTLIL representation for module `\_90_simplemap_logic_ops'.
+Generating RTLIL representation for module `\_90_simplemap_compare_ops'.
+Generating RTLIL representation for module `\_90_simplemap_various'.
+Generating RTLIL representation for module `\_90_simplemap_registers'.
+Generating RTLIL representation for module `\_90_shift_ops_shr_shl_sshl_sshr'.
+Generating RTLIL representation for module `\_90_shift_shiftx'.
+Generating RTLIL representation for module `\_90_fa'.
+Generating RTLIL representation for module `\_90_lcu'.
+Generating RTLIL representation for module `\_90_alu'.
+Generating RTLIL representation for module `\_90_macc'.
+Generating RTLIL representation for module `\_90_alumacc'.
+Generating RTLIL representation for module `\$__div_mod_u'.
+Generating RTLIL representation for module `\$__div_mod'.
+Generating RTLIL representation for module `\_90_div'.
+Generating RTLIL representation for module `\_90_mod'.
+Generating RTLIL representation for module `\_90_pow'.
+Generating RTLIL representation for module `\_90_pmux'.
+Generating RTLIL representation for module `\_90_lut'.
+Successfully finished Verilog frontend.
+Mapping SPI_driver.$procmux$124 ($mux) with simplemap.
+Mapping SPI_driver.$procmux$122 ($mux) with simplemap.
+Mapping SPI_driver.$procdff$150 ($dff) with simplemap.
+Mapping SPI_driver.$procdff$151 ($dff) with simplemap.
+
+2.14.2. Executing AST frontend in derive mode using pre-parsed AST for module `\_90_alu'.
+Parameter \A_SIGNED = 0
+Parameter \B_SIGNED = 0
+Parameter \A_WIDTH = 1
+Parameter \B_WIDTH = 3
+Parameter \Y_WIDTH = 3
+Generating RTLIL representation for module `$paramod\_90_alu\A_SIGNED=0\B_SIGNED=0\A_WIDTH=1\B_WIDTH=3\Y_WIDTH=3'.
+
+2.14.3. Continuing TECHMAP pass.
+Mapping SPI_driver.$auto$alumacc.cc:474:replace_alu$158 using $paramod\_90_alu\A_SIGNED=0\B_SIGNED=0\A_WIDTH=1\B_WIDTH=3\Y_WIDTH=3.
+Mapping SPI_driver.$techmap\spi_slave.$procmux$142 ($mux) with simplemap.
+Mapping SPI_driver.$techmap\spi_slave.$procdff$157 ($dff) with simplemap.
+Mapping SPI_driver.$techmap\spi_slave.$procdff$156 ($dff) with simplemap.
+Mapping SPI_driver.$techmap\spi_slave.$procdff$155 ($dff) with simplemap.
+Mapping SPI_driver.$techmap\spi_slave.$procdff$154 ($dff) with simplemap.
+Mapping SPI_driver.$techmap\spi_slave.$procdff$153 ($dff) with simplemap.
+Mapping SPI_driver.$techmap\spi_slave.$procdff$152 ($dff) with simplemap.
+Mapping SPI_driver.$techmap\spi_slave.$procmux$148 ($mux) with simplemap.
+Mapping SPI_driver.$techmap\spi_slave.$procmux$145 ($mux) with simplemap.
+Mapping SPI_driver.$techmap\spi_slave.$procmux$139 ($mux) with simplemap.
+Mapping SPI_driver.$techmap\spi_slave.$procmux$137 ($mux) with simplemap.
+Mapping SPI_driver.$techmap\spi_slave.$procmux$134 ($mux) with simplemap.
+Mapping SPI_driver.$techmap\spi_slave.$procmux$132 ($mux) with simplemap.
+Mapping SPI_driver.$techmap\spi_slave.$procmux$129 ($mux) with simplemap.
+Mapping SPI_driver.$techmap\spi_slave.$procmux$126 ($mux) with simplemap.
+Mapping SPI_driver.$techmap\spi_slave.$logic_and$spi.v:61$19 ($logic_and) with simplemap.
+Mapping SPI_driver.$techmap\spi_slave.$eq$spi.v:55$17 ($logic_not) with simplemap.
+Mapping SPI_driver.$techmap\spi_slave.$logic_and$spi.v:50$14 ($logic_and) with simplemap.
+Mapping SPI_driver.$techmap\spi_slave.$eq$spi.v:50$13 ($eq) with simplemap.
+Mapping SPI_driver.$techmap\spi_slave.$logic_and$spi.v:50$12 ($logic_and) with simplemap.
+Mapping SPI_driver.$techmap\spi_slave.$eq$spi.v:28$5 ($eq) with simplemap.
+Mapping SPI_driver.$techmap\spi_slave.$eq$spi.v:27$4 ($eq) with simplemap.
+Mapping SPI_driver.$techmap\spi_slave.$not$spi.v:19$1 ($not) with simplemap.
+Mapping SPI_driver.$techmap$auto$alumacc.cc:474:replace_alu$158.$and$<techmap.v>:260$240 ($and) with simplemap.
+Mapping SPI_driver.$techmap$auto$alumacc.cc:474:replace_alu$158.$xor$<techmap.v>:263$242 ($xor) with simplemap.
+Mapping SPI_driver.$techmap$auto$alumacc.cc:474:replace_alu$158.$xor$<techmap.v>:262$241 ($xor) with simplemap.
+
+2.14.4. Executing AST frontend in derive mode using pre-parsed AST for module `\_90_lcu'.
+Parameter \WIDTH = 3
+Generating RTLIL representation for module `$paramod\_90_lcu\WIDTH=3'.
+
+2.14.5. Executing PROC pass (convert processes to netlists).
+
+2.14.5.1. Executing PROC_CLEAN pass (remove empty switches from decision trees).
+Cleaned up 0 empty switches.
+
+2.14.5.2. Executing PROC_RMDEAD pass (remove dead branches from decision trees).
+Removed a total of 0 dead cases.
+
+2.14.5.3. Executing PROC_INIT pass (extract init attributes).
+
+2.14.5.4. Executing PROC_ARST pass (detect async resets in processes).
+
+2.14.5.5. Executing PROC_MUX pass (convert decision trees to multiplexers).
+Creating decoders for process `$paramod\_90_lcu\WIDTH=3.$proc$<techmap.v>:207$375'.
+     1/6: $0\p[2:0] [2]
+     2/6: $0\g[2:0] [2]
+     3/6: $0\p[2:0] [1]
+     4/6: $0\g[2:0] [1]
+     5/6: $0\g[2:0] [0]
+     6/6: $0\p[2:0] [0]
+
+2.14.5.6. Executing PROC_DLATCH pass (convert process syncs to latches).
+No latch inferred for signal `$paramod\_90_lcu\WIDTH=3.\g' from process `$paramod\_90_lcu\WIDTH=3.$proc$<techmap.v>:207$375'.
+No latch inferred for signal `$paramod\_90_lcu\WIDTH=3.\p' from process `$paramod\_90_lcu\WIDTH=3.$proc$<techmap.v>:207$375'.
+
+2.14.5.7. Executing PROC_DFF pass (convert process syncs to FFs).
+
+2.14.5.8. Executing PROC_CLEAN pass (remove empty switches from decision trees).
+Removing empty process `$paramod\_90_lcu\WIDTH=3.$proc$<techmap.v>:207$375'.
+Cleaned up 0 empty switches.
+
+2.14.6. Executing OPT pass (performing simple optimizations).
+
+2.14.6.1. Executing OPT_EXPR pass (perform const folding).
+
+2.14.6.2. Executing OPT_MERGE pass (detect identical cells).
+Finding identical cells in module `$paramod\_90_lcu\WIDTH=3'.
+Removed a total of 0 cells.
+
+2.14.6.3. Executing OPT_RMDFF pass (remove dff with constant values).
+
+2.14.6.4. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module $paramod\_90_lcu\WIDTH=3..
+  removing unused `$and' cell `$and$<techmap.v>:222$380'.
+  removing unused `$and' cell `$and$<techmap.v>:230$383'.
+  removing unused non-port wire \j.
+  removing unused non-port wire \i.
+  removed 9 unused temporary wires.
+Removed 2 unused cells and 39 unused wires.
+
+2.14.6.5. Finished fast OPT passes.
+
+2.14.7. Continuing TECHMAP pass.
+Mapping SPI_driver.$auto$alumacc.cc:474:replace_alu$158.lcu using $paramod\_90_lcu\WIDTH=3.
+Mapping SPI_driver.$techmap$auto$alumacc.cc:474:replace_alu$158.$ternary$<techmap.v>:258$239 ($mux) with simplemap.
+Mapping SPI_driver.$techmap$auto$alumacc.cc:474:replace_alu$158.$not$<techmap.v>:258$238 ($not) with simplemap.
+Mapping SPI_driver.$auto$alumacc.cc:474:replace_alu$158.B_conv ($pos) with simplemap.
+Mapping SPI_driver.$auto$alumacc.cc:474:replace_alu$158.A_conv ($pos) with simplemap.
+Mapping SPI_driver.$techmap$auto$alumacc.cc:474:replace_alu$158.lcu.$or$<techmap.v>:229$382 ($or) with simplemap.
+Mapping SPI_driver.$techmap$auto$alumacc.cc:474:replace_alu$158.lcu.$or$<techmap.v>:221$379 ($or) with simplemap.
+Mapping SPI_driver.$techmap$auto$alumacc.cc:474:replace_alu$158.lcu.$or$<techmap.v>:212$377 ($or) with simplemap.
+Mapping SPI_driver.$techmap$auto$alumacc.cc:474:replace_alu$158.lcu.$and$<techmap.v>:229$381 ($and) with simplemap.
+Mapping SPI_driver.$techmap$auto$alumacc.cc:474:replace_alu$158.lcu.$and$<techmap.v>:221$378 ($and) with simplemap.
+Mapping SPI_driver.$techmap$auto$alumacc.cc:474:replace_alu$158.lcu.$and$<techmap.v>:212$376 ($and) with simplemap.
+No more expansions possible.
+
+2.15. Executing DFFSR2DFF pass (mapping DFFSR cells to simpler FFs).
+
+2.16. Executing dff2dffs pass (merge synchronous set/reset into FF cells).
+Merging set/reset $_MUX_ cells into DFFs in SPI_driver.
+  Merging $auto$simplemap.cc:277:simplemap_mux$299 (A=$techmap\spi_slave.$procmux$129_Y [6], B=1'0, S=\ssel) into $auto$simplemap.cc:420:simplemap_dff$273 ($_DFF_P_).
+  Merging $auto$simplemap.cc:277:simplemap_mux$298 (A=$techmap\spi_slave.$procmux$129_Y [5], B=1'0, S=\ssel) into $auto$simplemap.cc:420:simplemap_dff$272 ($_DFF_P_).
+  Merging $auto$simplemap.cc:277:simplemap_mux$297 (A=$techmap\spi_slave.$procmux$129_Y [4], B=1'0, S=\ssel) into $auto$simplemap.cc:420:simplemap_dff$271 ($_DFF_P_).
+  Merging $auto$simplemap.cc:277:simplemap_mux$296 (A=$techmap\spi_slave.$procmux$129_Y [3], B=1'0, S=\ssel) into $auto$simplemap.cc:420:simplemap_dff$270 ($_DFF_P_).
+  Merging $auto$simplemap.cc:277:simplemap_mux$295 (A=$techmap\spi_slave.$procmux$129_Y [2], B=1'0, S=\ssel) into $auto$simplemap.cc:420:simplemap_dff$269 ($_DFF_P_).
+  Merging $auto$simplemap.cc:277:simplemap_mux$294 (A=$techmap\spi_slave.$procmux$129_Y [1], B=1'0, S=\ssel) into $auto$simplemap.cc:420:simplemap_dff$268 ($_DFF_P_).
+  Merging $auto$simplemap.cc:277:simplemap_mux$293 (A=$techmap\spi_slave.$procmux$129_Y [0], B=1'0, S=\ssel) into $auto$simplemap.cc:420:simplemap_dff$267 ($_DFF_P_).
+  Merging $auto$simplemap.cc:277:simplemap_mux$249 (A=$techmap\spi_slave.$procmux$139_Y [6], B=1'0, S=\ssel) into $auto$simplemap.cc:420:simplemap_dff$264 ($_DFF_P_).
+  Merging $auto$simplemap.cc:277:simplemap_mux$248 (A=$techmap\spi_slave.$procmux$139_Y [5], B=1'0, S=\ssel) into $auto$simplemap.cc:420:simplemap_dff$263 ($_DFF_P_).
+  Merging $auto$simplemap.cc:277:simplemap_mux$247 (A=$techmap\spi_slave.$procmux$139_Y [4], B=1'0, S=\ssel) into $auto$simplemap.cc:420:simplemap_dff$262 ($_DFF_P_).
+  Merging $auto$simplemap.cc:277:simplemap_mux$246 (A=$techmap\spi_slave.$procmux$139_Y [3], B=1'0, S=\ssel) into $auto$simplemap.cc:420:simplemap_dff$261 ($_DFF_P_).
+  Merging $auto$simplemap.cc:277:simplemap_mux$245 (A=$techmap\spi_slave.$procmux$139_Y [2], B=1'0, S=\ssel) into $auto$simplemap.cc:420:simplemap_dff$260 ($_DFF_P_).
+  Merging $auto$simplemap.cc:277:simplemap_mux$244 (A=$techmap\spi_slave.$procmux$139_Y [1], B=1'0, S=\ssel) into $auto$simplemap.cc:420:simplemap_dff$259 ($_DFF_P_).
+  Merging $auto$simplemap.cc:277:simplemap_mux$243 (A=$techmap\spi_slave.$procmux$139_Y [0], B=1'0, S=\ssel) into $auto$simplemap.cc:420:simplemap_dff$258 ($_DFF_P_).
+  Merging $auto$simplemap.cc:277:simplemap_mux$288 (A=$techmap\spi_slave.$procmux$134_Y [1], B=1'0, S=\ssel) into $auto$simplemap.cc:420:simplemap_dff$256 ($_DFF_P_).
+  Merging $auto$simplemap.cc:277:simplemap_mux$287 (A=$techmap\spi_slave.$procmux$134_Y [0], B=1'0, S=\ssel) into $auto$simplemap.cc:420:simplemap_dff$255 ($_DFF_P_).
+  Merging $auto$simplemap.cc:277:simplemap_mux$277 (A=\mosi, B=1'0, S=\ssel) into $auto$simplemap.cc:420:simplemap_dff$253 ($_DFF_P_).
+  Merging $auto$simplemap.cc:277:simplemap_mux$275 (A=\sck, B=1'0, S=\ssel) into $auto$simplemap.cc:420:simplemap_dff$251 ($_DFF_P_).
+  Merging $auto$simplemap.cc:277:simplemap_mux$300 (A=$techmap\spi_slave.$procmux$129_Y [7], B=1'0, S=\ssel) into $auto$simplemap.cc:420:simplemap_dff$274 ($_DFF_P_).
+  Merging $auto$simplemap.cc:277:simplemap_mux$250 (A=$techmap\spi_slave.$procmux$139_Y [7], B=1'0, S=\ssel) into $auto$simplemap.cc:420:simplemap_dff$265 ($_DFF_P_).
+  Merging $auto$simplemap.cc:277:simplemap_mux$289 (A=$techmap\spi_slave.$procmux$134_Y [2], B=1'0, S=\ssel) into $auto$simplemap.cc:420:simplemap_dff$257 ($_DFF_P_).
+  Merging $auto$simplemap.cc:277:simplemap_mux$278 (A=\spi_slave.mosir [0], B=1'0, S=\ssel) into $auto$simplemap.cc:420:simplemap_dff$254 ($_DFF_P_).
+  Merging $auto$simplemap.cc:277:simplemap_mux$276 (A=\spi_slave.sckr [0], B=1'0, S=\ssel) into $auto$simplemap.cc:420:simplemap_dff$252 ($_DFF_P_).
+
+2.17. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module \SPI_driver..
+  removing unused `$_MUX_' cell `$auto$simplemap.cc:277:simplemap_mux$275'.
+  removing unused `$_AND_' cell `$auto$simplemap.cc:85:simplemap_bitop$393'.
+  removing unused `$_OR_' cell `$auto$simplemap.cc:85:simplemap_bitop$390'.
+  removing unused `$_MUX_' cell `$auto$simplemap.cc:277:simplemap_mux$243'.
+  removing unused `$_MUX_' cell `$auto$simplemap.cc:277:simplemap_mux$244'.
+  removing unused `$_MUX_' cell `$auto$simplemap.cc:277:simplemap_mux$245'.
+  removing unused `$_MUX_' cell `$auto$simplemap.cc:277:simplemap_mux$246'.
+  removing unused `$_MUX_' cell `$auto$simplemap.cc:277:simplemap_mux$247'.
+  removing unused `$_MUX_' cell `$auto$simplemap.cc:277:simplemap_mux$248'.
+  removing unused `$_MUX_' cell `$auto$simplemap.cc:277:simplemap_mux$249'.
+  removing unused `$_MUX_' cell `$auto$simplemap.cc:277:simplemap_mux$250'.
+  removing unused `$_MUX_' cell `$auto$simplemap.cc:277:simplemap_mux$276'.
+  removing unused `$_MUX_' cell `$auto$simplemap.cc:277:simplemap_mux$277'.
+  removing unused `$_MUX_' cell `$auto$simplemap.cc:277:simplemap_mux$278'.
+  removing unused `$_MUX_' cell `$auto$simplemap.cc:277:simplemap_mux$287'.
+  removing unused `$_MUX_' cell `$auto$simplemap.cc:277:simplemap_mux$288'.
+  removing unused `$_MUX_' cell `$auto$simplemap.cc:277:simplemap_mux$289'.
+  removing unused `$_MUX_' cell `$auto$simplemap.cc:277:simplemap_mux$293'.
+  removing unused `$_MUX_' cell `$auto$simplemap.cc:277:simplemap_mux$294'.
+  removing unused `$_MUX_' cell `$auto$simplemap.cc:277:simplemap_mux$295'.
+  removing unused `$_MUX_' cell `$auto$simplemap.cc:277:simplemap_mux$296'.
+  removing unused `$_MUX_' cell `$auto$simplemap.cc:277:simplemap_mux$297'.
+  removing unused `$_MUX_' cell `$auto$simplemap.cc:277:simplemap_mux$298'.
+  removing unused `$_MUX_' cell `$auto$simplemap.cc:277:simplemap_mux$299'.
+  removing unused `$_MUX_' cell `$auto$simplemap.cc:277:simplemap_mux$300'.
+  removing unused `$_XOR_' cell `$auto$simplemap.cc:85:simplemap_bitop$365'.
+  removing unused `$_AND_' cell `$auto$simplemap.cc:85:simplemap_bitop$361'.
+  removed 28 unused temporary wires.
+Removed 29 unused cells and 67 unused wires.
+
+2.18. Executing DFF2DFFE pass (transform $dff to $dffe where applicable).
+Selected cell types for direct conversion:
+  $__DFFS_PP1_ -> $__DFFSE_PP1
+  $__DFFS_PP0_ -> $__DFFSE_PP0
+  $__DFFS_PN1_ -> $__DFFSE_PN1
+  $__DFFS_PN0_ -> $__DFFSE_PN0
+  $__DFFS_NP1_ -> $__DFFSE_NP1
+  $__DFFS_NP0_ -> $__DFFSE_NP0
+  $__DFFS_NN1_ -> $__DFFSE_NN1
+  $__DFFS_NN0_ -> $__DFFSE_NN0
+  $_DFF_PP1_ -> $__DFFE_PP1
+  $_DFF_PP0_ -> $__DFFE_PP0
+  $_DFF_PN1_ -> $__DFFE_PN1
+  $_DFF_PN0_ -> $__DFFE_PN0
+  $_DFF_NP1_ -> $__DFFE_NP1
+  $_DFF_NP0_ -> $__DFFE_NP0
+  $_DFF_NN1_ -> $__DFFE_NN1
+  $_DFF_NN0_ -> $__DFFE_NN0
+  $_DFF_N_ -> $_DFFE_NP_
+  $_DFF_P_ -> $_DFFE_PP_
+Transforming FF to FF+Enable cells in module SPI_driver:
+  converting $_DFF_P_ cell $auto$simplemap.cc:420:simplemap_dff$222 to $_DFFE_PP_ for $0\dataToSend[7:0] [0] -> \dataToSend [0].
+  converting $_DFF_P_ cell $auto$simplemap.cc:420:simplemap_dff$223 to $_DFFE_PP_ for $0\dataToSend[7:0] [1] -> \dataToSend [1].
+  converting $_DFF_P_ cell $auto$simplemap.cc:420:simplemap_dff$224 to $_DFFE_PP_ for $0\dataToSend[7:0] [2] -> \dataToSend [2].
+  converting $_DFF_P_ cell $auto$simplemap.cc:420:simplemap_dff$225 to $_DFFE_PP_ for $0\dataToSend[7:0] [3] -> \dataToSend [3].
+  converting $_DFF_P_ cell $auto$simplemap.cc:420:simplemap_dff$226 to $_DFFE_PP_ for $0\dataToSend[7:0] [4] -> \dataToSend [4].
+  converting $_DFF_P_ cell $auto$simplemap.cc:420:simplemap_dff$227 to $_DFFE_PP_ for $0\dataToSend[7:0] [5] -> \dataToSend [5].
+  converting $_DFF_P_ cell $auto$simplemap.cc:420:simplemap_dff$228 to $_DFFE_PP_ for $0\dataToSend[7:0] [6] -> \dataToSend [6].
+  converting $_DFF_P_ cell $auto$simplemap.cc:420:simplemap_dff$229 to $_DFFE_PP_ for $0\dataToSend[7:0] [7] -> \dataToSend [7].
+  converting $_DFF_P_ cell $auto$simplemap.cc:420:simplemap_dff$230 to $_DFFE_PP_ for $0\receivedDataBuffer[7:0] [0] -> \receivedDataBuffer [0].
+  converting $_DFF_P_ cell $auto$simplemap.cc:420:simplemap_dff$231 to $_DFFE_PP_ for $0\receivedDataBuffer[7:0] [1] -> \receivedDataBuffer [1].
+  converting $_DFF_P_ cell $auto$simplemap.cc:420:simplemap_dff$232 to $_DFFE_PP_ for $0\receivedDataBuffer[7:0] [2] -> \receivedDataBuffer [2].
+  converting $_DFF_P_ cell $auto$simplemap.cc:420:simplemap_dff$233 to $_DFFE_PP_ for $0\receivedDataBuffer[7:0] [3] -> \receivedDataBuffer [3].
+  converting $_DFF_P_ cell $auto$simplemap.cc:420:simplemap_dff$234 to $_DFFE_PP_ for $0\receivedDataBuffer[7:0] [4] -> \receivedDataBuffer [4].
+  converting $_DFF_P_ cell $auto$simplemap.cc:420:simplemap_dff$235 to $_DFFE_PP_ for $0\receivedDataBuffer[7:0] [5] -> \receivedDataBuffer [5].
+  converting $_DFF_P_ cell $auto$simplemap.cc:420:simplemap_dff$236 to $_DFFE_PP_ for $0\receivedDataBuffer[7:0] [6] -> \receivedDataBuffer [6].
+  converting $_DFF_P_ cell $auto$simplemap.cc:420:simplemap_dff$237 to $_DFFE_PP_ for $0\receivedDataBuffer[7:0] [7] -> \receivedDataBuffer [7].
+  converting $__DFFS_PP0_ cell $auto$simplemap.cc:420:simplemap_dff$255 to $__DFFSE_PP0 for $techmap\spi_slave.$procmux$134_Y [0] -> \spi_slave.bitcnt [0].
+  converting $__DFFS_PP0_ cell $auto$simplemap.cc:420:simplemap_dff$256 to $__DFFSE_PP0 for $techmap\spi_slave.$procmux$134_Y [1] -> \spi_slave.bitcnt [1].
+  converting $__DFFS_PP0_ cell $auto$simplemap.cc:420:simplemap_dff$257 to $__DFFSE_PP0 for $techmap\spi_slave.$procmux$134_Y [2] -> \spi_slave.bitcnt [2].
+  converting $__DFFS_PP0_ cell $auto$simplemap.cc:420:simplemap_dff$258 to $__DFFSE_PP0 for $techmap\spi_slave.$procmux$139_Y [0] -> \spi_slave.receivedData [0].
+  converting $__DFFS_PP0_ cell $auto$simplemap.cc:420:simplemap_dff$259 to $__DFFSE_PP0 for $techmap\spi_slave.$procmux$139_Y [1] -> \spi_slave.receivedData [1].
+  converting $__DFFS_PP0_ cell $auto$simplemap.cc:420:simplemap_dff$260 to $__DFFSE_PP0 for $techmap\spi_slave.$procmux$139_Y [2] -> \spi_slave.receivedData [2].
+  converting $__DFFS_PP0_ cell $auto$simplemap.cc:420:simplemap_dff$261 to $__DFFSE_PP0 for $techmap\spi_slave.$procmux$139_Y [3] -> \spi_slave.receivedData [3].
+  converting $__DFFS_PP0_ cell $auto$simplemap.cc:420:simplemap_dff$262 to $__DFFSE_PP0 for $techmap\spi_slave.$procmux$139_Y [4] -> \spi_slave.receivedData [4].
+  converting $__DFFS_PP0_ cell $auto$simplemap.cc:420:simplemap_dff$263 to $__DFFSE_PP0 for $techmap\spi_slave.$procmux$139_Y [5] -> \spi_slave.receivedData [5].
+  converting $__DFFS_PP0_ cell $auto$simplemap.cc:420:simplemap_dff$264 to $__DFFSE_PP0 for $techmap\spi_slave.$procmux$139_Y [6] -> \spi_slave.receivedData [6].
+  converting $__DFFS_PP0_ cell $auto$simplemap.cc:420:simplemap_dff$265 to $__DFFSE_PP0 for $techmap\spi_slave.$procmux$139_Y [7] -> \spi_slave.receivedData [7].
+  converting $__DFFS_PP0_ cell $auto$simplemap.cc:420:simplemap_dff$267 to $__DFFSE_PP0 for $techmap\spi_slave.$procmux$129_Y [0] -> \spi_slave.dataToSendBuffer [0].
+  converting $__DFFS_PP0_ cell $auto$simplemap.cc:420:simplemap_dff$268 to $__DFFSE_PP0 for $techmap\spi_slave.$procmux$129_Y [1] -> \spi_slave.dataToSendBuffer [1].
+  converting $__DFFS_PP0_ cell $auto$simplemap.cc:420:simplemap_dff$269 to $__DFFSE_PP0 for $techmap\spi_slave.$procmux$129_Y [2] -> \spi_slave.dataToSendBuffer [2].
+  converting $__DFFS_PP0_ cell $auto$simplemap.cc:420:simplemap_dff$270 to $__DFFSE_PP0 for $techmap\spi_slave.$procmux$129_Y [3] -> \spi_slave.dataToSendBuffer [3].
+  converting $__DFFS_PP0_ cell $auto$simplemap.cc:420:simplemap_dff$271 to $__DFFSE_PP0 for $techmap\spi_slave.$procmux$129_Y [4] -> \spi_slave.dataToSendBuffer [4].
+  converting $__DFFS_PP0_ cell $auto$simplemap.cc:420:simplemap_dff$272 to $__DFFSE_PP0 for $techmap\spi_slave.$procmux$129_Y [5] -> \spi_slave.dataToSendBuffer [5].
+  converting $__DFFS_PP0_ cell $auto$simplemap.cc:420:simplemap_dff$273 to $__DFFSE_PP0 for $techmap\spi_slave.$procmux$129_Y [6] -> \spi_slave.dataToSendBuffer [6].
+  converting $__DFFS_PP0_ cell $auto$simplemap.cc:420:simplemap_dff$274 to $__DFFSE_PP0 for $techmap\spi_slave.$procmux$129_Y [7] -> \spi_slave.dataToSendBuffer [7].
+
+2.19. Executing TECHMAP pass (map to technology primitives).
+
+2.19.1. Executing Verilog-2005 frontend.
+Parsing Verilog input from `/usr/local/bin/../share/yosys/ecp5/cells_map.v' to AST representation.
+Generating RTLIL representation for module `\$_DFF_N_'.
+Generating RTLIL representation for module `\$_DFF_P_'.
+Generating RTLIL representation for module `\$_DFFE_NN_'.
+Generating RTLIL representation for module `\$_DFFE_PN_'.
+Generating RTLIL representation for module `\$_DFFE_NP_'.
+Generating RTLIL representation for module `\$_DFFE_PP_'.
+Generating RTLIL representation for module `\$_DFF_NN0_'.
+Generating RTLIL representation for module `\$_DFF_NN1_'.
+Generating RTLIL representation for module `\$_DFF_PN0_'.
+Generating RTLIL representation for module `\$_DFF_PN1_'.
+Generating RTLIL representation for module `\$_DFF_NP0_'.
+Generating RTLIL representation for module `\$_DFF_NP1_'.
+Generating RTLIL representation for module `\$_DFF_PP0_'.
+Generating RTLIL representation for module `\$_DFF_PP1_'.
+Generating RTLIL representation for module `\$__DFFS_NN0_'.
+Generating RTLIL representation for module `\$__DFFS_NN1_'.
+Generating RTLIL representation for module `\$__DFFS_PN0_'.
+Generating RTLIL representation for module `\$__DFFS_PN1_'.
+Generating RTLIL representation for module `\$__DFFS_NP0_'.
+Generating RTLIL representation for module `\$__DFFS_NP1_'.
+Generating RTLIL representation for module `\$__DFFS_PP0_'.
+Generating RTLIL representation for module `\$__DFFS_PP1_'.
+Generating RTLIL representation for module `\$__DFFE_NN0'.
+Generating RTLIL representation for module `\$__DFFE_NN1'.
+Generating RTLIL representation for module `\$__DFFE_PN0'.
+Generating RTLIL representation for module `\$__DFFE_PN1'.
+Generating RTLIL representation for module `\$__DFFE_NP0'.
+Generating RTLIL representation for module `\$__DFFE_NP1'.
+Generating RTLIL representation for module `\$__DFFE_PP0'.
+Generating RTLIL representation for module `\$__DFFE_PP1'.
+Generating RTLIL representation for module `\$__DFFSE_NN0'.
+Generating RTLIL representation for module `\$__DFFSE_NN1'.
+Generating RTLIL representation for module `\$__DFFSE_PN0'.
+Generating RTLIL representation for module `\$__DFFSE_PN1'.
+Generating RTLIL representation for module `\$__DFFSE_NP0'.
+Generating RTLIL representation for module `\$__DFFSE_NP1'.
+Generating RTLIL representation for module `\$__DFFSE_PP0'.
+Generating RTLIL representation for module `\$__DFFSE_PP1'.
+Generating RTLIL representation for module `\FD1S3BX'.
+Successfully finished Verilog frontend.
+Mapping SPI_driver.$auto$simplemap.cc:420:simplemap_dff$222 using \$_DFFE_PP_.
+Mapping SPI_driver.$auto$simplemap.cc:420:simplemap_dff$223 using \$_DFFE_PP_.
+Mapping SPI_driver.$auto$simplemap.cc:420:simplemap_dff$224 using \$_DFFE_PP_.
+Mapping SPI_driver.$auto$simplemap.cc:420:simplemap_dff$225 using \$_DFFE_PP_.
+Mapping SPI_driver.$auto$simplemap.cc:420:simplemap_dff$226 using \$_DFFE_PP_.
+Mapping SPI_driver.$auto$simplemap.cc:420:simplemap_dff$227 using \$_DFFE_PP_.
+Mapping SPI_driver.$auto$simplemap.cc:420:simplemap_dff$228 using \$_DFFE_PP_.
+Mapping SPI_driver.$auto$simplemap.cc:420:simplemap_dff$229 using \$_DFFE_PP_.
+Mapping SPI_driver.$auto$simplemap.cc:420:simplemap_dff$230 using \$_DFFE_PP_.
+Mapping SPI_driver.$auto$simplemap.cc:420:simplemap_dff$231 using \$_DFFE_PP_.
+Mapping SPI_driver.$auto$simplemap.cc:420:simplemap_dff$232 using \$_DFFE_PP_.
+Mapping SPI_driver.$auto$simplemap.cc:420:simplemap_dff$233 using \$_DFFE_PP_.
+Mapping SPI_driver.$auto$simplemap.cc:420:simplemap_dff$234 using \$_DFFE_PP_.
+Mapping SPI_driver.$auto$simplemap.cc:420:simplemap_dff$235 using \$_DFFE_PP_.
+Mapping SPI_driver.$auto$simplemap.cc:420:simplemap_dff$236 using \$_DFFE_PP_.
+Mapping SPI_driver.$auto$simplemap.cc:420:simplemap_dff$237 using \$_DFFE_PP_.
+Mapping SPI_driver.$auto$simplemap.cc:420:simplemap_dff$251 using \$__DFFS_PP0_.
+Mapping SPI_driver.$auto$simplemap.cc:420:simplemap_dff$252 using \$__DFFS_PP0_.
+Mapping SPI_driver.$auto$simplemap.cc:420:simplemap_dff$253 using \$__DFFS_PP0_.
+Mapping SPI_driver.$auto$simplemap.cc:420:simplemap_dff$254 using \$__DFFS_PP0_.
+Mapping SPI_driver.$auto$simplemap.cc:420:simplemap_dff$255 using \$__DFFSE_PP0.
+Mapping SPI_driver.$auto$simplemap.cc:420:simplemap_dff$256 using \$__DFFSE_PP0.
+Mapping SPI_driver.$auto$simplemap.cc:420:simplemap_dff$257 using \$__DFFSE_PP0.
+Mapping SPI_driver.$auto$simplemap.cc:420:simplemap_dff$258 using \$__DFFSE_PP0.
+Mapping SPI_driver.$auto$simplemap.cc:420:simplemap_dff$259 using \$__DFFSE_PP0.
+Mapping SPI_driver.$auto$simplemap.cc:420:simplemap_dff$260 using \$__DFFSE_PP0.
+Mapping SPI_driver.$auto$simplemap.cc:420:simplemap_dff$261 using \$__DFFSE_PP0.
+Mapping SPI_driver.$auto$simplemap.cc:420:simplemap_dff$262 using \$__DFFSE_PP0.
+Mapping SPI_driver.$auto$simplemap.cc:420:simplemap_dff$263 using \$__DFFSE_PP0.
+Mapping SPI_driver.$auto$simplemap.cc:420:simplemap_dff$264 using \$__DFFSE_PP0.
+Mapping SPI_driver.$auto$simplemap.cc:420:simplemap_dff$265 using \$__DFFSE_PP0.
+Mapping SPI_driver.$auto$simplemap.cc:420:simplemap_dff$266 using \$_DFF_P_.
+Mapping SPI_driver.$auto$simplemap.cc:420:simplemap_dff$267 using \$__DFFSE_PP0.
+Mapping SPI_driver.$auto$simplemap.cc:420:simplemap_dff$268 using \$__DFFSE_PP0.
+Mapping SPI_driver.$auto$simplemap.cc:420:simplemap_dff$269 using \$__DFFSE_PP0.
+Mapping SPI_driver.$auto$simplemap.cc:420:simplemap_dff$270 using \$__DFFSE_PP0.
+Mapping SPI_driver.$auto$simplemap.cc:420:simplemap_dff$271 using \$__DFFSE_PP0.
+Mapping SPI_driver.$auto$simplemap.cc:420:simplemap_dff$272 using \$__DFFSE_PP0.
+Mapping SPI_driver.$auto$simplemap.cc:420:simplemap_dff$273 using \$__DFFSE_PP0.
+Mapping SPI_driver.$auto$simplemap.cc:420:simplemap_dff$274 using \$__DFFSE_PP0.
+No more expansions possible.
+
+2.20. Executing OPT_EXPR pass (perform const folding).
+Replacing $_XOR_ cell `$auto$simplemap.cc:85:simplemap_bitop$625' (?0) in module `\SPI_driver' with constant driver `$auto$simplemap.cc:250:simplemap_eqne$623 [0] = $techmap\spi_slave.$eq$spi.v:55$17_Y'.
+Replacing $_XOR_ cell `$auto$simplemap.cc:85:simplemap_bitop$448' (?0) in module `\SPI_driver' with constant driver `$auto$simplemap.cc:250:simplemap_eqne$446 = \spi_slave.byteReceived'.
+Replacing $_XOR_ cell `$auto$simplemap.cc:85:simplemap_bitop$454' (?0) in module `\SPI_driver' with constant driver `$auto$simplemap.cc:250:simplemap_eqne$452 = \spi_slave.byteReceived'.
+Replacing $_XOR_ cell `$auto$simplemap.cc:85:simplemap_bitop$478' (?0) in module `\SPI_driver' with constant driver `$auto$simplemap.cc:250:simplemap_eqne$476 = \spi_slave.byteReceived'.
+Replacing $_XOR_ cell `$auto$simplemap.cc:85:simplemap_bitop$607' (?0) in module `\SPI_driver' with constant driver `$auto$simplemap.cc:250:simplemap_eqne$605 [0] = $techmap\spi_slave.$eq$spi.v:55$17_Y'.
+Replacing $_XOR_ cell `$auto$simplemap.cc:85:simplemap_bitop$340' (?0) in module `\SPI_driver' with constant driver `$auto$simplemap.cc:250:simplemap_eqne$338 [0] = \spi_slave.sckr [0]'.
+Replacing $_XOR_ cell `$auto$simplemap.cc:85:simplemap_bitop$608' (?0) in module `\SPI_driver' with constant driver `$auto$simplemap.cc:250:simplemap_eqne$605 [1] = \spi_slave.sck_fallingEdge'.
+Replacing $_XOR_ cell `$auto$simplemap.cc:85:simplemap_bitop$590' (?0) in module `\SPI_driver' with constant driver `$auto$simplemap.cc:250:simplemap_eqne$587 [1] = \spi_slave.sck_fallingEdge'.
+Replacing $_XOR_ cell `$auto$simplemap.cc:85:simplemap_bitop$599' (?0) in module `\SPI_driver' with constant driver `$auto$simplemap.cc:250:simplemap_eqne$596 [1] = \spi_slave.sck_fallingEdge'.
+Replacing $_XOR_ cell `$auto$simplemap.cc:85:simplemap_bitop$598' (?0) in module `\SPI_driver' with constant driver `$auto$simplemap.cc:250:simplemap_eqne$596 [0] = $techmap\spi_slave.$eq$spi.v:55$17_Y'.
+Replacing $_XOR_ cell `$auto$simplemap.cc:85:simplemap_bitop$589' (?0) in module `\SPI_driver' with constant driver `$auto$simplemap.cc:250:simplemap_eqne$587 [0] = $techmap\spi_slave.$eq$spi.v:55$17_Y'.
+Replacing $_XOR_ cell `$auto$simplemap.cc:85:simplemap_bitop$460' (?0) in module `\SPI_driver' with constant driver `$auto$simplemap.cc:250:simplemap_eqne$458 = \spi_slave.byteReceived'.
+Replacing $_XOR_ cell `$auto$simplemap.cc:85:simplemap_bitop$351' (?0) in module `\SPI_driver' with constant driver `$auto$simplemap.cc:250:simplemap_eqne$348 [1] = \spi_slave.sckr [1]'.
+Replacing $_XOR_ cell `$auto$simplemap.cc:85:simplemap_bitop$538' (?0) in module `\SPI_driver' with constant driver `$auto$simplemap.cc:250:simplemap_eqne$536 = \spi_slave.sck_risingEdge'.
+Replacing $_XOR_ cell `$auto$simplemap.cc:85:simplemap_bitop$496' (?0) in module `\SPI_driver' with constant driver `$auto$simplemap.cc:250:simplemap_eqne$494 = \spi_slave.sck_risingEdge'.
+Replacing $_XOR_ cell `$auto$simplemap.cc:85:simplemap_bitop$616' (?0) in module `\SPI_driver' with constant driver `$auto$simplemap.cc:250:simplemap_eqne$614 [0] = $techmap\spi_slave.$eq$spi.v:55$17_Y'.
+Replacing $_XOR_ cell `$auto$simplemap.cc:85:simplemap_bitop$626' (?0) in module `\SPI_driver' with constant driver `$auto$simplemap.cc:250:simplemap_eqne$623 [1] = \spi_slave.sck_fallingEdge'.
+Replacing $_XOR_ cell `$auto$simplemap.cc:85:simplemap_bitop$617' (?0) in module `\SPI_driver' with constant driver `$auto$simplemap.cc:250:simplemap_eqne$614 [1] = \spi_slave.sck_fallingEdge'.
+Replacing $_XOR_ cell `$auto$simplemap.cc:85:simplemap_bitop$490' (?0) in module `\SPI_driver' with constant driver `$auto$simplemap.cc:250:simplemap_eqne$488 = \spi_slave.byteReceived'.
+Replacing $_XOR_ cell `$auto$simplemap.cc:85:simplemap_bitop$466' (?0) in module `\SPI_driver' with constant driver `$auto$simplemap.cc:250:simplemap_eqne$464 = \spi_slave.byteReceived'.
+Replacing $_XOR_ cell `$auto$simplemap.cc:85:simplemap_bitop$581' (?0) in module `\SPI_driver' with constant driver `$auto$simplemap.cc:250:simplemap_eqne$578 [1] = \spi_slave.sck_fallingEdge'.
+Replacing $_XOR_ cell `$auto$simplemap.cc:85:simplemap_bitop$580' (?0) in module `\SPI_driver' with constant driver `$auto$simplemap.cc:250:simplemap_eqne$578 [0] = $techmap\spi_slave.$eq$spi.v:55$17_Y'.
+Replacing $_XOR_ cell `$auto$simplemap.cc:85:simplemap_bitop$562' (?0) in module `\SPI_driver' with constant driver `$auto$simplemap.cc:250:simplemap_eqne$560 [0] = $techmap\spi_slave.$eq$spi.v:55$17_Y'.
+Replacing $_XOR_ cell `$auto$simplemap.cc:85:simplemap_bitop$544' (?0) in module `\SPI_driver' with constant driver `$auto$simplemap.cc:250:simplemap_eqne$542 = \spi_slave.sck_risingEdge'.
+Replacing $_XOR_ cell `$auto$simplemap.cc:85:simplemap_bitop$532' (?0) in module `\SPI_driver' with constant driver `$auto$simplemap.cc:250:simplemap_eqne$530 = \spi_slave.sck_risingEdge'.
+Replacing $_XOR_ cell `$auto$simplemap.cc:85:simplemap_bitop$550' (?0) in module `\SPI_driver' with constant driver `$auto$simplemap.cc:250:simplemap_eqne$548 = \spi_slave.sck_risingEdge'.
+Replacing $_XOR_ cell `$auto$simplemap.cc:85:simplemap_bitop$430' (?0) in module `\SPI_driver' with constant driver `$auto$simplemap.cc:250:simplemap_eqne$428 = \dataNeeded'.
+Replacing $_XOR_ cell `$auto$simplemap.cc:85:simplemap_bitop$436' (?0) in module `\SPI_driver' with constant driver `$auto$simplemap.cc:250:simplemap_eqne$434 = \dataNeeded'.
+Replacing $_XOR_ cell `$auto$simplemap.cc:85:simplemap_bitop$563' (?0) in module `\SPI_driver' with constant driver `$auto$simplemap.cc:250:simplemap_eqne$560 [1] = \spi_slave.sck_fallingEdge'.
+Replacing $_MUX_ cell `$auto$simplemap.cc:277:simplemap_mux$384' (??0) in module `\SPI_driver' with constant driver `$auto$alumacc.cc:474:replace_alu$158.BB [0] = \spi_slave.bitcnt [0]'.
+Replacing $_AND_ cell `$auto$simplemap.cc:85:simplemap_bitop$395' (const_and) in module `\SPI_driver' with constant driver `$techmap$auto$alumacc.cc:474:replace_alu$158.lcu.$and$<techmap.v>:212$376_Y = 1'0'.
+Replacing $_AND_ cell `$auto$simplemap.cc:85:simplemap_bitop$359' (and_or_buffer) in module `\SPI_driver' with constant driver `$techmap$auto$alumacc.cc:474:replace_alu$158.$and$<techmap.v>:260$240_Y [0] = \spi_slave.bitcnt [0]'.
+Replacing $_OR_ cell `$auto$simplemap.cc:85:simplemap_bitop$392' (and_or_buffer) in module `\SPI_driver' with constant driver `$auto$alumacc.cc:474:replace_alu$158.lcu.g [0] = \spi_slave.bitcnt [0]'.
+Replacing $_MUX_ cell `$auto$simplemap.cc:277:simplemap_mux$385' (??0) in module `\SPI_driver' with constant driver `$auto$alumacc.cc:474:replace_alu$158.BB [1] = \spi_slave.bitcnt [1]'.
+Replacing $_XOR_ cell `$auto$simplemap.cc:85:simplemap_bitop$367' (0?) in module `\SPI_driver' with constant driver `$auto$alumacc.cc:490:replace_alu$159 [1] = \spi_slave.bitcnt [1]'.
+Replacing $_AND_ cell `$auto$simplemap.cc:85:simplemap_bitop$360' (const_and) in module `\SPI_driver' with constant driver `$techmap$auto$alumacc.cc:474:replace_alu$158.$and$<techmap.v>:260$240_Y [1] = 1'0'.
+Replacing $_OR_ cell `$auto$simplemap.cc:85:simplemap_bitop$391' (and_or_buffer) in module `\SPI_driver' with constant driver `$auto$alumacc.cc:474:replace_alu$158.lcu.g [1] = $techmap$auto$alumacc.cc:474:replace_alu$158.lcu.$and$<techmap.v>:221$378_Y'.
+Replacing $_XOR_ cell `$auto$simplemap.cc:85:simplemap_bitop$508' (?0) in module `\SPI_driver' with constant driver `$auto$simplemap.cc:250:simplemap_eqne$506 = \spi_slave.sck_risingEdge'.
+Replacing $_XOR_ cell `$auto$simplemap.cc:85:simplemap_bitop$502' (?0) in module `\SPI_driver' with constant driver `$auto$simplemap.cc:250:simplemap_eqne$500 = \spi_slave.sck_risingEdge'.
+Replacing $_XOR_ cell `$auto$simplemap.cc:85:simplemap_bitop$556' (?0) in module `\SPI_driver' with constant driver `$auto$simplemap.cc:250:simplemap_eqne$554 = \spi_slave.sck_risingEdge'.
+Replacing $_XOR_ cell `$auto$simplemap.cc:85:simplemap_bitop$571' (?0) in module `\SPI_driver' with constant driver `$auto$simplemap.cc:250:simplemap_eqne$569 [0] = $techmap\spi_slave.$eq$spi.v:55$17_Y'.
+Replacing $_XOR_ cell `$auto$simplemap.cc:85:simplemap_bitop$572' (?0) in module `\SPI_driver' with constant driver `$auto$simplemap.cc:250:simplemap_eqne$569 [1] = \spi_slave.sck_fallingEdge'.
+Replacing $_XOR_ cell `$auto$simplemap.cc:85:simplemap_bitop$484' (?0) in module `\SPI_driver' with constant driver `$auto$simplemap.cc:250:simplemap_eqne$482 = \spi_slave.byteReceived'.
+Replacing $_XOR_ cell `$auto$simplemap.cc:85:simplemap_bitop$472' (?0) in module `\SPI_driver' with constant driver `$auto$simplemap.cc:250:simplemap_eqne$470 = \spi_slave.byteReceived'.
+Replacing $_MUX_ cell `$auto$simplemap.cc:277:simplemap_mux$206' (x??) in module `\SPI_driver' with constant driver `$0\receivedDataBuffer[7:0] [0] = \spi_slave.receivedData [0]'.
+Replacing $_MUX_ cell `$auto$simplemap.cc:277:simplemap_mux$207' (x??) in module `\SPI_driver' with constant driver `$0\receivedDataBuffer[7:0] [1] = \spi_slave.receivedData [1]'.
+Replacing $_MUX_ cell `$auto$simplemap.cc:277:simplemap_mux$208' (x??) in module `\SPI_driver' with constant driver `$0\receivedDataBuffer[7:0] [2] = \spi_slave.receivedData [2]'.
+Replacing $_MUX_ cell `$auto$simplemap.cc:277:simplemap_mux$209' (x??) in module `\SPI_driver' with constant driver `$0\receivedDataBuffer[7:0] [3] = \spi_slave.receivedData [3]'.
+Replacing $_MUX_ cell `$auto$simplemap.cc:277:simplemap_mux$210' (x??) in module `\SPI_driver' with constant driver `$0\receivedDataBuffer[7:0] [4] = \spi_slave.receivedData [4]'.
+Replacing $_MUX_ cell `$auto$simplemap.cc:277:simplemap_mux$211' (x??) in module `\SPI_driver' with constant driver `$0\receivedDataBuffer[7:0] [5] = \spi_slave.receivedData [5]'.
+Replacing $_MUX_ cell `$auto$simplemap.cc:277:simplemap_mux$212' (x??) in module `\SPI_driver' with constant driver `$0\receivedDataBuffer[7:0] [6] = \spi_slave.receivedData [6]'.
+Replacing $_MUX_ cell `$auto$simplemap.cc:277:simplemap_mux$213' (x??) in module `\SPI_driver' with constant driver `$0\receivedDataBuffer[7:0] [7] = \spi_slave.receivedData [7]'.
+Replacing $_MUX_ cell `$auto$simplemap.cc:277:simplemap_mux$214' (x??) in module `\SPI_driver' with constant driver `$0\dataToSend[7:0] [0] = \receivedDataBuffer [0]'.
+Replacing $_MUX_ cell `$auto$simplemap.cc:277:simplemap_mux$215' (x??) in module `\SPI_driver' with constant driver `$0\dataToSend[7:0] [1] = \receivedDataBuffer [1]'.
+Replacing $_MUX_ cell `$auto$simplemap.cc:277:simplemap_mux$216' (x??) in module `\SPI_driver' with constant driver `$0\dataToSend[7:0] [2] = \receivedDataBuffer [2]'.
+Replacing $_MUX_ cell `$auto$simplemap.cc:277:simplemap_mux$217' (x??) in module `\SPI_driver' with constant driver `$0\dataToSend[7:0] [3] = \receivedDataBuffer [3]'.
+Replacing $_MUX_ cell `$auto$simplemap.cc:277:simplemap_mux$218' (x??) in module `\SPI_driver' with constant driver `$0\dataToSend[7:0] [4] = \receivedDataBuffer [4]'.
+Replacing $_MUX_ cell `$auto$simplemap.cc:277:simplemap_mux$219' (x??) in module `\SPI_driver' with constant driver `$0\dataToSend[7:0] [5] = \receivedDataBuffer [5]'.
+Replacing $_MUX_ cell `$auto$simplemap.cc:277:simplemap_mux$220' (x??) in module `\SPI_driver' with constant driver `$0\dataToSend[7:0] [6] = \receivedDataBuffer [6]'.
+Replacing $_MUX_ cell `$auto$simplemap.cc:277:simplemap_mux$221' (x??) in module `\SPI_driver' with constant driver `$0\dataToSend[7:0] [7] = \receivedDataBuffer [7]'.
+Replacing $_XOR_ cell `$auto$simplemap.cc:85:simplemap_bitop$526' (?0) in module `\SPI_driver' with constant driver `$auto$simplemap.cc:250:simplemap_eqne$524 = \spi_slave.sck_risingEdge'.
+Replacing $_XOR_ cell `$auto$simplemap.cc:85:simplemap_bitop$418' (?0) in module `\SPI_driver' with constant driver `$auto$simplemap.cc:250:simplemap_eqne$416 = \dataNeeded'.
+Replacing $_XOR_ cell `$auto$simplemap.cc:85:simplemap_bitop$424' (?0) in module `\SPI_driver' with constant driver `$auto$simplemap.cc:250:simplemap_eqne$422 = \dataNeeded'.
+Replacing $_XOR_ cell `$auto$simplemap.cc:85:simplemap_bitop$412' (?0) in module `\SPI_driver' with constant driver `$auto$simplemap.cc:250:simplemap_eqne$410 = \dataNeeded'.
+Replacing $_XOR_ cell `$auto$simplemap.cc:85:simplemap_bitop$406' (?0) in module `\SPI_driver' with constant driver `$auto$simplemap.cc:250:simplemap_eqne$404 = \dataNeeded'.
+Replacing $_XOR_ cell `$auto$simplemap.cc:85:simplemap_bitop$520' (?0) in module `\SPI_driver' with constant driver `$auto$simplemap.cc:250:simplemap_eqne$518 = \spi_slave.sck_risingEdge'.
+Replacing $_XOR_ cell `$auto$simplemap.cc:85:simplemap_bitop$514' (?0) in module `\SPI_driver' with constant driver `$auto$simplemap.cc:250:simplemap_eqne$512 = \spi_slave.sck_risingEdge'.
+Optimizing away select inverter for $_MUX_ cell `$auto$simplemap.cc:277:simplemap_mux$279' in module `SPI_driver'.
+Optimizing away select inverter for $_MUX_ cell `$auto$simplemap.cc:277:simplemap_mux$280' in module `SPI_driver'.
+Optimizing away select inverter for $_MUX_ cell `$auto$simplemap.cc:277:simplemap_mux$281' in module `SPI_driver'.
+Optimizing away select inverter for $_MUX_ cell `$auto$simplemap.cc:277:simplemap_mux$282' in module `SPI_driver'.
+Optimizing away select inverter for $_MUX_ cell `$auto$simplemap.cc:277:simplemap_mux$283' in module `SPI_driver'.
+Optimizing away select inverter for $_MUX_ cell `$auto$simplemap.cc:277:simplemap_mux$284' in module `SPI_driver'.
+Optimizing away select inverter for $_MUX_ cell `$auto$simplemap.cc:277:simplemap_mux$285' in module `SPI_driver'.
+Optimizing away select inverter for $_MUX_ cell `$auto$simplemap.cc:277:simplemap_mux$286' in module `SPI_driver'.
+Replacing $_XOR_ cell `$auto$simplemap.cc:85:simplemap_bitop$362' (?0) in module `\SPI_driver' with constant driver `$techmap$auto$alumacc.cc:474:replace_alu$158.$xor$<techmap.v>:263$242_Y [0] = $auto$alumacc.cc:474:replace_alu$158.lcu.p [0]'.
+Optimizing away select inverter for $_MUX_ cell `$auto$simplemap.cc:277:simplemap_mux$290' in module `SPI_driver'.
+Optimizing away select inverter for $_MUX_ cell `$auto$simplemap.cc:277:simplemap_mux$291' in module `SPI_driver'.
+Replacing $_MUX_ cell `$auto$simplemap.cc:277:simplemap_mux$386' (??0) in module `\SPI_driver' with constant driver `$auto$alumacc.cc:474:replace_alu$158.BB [2] = \spi_slave.bitcnt [2]'.
+Replacing $_XOR_ cell `$auto$simplemap.cc:85:simplemap_bitop$368' (0?) in module `\SPI_driver' with constant driver `$auto$alumacc.cc:490:replace_alu$159 [2] = \spi_slave.bitcnt [2]'.
+Optimizing away select inverter for $_MUX_ cell `$auto$simplemap.cc:277:simplemap_mux$292' in module `SPI_driver'.
+Optimizing away select inverter for $_MUX_ cell `$auto$simplemap.cc:277:simplemap_mux$309' in module `SPI_driver'.
+Optimizing away select inverter for $_MUX_ cell `$auto$simplemap.cc:277:simplemap_mux$301' in module `SPI_driver'.
+Optimizing away select inverter for $_MUX_ cell `$auto$simplemap.cc:277:simplemap_mux$310' in module `SPI_driver'.
+Optimizing away select inverter for $_MUX_ cell `$auto$simplemap.cc:277:simplemap_mux$302' in module `SPI_driver'.
+Optimizing away select inverter for $_MUX_ cell `$auto$simplemap.cc:277:simplemap_mux$311' in module `SPI_driver'.
+Optimizing away select inverter for $_MUX_ cell `$auto$simplemap.cc:277:simplemap_mux$303' in module `SPI_driver'.
+Optimizing away select inverter for $_MUX_ cell `$auto$simplemap.cc:277:simplemap_mux$312' in module `SPI_driver'.
+Optimizing away select inverter for $_MUX_ cell `$auto$simplemap.cc:277:simplemap_mux$304' in module `SPI_driver'.
+Optimizing away select inverter for $_MUX_ cell `$auto$simplemap.cc:277:simplemap_mux$313' in module `SPI_driver'.
+Optimizing away select inverter for $_MUX_ cell `$auto$simplemap.cc:277:simplemap_mux$305' in module `SPI_driver'.
+Optimizing away select inverter for $_MUX_ cell `$auto$simplemap.cc:277:simplemap_mux$314' in module `SPI_driver'.
+Optimizing away select inverter for $_MUX_ cell `$auto$simplemap.cc:277:simplemap_mux$306' in module `SPI_driver'.
+Optimizing away select inverter for $_MUX_ cell `$auto$simplemap.cc:277:simplemap_mux$315' in module `SPI_driver'.
+Optimizing away select inverter for $_MUX_ cell `$auto$simplemap.cc:277:simplemap_mux$307' in module `SPI_driver'.
+Optimizing away select inverter for $_MUX_ cell `$auto$simplemap.cc:277:simplemap_mux$316' in module `SPI_driver'.
+Optimizing away select inverter for $_MUX_ cell `$auto$simplemap.cc:277:simplemap_mux$308' in module `SPI_driver'.
+Replacing $_XOR_ cell `$auto$simplemap.cc:85:simplemap_bitop$400' (?0) in module `\SPI_driver' with constant driver `$auto$simplemap.cc:250:simplemap_eqne$398 = \dataNeeded'.
+Replacing $_XOR_ cell `$auto$simplemap.cc:85:simplemap_bitop$442' (?0) in module `\SPI_driver' with constant driver `$auto$simplemap.cc:250:simplemap_eqne$440 = \dataNeeded'.
+Replacing $_MUX_ cell `$auto$simplemap.cc:277:simplemap_mux$279' (?x?) in module `\SPI_driver' with constant driver `$techmap\spi_slave.$procmux$139_Y [0] = \spi_slave.mosir [1]'.
+Replacing $_MUX_ cell `$auto$simplemap.cc:277:simplemap_mux$280' (?x?) in module `\SPI_driver' with constant driver `$techmap\spi_slave.$procmux$139_Y [1] = \spi_slave.receivedData [0]'.
+Replacing $_MUX_ cell `$auto$simplemap.cc:277:simplemap_mux$281' (?x?) in module `\SPI_driver' with constant driver `$techmap\spi_slave.$procmux$139_Y [2] = \spi_slave.receivedData [1]'.
+Replacing $_MUX_ cell `$auto$simplemap.cc:277:simplemap_mux$282' (?x?) in module `\SPI_driver' with constant driver `$techmap\spi_slave.$procmux$139_Y [3] = \spi_slave.receivedData [2]'.
+Replacing $_MUX_ cell `$auto$simplemap.cc:277:simplemap_mux$283' (?x?) in module `\SPI_driver' with constant driver `$techmap\spi_slave.$procmux$139_Y [4] = \spi_slave.receivedData [3]'.
+Replacing $_MUX_ cell `$auto$simplemap.cc:277:simplemap_mux$284' (?x?) in module `\SPI_driver' with constant driver `$techmap\spi_slave.$procmux$139_Y [5] = \spi_slave.receivedData [4]'.
+Replacing $_MUX_ cell `$auto$simplemap.cc:277:simplemap_mux$285' (?x?) in module `\SPI_driver' with constant driver `$techmap\spi_slave.$procmux$139_Y [6] = \spi_slave.receivedData [5]'.
+Replacing $_MUX_ cell `$auto$simplemap.cc:277:simplemap_mux$286' (?x?) in module `\SPI_driver' with constant driver `$techmap\spi_slave.$procmux$139_Y [7] = \spi_slave.receivedData [6]'.
+Replacing $_MUX_ cell `$auto$simplemap.cc:277:simplemap_mux$290' (?x?) in module `\SPI_driver' with constant driver `$techmap\spi_slave.$procmux$134_Y [0] = $auto$alumacc.cc:474:replace_alu$158.lcu.p [0]'.
+Replacing $_MUX_ cell `$auto$simplemap.cc:277:simplemap_mux$291' (?x?) in module `\SPI_driver' with constant driver `$techmap\spi_slave.$procmux$134_Y [1] = $techmap$auto$alumacc.cc:474:replace_alu$158.$xor$<techmap.v>:263$242_Y [1]'.
+Replacing $_MUX_ cell `$auto$simplemap.cc:277:simplemap_mux$292' (?x?) in module `\SPI_driver' with constant driver `$techmap\spi_slave.$procmux$134_Y [2] = $techmap$auto$alumacc.cc:474:replace_alu$158.$xor$<techmap.v>:263$242_Y [2]'.
+Replacing $_MUX_ cell `$auto$simplemap.cc:277:simplemap_mux$309' (0x?) in module `\SPI_driver' with constant driver `$techmap\spi_slave.$procmux$126_Y [0] = 1'0'.
+Replacing $_MUX_ cell `$auto$simplemap.cc:277:simplemap_mux$310' (?x?) in module `\SPI_driver' with constant driver `$techmap\spi_slave.$procmux$126_Y [1] = \spi_slave.dataToSendBuffer [0]'.
+Replacing $_MUX_ cell `$auto$simplemap.cc:277:simplemap_mux$311' (?x?) in module `\SPI_driver' with constant driver `$techmap\spi_slave.$procmux$126_Y [2] = \spi_slave.dataToSendBuffer [1]'.
+Replacing $_MUX_ cell `$auto$simplemap.cc:277:simplemap_mux$312' (?x?) in module `\SPI_driver' with constant driver `$techmap\spi_slave.$procmux$126_Y [3] = \spi_slave.dataToSendBuffer [2]'.
+Replacing $_MUX_ cell `$auto$simplemap.cc:277:simplemap_mux$313' (?x?) in module `\SPI_driver' with constant driver `$techmap\spi_slave.$procmux$126_Y [4] = \spi_slave.dataToSendBuffer [3]'.
+Replacing $_MUX_ cell `$auto$simplemap.cc:277:simplemap_mux$314' (?x?) in module `\SPI_driver' with constant driver `$techmap\spi_slave.$procmux$126_Y [5] = \spi_slave.dataToSendBuffer [4]'.
+Replacing $_MUX_ cell `$auto$simplemap.cc:277:simplemap_mux$315' (?x?) in module `\SPI_driver' with constant driver `$techmap\spi_slave.$procmux$126_Y [6] = \spi_slave.dataToSendBuffer [5]'.
+Replacing $_MUX_ cell `$auto$simplemap.cc:277:simplemap_mux$316' (?x?) in module `\SPI_driver' with constant driver `$techmap\spi_slave.$procmux$126_Y [7] = \spi_slave.dataToSendBuffer [6]'.
+
+2.21. Executing SIMPLEMAP pass (map simple cells to gate primitives).
+
+2.22. Executing ECP5_FFINIT pass (implement FF init values).
+Handling FF init values in SPI_driver.
+FF init value for cell $auto$simplemap.cc:420:simplemap_dff$258 (TRELLIS_FF): \spi_slave.receivedData [0] = 0
+FF init value for cell $auto$simplemap.cc:420:simplemap_dff$259 (TRELLIS_FF): \spi_slave.receivedData [1] = 0
+FF init value for cell $auto$simplemap.cc:420:simplemap_dff$260 (TRELLIS_FF): \spi_slave.receivedData [2] = 0
+FF init value for cell $auto$simplemap.cc:420:simplemap_dff$261 (TRELLIS_FF): \spi_slave.receivedData [3] = 0
+FF init value for cell $auto$simplemap.cc:420:simplemap_dff$262 (TRELLIS_FF): \spi_slave.receivedData [4] = 0
+FF init value for cell $auto$simplemap.cc:420:simplemap_dff$263 (TRELLIS_FF): \spi_slave.receivedData [5] = 0
+FF init value for cell $auto$simplemap.cc:420:simplemap_dff$264 (TRELLIS_FF): \spi_slave.receivedData [6] = 0
+FF init value for cell $auto$simplemap.cc:420:simplemap_dff$265 (TRELLIS_FF): \spi_slave.receivedData [7] = 0
+FF init value for cell $auto$simplemap.cc:420:simplemap_dff$266 (TRELLIS_FF): \spi_slave.byteReceived = 0
+
+2.23. Executing TECHMAP pass (map to technology primitives).
+
+2.23.1. Executing Verilog-2005 frontend.
+Parsing Verilog input from `/usr/local/bin/../share/yosys/ecp5/latches_map.v' to AST representation.
+Generating RTLIL representation for module `\$_DLATCH_N_'.
+Generating RTLIL representation for module `\$_DLATCH_P_'.
+Successfully finished Verilog frontend.
+No more expansions possible.
+
+2.24. Executing ABC pass (technology mapping using ABC).
+
+2.24.1. Extracting gate netlist of module `\SPI_driver' to `<abc-temp-dir>/input.blif'..
+Extracted 42 gates and 65 wires to a netlist network with 21 inputs and 22 outputs.
+
+2.24.1.1. Executing ABC.
+Running ABC command: <yosys-exe-dir>/yosys-abc -s -f <abc-temp-dir>/abc.script 2>&1
+ABC: ABC command line: "source <abc-temp-dir>/abc.script".
+ABC: 
+ABC: + read_blif <abc-temp-dir>/input.blif 
+ABC: + read_lut <abc-temp-dir>/lutdefs.txt 
+ABC: + strash 
+ABC: + ifraig 
+ABC: + scorr 
+ABC: Warning: The network is combinational (run "fraig" or "fraig_sweep").
+ABC: + dc2 
+ABC: + dretime 
+ABC: + strash 
+ABC: + dch -f 
+ABC: + if 
+ABC: + mfs2 
+ABC: + lutpack -S 1 
+ABC: + dress 
+ABC: Total number of equiv classes                =      18.
+ABC: Participating nodes from both networks       =      55.
+ABC: Participating nodes from the first network   =      24. (  96.00 % of nodes)
+ABC: Participating nodes from the second network  =      31. ( 124.00 % of nodes)
+ABC: Node pairs (any polarity)                    =      24. (  96.00 % of names can be moved)
+ABC: Node pairs (same polarity)                   =      24. (  96.00 % of names can be moved)
+ABC: Total runtime =     0.00 sec
+ABC: + write_blif <abc-temp-dir>/output.blif 
+
+2.24.1.2. Re-integrating ABC results.
+ABC RESULTS:              $lut cells:       48
+ABC RESULTS:        internal signals:       22
+ABC RESULTS:           input signals:       21
+ABC RESULTS:          output signals:       22
+Removing temp directory.
+Removed 0 unused cells and 309 unused wires.
+
+2.25. Executing TECHMAP pass (map to technology primitives).
+
+2.25.1. Executing Verilog-2005 frontend.
+Parsing Verilog input from `/usr/local/bin/../share/yosys/ecp5/cells_map.v' to AST representation.
+Generating RTLIL representation for module `\$_DFF_N_'.
+Generating RTLIL representation for module `\$_DFF_P_'.
+Generating RTLIL representation for module `\$_DFFE_NN_'.
+Generating RTLIL representation for module `\$_DFFE_PN_'.
+Generating RTLIL representation for module `\$_DFFE_NP_'.
+Generating RTLIL representation for module `\$_DFFE_PP_'.
+Generating RTLIL representation for module `\$_DFF_NN0_'.
+Generating RTLIL representation for module `\$_DFF_NN1_'.
+Generating RTLIL representation for module `\$_DFF_PN0_'.
+Generating RTLIL representation for module `\$_DFF_PN1_'.
+Generating RTLIL representation for module `\$_DFF_NP0_'.
+Generating RTLIL representation for module `\$_DFF_NP1_'.
+Generating RTLIL representation for module `\$_DFF_PP0_'.
+Generating RTLIL representation for module `\$_DFF_PP1_'.
+Generating RTLIL representation for module `\$__DFFS_NN0_'.
+Generating RTLIL representation for module `\$__DFFS_NN1_'.
+Generating RTLIL representation for module `\$__DFFS_PN0_'.
+Generating RTLIL representation for module `\$__DFFS_PN1_'.
+Generating RTLIL representation for module `\$__DFFS_NP0_'.
+Generating RTLIL representation for module `\$__DFFS_NP1_'.
+Generating RTLIL representation for module `\$__DFFS_PP0_'.
+Generating RTLIL representation for module `\$__DFFS_PP1_'.
+Generating RTLIL representation for module `\$__DFFE_NN0'.
+Generating RTLIL representation for module `\$__DFFE_NN1'.
+Generating RTLIL representation for module `\$__DFFE_PN0'.
+Generating RTLIL representation for module `\$__DFFE_PN1'.
+Generating RTLIL representation for module `\$__DFFE_NP0'.
+Generating RTLIL representation for module `\$__DFFE_NP1'.
+Generating RTLIL representation for module `\$__DFFE_PP0'.
+Generating RTLIL representation for module `\$__DFFE_PP1'.
+Generating RTLIL representation for module `\$__DFFSE_NN0'.
+Generating RTLIL representation for module `\$__DFFSE_NN1'.
+Generating RTLIL representation for module `\$__DFFSE_PN0'.
+Generating RTLIL representation for module `\$__DFFSE_PN1'.
+Generating RTLIL representation for module `\$__DFFSE_NP0'.
+Generating RTLIL representation for module `\$__DFFSE_NP1'.
+Generating RTLIL representation for module `\$__DFFSE_PP0'.
+Generating RTLIL representation for module `\$__DFFSE_PP1'.
+Generating RTLIL representation for module `\FD1S3BX'.
+Generating RTLIL representation for module `\$lut'.
+Successfully finished Verilog frontend.
+
+2.25.2. Executing AST frontend in derive mode using pre-parsed AST for module `\$lut'.
+Parameter \WIDTH = 3
+Parameter \LUT = 8'00000001
+Generating RTLIL representation for module `$paramod\$lut\WIDTH=3\LUT=8'00000001'.
+
+2.25.3. Continuing TECHMAP pass.
+Mapping SPI_driver.$abc$689$auto$blifparse.cc:492:parse_blif$691 using $paramod\$lut\WIDTH=3\LUT=8'00000001.
+
+2.25.4. Executing AST frontend in derive mode using pre-parsed AST for module `\$lut'.
+Parameter \WIDTH = 3
+Parameter \LUT = 8'11001010
+Generating RTLIL representation for module `$paramod\$lut\WIDTH=3\LUT=8'11001010'.
+
+2.25.5. Continuing TECHMAP pass.
+Mapping SPI_driver.$abc$689$auto$blifparse.cc:492:parse_blif$697 using $paramod\$lut\WIDTH=3\LUT=8'11001010.
+Mapping SPI_driver.$abc$689$auto$blifparse.cc:492:parse_blif$698 using $paramod\$lut\WIDTH=3\LUT=8'11001010.
+
+2.25.6. Executing AST frontend in derive mode using pre-parsed AST for module `\$lut'.
+Parameter \WIDTH = 2
+Parameter \LUT = 4'0100
+Generating RTLIL representation for module `$paramod\$lut\WIDTH=2\LUT=4'0100'.
+
+2.25.7. Continuing TECHMAP pass.
+Mapping SPI_driver.$abc$689$auto$blifparse.cc:492:parse_blif$699 using $paramod\$lut\WIDTH=2\LUT=4'0100.
+
+2.25.8. Executing AST frontend in derive mode using pre-parsed AST for module `\$lut'.
+Parameter \WIDTH = 3
+Parameter \LUT = 8'11110100
+Generating RTLIL representation for module `$paramod\$lut\WIDTH=3\LUT=8'11110100'.
+
+2.25.9. Continuing TECHMAP pass.
+Mapping SPI_driver.$abc$689$auto$blifparse.cc:492:parse_blif$700 using $paramod\$lut\WIDTH=3\LUT=8'11110100.
+Mapping SPI_driver.$abc$689$auto$blifparse.cc:492:parse_blif$692 using $paramod\$lut\WIDTH=3\LUT=8'11001010.
+
+2.25.10. Executing AST frontend in derive mode using pre-parsed AST for module `\$lut'.
+Parameter \WIDTH = 3
+Parameter \LUT = 8'10000000
+Generating RTLIL representation for module `$paramod\$lut\WIDTH=3\LUT=8'10000000'.
+
+2.25.11. Continuing TECHMAP pass.
+Mapping SPI_driver.$abc$689$auto$blifparse.cc:492:parse_blif$702 using $paramod\$lut\WIDTH=3\LUT=8'10000000.
+
+2.25.12. Executing AST frontend in derive mode using pre-parsed AST for module `\$lut'.
+Parameter \WIDTH = 3
+Parameter \LUT = 8'01000000
+Generating RTLIL representation for module `$paramod\$lut\WIDTH=3\LUT=8'01000000'.
+
+2.25.13. Continuing TECHMAP pass.
+Mapping SPI_driver.$abc$689$auto$blifparse.cc:492:parse_blif$701 using $paramod\$lut\WIDTH=3\LUT=8'01000000.
+Mapping SPI_driver.$abc$689$auto$blifparse.cc:492:parse_blif$703 using $paramod\$lut\WIDTH=2\LUT=4'0100.
+
+2.25.14. Executing AST frontend in derive mode using pre-parsed AST for module `\$lut'.
+Parameter \WIDTH = 2
+Parameter \LUT = 4'0110
+Generating RTLIL representation for module `$paramod\$lut\WIDTH=2\LUT=4'0110'.
+
+2.25.15. Continuing TECHMAP pass.
+Mapping SPI_driver.$abc$689$auto$blifparse.cc:492:parse_blif$704 using $paramod\$lut\WIDTH=2\LUT=4'0110.
+
+2.25.16. Executing AST frontend in derive mode using pre-parsed AST for module `\$lut'.
+Parameter \WIDTH = 3
+Parameter \LUT = 8'01111000
+Generating RTLIL representation for module `$paramod\$lut\WIDTH=3\LUT=8'01111000'.
+
+2.25.17. Continuing TECHMAP pass.
+Mapping SPI_driver.$abc$689$auto$blifparse.cc:492:parse_blif$705 using $paramod\$lut\WIDTH=3\LUT=8'01111000.
+
+2.25.18. Executing AST frontend in derive mode using pre-parsed AST for module `\$lut'.
+Parameter \WIDTH = 1
+Parameter \LUT = 2'01
+Generating RTLIL representation for module `$paramod\$lut\WIDTH=1\LUT=2'01'.
+
+2.25.19. Continuing TECHMAP pass.
+Mapping SPI_driver.$abc$689$auto$blifparse.cc:492:parse_blif$706 using $paramod\$lut\WIDTH=1\LUT=2'01.
+Mapping SPI_driver.$abc$689$auto$blifparse.cc:492:parse_blif$708 using $paramod\$lut\WIDTH=3\LUT=8'11110100.
+Mapping SPI_driver.$abc$689$auto$blifparse.cc:492:parse_blif$710 using $paramod\$lut\WIDTH=3\LUT=8'11110100.
+Mapping SPI_driver.$abc$689$auto$blifparse.cc:492:parse_blif$711 using $paramod\$lut\WIDTH=3\LUT=8'11110100.
+Mapping SPI_driver.$abc$689$auto$blifparse.cc:492:parse_blif$707 using $paramod\$lut\WIDTH=3\LUT=8'11110100.
+Mapping SPI_driver.$abc$689$auto$blifparse.cc:492:parse_blif$712 using $paramod\$lut\WIDTH=3\LUT=8'11110100.
+
+2.25.20. Executing AST frontend in derive mode using pre-parsed AST for module `\$lut'.
+Parameter \WIDTH = 2
+Parameter \LUT = 4'1000
+Generating RTLIL representation for module `$paramod\$lut\WIDTH=2\LUT=4'1000'.
+
+2.25.21. Continuing TECHMAP pass.
+Mapping SPI_driver.$abc$689$auto$blifparse.cc:492:parse_blif$690 using $paramod\$lut\WIDTH=2\LUT=4'1000.
+Mapping SPI_driver.$abc$689$auto$blifparse.cc:492:parse_blif$713 using $paramod\$lut\WIDTH=3\LUT=8'11110100.
+Mapping SPI_driver.$abc$689$auto$blifparse.cc:492:parse_blif$709 using $paramod\$lut\WIDTH=3\LUT=8'11110100.
+Mapping SPI_driver.$abc$689$auto$blifparse.cc:492:parse_blif$693 using $paramod\$lut\WIDTH=3\LUT=8'11001010.
+Mapping SPI_driver.$abc$689$auto$blifparse.cc:492:parse_blif$694 using $paramod\$lut\WIDTH=3\LUT=8'11001010.
+Mapping SPI_driver.$abc$689$auto$blifparse.cc:492:parse_blif$696 using $paramod\$lut\WIDTH=3\LUT=8'11001010.
+Mapping SPI_driver.$abc$689$auto$blifparse.cc:492:parse_blif$695 using $paramod\$lut\WIDTH=3\LUT=8'11001010.
+No more expansions possible.
+Removed 0 unused cells and 48 unused wires.
+
+2.26. Executing HIERARCHY pass (managing design hierarchy).
+
+2.26.1. Analyzing design hierarchy..
+Top module:  \SPI_driver
+
+2.26.2. Analyzing design hierarchy..
+Top module:  \SPI_driver
+Removed 0 unused modules.
+
+2.27. Printing statistics.
+
+=== SPI_driver ===
+
+   Number of wires:                 48
+   Number of wire bits:            101
+   Number of public wires:          26
+   Number of public wire bits:      79
+   Number of memories:               0
+   Number of memory bits:            0
+   Number of processes:              0
+   Number of cells:                 64
+     LUT4                           24
+     TRELLIS_FF                     40
+
+2.28. Executing CHECK pass (checking for obvious problems).
+checking module SPI_driver..
+found and reported 0 problems.
+
+2.29. Executing JSON backend.
+
+End of script. Logfile hash: bcea3c44dd
+CPU: user 0.88s system 0.47s, MEM: 218.73 MB total, 198.43 MB resident
+Yosys 0.8+308 (git sha1 7682629b, clang 6.0.0-1ubuntu2 -fPIC -Os)
+Time spent: 70% 11x read_verilog (0 sec), 5% 1x share (0 sec), ...

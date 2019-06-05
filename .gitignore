@@ -47,3 +47,5 @@ implementation/
 /VisualMicro/__vm/Compile.vmps.xml
 /VisualMicro/Debug
 /VisualMicro/Release
+/VisualMicro-SSD1331-Display/Release
+/VisualMicro-SSD1331-Display/__vm
