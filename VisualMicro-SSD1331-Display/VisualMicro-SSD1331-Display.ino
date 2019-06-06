@@ -100,8 +100,8 @@ SD1331 Pin	    Arduino	ESP8266		rPi
 //#define dc   27 // GPIO16
 
 // Option 1: use any pins but a little slower
-//#pragma message "Using SWSPI"
-//Adafruit_SSD1331 display = Adafruit_SSD1331(cs, dc, mosi, sclk, rst);
+#pragma message "Using SWSPI"
+Adafruit_SSD1331 display = Adafruit_SSD1331(oled_csn, oled_dc, oled_mosi, oled_clk, oled_resn);
 
 // Option 2: must use the hardware SPI pins
 // (for UNO thats sclk = 13 and sid = 11) and pin 10 must be
@@ -111,8 +111,8 @@ SD1331 Pin	    Arduino	ESP8266		rPi
 // for the ULX3S, the SPI object is defined in
 // %USERPROFILE%\Documents\Arduino\hardware\espressif\esp32\libraries\SPI\src
 // whene the ESP32 Dev Module is selected
-#pragma message "Using HWSPI"
-Adafruit_SSD1331 display = Adafruit_SSD1331(&SPI, oled_csn, oled_dc, oled_resn);
+// #pragma message "Using HWSPI"
+// Adafruit_SSD1331 display = Adafruit_SSD1331(&SPI, oled_csn, oled_dc, oled_resn);
 
 // This could also be defined as display.color(255,0,0) but those defines
 // are meant to work for adafruit_gfx backends that are lacking color()
