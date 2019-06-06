@@ -174,13 +174,17 @@ perhaps more flexible but a little slower:
 Adafruit_SSD1331 display = Adafruit_SSD1331(cs, dc, mosi, sclk, rst);
 ```
 
-... or the alternative is this hardware SPI instantiation (untested at this time):
+... or the alternative is this hardware SPI instantiation (untested / not working at this time):
 ```
 Adafruit_SSD1331 display = Adafruit_SSD1331(&SPI, cs, dc, rst);
 ```
-Note the comments in the code: `hwspi hardcodes those pins, no need to redefine them`. As the ULX3S uses different pins, is HWSPI even possible? TODO
+Note the [comments in the Adafruit code](https://github.com/adafruit/Adafruit-SSD1331-OLED-Driver-Library-for-Arduino/blob/master/examples/LCDGFXDemo/LCDGFXDemo.ino#L29):
 
-The &SPI is defined in `%USERPROFILE%\Documents\Arduino\hardware\espressif\esp32\libraries\SPI\src\SPI.cpp` of interest, is this initialization code:
+> hwspi hardcodes those pins, no need to redefine them.
+
+ **As the ULX3S appears to use different pins, is HWSPI even possible?** The `cs`, `dc`, `rst` pins do not seem to be otherwise defined without the macros. 
+
+The `&SPI` is defined in `%USERPROFILE%\Documents\Arduino\hardware\espressif\esp32\libraries\SPI\src\SPI.cpp` of interest, is this initialization code:
 
 ```
     if(sck == -1 && miso == -1 && mosi == -1 && ss == -1) {
@@ -195,9 +199,9 @@ The &SPI is defined in `%USERPROFILE%\Documents\Arduino\hardware\espressif\esp32
         _ss = ss;
     }
 ```
-We're looking for the defaults not explicitly stated in the declaration `Adafruit_SSD1331(&SPI, oled_csn, oled_dc, oled_resn);` 
-specifically (`MOSI` and `SCLK`) - however here it appears `MISO` is pin 12 amd `SCK` is 15 (we are expecting `MOSI`=15 and `SCK`=14)
-when `_spi_num != VSPI`. TODO: where is `_spi_num` defined?
+We're looking for the defaults not explicitly stated in the declaration `Adafruit_SSD1331(&SPI, oled_csn, oled_dc, oled_resn);` specifically (`MOSI` and `SCLK`) - however here it appears `MISO` is pin 12 and `SCK` is 15 (we are expecting `MOSI`=15 and `SCK`=14) when `_spi_num != VSPI`. 
+
+TODO: where is `_spi_num` defined?
 
 The last line of file `SPI.cpp` 
 ```
