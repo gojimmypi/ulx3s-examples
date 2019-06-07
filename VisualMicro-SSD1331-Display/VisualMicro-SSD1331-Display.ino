@@ -79,11 +79,28 @@ SD1331 Pin	    Arduino	ESP8266		rPi
 //#define dc   16
 
 // ULX3S names and physical connector order:
-#define oled_csn  17 // aka cs
-#define oled_dc   16 // aka ds
-#define oled_resn 25 // aka rst
-#define oled_mosi 15 // aka mosi
-#define oled_clk  14 // aka sclk
+//#define oled_csn  17 // aka cs
+//#define oled_dc   16 // aka ds aka a0
+//#define oled_resn 25 // aka rst
+//#define oled_mosi 15 // aka mosi
+//#define oled_clk  14 // ak
+
+// WROOM-32
+#define oled_csn  5 // aka cs - chip select
+#define oled_dc   16 // aka ds aka a0 -  SPI data or command selector pin
+#define oled_resn 25 // aka rst - reset
+#define oled_mosi 15 // aka mosi - data
+#define oled_clk  18 // aka sclk - clock
+
+// from 
+//__CS_SD = 13
+//__MOSI_TFT = 15
+//__MISO_TFT = 2
+//__SCL_TFT = 14
+//__DC_TFT = 16
+//__CS_TFT = 17
+//__RES_TFT = 25
+
 
 // from Verilog passthru source, pin numbers: (for reference only; we use GPIO numbers~)
 //#define sclk 17 // GPIO14
@@ -101,7 +118,7 @@ SD1331 Pin	    Arduino	ESP8266		rPi
 
 // Option 1: use any pins but a little slower
 //#pragma message "Using SWSPI"
-//Adafruit_SSD1331 display = Adafruit_SSD1331(cs, dc, mosi, sclk, rst);
+Adafruit_SSD1331 display = Adafruit_SSD1331(oled_csn, oled_dc, oled_mosi, oled_clk, oled_resn);
 
 // Option 2: must use the hardware SPI pins
 // (for UNO thats sclk = 13 and sid = 11) and pin 10 must be
@@ -111,8 +128,8 @@ SD1331 Pin	    Arduino	ESP8266		rPi
 // for the ULX3S, the SPI object is defined in
 // %USERPROFILE%\Documents\Arduino\hardware\espressif\esp32\libraries\SPI\src
 // whene the ESP32 Dev Module is selected
-#pragma message "Using HWSPI"
-Adafruit_SSD1331 display = Adafruit_SSD1331(&SPI, oled_csn, oled_dc, oled_resn);
+//#pragma message "Using HWSPI"
+//Adafruit_SSD1331 display = Adafruit_SSD1331(&SPI, oled_csn, oled_dc, oled_resn);
 
 // This could also be defined as display.color(255,0,0) but those defines
 // are meant to work for adafruit_gfx backends that are lacking color()
@@ -651,6 +668,7 @@ void display_panOrBounceBitmap(uint8_t bitmapSize, bool clear = true) {
 
 
 void loop() {
+    Serial.println("Loop start!");
     // clear the screen after X bitmaps have been displayed and we
     // loop back to the top left corner
     // 8x8 => 1, 16x8 => 2, 17x9 => 6
@@ -813,20 +831,31 @@ void setup() {
     pinMode(oled_mosi, INPUT_PULLUP); // pullup SPI shared with SD
     pinMode(oled_clk, INPUT_PULLUP); // pullup SPI shared with SD
 
-	delay(1000);
+    pinMode(2, INPUT_PULLUP); // pullup SPI shared with SD
+    pinMode(13, INPUT_PULLUP); // pullup SPI shared with SD
+
+    delay(1000);
     Serial.begin(115200);
     // Default is 40Mhz
     display.begin();
     Serial.println("For extra speed, try 80Mhz, may be less stable");
     //display.begin(80000000);
     display.setTextWrap(false);
+    Serial.println("Step 1");
+
     display.setAddrWindow(0, 0, mw, mh);
+    Serial.println("Step 2");
     // Test full bright of all LEDs. If brightness is too high
     // for your current limit (i.e. USB), decrease it.
     display.fillScreen(LED_WHITE_HIGH);
+    Serial.println("Step 3");
+
     display.show();
+    Serial.println("Step 4");
+
     delay(3000);
     display.clear();
+    Serial.println("Setup complete!");
 }
 
 // vim:sts=4:sw=4
