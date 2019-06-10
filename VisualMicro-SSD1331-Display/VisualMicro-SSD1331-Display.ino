@@ -85,12 +85,44 @@ SD1331 Pin	    Arduino	ESP8266		rPi
 //#define oled_mosi 15 // aka mosi
 //#define oled_clk  14 // ak
 
-// WROOM-32
-#define oled_csn  5 // aka cs - chip select
-#define oled_dc   16 // aka ds aka a0 -  SPI data or command selector pin
-#define oled_resn 25 // aka rst - reset
-#define oled_mosi 15 // aka mosi - data
-#define oled_clk  18 // aka sclk - clock
+// VSPI see https://github.com/espressif/arduino-esp32/blob/7d7824701fe5e22f08555d3e1ce3180a922b2151/libraries/SPI/examples/SPI_Multiple_Buses/SPI_Multiple_Buses.ino#L31
+// initialise vspi with default pins SCLK = 18, MISO = 19, MOSI = 23, SS = 5
+// working WROOM-32 using VSPI (does not work on ULX3S)
+//#define oled_csn  5 //  white aka cs - chip select
+//#define oled_dc   26 // orange aka ds aka a0 -  SPI data or command selector pin
+//#define oled_resn 27 // gray aka rst - reset
+//#define oled_mosi 23 // purple aka mosi - data
+//#define oled_clk  18 // blue aka sclk - clock
+//#define oled_miso -1 // not used
+
+
+// HSPI see https://github.com/espressif/arduino-esp32/blob/7d7824701fe5e22f08555d3e1ce3180a922b2151/libraries/SPI/examples/SPI_Multiple_Buses/SPI_Multiple_Buses.ino#L37
+// initialise hspi with default pins SCLK = 14, MISO = 12, MOSI = 13, SS = 15
+// working WROOM-32 using HSPI (does not work on ULX3S)
+#define oled_csn  15 // white aka cs - chip select
+#define oled_dc   26 // orange aka ds aka a0 -  SPI data or command selector pin
+#define oled_resn 27 // gray aka rst - reset
+#define oled_mosi 13 // purple aka mosi - data
+#define oled_clk  14 // blue aka sclk - clock
+#define oled_miso -1 // 12 not used
+
+// working ULX3S  
+//#define oled_csn  17 // white aka cs - chip select
+//#define oled_dc   16 // orange aka ds aka a0 -  SPI data or command selector pin
+//#define oled_resn 25 // gray aka rst - reset
+//#define oled_mosi 15 // purple aka mosi - data
+//#define oled_clk  14 // blue aka sclk - clock
+//#define oled_miso -1 // 12 not used
+
+
+// new ULX3S  (does not work)
+//#define oled_csn  15 // white aka cs - chip select
+//#define oled_dc   16 // orange aka ds aka a0 -  SPI data or command selector pin
+//#define oled_resn 25 // gray aka rst - reset
+//#define oled_mosi 13 // purple aka mosi - data
+//#define oled_clk  14 // blue aka sclk - clock
+//#define oled_miso -1 // 12 not used
+
 
 // from 
 //__CS_SD = 13
@@ -825,14 +857,14 @@ void setup() {
     // pinMode(__MISO_TFT, INPUT_PULLUP); // pullup SPI shared with SD
 	
     // explicit pullup defintion is essential 
-    pinMode(oled_csn, INPUT_PULLUP); // pullup SPI
-    pinMode(oled_dc, INPUT_PULLUP); // pullup SPI
-    pinMode(oled_resn, INPUT_PULLUP); // pullup SPI
-    pinMode(oled_mosi, INPUT_PULLUP); // pullup SPI shared with SD
-    pinMode(oled_clk, INPUT_PULLUP); // pullup SPI shared with SD
+    //pinMode(oled_csn, INPUT_PULLUP); // pullup SPI
+    //pinMode(oled_dc, INPUT_PULLUP); // pullup SPI
+    //pinMode(oled_resn, INPUT_PULLUP); // pullup SPI
+    //pinMode(oled_mosi, INPUT_PULLUP); // pullup SPI shared with SD
+    //pinMode(oled_clk, INPUT_PULLUP); // pullup SPI shared with SD
 
-    pinMode(2, INPUT_PULLUP); // pullup SPI shared with SD
-    pinMode(13, INPUT_PULLUP); // pullup SPI shared with SD
+    //pinMode(2, INPUT_PULLUP); // pullup SPI shared with SD
+    //pinMode(13, INPUT_PULLUP); // pullup SPI shared with SD
 
     delay(1000);
     Serial.begin(115200);

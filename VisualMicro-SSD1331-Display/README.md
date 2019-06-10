@@ -9,6 +9,17 @@ and [SSD1331](https://github.com/adafruit/Adafruit-SSD1331-OLED-Driver-Library-f
 then open the `VisualMicro-SSD1331-Display.sln` solution file in Visual Studio.
 Select the COM port for your ULX3S and press F5.
 
+```
+cd %USERPROFILE%\Documents\Arduino\libraries\
+
+# Adafruit_GFX
+git clone https://github.com/adafruit/Adafruit-GFX-Library.git
+
+# Adafruit_SSD1331
+git clone https://github.com/adafruit/Adafruit-SSD1331-OLED-Driver-Library-for-Arduino.git
+
+```
+
 ## SSD1331 Display
 
 The ULX3S board has a connector near the center of the board for an optional display:
@@ -224,7 +235,7 @@ display.begin(80000000);"
 
 ## other stuff
 
-See supplements (TODO - wich are actually needed?)
+See supplements (TODO - which are actually needed?)
 ```
 cd C:\Users\gojimmypi\Documents\Arduino\libraries
 git clone https://github.com/me-no-dev/ESPAsyncTCP.git
@@ -235,6 +246,7 @@ git clone https://github.com/emard/LibXSVF
 ```
 
 ## See also
+* https://github.com/emard/SSD_13XX.git
 * [Adafruit 0.96" mini Color OLED technical details](https://learn.adafruit.com/096-mini-color-oled/downloads)
 * https://github.com/mgo-tec/ESP32_SD_SSD1331_Gadgets
 * https://github.com/emard/LibXSVF-ESP/blob/master/examples/websvf_sd/websvf_sd.ino
