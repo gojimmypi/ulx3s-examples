@@ -54,24 +54,16 @@ See also the [ESP-WROOM-32 data sheet](../doc/esp32-wroom-32_datasheet_en-151093
 
 ## ESP32 SPI **
 
-IOMUX pins for SPI controllers are as below:
+IOMUX pins for SPI controllers are as below (GPIO numbers):
 
 | Pin Name | HSPI | VSPI |
-|          | ---- | ---- |
-|          | GPIO Number |
-|==========|======|======|
+| -------- | ---- | ---- |
 | CS0*     | 15   | 5    |
-| -------- | ---- | ---- |
 | SCLK     | 14   | 18   |
-| -------- | ---- | ---- |
 | MISO     | 12   | 19   |
-| -------- | ---- | ---- |
 | MOSI     | 13   | 23   |
-| -------- | ---- | ---- |
 | QUADWP   | 2    | 22   |
-| -------- | ---- | ---- |
 | QUADHD   | 4    | 21   |
-| -------- | ---- | ---- |
 
 note * Only the first device attaching to the bus can use CS0 pin.
 
