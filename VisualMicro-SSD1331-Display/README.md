@@ -174,7 +174,49 @@ Install [Adafruit_GFX](https://github.com/adafruit/Adafruit-GFX-Library)
 Install [Adafruit_SSD1331](https://github.com/adafruit/Adafruit-SSD1331-OLED-Driver-Library-for-Arduino)
 
 ![ArduinoIDE-Adafruit-SSD1331-Library.PNG](../images/ArduinoIDE-Adafruit-SSD1331-Library.png)
-                                                     
+            
+## Some SPI Tips
+(copied [from SSD_13XX library notes](https://github.com/sumotoy/SSD_13XX/blob/master/README.md) and credits to [@sumotoy](https://github.com/sumotoy) for this section)
+
+> <b>Connections:</b><br>
+> Of course some oled has just SPI exposed but some can be configured for parallel, I2C and so on. I'm using ONLY SPI here (so don't ask for any other protocol please).<br>
+> - RST Connect to +3v3 using a 4k7->10k resistor.
+> - scl, sclk -> SCLK
+> - sda, sdin -> MOSI
+> - DC,RS ->DC pin on MCU
+> - some oled has WR, RD. Leave floating...
+> - some oled has D0...D7. Most of the times D0 and D1 are used for SPI, connect D2...D7 to GND or will be unstable!
+> - VIN. Most oled support 5v, internally they have regulators, but follow specifications of your particular oled!
+> - 3v3. This is 99% of the times an OUT! So do not use it.<br>
+> 
+> <b>Some notes, please read this, will save your time:</b><br>
+> - Even if your OLED can work at 5V, it cannot accept logic levels at 5V!!! All OLED accept logic levels at 3v3 so if you plan to use an AVR (like UNO) you need a level converted (like CD4050 or HCF4050 powered at 3v3, very cheap).
+> - Do not use logic converters based on mosfet or similar or bidirectional ones (Adafruit and Sparkfun sell a lot of these), they are crap, waveforms are distorted and DO NOT USE PARTITION RESISTOR's for that, it's a bad idea, you can damage oled and cpu in the same time.
+> - Most of you know already this but remember that Arduino UNO or similar can provide 3v3 but the logic levels are always at 5V!!!
+> - The RST pin is not strictly necessary but if not used must pullup to 3v3, never leave float! When is necessary? When you develop a library for example but if you change libraries you may need a complete power cycle if you are not using this pin.
+> - ESP8266 has very weak SPI, should be 3v3 but most of the times is much less so better avoid use any logic chip between it and oled, I spend days around a circuit before discovering this.
+> - On ESP8266, from April 2016 the pin GPIO16 misteriously doesn't works as CS, don't ask me why. I'm currently using GPIO2 or GPIO4.
+> - Since I'm using the fast SPI possible, keep wires short and remember to provide a decoupling capacitor for your oled.<br>
+> - If you plan to use SPI for other devices as well it's a good idea pullup the CS with a 10K resistor to +3v3, this will keep oled disabled until your CPU access it for initialization and avoid interferences.
+> - It's always a good idea provide a pullup for each CS if multiple SPI devices are used, when CPU start all devices are forced disabled and CPU is able to access one by one and initialize all of them correctly, keep in mind and you will happy in the future!<br>
+
+## Hardware SPI can be slower on the ESP32
+(copied from [espressif/arduino-esp32/issues/149](https://github.com/espressif/arduino-esp32/issues/149#issuecomment-275633601) )
+
+> Here is the thing about SPI and all other drivers running on ESP32:
+> 
+> * We have 2 cores, so there is the possibility that hardware could be accessed from both cores at the same time
+> * In order to prevent that, we use mutexes
+> * Locking and unlocking mutexes takes time :(
+> 
+> Now the ESP32 on other hand can transfer lots of data with just one lock/unlock, but that is not something that Arduino has on lower platforms (AVR), so libraries use the byte-by-byte approach to communicate, which in turn means lock/unlock every byte. And that is what causes the slowdown you see.
+> 
+> There are generally two ways to speed things up:
+> 
+> * Update all libraries to use proper multi-byte api on ESP32 (Espressif is rolling out own ILI9341 driver based on Adafruit's API)
+> * Disable hardware locking by adding `#define CONFIG_DISABLE_HAL_LOCKS 1` to [esp32-hal.h](https://github.com/espressif/arduino-esp32/blob/master/cores/esp32/esp32-hal.h)
+
+
 ## Arduino Implmentation Notes
 
 This an Arduino-style solution, suitable for use with either the [Ardunio IDE](https://www.arduino.cc/en/Main/Software), 
@@ -246,8 +288,13 @@ git clone https://github.com/emard/LibXSVF
 ```
 
 ## See also
+* [espressif/arduino-esp32/issues/149](https://github.com/espressif/arduino-esp32/issues/149#issuecomment-275633601) - slow hardware SPI on ESP32
+* [sumotoy/SSD_13XX](https://github.com/sumotoy/SSD_13XX) - See the README for some excellent information.
 * https://github.com/emard/SSD_13XX.git
 * [Adafruit 0.96" mini Color OLED technical details](https://learn.adafruit.com/096-mini-color-oled/downloads)
+* [espressif/Adafruit-GFX-Library](https://github.com/espressif/Adafruit-GFX-Library)
 * https://github.com/mgo-tec/ESP32_SD_SSD1331_Gadgets
 * https://github.com/emard/LibXSVF-ESP/blob/master/examples/websvf_sd/websvf_sd.ino
+* [olikraus/ucglib](https://github.com/olikraus/ucglib) - Color graphics library for embedded systems with focus on Arduino Environment.
+* [ODRIOD-GO Getting started with Arduino](https://wiki.odroid.com/odroid_go/arduino/01_arduino_setup)
 * https://gojimmypi.blogspot.com/2019/02/
