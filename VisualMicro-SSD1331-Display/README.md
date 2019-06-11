@@ -23,11 +23,11 @@ git clone https://github.com/adafruit/Adafruit-SSD1331-OLED-Driver-Library-for-A
 The pins used to control the ULX3S SSD-1331 display from the ESP32:
 
 ```
-#define oled_csn  17 // white aka cs - chip select
-#define oled_dc   16 // orange aka ds aka a0 -  SPI data or command selector pin
-#define oled_resn 25 // gray aka rst - reset
-#define oled_mosi 15 // purple aka mosi - data
-#define oled_clk  14 // blue aka sclk - clock
+#define oled_csn  17 // aka cs - chip select
+#define oled_dc   16 // aka ds aka a0 -  SPI data or command selector pin
+#define oled_resn 25 // aka rst - reset
+#define oled_mosi 15 // aka mosi - data
+#define oled_clk  14 // aka sclk - clock
 #define oled_miso -1 // 12 not used
 ```
 
@@ -45,34 +45,34 @@ If your ULX3S does not have a display [buy one from Amazon](https://www.amazon.c
 It is always good to support Adafruit, particularly given the amount of work put into their open source libraries, including ones used in this project.
 Adafruit has a [OLED SSD-1331](https://www.adafruit.com/product/684) - but note that board appears to have a different size/pinout and includes a MicroSD card. 
 
-See also the [pdf specification for the SSD-1331 Display](../docs/SSD1331_1.2.pdf) in the [docs](../docs/) folder.
+See also the [pdf specification for the SSD-1331 Display](../doc/SSD1331_1.2.pdf) in the [doc](../doc/) folder.
 
 ## ULX3S ESP-32
 
 The ULX3S on-boarad ESP32 is this [ESP-WROOM-32 from Mouser Electronics](https://hr.mouser.com/ProductDetail/Espressif-Systems/ESP-WROOM-32-16MB?qs=sGAEpiMZZMsRr7brxAGoXSSUPDSAjAiV1M6iRPUJ5tDjstOHDp9d7Q%3d%3d) 
-See also the [ESP-WROOM-32 data sheet](../doc/esp32-wroom-32_datasheet_en-1510934.pdf) copy in the local [docs](../docs/) folder
+See also the [ESP-WROOM-32 data sheet](../doc/esp32-wroom-32_datasheet_en-1510934.pdf) copy in the local [doc](../doc/) folder
 
 ## ESP32 SPI **
 
 IOMUX pins for SPI controllers are as below:
 
-+----------+------+------+
+| -------- | ---- | ---- |
 | Pin Name | HSPI | VSPI |
-+          +------+------+
+|          | ---- | ---- |
 |          | GPIO Number |
-+==========+======+======+
+|==========|======|======|
 | CS0*     | 15   | 5    |
-+----------+------+------+
+| -------- | ---- | ---- |
 | SCLK     | 14   | 18   |
-+----------+------+------+
+| -------- | ---- | ---- |
 | MISO     | 12   | 19   |
-+----------+------+------+
+| -------- | ---- | ---- |
 | MOSI     | 13   | 23   |
-+----------+------+------+
+| -------- | ---- | ---- |
 | QUADWP   | 2    | 22   |
-+----------+------+------+
+| -------- | ---- | ---- |
 | QUADHD   | 4    | 21   |
-+----------+------+------+
+| -------- | ---- | ---- |
 
 note * Only the first device attaching to the bus can use CS0 pin.
 
@@ -80,7 +80,7 @@ note * Only the first device attaching to the bus can use CS0 pin.
 
 ## Passthru FPGA Needed
 
-The FPGA sits between the display and the ESP32, allowing either device to control the SSD-1331 display. An FPGA design is needed to "wire" the
+The FPGA sits between the display and the ESP32, allowing either the FPGA or ESP32 to control the SSD-1331 display. An FPGA design is needed to "wire" the
 connection between the ESP32 to allow that device to control the display. Keep this in mind if also writing something in FPGA that also attempts to
 control the display concurrently. 
 
@@ -244,7 +244,7 @@ Install [Adafruit_SSD1331](https://github.com/adafruit/Adafruit-SSD1331-OLED-Dri
 ![ArduinoIDE-Adafruit-SSD1331-Library.PNG](../images/ArduinoIDE-Adafruit-SSD1331-Library.png)
             
 ## Some SPI Tips
-(copied [from SSD_13XX library notes](https://github.com/sumotoy/SSD_13XX/blob/master/README.md) and credits to [@sumotoy](https://github.com/sumotoy) for this section)
+(copied [from SSD_13XX library notes](https://github.com/sumotoy/SSD_13XX/blob/master/README.md) with thanks and credits to [@sumotoy](https://github.com/sumotoy) for this section)
 
 > <b>Connections:</b><br>
 > Of course some oled has just SPI exposed but some can be configured for parallel, I2C and so on. I'm using ONLY SPI here (so don't ask for any other protocol please).<br>
@@ -269,7 +269,7 @@ Install [Adafruit_SSD1331](https://github.com/adafruit/Adafruit-SSD1331-OLED-Dri
 > - It's always a good idea provide a pullup for each CS if multiple SPI devices are used, when CPU start all devices are forced disabled and CPU is able to access one by one and initialize all of them correctly, keep in mind and you will happy in the future!<br>
 
 ## Hardware SPI can be slower on the ESP32
-(copied from [espressif/arduino-esp32/issues/149](https://github.com/espressif/arduino-esp32/issues/149#issuecomment-275633601) )
+(copied from [espressif/arduino-esp32/issues/149](https://github.com/espressif/arduino-esp32/issues/149#issuecomment-275633601) with thanks and credit to [@me-no-dev](https://github.com/me-no-dev) )
 
 > Here is the thing about SPI and all other drivers running on ESP32:
 > 
@@ -358,9 +358,9 @@ git clone https://github.com/emard/LibXSVF
 ## See also
 * [espressif/arduino-esp32](https://github.com/espressif/arduino-esp32) - Arduino core for the ESP32
 * [emard/ulx3s](https://github.com/emard/ulx3s) - PCB for ULX3S FPGA R&D board
-* [ULX3S Schematics](https://github.com/emard/ulx3s/blob/master/doc/schematics.pdf)
-* [Adafruit SPI Protocol](https://learn.adafruit.com/circuitpython-basics-i2c-and-spi/spi-devices)
-* [emard/ulx3s/issues/8](https://github.com/emard/ulx3s/issues/8) ESP32 to SSD1331 HWSPI using correct default pin numbers
+* [ULX3S Schematics](https://github.com/emard/ulx3s/blob/master/doc/schematics.pdf) - 
+* [Adafruit SPI Protocol](https://learn.adafruit.com/circuitpython-basics-i2c-and-spi/spi-devices) - CircuitPython Basics: I2C and SPI
+* [emard/ulx3s/issues/8](https://github.com/emard/ulx3s/issues/8) ESP32 to SSD1331 HWSPI using correct default pin numbers?
 * [espressif/arduino-esp32/issues/149](https://github.com/espressif/arduino-esp32/issues/149#issuecomment-275633601) - slow hardware SPI on ESP32
 * [sumotoy/SSD_13XX](https://github.com/sumotoy/SSD_13XX) - See the README for some excellent SPI information.
 * [emard/SSD_13XX](https://github.com/emard/SSD_13XX.git) - fork of [sumotoy/SSD_13XX](https://github.com/sumotoy/SSD_13XX) for the ULX3S
@@ -372,4 +372,4 @@ git clone https://github.com/emard/LibXSVF
 * [ODRIOD-GO Getting started with Arduino](https://wiki.odroid.com/odroid_go/arduino/01_arduino_setup) and on [GitHub](https://github.com/hardkernel/ODROID-GO)
 * [gojimmypi blog](https://gojimmypi.blogspot.com/2019/02/) - Notes on ulx3s FPGA
 * [ESP-IDF Programming Guide](https://docs.espressif.com/projects/esp-idf/en/latest/) Specifically [SPI Master Driver](https://docs.espressif.com/projects/esp-idf/en/latest/api-reference/peripherals/spi_master.html)
-* [NodeMCU SPI Documetationb](https://nodemcu.readthedocs.io/en/dev-esp32/modules/spi/)
+* [NodeMCU SPI Documentation](https://nodemcu.readthedocs.io/en/dev-esp32/modules/spi/)
