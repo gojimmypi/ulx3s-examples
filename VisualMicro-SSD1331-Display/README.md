@@ -20,6 +20,17 @@ git clone https://github.com/adafruit/Adafruit-SSD1331-OLED-Driver-Library-for-A
 
 ```
 
+The pins used to control the ULX3S SSD-1331 display from the ESP32:
+
+```
+#define oled_csn  17 // white aka cs - chip select
+#define oled_dc   16 // orange aka ds aka a0 -  SPI data or command selector pin
+#define oled_resn 25 // gray aka rst - reset
+#define oled_mosi 15 // purple aka mosi - data
+#define oled_clk  14 // blue aka sclk - clock
+#define oled_miso -1 // 12 not used
+```
+
 ## SSD1331 Display
 
 The ULX3S board has a connector near the center of the board for an optional display:
@@ -30,9 +41,16 @@ From the [schematic](../doc/schematics.pdf), these are the connector names defin
 
 ![SSD1331_connector.PNG](../images/SSD1331_connector.PNG)
 
-If your ULX3S does not have a display, you can [buy one from Adafruit](https://www.adafruit.com/product/684).
+If your ULX3S does not have a display [buy one from Amazon](https://www.amazon.com/dp/B0711RKXB5/). 
+It is always good to support Adafruit, particularly given the amount of work put into their open source libraries, including ones used in this project.
+Adafruit has a [OLED SSD-1331](https://www.adafruit.com/product/684) - but note that board appears to have a different size/pinout and includes a MicroSD card. 
 
 See also the [pdf specification for the SSD-1331 Display](../docs/SSD1331_1.2.pdf) in the [docs](../docs/) folder.
+
+## ULX3S ESP-32
+
+The ULX3S on-boarad ESP32 is this [ESP-WROOM-32 from Mouser Electronics](https://hr.mouser.com/ProductDetail/Espressif-Systems/ESP-WROOM-32-16MB?qs=sGAEpiMZZMsRr7brxAGoXSSUPDSAjAiV1M6iRPUJ5tDjstOHDp9d7Q%3d%3d) 
+See also the [ESP-WROOM-32 data sheet](../doc/esp32-wroom-32_datasheet_en-1510934.pdf) copy in the local [docs](../docs/) folder
 
 ## ESP32 SPI **
 
@@ -60,11 +78,13 @@ note * Only the first device attaching to the bus can use CS0 pin.
 
 ** from the [ESP-IDF Programming Guide: SPI Master driver](https://docs.espressif.com/projects/esp-idf/en/latest/api-reference/peripherals/spi_master.html#gpio-matrix-and-iomux)
 
-## Passthru Needed
+## Passthru FPGA Needed
 
 The FPGA sits between the display and the ESP32, allowing either device to control the SSD-1331 display. An FPGA design is needed to "wire" the
 connection between the ESP32 to allow that device to control the display. Keep this in mind if also writing something in FPGA that also attempts to
 control the display concurrently. 
+
+The default for `ujprog` is to program to volatile SRAM (power cycle to revert). See the `-j` parameter to make FPGA changes persistent. 
 
 ### Quick Start Passthru
 
@@ -76,9 +96,9 @@ cd ..\bin
 ujprog.exe passthru_implementation_12F.bit
 ```
 
-### SSD1331 to ESP32 Passtrhu via FPGA details
+### SSD1331 to ESP32 Passthru via FPGA details
 
-The ULX3S will typically ship with the passthru code already loaded. So this step may not always be needed.
+The ULX3S will typically ship with the passthru code already loaded on the FPGA. So this step may not always be needed.
 
 As noted in other ULX3S ESP32 projects such as the [Getting Started with Visual Micro](../VisualMicro/README.md), 
 the ESP32 sits behind the FPGA chip:
@@ -169,7 +189,7 @@ TODO: is `INPUT_PULLUP` really needed for _output_ pins?
 
 ## Arduino Libraries Needed
 
-Two libraries can be used to vastly simplify the use display with Visual Micro or the Arduinio IDE for the ESP32:
+Two libraries can be used to vastly simplify the use of the display with Visual Micro or the Arduinio IDE for the ESP32:
 
 * [Adafruit_GFX](https://github.com/adafruit/Adafruit-GFX-Library) 
 * [Adafruit_SSD1331](https://github.com/adafruit/Adafruit-SSD1331-OLED-Driver-Library-for-Arduino)
@@ -205,6 +225,11 @@ fit pull
 ```
 
 ### Windows Arduino IDE Libraries 
+
+Ensure the [ESP32 Board](https://github.com/espressif/arduino-esp32/blob/master/docs/arduino-ide/boards_manager.md) is installed. 
+This line may need to be added to the _Additional Board Manager URLs_ field:
+
+`https://dl.espressif.com/dl/package_esp32_index.json`
 
 To install libraries from the Arduino IDE, click `Sketch - Include Library - Manage Libraries`:
 
@@ -331,18 +356,20 @@ git clone https://github.com/emard/LibXSVF
 ```
 
 ## See also
-* [emard/ulx3s](https://github.com/emard/ulx3s) PCB for ULX3S FPGA R&D board
+* [espressif/arduino-esp32](https://github.com/espressif/arduino-esp32) - Arduino core for the ESP32
+* [emard/ulx3s](https://github.com/emard/ulx3s) - PCB for ULX3S FPGA R&D board
 * [ULX3S Schematics](https://github.com/emard/ulx3s/blob/master/doc/schematics.pdf)
 * [Adafruit SPI Protocol](https://learn.adafruit.com/circuitpython-basics-i2c-and-spi/spi-devices)
 * [emard/ulx3s/issues/8](https://github.com/emard/ulx3s/issues/8) ESP32 to SSD1331 HWSPI using correct default pin numbers
 * [espressif/arduino-esp32/issues/149](https://github.com/espressif/arduino-esp32/issues/149#issuecomment-275633601) - slow hardware SPI on ESP32
 * [sumotoy/SSD_13XX](https://github.com/sumotoy/SSD_13XX) - See the README for some excellent SPI information.
-* https://github.com/emard/SSD_13XX.git
+* [emard/SSD_13XX](https://github.com/emard/SSD_13XX.git) - fork of [sumotoy/SSD_13XX](https://github.com/sumotoy/SSD_13XX) for the ULX3S
 * [Adafruit 0.96" mini Color OLED technical details](https://learn.adafruit.com/096-mini-color-oled/downloads)
 * [espressif/Adafruit-GFX-Library](https://github.com/espressif/Adafruit-GFX-Library) (fork from []())
-* https://github.com/mgo-tec/ESP32_SD_SSD1331_Gadgets
-* https://github.com/emard/LibXSVF-ESP/blob/master/examples/websvf_sd/websvf_sd.ino
+* [mgo-tec/ESP32_SD_SSD1331_Gadgets](https://github.com/mgo-tec/ESP32_SD_SSD1331_Gadgets)
+* [websvf_sd](https://github.com/emard/LibXSVF-ESP/blob/master/examples/websvf_sd/websvf_sd.ino) - the default as-shipped software on the ULX3S
 * [olikraus/ucglib](https://github.com/olikraus/ucglib) - Color graphics library for embedded systems with focus on Arduino Environment.
 * [ODRIOD-GO Getting started with Arduino](https://wiki.odroid.com/odroid_go/arduino/01_arduino_setup) and on [GitHub](https://github.com/hardkernel/ODROID-GO)
-* https://gojimmypi.blogspot.com/2019/02/
+* [gojimmypi blog](https://gojimmypi.blogspot.com/2019/02/) - Notes on ulx3s FPGA
 * [ESP-IDF Programming Guide](https://docs.espressif.com/projects/esp-idf/en/latest/) Specifically [SPI Master Driver](https://docs.espressif.com/projects/esp-idf/en/latest/api-reference/peripherals/spi_master.html)
+* [NodeMCU SPI Documetationb](https://nodemcu.readthedocs.io/en/dev-esp32/modules/spi/)
