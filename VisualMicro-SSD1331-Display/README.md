@@ -34,7 +34,49 @@ If your ULX3S does not have a display, you can [buy one from Adafruit](https://w
 
 See also the [pdf specification for the SSD-1331 Display](../docs/SSD1331_1.2.pdf) in the [docs](../docs/) folder.
 
+## ESP32 SPI **
+
+IOMUX pins for SPI controllers are as below:
+
++----------+------+------+
+| Pin Name | HSPI | VSPI |
++          +------+------+
+|          | GPIO Number |
++==========+======+======+
+| CS0*     | 15   | 5    |
++----------+------+------+
+| SCLK     | 14   | 18   |
++----------+------+------+
+| MISO     | 12   | 19   |
++----------+------+------+
+| MOSI     | 13   | 23   |
++----------+------+------+
+| QUADWP   | 2    | 22   |
++----------+------+------+
+| QUADHD   | 4    | 21   |
++----------+------+------+
+
+note * Only the first device attaching to the bus can use CS0 pin.
+
+** from the [ESP-IDF Programming Guide: SPI Master driver](https://docs.espressif.com/projects/esp-idf/en/latest/api-reference/peripherals/spi_master.html#gpio-matrix-and-iomux)
+
 ## Passthru Needed
+
+The FPGA sits between the display and the ESP32, allowing either device to control the SSD-1331 display. An FPGA design is needed to "wire" the
+connection between the ESP32 to allow that device to control the display. Keep this in mind if also writing something in FPGA that also attempts to
+control the display concurrently. 
+
+### Quick Start Passthru
+
+Windows
+tip: you can open a command prompt by rick-clicking on the project om Visual Studio, select Open Folder in File Explorer, then type `cmd` in the path and press `enter`.
+```
+:: From this project directory (e.g. c:\workspace\ulx3s-examples\VisualMicro-SSD1331-Display )
+cd ..\bin
+ujprog.exe passthru_implementation_12F.bit
+```
+
+### SSD1331 to ESP32 Passtrhu via FPGA details
 
 The ULX3S will typically ship with the passthru code already loaded. So this step may not always be needed.
 
@@ -49,7 +91,7 @@ FPGA project connects not only some of ESP32 pins to the physical ULX3S external
 connector for the SSD1331 display.
 
 Of particular interest, are these lines from the 
-[WiFi passthrough](https://github.com/emard/ulx3s-passthru/blob/master/rtl/ulx3s_v20_passthru_wifi.vhd#L116) example:
+[WiFi passthrough](https://github.com/emard/ulx3s-passthru/blob/71ce18953f84ea8ee07bb42d42ddc5a2673623c3/rtl/ulx3s_v20_passthru_wifi.vhd#L116) example:
 
 ```
 S_oled_csn <= wifi_gpio17;
@@ -123,6 +165,7 @@ the `INPUT_PULLUP`, or the display will not work properly:
 	pinMode(oled_mosi, INPUT_PULLUP); // pullup SPI shared with SD
 	pinMode(oled_clk,  INPUT_PULLUP); // pullup SPI shared with SD
 ```
+TODO: is `INPUT_PULLUP` really needed for _output_ pins?
 
 ## Arduino Libraries Needed
 
@@ -217,7 +260,7 @@ Install [Adafruit_SSD1331](https://github.com/adafruit/Adafruit-SSD1331-OLED-Dri
 > * Disable hardware locking by adding `#define CONFIG_DISABLE_HAL_LOCKS 1` to [esp32-hal.h](https://github.com/espressif/arduino-esp32/blob/master/cores/esp32/esp32-hal.h)
 
 
-## Arduino Implmentation Notes
+## Arduino Implementation Notes
 
 This an Arduino-style solution, suitable for use with either the [Ardunio IDE](https://www.arduino.cc/en/Main/Software), 
 or [Visual Micro](https://www.visualmicro.com/). The display can be initialized either with this software SPI, which is 
@@ -288,13 +331,18 @@ git clone https://github.com/emard/LibXSVF
 ```
 
 ## See also
+* [emard/ulx3s](https://github.com/emard/ulx3s) PCB for ULX3S FPGA R&D board
+* [ULX3S Schematics](https://github.com/emard/ulx3s/blob/master/doc/schematics.pdf)
+* [Adafruit SPI Protocol](https://learn.adafruit.com/circuitpython-basics-i2c-and-spi/spi-devices)
+* [emard/ulx3s/issues/8](https://github.com/emard/ulx3s/issues/8) ESP32 to SSD1331 HWSPI using correct default pin numbers
 * [espressif/arduino-esp32/issues/149](https://github.com/espressif/arduino-esp32/issues/149#issuecomment-275633601) - slow hardware SPI on ESP32
-* [sumotoy/SSD_13XX](https://github.com/sumotoy/SSD_13XX) - See the README for some excellent information.
+* [sumotoy/SSD_13XX](https://github.com/sumotoy/SSD_13XX) - See the README for some excellent SPI information.
 * https://github.com/emard/SSD_13XX.git
 * [Adafruit 0.96" mini Color OLED technical details](https://learn.adafruit.com/096-mini-color-oled/downloads)
-* [espressif/Adafruit-GFX-Library](https://github.com/espressif/Adafruit-GFX-Library)
+* [espressif/Adafruit-GFX-Library](https://github.com/espressif/Adafruit-GFX-Library) (fork from []())
 * https://github.com/mgo-tec/ESP32_SD_SSD1331_Gadgets
 * https://github.com/emard/LibXSVF-ESP/blob/master/examples/websvf_sd/websvf_sd.ino
 * [olikraus/ucglib](https://github.com/olikraus/ucglib) - Color graphics library for embedded systems with focus on Arduino Environment.
-* [ODRIOD-GO Getting started with Arduino](https://wiki.odroid.com/odroid_go/arduino/01_arduino_setup)
+* [ODRIOD-GO Getting started with Arduino](https://wiki.odroid.com/odroid_go/arduino/01_arduino_setup) and on [GitHub](https://github.com/hardkernel/ODROID-GO)
 * https://gojimmypi.blogspot.com/2019/02/
+* [ESP-IDF Programming Guide](https://docs.espressif.com/projects/esp-idf/en/latest/) Specifically [SPI Master Driver](https://docs.espressif.com/projects/esp-idf/en/latest/api-reference/peripherals/spi_master.html)
