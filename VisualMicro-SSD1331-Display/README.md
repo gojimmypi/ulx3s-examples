@@ -55,8 +55,6 @@ See also the [ESP-WROOM-32 data sheet](../doc/esp32-wroom-32_datasheet_en-151093
 ## ESP32 SPI **
 
 IOMUX pins for SPI controllers are as below:
-
-| -------- | ---- | ---- |
 | Pin Name | HSPI | VSPI |
 |          | ---- | ---- |
 |          | GPIO Number |
