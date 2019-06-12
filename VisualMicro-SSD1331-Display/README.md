@@ -1,4 +1,4 @@
-# Using VisualMicro to program the ULX3S SSD1331 Display from ESP32
+# Using VisualMicro to Program the ULX3S ESP32 Display
 
 ## Quick Start
 
@@ -41,16 +41,17 @@ From the [schematic](../doc/schematics.pdf), these are the connector names defin
 
 ![SSD1331_connector.PNG](../images/SSD1331_connector.PNG)
 
-If your ULX3S does not have a display [buy one from Amazon](https://www.amazon.com/dp/B0711RKXB5/). 
+If your ULX3S does not have a display you can [buy one from Amazon](https://www.amazon.com/dp/B0711RKXB5/). 
 It is always good to support Adafruit, particularly given the amount of work put into their open source libraries, including ones used in this project.
-Adafruit has a [OLED SSD-1331](https://www.adafruit.com/product/684) - but note that board appears to have a different size/pinout and includes a MicroSD card. 
+Adafruit has a [OLED SSD-1331](https://www.adafruit.com/product/684) - but note that board appears to have a different size/pinout and includes a MicroSD card. ymmv.
 
 See also the [pdf specification for the SSD-1331 Display](../doc/SSD1331_1.2.pdf) in the [doc](../doc/) folder.
 
 ## ULX3S ESP-32
 
-The ULX3S on-boarad ESP32 is this [ESP-WROOM-32 from Mouser Electronics](https://hr.mouser.com/ProductDetail/Espressif-Systems/ESP-WROOM-32-16MB?qs=sGAEpiMZZMsRr7brxAGoXSSUPDSAjAiV1M6iRPUJ5tDjstOHDp9d7Q%3d%3d) 
-See also the [ESP-WROOM-32 data sheet](../doc/esp32-wroom-32_datasheet_en-1510934.pdf) copy in the local [doc](../doc/) folder
+The ULX3S on-boarad ESP32 is this [ESP-WROOM-32 from Mouser Electronics](https://hr.mouser.com/ProductDetail/Espressif-Systems/ESP-WROOM-32-16MB?qs=sGAEpiMZZMsRr7brxAGoXSSUPDSAjAiV1M6iRPUJ5tDjstOHDp9d7Q%3d%3d),
+(Specfically the ESP32-D0WDQ6).
+See also the [ESP-WROOM-32 data sheet](../doc/esp32-wroom-32_datasheet_en-1510934.pdf) and [../doc/esp32_datasheet_en.pdf](Espressif ESP32 Series Datasheet) copy in the local [doc](../doc/) folder.
 
 ## ESP32 SPI **
 
@@ -68,6 +69,11 @@ IOMUX pins for SPI controllers are as below (GPIO numbers):
 note * Only the first device attaching to the bus can use CS0 pin.
 
 ** from the [ESP-IDF Programming Guide: SPI Master driver](https://docs.espressif.com/projects/esp-idf/en/latest/api-reference/peripherals/spi_master.html#gpio-matrix-and-iomux)
+
+From the ESP32 Datasheet V3.0 (page 8)
+![ESP32 HSPI GPIO Pins](../images/ESP32-HSPI.png)
+
+See also a copy of the full [ESP32 IO_MUX Pins](../images/ESP32-IO_MUX.png) from Page 50 of the [../doc/esp32_datasheet_en.pdf](Espressif ESP32 Series Datasheet). 
 
 ## Passthru FPGA Needed
 
