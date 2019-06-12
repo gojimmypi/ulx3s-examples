@@ -73,7 +73,7 @@ note * Only the first device attaching to the bus can use CS0 pin.
 From the ESP32 Datasheet V3.0 (page 8)
 ![ESP32 HSPI GPIO Pins](../images/ESP32-HSPI.png)
 
-See also a copy of the full [ESP32 IO_MUX Pins](../images/ESP32-IO_MUX.png) from Page 50 of the [../doc/esp32_datasheet_en.pdf](Espressif ESP32 Series Datasheet). 
+See also a copy of the full [ESP32 IO_MUX Pins](../images/ESP32-IO_MUX.png) from Page 50 of the [Espressif ESP32 Series Datasheet](../doc/esp32_datasheet_en.pdf). 
 
 ## Passthru FPGA Needed
 
