@@ -26,7 +26,7 @@ The pins used to control the ULX3S SSD-1331 display from the ESP32:
 #define oled_csn  17 // aka cs - chip select
 #define oled_dc   16 // aka ds aka a0 -  SPI data or command selector pin
 #define oled_resn 25 // aka rst - reset
-#define oled_mosi 15 // aka mosi - data
+#define oled_mosi 15 // aka mosi - data TODO Note spec shows MOSI = GPIO13 not 15 and CS0 = GPIO15??
 #define oled_clk  14 // aka sclk - clock
 #define oled_miso -1 // 12 not used
 ```
@@ -51,7 +51,7 @@ See also the [pdf specification for the SSD-1331 Display](../doc/SSD1331_1.2.pdf
 
 The ULX3S on-boarad ESP32 is this [ESP-WROOM-32 from Mouser Electronics](https://hr.mouser.com/ProductDetail/Espressif-Systems/ESP-WROOM-32-16MB?qs=sGAEpiMZZMsRr7brxAGoXSSUPDSAjAiV1M6iRPUJ5tDjstOHDp9d7Q%3d%3d),
 (Specfically the ESP32-D0WDQ6).
-See also the [ESP-WROOM-32 data sheet](../doc/esp32-wroom-32_datasheet_en-1510934.pdf) and [../doc/esp32_datasheet_en.pdf](Espressif ESP32 Series Datasheet) copy in the local [doc](../doc/) folder.
+See also the [ESP-WROOM-32 data sheet](../doc/esp32-wroom-32_datasheet_en-1510934.pdf) and [Espressif ESP32 Series Datasheet](../doc/esp32_datasheet_en.pdf) copy in the local [doc](../doc/) folder.
 
 ## ESP32 SPI **
 
@@ -73,7 +73,7 @@ note * Only the first device attaching to the bus can use CS0 pin.
 From the ESP32 Datasheet V3.0 (page 8)
 ![ESP32 HSPI GPIO Pins](../images/ESP32-HSPI.png)
 
-See also a copy of the full [ESP32 IO_MUX Pins](../images/ESP32-IO_MUX.png) from Page 50 of the [Espressif ESP32 Series Datasheet](../doc/esp32_datasheet_en.pdf). 
+See also a copy of the comprehensive [ESP32 IO_MUX Pins](../images/ESP32-IO_MUX.png) from Page 50 of the [Espressif ESP32 Series Datasheet](../doc/esp32_datasheet_en.pdf). 
 
 ## Passthru FPGA Needed
 
@@ -85,8 +85,7 @@ The default for `ujprog` is to program to volatile SRAM (power cycle to revert).
 
 ### Quick Start Passthru
 
-Windows
-tip: you can open a command prompt by rick-clicking on the project om Visual Studio, select Open Folder in File Explorer, then type `cmd` in the path and press `enter`.
+Windows tip: you can open a command prompt by rick-clicking on the project in Visual Studio, select `Open Folder in File Explorer`, then type `cmd` in the address path and press `enter`.
 ```
 :: From this project directory (e.g. c:\workspace\ulx3s-examples\VisualMicro-SSD1331-Display )
 cd ..\bin
@@ -158,7 +157,7 @@ From the FPGA code, the intent of the passthru for the display is to connect the
 * N2 to N3 for oled_csn /CS  to wifi_gpio17 (GPIO17)
 * P1 to L1 for oled_dc  /DC  to wifi_gpio16 (GPIO16)
 * P2 to E3 for oled_resn/RES to wifi_gpio25 (GPIO25) 
-* P3 to J1 for oled_mosi/SDA to sd_cmd      (GPIO15) 
+* P3 to J1 for oled_mosi/SDA to sd_cmd      (GPIO15)  TODO - HSPI uses GPIO13 here
 * P4 to H2 for oled_clk /SCL to sd_clk      (GPIO14)
 
 ## Pull-up needed
