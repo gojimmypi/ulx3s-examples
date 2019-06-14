@@ -4,6 +4,28 @@ The [passthru.vhd](../Diamond/passthru.vhd) VHDL file in the [Diamond for Window
 
 This is the not-yet-working version.
 
+
+#Make for WSL
+
+Assuming the repo was cloned to `C:\workspace\`, in WSL, ensure the [Open Source Toolchain](../../OpenSource-toolchain/README.md) is installed, then:
+
+```
+cd /mnt/c/workspace/ulx3s-examples/passthru/OpenSource
+
+make wslprog -f Makefile.12F
+```
+This should result in a output something like this:
+
+```
+../../bin/ujprog.exe ulx3s.bit
+Programming: 99% | ULX2S / ULX3S JTAG programmer v 3.0.92 (built Feb 18 2019 10:55:47)
+Using USB cable: ULX3S FPGA 12K v3.0.3
+Programming: 100%
+Completed in 17.36 seconds.
+```
+
+
+# Make for Linux
 ```
 gojimmypi:/mnt/c/workspace/ulx3s-examples/passthru/OpenSource
 $ make prog -f Makefile.12F
