@@ -82,4 +82,4 @@ prog: ulx3s.bit
 	../../bin/ujprog ulx3s.bit
 
 wslprog: ulx3s.bit
-	../../bin/ujprog ulx3s.bit
+	../../bin/ujprog.exe ulx3s.bit
