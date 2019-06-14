@@ -10,8 +10,9 @@
 # note WSL does not current support native USB drivers, but we can call the Windows exe that does
 # see https://github.com/Microsoft/WSL/issues/2185#issuecomment-306083436
 
-if grep -q Microssoft /proc/version; then
+if grep -q Microsoft /proc/version; then
   # if WSL, then use Windows ujprog.exe
+  echo WSL using exe
   ./ujprog.exe passthru_implementation_12F.bit
 else
   # use the linux ujprog
