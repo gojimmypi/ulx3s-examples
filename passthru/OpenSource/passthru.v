@@ -157,10 +157,8 @@ parameter [31:0] C_dummy_constant=0;
   // wifi_gpio0 <= ftdi_ndtr;
   assign S_oled_csn = wifi_gpio17;
   assign oled_csn = S_oled_csn;
-  assign oled_clk = sd_clk;
-  // wifi_gpio14
-  assign oled_mosi = sd_cmd;
-  // wifi_gpio15
+  assign oled_clk = sd_clk;  // wifi_gpio14
+  assign oled_mosi = sd_cmd;  // wifi_gpio15
   assign oled_dc = wifi_gpio16;
   assign oled_resn = gp[11]; // wifi_gpio25
 
