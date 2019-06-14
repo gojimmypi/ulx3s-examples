@@ -50,3 +50,5 @@ implementation/
 /VisualMicro-SSD1331-Display/Debug
 /VisualMicro-SSD1331-Display/__vm
 /VisualMicro-SSD1331-Display/Release
+/passthru/OpenSource/passthru.json
+/passthru/OpenSource/ulx3s_out.config
