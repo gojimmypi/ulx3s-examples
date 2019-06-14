@@ -26,11 +26,8 @@
 // use work.f32c_pack.all;
 // no timescale needed
 
-module passthru(
-/* verilator lint_off UNUSED */		 
-/* verilator lint_off UNDRIVEN */
-
-		input  wire clk_25MHz, // -- main clock input from 25MHz clock source must be lowercase
+module ulx3s_passthru_wifi(
+		input  wire clk_25mhz, // -- main clock input from 25MHz clock source must be lowercase
 
 		// UART0 (FTDI USB slave serial)
 		output wire ftdi_rxd,
@@ -56,7 +53,7 @@ module passthru(
 		// Onboard blinky
 		output wire [7:0] led,
 		input  wire [6:0] btn,
-		// input  wire [1:4] sw,
+		input  wire [1:4] sw,
 	
 		output wire oled_csn,
 		output wire oled_clk,
@@ -86,19 +83,17 @@ module passthru(
 		input  wire sd_clk,
 		input  wire sd_cdn,
 		input  wire sd_wp
-/* verilator lint_on UNUSED */
-/* verilator lint_off UNDRIVEN */
 );
-	reg  [7:0] button_press;
+
 	parameter [31:0] C_dummy_constant=0;
-	assign shutdown = 0;
+
 	wire [1:0] S_prog_in; 
 	reg  [1:0] R_prog_in; 
 	wire [1:0] S_prog_out;
 	reg  [7:0] R_spi_miso;
 	wire S_oled_csn;
 	parameter C_prog_release_timeout = 17;  // default 17 2^n * 25MHz timeout for initialization phase
-	reg [C_prog_release_timeout:0] R_prog_release = 18'b1;  // timeout that holds lines for reliable entering programming mode
+	reg [C_prog_release_timeout:0] R_prog_release = 1'b1;  // timeout that holds lines for reliable entering programming mode
 
 	// TX/RX passthru
 	assign ftdi_rxd = wifi_txd;
@@ -162,7 +157,6 @@ module passthru(
 
 	// programming release counter
 	always @(posedge clk_25MHz) begin
-		button_press = {1'b0,btn};
 		R_prog_in <= S_prog_in;
 		if (S_prog_out == 2'b01 && R_prog_in == 2'b11) begin
 			R_prog_release <= 0; // was converted as: <= {(((C_prog_release_timeout))-((0))+1){1'b0}};
@@ -176,8 +170,9 @@ module passthru(
 
 	always @(posedge sd_clk, posedge wifi_gpio17) begin : P1
 		// gpio17 is OLED CSn
+
 		if(wifi_gpio17 == 1'b1) begin
-			R_spi_miso <= button_press; // sample button state during csn=1
+			R_spi_miso <= {1'b0,btn}; // sample button state during csn=1
 			end 
 		else begin
 		 // R_spi_miso <= {R_spi_miso[((7)) - 1:0],R_spi_miso[(7)]}; // shift to the left
