@@ -1,5 +1,15 @@
 # Using VisualMicro to Program the ULX3S ESP32 Display
 
+The ULX3S has both onboard FPGA and the Espressif ESP32. One of the ways to program the ESP32 is using the Arduino IDE.
+
+Additionally, VisualMicro is a Visual Studio extension that makes programming the ESP32 (and any other device the Arduino IDE uses)
+vastly easier and more powerful. All the benefits of GitHub integration, auto-complete, syntax highlighting, serial debugging, and more
+are available to the ESP32 developer when using Visual Micro.
+
+There's also a [Verilog Syntax Highlighter](https://marketplace.visualstudio.com/items?itemName=gojimmypi.gojimmypi-verilog-language-extension) 
+with source code on GitHub [gojimmypi/VerilogLanguageExtension](https://github.com/gojimmypi/VerilogLanguageExtension) that can be 
+helpful when editing ULX3S FPGA code in Visual Studio. 
+
 ## Quick Start
 
 First, ensure the [FPGA passthru](../passthru/README.md) is enabled. 
@@ -45,7 +55,16 @@ If your ULX3S does not have a display you can [buy one from Amazon](https://www.
 It is always good to support Adafruit, particularly given the amount of work put into their open source libraries, including ones used in this project.
 Adafruit has a [OLED SSD-1331](https://www.adafruit.com/product/684) - but note that board appears to have a different size/pinout and includes a MicroSD card. ymmv.
 
-See also the [pdf specification for the SSD-1331 Display](../doc/SSD1331_1.2.pdf) in the [doc](../doc/) folder.
+See also the [pdf specification for the SSD-1331 Display](../doc/SSD1331_1.2.pdf) in the [doc](../doc/) folder,
+as well as the [oled info](https://github.com/emard/ulx3s/blob/master/doc/MANUAL.md#oled) in [emard's ULX3S manual](https://github.com/emard/ulx3s/blob/master/doc/MANUAL.md).
+
+## SPI
+
+The SDDI-1331 uses SPI. Here's an excellent illustration of SPI from [electronics.stackexchange](https://electronics.stackexchange.com/questions/55960/difference-between-miso-mosi-and-txd-rxd):
+
+![SPI](../images/spi.jpg)
+
+See also the [Arduino SPI Reference](https://www.arduino.cc/en/Reference/SPI).
 
 ## ULX3S ESP-32
 
@@ -295,9 +314,18 @@ Adafruit_SSD1331 display = Adafruit_SSD1331(cs, dc, mosi, sclk, rst);
 ```
 Adafruit_SSD1331 display = Adafruit_SSD1331(&SPI, cs, dc, rst);
 ```
-Note the [comments in the Adafruit code](https://github.com/adafruit/Adafruit-SSD1331-OLED-Driver-Library-for-Arduino/blob/master/examples/LCDGFXDemo/LCDGFXDemo.ino#L29):
+Note the [comments in the Adafruit code](https://github.com/adafruit/Adafruit-SSD1331-OLED-Driver-Library-for-Arduino/blob/1ed3a35896300bbcdda6af3c05354285be893d46/examples/LCDGFXDemo/LCDGFXDemo.ino#L29):
 
 > hwspi hardcodes those pins, no need to redefine them.
+
+```
+#define sclk 14
+#define mosi 13
+#define cs   5
+#define rst  9
+#define dc   6
+```
+
 
  **As the ULX3S appears to use different pins, is HWSPI even possible?** The `cs`, `dc`, `rst` pins do not seem to be otherwise defined without the macros. 
 
@@ -369,3 +397,7 @@ git clone https://github.com/emard/LibXSVF
 * [gojimmypi blog](https://gojimmypi.blogspot.com/2019/02/) - Notes on ulx3s FPGA
 * [ESP-IDF Programming Guide](https://docs.espressif.com/projects/esp-idf/en/latest/) Specifically [SPI Master Driver](https://docs.espressif.com/projects/esp-idf/en/latest/api-reference/peripherals/spi_master.html)
 * [NodeMCU SPI Documentation](https://nodemcu.readthedocs.io/en/dev-esp32/modules/spi/)
+* [ESP32-DevKitC V4 Getting Started Guide](https://docs.espressif.com/projects/esp-idf/en/latest/get-started/get-started-devkitc.html)
+* [espressif ESP32 Multi-bus SPI example](https://github.com/espressif/arduino-esp32/blob/master/libraries/SPI/examples/SPI_Multiple_Buses/SPI_Multiple_Buses.ino)
+* [emard's ULX3S manual](https://github.com/emard/ulx3s/blob/master/doc/MANUAL.md)
+* [Arduino SPI Reference](https://www.arduino.cc/en/Reference/SPI)
