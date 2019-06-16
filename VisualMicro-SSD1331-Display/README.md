@@ -96,8 +96,10 @@ Connecting........_____....._____....._____....._____....._____....._____.....__
 A fatal error occurred: Failed to connect to ESP32: Timed out waiting for packet header
 esptool.py v2.6-beta1
 ```
-As noted in [arduino-esp32 issues #333](https://github.com/espressif/arduino-esp32/issues/333), there are sometimes
-issues with code upload on the ESP32 (but _not_ for the ULX3S). For the NodeMCU-32S board:
+As noted in [arduino-esp32 issue #333](https://github.com/espressif/arduino-esp32/issues/333), there are sometimes
+issues with code upload on the ESP32 (but _not_ for the ULX3S). 
+
+For the NodeMCU-32S board:
 
 1. Press and hold `EN`
 2. Press `IO0` while still holding `EN` 
@@ -106,7 +108,7 @@ issues with code upload on the ESP32 (but _not_ for the ULX3S). For the NodeMCU-
 
 ![NodeMCU-32S Front View Buttons](../images/NodeMCU32S-FrontView-Buttons.png)
 
-NOTE: The ULX3S has robust upload logic; the button pressing is *not* needed to upload code.
+NOTE: The ULX3S has robust upload logic; the button pressing is *not* needed to upload code to the ESP32 on the ULX3S.
 
 ## ESP32 SPI **
 
