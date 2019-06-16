@@ -259,6 +259,8 @@ Install [Adafruit_SSD1331](https://github.com/adafruit/Adafruit-SSD1331-OLED-Dri
 ![ArduinoIDE-Adafruit-SSD1331-Library.PNG](../images/ArduinoIDE-Adafruit-SSD1331-Library.png)
             
 ## Some SPI Tips
+
+### SPI Connection Tips
 (copied [from SSD_13XX library notes](https://github.com/sumotoy/SSD_13XX/blob/master/README.md) with thanks and credits to [@sumotoy](https://github.com/sumotoy) for this section)
 
 > <b>Connections:</b><br>
@@ -283,7 +285,7 @@ Install [Adafruit_SSD1331](https://github.com/adafruit/Adafruit-SSD1331-OLED-Dri
 > - If you plan to use SPI for other devices as well it's a good idea pullup the CS with a 10K resistor to +3v3, this will keep oled disabled until your CPU access it for initialization and avoid interferences.
 > - It's always a good idea provide a pullup for each CS if multiple SPI devices are used, when CPU start all devices are forced disabled and CPU is able to access one by one and initialize all of them correctly, keep in mind and you will happy in the future!<br>
 
-## Hardware SPI can be slower on the ESP32
+### Hardware SPI can be slower on the ESP32
 (copied from [espressif/arduino-esp32/issues/149](https://github.com/espressif/arduino-esp32/issues/149#issuecomment-275633601) with thanks and credit to [@me-no-dev](https://github.com/me-no-dev) )
 
 > Here is the thing about SPI and all other drivers running on ESP32:
@@ -298,6 +300,21 @@ Install [Adafruit_SSD1331](https://github.com/adafruit/Adafruit-SSD1331-OLED-Dri
 > 
 > * Update all libraries to use proper multi-byte api on ESP32 (Espressif is rolling out own ILI9341 driver based on Adafruit's API)
 > * Disable hardware locking by adding `#define CONFIG_DISABLE_HAL_LOCKS 1` to [esp32-hal.h](https://github.com/espressif/arduino-esp32/blob/master/cores/esp32/esp32-hal.h)
+
+### QIO DIO QOUT DOUT flash modes
+(copied from [esp32 forum](https://www.esp32.com/viewtopic.php?t=1250)
+
+> Not all chips support all of these modes. The datasheet is the best source to know what supports what.
+> * DIO - SPI host uses the "Dual I/O Fast Read" command (BBh). Two SPI pins are used to write the flash address part of the command, and to read flash data out. Therefore these phases need half the clock cycles compared to standard SPI.
+> * DOUT - SPI host uses the "Dual Output Fast Read" command (3Bh). Two SPI pins are used to read flash data out. Slightly slower than DIO, because the address is written via the single MOSI data pin.
+> * QIO - SPI host uses the "Quad I/O Fast Read" command (EBh). Four SPI pins are used to write the flash address part of the command, and to read flash data out. Therefore these phases need a quarter the clock cycles compared to standard SPI.
+> * QOUT - SPI host uses the "Quad Output Fast Read" command (6Bh). Four SPI pins are used to read the flash data out. Slightly slower than QIO, because the address is written via the single MOSI data pin.
+>
+> In terms of performance: QIO > QOUT > DIO > DOUT. I'm fairly sure the flash cache issues 32 byte reads each time, so QOUT or QIO are substantially faster than DIO or DOUT.
+>
+> However, because the command itself (and the read status command) are sent using standard SPI, doubling the SPI clock speed is a bigger speed boost than switching from DOUT to QIO.
+>
+> ESP-IDF defaults to DIO because some flash chips use a mode bit to enable QIO & QOUT support, and this can vary between manufacturers. The chips used in ESP-WROOM modules do not enable QIO correctly without an additional command. A modification is pending in esp-idf which will use the Flash ID to determine which initialisation sequence should be used to enable QIO or QOUT mode.
 
 
 ## Arduino Implementation Notes
@@ -367,6 +384,9 @@ See https://forums.adafruit.com/viewtopic.php?f=8&t=65785:
 > "If you use HWSpi, the adafruit library defaults to 40Mhz, you can make it twice as fast by going to the full 80Mhz speed if your hardware supports it (worked for me with ESP8266):
 display.begin(80000000);"
 
+When editing Arduino Libraries with Visual Studio, you can safely ignore the `WARNING: Spurious .vs folder` errors. 
+There's an [open issue](https://github.com/arduino/arduino-builder/issues/322) and [PR](https://github.com/arduino/arduino-builder/pull/321) to address this.
+
 ## other stuff
 
 See supplements (TODO - which are actually needed?)
@@ -401,3 +421,4 @@ git clone https://github.com/emard/LibXSVF
 * [espressif ESP32 Multi-bus SPI example](https://github.com/espressif/arduino-esp32/blob/master/libraries/SPI/examples/SPI_Multiple_Buses/SPI_Multiple_Buses.ino)
 * [emard's ULX3S manual](https://github.com/emard/ulx3s/blob/master/doc/MANUAL.md)
 * [Arduino SPI Reference](https://www.arduino.cc/en/Reference/SPI)
+* [randomnerdtutorials esp32 pinout reference](https://randomnerdtutorials.com/esp32-pinout-reference-gpios/)
