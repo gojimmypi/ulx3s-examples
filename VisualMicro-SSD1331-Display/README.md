@@ -61,7 +61,7 @@ as well as the [oled info](https://github.com/emard/ulx3s/blob/master/doc/MANUAL
 
 ## SPI
 
-The SDDI-1331 uses SPI. Here's an excellent illustration of SPI from [electronics.stackexchange](https://electronics.stackexchange.com/questions/55960/difference-between-miso-mosi-and-txd-rxd):
+The SSD-1331 uses SPI. Here's an excellent illustration of SPI from [electronics.stackexchange](https://electronics.stackexchange.com/questions/55960/difference-between-miso-mosi-and-txd-rxd/55968#55968):
 
 ![SPI](../images/SPI.png)
 
@@ -69,9 +69,44 @@ See also the [Arduino SPI Reference](https://www.arduino.cc/en/Reference/SPI).
 
 ## ULX3S ESP-32
 
-The ULX3S on-boarad ESP32 is this [ESP-WROOM-32 from Mouser Electronics](https://hr.mouser.com/ProductDetail/Espressif-Systems/ESP-WROOM-32-16MB?qs=sGAEpiMZZMsRr7brxAGoXSSUPDSAjAiV1M6iRPUJ5tDjstOHDp9d7Q%3d%3d),
+The ULX3S on-board ESP32 is this [ESP-WROOM-32 from Mouser Electronics](https://hr.mouser.com/ProductDetail/Espressif-Systems/ESP-WROOM-32-16MB?qs=sGAEpiMZZMsRr7brxAGoXSSUPDSAjAiV1M6iRPUJ5tDjstOHDp9d7Q%3d%3d),
 (Specfically the ESP32-D0WDQ6).
 See also the [ESP-WROOM-32 data sheet](../doc/esp32-wroom-32_datasheet_en-1510934.pdf) and [Espressif ESP32 Series Datasheet](../doc/esp32_datasheet_en.pdf) copy in the local [doc](../doc/) folder.
+
+# Other boards using the ESP-WROOM-32
+
+It can be helpful to have a stand-alone WROOM-32 and SPI display, particularly when concurrently developing FPGA solutions on the ULX3S.
+
+Here are the connections:
+
+![NodeMCU-32S to SSD1331 connection](../images/NodeMCU32S-to-SSD1331-connection.png)
+
+When programming the WROOM-32 ESP32 on something _other_ than the ULX3S, such as the stand-alone NodeMCU-32S, programming
+upload errors may occur:
+
+```
+Uploading 'VisualMicro-SSD1331-Display' to 'ESP32 Dev Module' using 'COM3'
+Uploader started for board ESP32 Dev Module
+Upload method will be: bootloader
+Uploading via Bootloader 
+C:\Users\gojimmypi\AppData\Local\arduino15\packages\esp32\tools\esptool_py\2.6.0\esptool.exe --chip esp32 --port "COM3" --baud 115200 --before default_reset --after hard_reset write_flash -z --flash_mode dio --flash_freq 80m --flash_size detect 0xe000 "C:\Users\gojimmypi\AppData\Local\arduino15\packages\esp32\hardware\esp32\1.0.1/tools/partitions/boot_app0.bin" 0x1000 "C:\Users\gojimmypi\AppData\Local\arduino15\packages\esp32\hardware\esp32\1.0.1/tools/sdk/bin/bootloader_dio_80m.bin" 0x10000 "C:\Users\GOJIMM~1\AppData\Local\Temp\VMBuilds\VISUAL~2\ESP32_~1\Release/VisualMicro-SSD1331-Display.ino.bin" 0x8000 "C:\Users\GOJIMM~1\AppData\Local\Temp\VMBuilds\VISUAL~2\ESP32_~1\Release/VisualMicro-SSD1331-Display.ino.partitions.bin"
+esptool.py v2.6-beta1
+Serial port COM3
+Connecting........_____....._____....._____....._____....._____....._____....._____
+A fatal error occurred: Failed to connect to ESP32: Timed out waiting for packet header
+esptool.py v2.6-beta1
+```
+As noted in [arduino-esp32 issues #333](https://github.com/espressif/arduino-esp32/issues/333), there are sometimes
+issues with code upload on the ESP32 (but _not_ for the ULX3S). For the NodeMCU-32S board:
+
+1. Press and hold `EN`
+2. Press `IO0` while still holding `EN` 
+3. Release `EN` while still holding `IO0` 
+4. Release `IO0` (programming may resume even if `IO0` is still being held)
+
+![NodeMCU-32S Front View Buttons](../images/NodeMCU32S-FrontView-Buttons.png)
+
+NOTE: The ULX3S has robust upload logic; the button pressing is *not* needed to upload code.
 
 ## ESP32 SPI **
 
@@ -259,7 +294,9 @@ Install [Adafruit_SSD1331](https://github.com/adafruit/Adafruit-SSD1331-OLED-Dri
 
 ![ArduinoIDE-Adafruit-SSD1331-Library.PNG](../images/ArduinoIDE-Adafruit-SSD1331-Library.png)
             
-## Some SPI Tips
+## Some SPI Tips, Notes, and other Development Gems
+
+Here are some helpful SPI tidbits from various sources:
 
 ### SPI Connection Tips
 (copied [from SSD_13XX library notes](https://github.com/sumotoy/SSD_13XX/blob/master/README.md) with thanks and credits to [@sumotoy](https://github.com/sumotoy) for this section)
@@ -410,8 +447,8 @@ git clone https://github.com/emard/LibXSVF
 * [sumotoy/SSD_13XX](https://github.com/sumotoy/SSD_13XX) - See the README for some excellent SPI information.
 * [emard/SSD_13XX](https://github.com/emard/SSD_13XX.git) - fork of [sumotoy/SSD_13XX](https://github.com/sumotoy/SSD_13XX) for the ULX3S
 * [Adafruit 0.96" mini Color OLED technical details](https://learn.adafruit.com/096-mini-color-oled/downloads)
-* [espressif/Adafruit-GFX-Library](https://github.com/espressif/Adafruit-GFX-Library) (fork from []())
-* [mgo-tec/ESP32_SD_SSD1331_Gadgets](https://github.com/mgo-tec/ESP32_SD_SSD1331_Gadgets)
+* [espressif/Adafruit-GFX-Library](https://github.com/espressif/Adafruit-GFX-Library) (fork from [adafruit/Adafruit-GFX-Library](https://github.com/adafruit/Adafruit-GFX-Library))
+* [mgo-tec/ESP32_SD_SSD1331_Gadgets](https://github.com/mgo-tec/ESP32_SD_SSD1331_Gadgets) - see also [ESP32_SSD1331 library](https://github.com/mgo-tec/ESP32_SSD1331/blob/master/src/ESP32_SSD1331.cpp)
 * [websvf_sd](https://github.com/emard/LibXSVF-ESP/blob/master/examples/websvf_sd/websvf_sd.ino) - the default as-shipped software on the ULX3S
 * [olikraus/ucglib](https://github.com/olikraus/ucglib) - Color graphics library for embedded systems with focus on Arduino Environment.
 * [ODRIOD-GO Getting started with Arduino](https://wiki.odroid.com/odroid_go/arduino/01_arduino_setup) and on [GitHub](https://github.com/hardkernel/ODROID-GO)
@@ -422,4 +459,4 @@ git clone https://github.com/emard/LibXSVF
 * [espressif ESP32 Multi-bus SPI example](https://github.com/espressif/arduino-esp32/blob/master/libraries/SPI/examples/SPI_Multiple_Buses/SPI_Multiple_Buses.ino)
 * [emard's ULX3S manual](https://github.com/emard/ulx3s/blob/master/doc/MANUAL.md)
 * [Arduino SPI Reference](https://www.arduino.cc/en/Reference/SPI)
-* [randomnerdtutorials esp32 pinout reference](https://randomnerdtutorials.com/esp32-pinout-reference-gpios/)
+* [randomnerdtutorials esp32 pinout reference](https://randomnerdtutorials.com/esp32-pinout-reference-gpios/) - Note this board has a different pinout as compared to WROOM-32!
