@@ -63,7 +63,7 @@ as well as the [oled info](https://github.com/emard/ulx3s/blob/master/doc/MANUAL
 
 The SDDI-1331 uses SPI. Here's an excellent illustration of SPI from [electronics.stackexchange](https://electronics.stackexchange.com/questions/55960/difference-between-miso-mosi-and-txd-rxd):
 
-![SPI](../images/SPI.jpg)
+![SPI](../images/SPI.png)
 
 See also the [Arduino SPI Reference](https://www.arduino.cc/en/Reference/SPI).
 
