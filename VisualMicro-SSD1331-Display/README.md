@@ -1,8 +1,9 @@
 # Using VisualMicro to Program the ULX3S ESP32 Display
 
 The ULX3S has both onboard FPGA and the Espressif ESP32. One of the ways to program the ESP32 is using the Arduino IDE.
+Another, and considerably more productive method - is to use Visual Micro.
 
-Additionally, VisualMicro is a Visual Studio extension that makes programming the ESP32 (and any other device the Arduino IDE uses)
+VisualMicro is a Visual Studio extension that makes programming the ESP32 (and any other device the Arduino IDE uses)
 vastly easier and more powerful. All the benefits of GitHub integration, auto-complete, syntax highlighting, serial debugging, and more
 are available to the ESP32 developer when using Visual Micro.
 
@@ -62,7 +63,7 @@ as well as the [oled info](https://github.com/emard/ulx3s/blob/master/doc/MANUAL
 
 The SDDI-1331 uses SPI. Here's an excellent illustration of SPI from [electronics.stackexchange](https://electronics.stackexchange.com/questions/55960/difference-between-miso-mosi-and-txd-rxd):
 
-![SPI](../images/spi.jpg)
+![SPI](../images/SPI.jpg)
 
 See also the [Arduino SPI Reference](https://www.arduino.cc/en/Reference/SPI).
 
