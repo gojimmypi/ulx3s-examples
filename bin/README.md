@@ -12,4 +12,48 @@ To get started quickly, see the [upload_passthru.sh](./upload_passthru.sh) to up
 
 For other binaries see [https://github.com/emard/ulx3s-bin](https://github.com/emard/ulx3s-bin)
 
+## Diamond Verilog Fresh Build
+
+Run this command from this local `./bin/` directory in WSL for load fresh [Diamond Verilog Passthru](../passthru/DiamondVerilog/README.md).
+Note the file is copied local due to `ujprog` having issues with a long path:
+
+```
+cp /mnt/c/workspace/ulx3s-examples/passthru/DiamondVerilog/implementation/passthru_implementation.bit ./DiamondVerilog_passthru.bit
+./ujprog.exe ./DiamondVerilog_passthru.bit
+```
+
+
+## Troubleshooting
+
+### ESP32 Disply blank after loading FPGA bitfile with ujprog
+
+This is a known problem. Reload ESP32 app if FPGA code is not saved to flash (as otherwise FPGA code is lost during power cycle)
+
+###  $'\r': command not found
+
+If this error is encountered:
+
+```
+$ ./upload_passthru.sh
+./upload_passthru.sh: line 9: $'\r': command not found
+./upload_passthru.sh: line 12: $'\r': command not found
+./upload_passthru.sh: line 22: syntax error: unexpected end of file
+```
+This means the file was improperly terminated with CR/LF characters when saving in Visual Studio. To fix, use the `dos2unix` utility:
+
+```
+$ dos2unix ./upload_passthru.sh
+dos2unix: converting file ./upload_passthru.sh to Unix format...
+```
+
+### Path too long for ujprog
+
+When the path paramter to `ujprog` is too long:
+```
+Using USB cable: ULX3S FPGA 12K v3.0.3
+open(/mnt/c/workspace/ulx3s-examples/passthru/DiamondVerilog/implementation/passthru_implementation.bit) failed
+
+Failed.
+```
+
 See also [other examples](../README.md)

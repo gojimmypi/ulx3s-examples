@@ -47,3 +47,15 @@ implementation/
 /VisualMicro/__vm/Compile.vmps.xml
 /VisualMicro/Debug
 /VisualMicro/Release
+/VisualMicro-SSD1331-Display/Debug
+/VisualMicro-SSD1331-Display/__vm
+/VisualMicro-SSD1331-Display/Release
+/passthru/OpenSource/passthru.json
+/passthru/OpenSource/ulx3s_out.config
+/bin/DiamondVerilog_passthru.bit
+/passthru/DiamondVerilog/ulx3s_v20.ccl
+/passthru/DiamondVerilog/passthru_tcl.html
+/passthru/DiamondVerilog/.spread_sheet.ini
+/passthru/DiamondVerilog/.spreadsheet_view.ini
+/passthru/DiamondVerilog/.setting.ini
+/SPI/stm32-spi-test/out/build/x64-Debug

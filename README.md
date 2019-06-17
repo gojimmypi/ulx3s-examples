@@ -28,11 +28,25 @@ Here is a collection of various ULX3S examples to get started:
 
 * [Using Visual Micro to program the ESP32](./VisualMicro/README.md)
 
+* [Visual Micro ESP32 SSD1331 Display Example](./VisualMicro-SSD1331-Display/README.md)
+
 * [MicroPython on the ULX3S ESP32](./MicroPython/README.md)
 
 * [More links to RadionaOrg ULX3S examples](https://github.com/RadionaOrg/ulx3s-links/blob/master/README.md) 
 
-# See also: 
+## Common Problems
+
+### FT_Open() failed Cannot find JTAG cable.
+Check to see if the serial port is in use, such as:
+* Arduino Serial Monitor
+* Visual Micro Serial Monitor
+* Putty
+* Anything else that might have the serial port in use
+
+# Found unknown (FFFFFFFF) device, but the bitstream is for LFE5U-12E.
+Create and upload a blank Arduino project (empty `setup` / `loop`)
+
+## See also: 
 
 [binaries](./bin/README.md), [hardware](https://github.com/emard/ulx3s), [f32c/tools/ujprog](https://github.com/f32c/tools/tree/master/ujprog)
 
