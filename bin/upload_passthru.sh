@@ -6,7 +6,7 @@
 # ULX2S / ULX3S JTAG programmer v 3.0.92 (built Feb 18 2019 10:55:47)
 # Using USB cable: ULX3S FPGA 12K v3.0.3
 # Programming: 100%
-
+#
 # note WSL does not current support native USB drivers, but we can call the Windows exe that does
 # see https://github.com/Microsoft/WSL/issues/2185#issuecomment-306083436
 
@@ -18,3 +18,4 @@ else
   # use the linux ujprog
   ./ujprog     passthru_implementation_12F.bit
 fi
+ 
