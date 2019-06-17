@@ -462,3 +462,5 @@ git clone https://github.com/emard/LibXSVF
 * [emard's ULX3S manual](https://github.com/emard/ulx3s/blob/master/doc/MANUAL.md)
 * [Arduino SPI Reference](https://www.arduino.cc/en/Reference/SPI)
 * [randomnerdtutorials esp32 pinout reference](https://randomnerdtutorials.com/esp32-pinout-reference-gpios/) - Note this board has a different pinout as compared to WROOM-32!
+* [gojimmypi FPGA-SPI](https://github.com/gojimmypi/fpga-spi) - example SPI slave device for FPGA. Fork from [joeferner/fpga-spi](https://github.com/joeferner/fpga-spi)
+* [SPI Driver](https://spidriver.com/) - excellent tool for controlling and debugging SPI devices
