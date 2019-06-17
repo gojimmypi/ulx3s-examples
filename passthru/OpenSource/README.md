@@ -2,7 +2,7 @@
 
 The [passthru.vhd](../Diamond/passthru.vhd) VHDL file in the [Diamond for Windows passthru (VHDL)](../Diamond/README.md) was converted to Verilog using @ldoolitt's [VHDL to Verilog](https://github.com/ldoolitt/vhd2vl) converter.
 
-This is the not-yet-working version.
+This is the not-yet-working version. TODO: why? This is the same Verilog and constraint file as in the DiamondVerilog example.
 
 
 #Make for WSL
