@@ -20,11 +20,13 @@ Here is a collection of various ULX3S examples to get started:
 
 * [FPGA PassThru QuickStart](./passthru/README.md#quick-start-fpga-passthru)
 
-* [PassThru in Lattice Diamond for Windows](./passthru/Diamond/README.md)
+* [FPGA PassThru in VHDL using Lattice Diamond for Windows](./passthru/Diamond/README.md)
+
+* [FPGA PassThru in Verilog using Lattice Diamond for Windows](./passthru/DiamondVerilog/README.md)
 
 * [Build Open Source Toolchain yosys/nextpnr](./OpenSource-toolchain/README.md)
 
-* [PassThru using Open Source](./passthru/OpenSource/README.md)
+* [FPGA PassThru using Open Source](./passthru/OpenSource/README.md)
 
 * [Using Visual Micro to program the ESP32](./VisualMicro/README.md)
 
@@ -36,6 +38,8 @@ Here is a collection of various ULX3S examples to get started:
 
 ## Common Problems
 
+Here are some common problems that may be encountered, and how to resolve them.
+
 ### FT_Open() failed Cannot find JTAG cable.
 Check to see if the serial port is in use, such as:
 * Arduino Serial Monitor
@@ -43,8 +47,9 @@ Check to see if the serial port is in use, such as:
 * Putty
 * Anything else that might have the serial port in use
 
-# Found unknown (FFFFFFFF) device, but the bitstream is for LFE5U-12E.
-Create and upload a blank Arduino project (empty `setup` / `loop`)
+### Found unknown (FFFFFFFF) device, but the bitstream is for LFE5U-12E.
+
+This error has been seen when experimenting with SPI pins to get VSPI/HSPI working. Create and upload a blank Arduino project (empty `setup` / `loop`)
 
 ## See also: 
 
@@ -58,6 +63,9 @@ Create and upload a blank Arduino project (empty `setup` / `loop`)
 
 * https://github.com/jhol/otl-modem/blob/master/fw/syn/top.v
 
-* http://www.clifford.at/icestorm/
+* [icestorm](http://www.clifford.at/icestorm/)
 
 * [Windows Subsystem for Linux (WSL): what can't I do with the Ubuntu application for Microsoft Windows?](https://askubuntu.com/questions/1051525/windows-subsystem-for-linux-wsl-what-cant-i-do-with-the-ubuntu-application-f)
+
+* [ldoolitt/vhd2vl](https://github.com/ldoolitt/vhd2vl) and [doolittle.icarus.com/~larry/vhd2vl/](http://doolittle.icarus.com/~larry/vhd2vl/) (some confusion as tp which is actually the _latest_) 
+
