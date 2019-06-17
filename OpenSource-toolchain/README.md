@@ -17,6 +17,7 @@ git clone https://gist.github.com/f96cd86b2b8595b4cf3be4baf493c5a7.git ULX3S_WSL
 This can take quite some time....
 
 ```
+cd /mnt/c/workspace/ulx3s-examples/OpenSource-toolchain
 ./ULX3S_WSL_Toolchain.sh
 ```
 
