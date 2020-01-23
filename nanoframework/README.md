@@ -31,27 +31,27 @@ Key to uploading code, is ensuring Visual Studio can "see" the devices. Ensure t
 Click on `View - Other Windows - Device Explorer`. If the device is not listed, you may need to exist Visual Studio and try again.
 There does not appear to be a "device refresh / rescan" feature. When found, it should look something like this:
  
-![device explorer](device_explorer.png)
+![device explorer](./images/device_explorer.png)
 
 # Create a Project
 
 There does not seem to be an easy way to browse to the project type:
 
-![visual_studio_no_project](visual_studio_no_project.png)
+![visual_studio_no_project](./images/visual_studio_no_project.png)
 
 So you may need to search for it:
 
-![visual_studio_search_project](visual_studio_search_project.png)
+![visual_studio_search_project](./images/visual_studio_search_project.png)
 
 # Troubleshooting
 
 if you see an error like "Couldn't find a valid native assembly required by mscorlib v1.3.0.3":
 
-![failure_mscorlib_missing](failure_mscorlib_missing.png)
+![failure_mscorlib_missing](./images/failure_mscorlib_missing.png)
 
 Ensure the Core Library checkbox is checked:
 
-![nuget_checkbox.png](nuget_checkbox.png)
+![nuget_checkbox.png](./images/nuget_checkbox.png)
 
 # Building the nanoFramework bootloader.
 
