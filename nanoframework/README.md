@@ -1,6 +1,6 @@
 # Programming the ULX3S ESP32 using C# in Visual Studio
 
-In order to program the ESP32 on the ULX3S, the [PassThru FPGA](../../passthru/README.md) code needs to first be loaded.
+In order to program the ESP32 on the ULX3S, the [PassThru FPGA](../passthru/README.md) code needs to first be loaded.
 
 Programming in C# will require the [nanoFramework Extension for Visual Studio 2019](https://marketplace.visualstudio.com/items?itemName=nanoframework.nanoFramework-VS2019-Extension)
 or the [nanoFramework Extension for Visual Studio 2017](https://marketplace.visualstudio.com/items?itemName=vs-publisher-1470366.nanoFrameworkVS2017Extension); yes, they are different!
