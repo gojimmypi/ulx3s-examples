@@ -13,8 +13,22 @@ In order to propgram C# on the ESP32, a special bootloader is needed.
 
 See the [upload_firmware.bat](./upload_firmware.bat); this uploads the binaries in [./bin/](./bin/) to the ESP32.
 
+You'll need to know the USB port of your ESP32:
+
+![device_manager_com_port.png](./images/device_manager_com_port.png)
+
+Example:
+
+```
+upload_firmware.bat COM13
+```
+
 If these binaries do not work, check the versions. The latest binaries can be downloaded from [here](https://github.com/nanoframework/nf-interpreter#firmware-for-reference-boards).
 Note the files are not hosted on GitHub. Don't despair if there are no downloads available, click on the "Files" for a download. Might be nice to have the GitHub links go directly there.
+
+
+Check your path. The Python script expects version 3.x of Python. Visual Studio users may find Python installed in an unexpected directory, even when not using
+the Visual Studio Installer.
 
 # Installing the nanoFramework.
 
@@ -48,6 +62,21 @@ So you may need to search for it:
 ![visual_studio_search_project](./images/visual_studio_search_project.png)
 
 # Troubleshooting
+
+If you see an error like this when attempting to flash the nanoFramework firmware:
+
+```
+Traceback (most recent call last):
+  File "..\bin\ESP32\esptool.py", line 25, in <module>
+    import serial
+ImportError: No module named serial
+```
+See [Issue 350](https://github.com/espressif/esptool/issues/350) and try: 
+
+```
+pip install pyserial
+```
+
 
 if you see an error like "Couldn't find a valid native assembly required by mscorlib v1.3.0.3":
 
