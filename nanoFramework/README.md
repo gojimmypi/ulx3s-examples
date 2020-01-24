@@ -20,7 +20,7 @@ You'll need to know the USB port of your ESP32:
 Example:
 
 ```
-upload_firmware.bat COM13
+upload_firmware.bat COM5
 ```
 
 If these binaries do not work, check the versions. The latest binaries can be downloaded from [here](https://github.com/nanoframework/nf-interpreter#firmware-for-reference-boards).

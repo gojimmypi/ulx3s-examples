@@ -8,7 +8,7 @@ python ..\bin\ESP32\esptool.py --chip esp32 --port "%1" --baud 921600 --before "
 goto done
 
 :NO_COM
-echo error: no COM port specified. example: upload_firmware.bat COM13
+echo error: no COM port specified. example: upload_firmware.bat COM5
 
 :done
 
