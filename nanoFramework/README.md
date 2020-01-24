@@ -11,7 +11,7 @@ Next, if you want to compile the [nanoFramework](https://nanoframework.net/) its
 
 In order to propgram C# on the ESP32, a special bootloader is needed.
 
-See the [upload_firmware.bat](./upload_firmware.bat); this uploads the binaries in [./bin/] to the ESP32.
+See the [upload_firmware.bat](./upload_firmware.bat); this uploads the binaries in [./bin/](./bin/) to the ESP32.
 
 If these binaries do not work, check the versions. The latest binaries can be downloaded from [here](https://github.com/nanoframework/nf-interpreter#firmware-for-reference-boards).
 Note the files are not hosted on GitHub. Don't despair if there are no downloads available, click on the "Files" for a download. Might be nice to have the GitHub links go directly there.
@@ -25,9 +25,13 @@ The [Espressif docs indicates the DevKitC also uses the WROOM-32](https://www.es
 
 ![SP32-DevKitC docs](./images/ESP32-DevKitC.png )
 
+The easiest way to install the nanoFramework extension is from the Visual Studio `Extensions - Manage Extensions`:
+
+![VisualStudio_nanoFramework_Marketplace](./images/VisualStudio_nanoFramework_Marketplace.png)
+
 # Find ULX3S in Device Explorer
 
-Key to uploading code, is ensuring Visual Studio can "see" the devices. Ensure the ULX3S is plugged into a USB port.
+Key to uploading C#-compiled code, is ensuring Visual Studio can "see" the devices. Ensure the ULX3S is plugged into a USB port.
 Click on `View - Other Windows - Device Explorer`. If the device is not listed, you may need to exist Visual Studio and try again.
 There does not appear to be a "device refresh / rescan" feature. When found, it should look something like this:
  
