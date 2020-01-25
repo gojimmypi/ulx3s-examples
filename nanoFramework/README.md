@@ -1,3 +1,9 @@
+# Requirements
+
+Visual Studio 2017 or 2019 with nanoFramework extension
+Python
+ULX3S (or any ESP32 WROOM device)
+
 # Programming the ULX3S ESP32 using C# in Visual Studio
 
 In order to program the ESP32 on the ULX3S, the [PassThru FPGA](../passthru/README.md) code needs to first be loaded.
@@ -9,7 +15,7 @@ Next, if you want to compile the [nanoFramework](https://nanoframework.net/) its
 
 # Quickstart C# on the ULX3S ESP32
 
-In order to propgram C# on the ESP32, a special bootloader is needed.
+In order to program C# on the ESP32, a special bootloader is needed.
 
 See the [upload_firmware.bat](./upload_firmware.bat); this uploads the binaries in [./bin/](./bin/) to the ESP32.
 
@@ -20,15 +26,20 @@ You'll need to know the USB port of your ESP32:
 Example:
 
 ```
+c:
+if not exist c:\workspace mkdir c:\workspace
+cd\workspace
+git clone https://github.com/gojimmypi/ulx3s-examples.git
+cd ulx3s-examples\nanoFramework
+
 upload_firmware.bat COM5
 ```
 
 If these binaries do not work, check the versions. The latest binaries can be downloaded from [here](https://github.com/nanoframework/nf-interpreter#firmware-for-reference-boards).
 Note the files are not hosted on GitHub. Don't despair if there are no downloads available, click on the "Files" for a download. Might be nice to have the GitHub links go directly there.
 
+![precompiled_binaries_on_files_tab](./images/precompiled_binaries_on_files_tab.png)
 
-Check your path. The Python script expects version 3.x of Python. Visual Studio users may find Python installed in an unexpected directory, even when not using
-the Visual Studio Installer.
 
 # Installing the nanoFramework.
 
@@ -77,12 +88,29 @@ See [Issue 350](https://github.com/espressif/esptool/issues/350) and try:
 pip install pyserial
 ```
 
+This error typically means the wrong COM port was specified:
+```
+Traceback (most recent call last):
+  File "..\bin\ESP32\esptool.py", line 2524, in <module>
+    _main()
+  File "..\bin\ESP32\esptool.py", line 2517, in _main
+    main()
+  File "..\bin\ESP32\esptool.py", line 2246, in main
+    esp = chip_class(args.port, initial_baud)
+  File "..\bin\ESP32\esptool.py", line 177, in __init__
+    self._port = serial.serial_for_url(port)
+  File "C:\Python27\lib\site-packages\serial\__init__.py", line 88, in serial_for_url
+    instance.open()
+  File "C:\Python27\lib\site-packages\serial\serialwin32.py", line 62, in open
+    raise SerialException("could not open port {!r}: {!r}".format(self.portstr, ctypes.WinError()))
+serial.serialutil.SerialException: could not open port 'COM5': WindowsError(2, 'The system cannot find the file specified.')
+```
 
 if you see an error like "Couldn't find a valid native assembly required by mscorlib v1.3.0.3":
 
 ![failure_mscorlib_missing](./images/failure_mscorlib_missing.png)
 
-Ensure the Core Library checkbox is checked:
+Ensure the Core Library checkbox is checked in `Tools - NuGet Package Manager - Manage NuGet Packages for Solution`
 
 ![nuget_checkbox.png](./images/nuget_checkbox.png)
 
