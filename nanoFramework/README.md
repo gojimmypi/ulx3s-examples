@@ -1,8 +1,8 @@
 # Requirements
 
-Visual Studio 2017 or 2019 with nanoFramework extension
-Python
-ULX3S (or any ESP32 WROOM device)
+- Visual Studio 2017 or 2019 with nanoFramework extension
+- Python
+- ULX3S (or any ESP32 WROOM device)
 
 # Programming the ULX3S ESP32 using C# in Visual Studio
 
