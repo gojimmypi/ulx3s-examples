@@ -2,11 +2,12 @@
 
 - Visual Studio 2017 or 2019 with nanoFramework extension
 - Python
-- ULX3S (or any ESP32 WROOM device)
+- [ULX3S](https://www.crowdsupply.com/radiona/ulx3s) (or any ESP32 WROOM device)
 
 # Programming the ULX3S ESP32 using C# in Visual Studio
 
-In order to program the ESP32 on the ULX3S, the [PassThru FPGA](../passthru/README.md) code needs to first be loaded.
+In order to program the ESP32 on the ULX3S, the [PassThru FPGA](../passthru/README.md) code needs to first be loaded. 
+This is typically already installed on new boards, and may not be necessary. Try to connect to the ESP32 first.
 
 Programming in C# will require the [nanoFramework Extension for Visual Studio 2019](https://marketplace.visualstudio.com/items?itemName=nanoframework.nanoFramework-VS2019-Extension)
 or the [nanoFramework Extension for Visual Studio 2017](https://marketplace.visualstudio.com/items?itemName=vs-publisher-1470366.nanoFrameworkVS2017Extension); yes, they are different!
@@ -41,7 +42,7 @@ Note the files are not hosted on GitHub. Don't despair if there are no downloads
 ![precompiled_binaries_on_files_tab](./images/precompiled_binaries_on_files_tab.png)
 
 
-# Installing the nanoFramework.
+# Installing the nanoFramework Extension
 
 The first thing to consider is if the nanoFramwork supports the ESP32 on the ULX3S. 
 The documentation explicitly calls out the ESP32 DevKit-C. 
@@ -58,7 +59,7 @@ The easiest way to install the nanoFramework extension is from the Visual Studio
 
 Key to uploading C#-compiled code, is ensuring Visual Studio can "see" the devices. Ensure the ULX3S is plugged into a USB port.
 Click on `View - Other Windows - Device Explorer`. If the device is not listed, you may need to exist Visual Studio and try again.
-There does not appear to be a "device refresh / rescan" feature. When found, it should look something like this:
+The little refresh icon is for resetting; the magnifying glass is for refreshing the device list (searching device). When found, it should look something like this:
  
 ![device explorer](./images/device_explorer.png)
 
@@ -71,6 +72,12 @@ There does not seem to be an easy way to browse to the project type:
 So you may need to search for it:
 
 ![visual_studio_search_project](./images/visual_studio_search_project.png)
+
+To blink the onboard LED, the `nanoFramework.Windows.Devices.Gpio` NuGet package reference is needed:
+
+![nanoFramework.Windows.Devices.Gpio_NuGet_package](./images/nanoFramework.Windows.Devices.Gpio_NuGet_package.png)
+
+See also the online [source code for nanoFramework.Windows.Devices.Gpio](https://github.com/nanoframework/lib-Windows.Devices.Gpio). 
 
 # Troubleshooting
 
