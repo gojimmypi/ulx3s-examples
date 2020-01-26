@@ -59,3 +59,6 @@ implementation/
 /passthru/DiamondVerilog/.spreadsheet_view.ini
 /passthru/DiamondVerilog/.setting.ini
 /SPI/stm32-spi-test/out/build/x64-Debug
+/nanoframework/blinky/bin/Debug
+/nanoframework/blinky/obj/Debug
+/nanoframework/blinky/packages/nanoFramework.CoreLibrary.1.6.0-preview.1

@@ -32,6 +32,8 @@ Here is a collection of various ULX3S examples to get started:
 
 * [Visual Micro ESP32 SSD1331 Display Example](./VisualMicro-SSD1331-Display/README.md)
 
+* [Using nanoFramework to program the ESP32 with C#](./passthru/nanoFramework/README.md)
+
 * [MicroPython on the ULX3S ESP32](./MicroPython/README.md)
 
 * [More links to RadionaOrg ULX3S examples](https://github.com/RadionaOrg/ulx3s-links/blob/master/README.md) 
