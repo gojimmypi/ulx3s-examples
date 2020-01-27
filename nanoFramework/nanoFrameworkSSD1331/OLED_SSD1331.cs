@@ -48,6 +48,8 @@ namespace nanoFrameworkSSD1331
 {
     public class OLED_SSD1331
     {
+        private byte _width = 96;
+        private byte _height = 64;
         private byte _rst;            ///< Reset pin # (or -1)
         private byte _cs;             ///< Chip select pin # (or -1)
         private byte _dc;             ///< Data/command pin #
@@ -122,7 +124,32 @@ namespace nanoFrameworkSSD1331
                 b <<= 1;
                 SPI_SCK_LOW();
             }
+        }
 
+        private void SPI_WRITE16(UInt16 b)
+        {
+            for (byte bit = 0; bit < 16; bit++)
+            {
+                if ((b & 0x8000) > 0)
+                {
+                    SPI_MOSI_HIGH();
+                }
+                else
+                {
+                    SPI_MOSI_LOW();
+                }
+                SPI_SCK_HIGH();
+                b <<= 1;
+                SPI_SCK_LOW();
+            }
+            TFT_WR_STROBE();
+        }
+
+        private void TFT_WR_STROBE()
+        {
+            // we don't have a write strobe pin!
+            //digitalWrite(_wr, LOW);
+            //digitalWrite(_wr, HIGH);
         }
         /// <summary>
         /// Send a command to the controller
@@ -360,5 +387,77 @@ namespace nanoFrameworkSSD1331
             Thread.Sleep(125);
         }
 
+
+        static public void SPI_BEGIN_TRANSACTION()
+        {
+
+        }
+        static public void SPI_END_TRANSACTION()
+        {
+
+        }
+
+        void startWrite()
+        {
+            SPI_BEGIN_TRANSACTION();
+            if (_cs >= 0) SPI_CS_LOW();
+        }
+
+        void endWrite()
+        {
+            if (_cs >= 0) SPI_CS_HIGH();
+            SPI_END_TRANSACTION();
+        }
+
+        public void drawPixel(byte x, byte y, ushort color)
+        {
+            // Clip first...
+            if ((x >= 0) && (x < _width) && (y >= 0) && (y < _height))
+            {
+                // THEN set up transaction (if needed) and draw...
+                startWrite();
+                setAddrWindow(x, y, 1, 1);
+                SPI_WRITE16(color);
+                endWrite();
+            }
+        }
+
+        public void setAddrWindow(byte x, byte y, byte w, byte h)
+        {
+
+            byte x1 = x;
+            byte y1 = y;
+            if (x1 > 95) x1 = 95;
+            if (y1 > 63) y1 = 63;
+
+            byte x2 = (byte)(x + w - 1);
+            byte y2 = (byte)(y + h - 1);
+            if (x2 > 95) x2 = 95;
+            if (y2 > 63) y2 = 63;
+
+            if (x1 > x2)
+            {
+                byte t = x2;
+                x2 = x1;
+                x1 = t;
+            }
+            if (y1 > y2)
+            {
+                byte t = y2;
+                y2 = y1;
+                y1 = t;
+            }
+
+            sendCommand(0x15); // Column addr set
+            sendCommand(x1);
+            sendCommand(x2);
+
+            sendCommand(0x75); // Column addr set
+            sendCommand(y1);
+            sendCommand(y2);
+
+            startWrite();
+
+        }
     }
 }

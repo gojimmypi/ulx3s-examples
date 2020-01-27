@@ -15,8 +15,12 @@ namespace nanoFrameworkSSD1331_demo
             byte oled_clk = 14; // aka sclk - clock
                                 // byte oled_miso = -1; // 12 not used
 
-            OLED_SSD1331 a = new OLED_SSD1331(oled_csn, oled_dc, oled_mosi, oled_clk, oled_resn);
+            OLED_SSD1331 myDisplay = new OLED_SSD1331(oled_csn, oled_dc, oled_mosi, oled_clk, oled_resn);
 
+            for (int i = 0; i < 64; i++)
+            {
+                myDisplay.drawPixel((byte)i, (byte)i, (ushort)(36 + i));
+            }
             Console.WriteLine("Hello world!");
  
             //OLED_SSD1331.ToggleClock();
