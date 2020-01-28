@@ -121,6 +121,25 @@ Ensure the Core Library checkbox is checked in `Tools - NuGet Package Manager - 
 
 ![nuget_checkbox.png](./images/nuget_checkbox.png)
 
+## Connecting........_____....._____....._____.....
+
+This is a common message for some ESP32 boards that did not implement a robust auto-detect of the uploader. 
+Some manual intervention is needed to kickstart the upload.
+
+While running uploader: Hold down `1O0`, continue holding then press `EN`, release `EN` amd release `IO0` and the upload should begin.
+
+![ESP32_upload_error_needs_button_pre](./images/ESP32_upload_error_needs_button_pre.png)
+
+
+## A fatal error occurred: Invalid head of packet ('e')
+
+This error is also typical of some ESP32 boards needing the special button sequence. Often this message will be seen after the nanoFramework
+has been successfully loaded onto the chip.
+
+While running uploader: Hold down `1O0`, continue holding then press `EN`, release `EN` amd release `IO0` and the upload should begin.
+
+![ESP32_upload_error_needs_button_post](./images/ESP32_upload_error_needs_button_post.png)
+
 # Building the nanoFramework bootloader.
 
 See the [source code](https://github.com/nanoframework/nf-interpreter/tree/develop/targets/FreeRTOS_ESP32/ESP32_WROOM_32).
