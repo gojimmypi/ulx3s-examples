@@ -35,6 +35,9 @@
       <SpecificVersion>True</SpecificVersion>
     </Reference>
   </ItemGroup>
+  <ItemGroup>
+    <Folder Include="packages\" />
+  </ItemGroup>
   <Import Project="$(NanoFrameworkProjectSystemPath)NFProjectSystem.CSharp.targets" Condition="Exists('$(NanoFrameworkProjectSystemPath)NFProjectSystem.CSharp.targets')" />
   <ProjectExtensions>
     <ProjectCapabilities>
