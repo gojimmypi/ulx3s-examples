@@ -76,7 +76,7 @@ Update-Package -Reinstall -IncludePrerelease
 
 Ensure the package source is set to `nuget.org`
 
-~[NuGet_reinstall](./NuGet_reinstall.png)
+![NuGet_reinstall](./NuGet_reinstall.png)
 
 See [Nuget package restore not working vs2019](https://github.com/NuGet/Home/issues/8852#issuecomment-579880577)
 
@@ -105,6 +105,14 @@ To blink the onboard LED, the `nanoFramework.Windows.Devices.Gpio` NuGet package
 See also the online [source code for nanoFramework.Windows.Devices.Gpio](https://github.com/nanoframework/lib-Windows.Devices.Gpio). 
 
 # Troubleshooting
+
+## Debugger Doesn't step into main
+
+Ensure the code with `main()` project is set as the startup project (right click)
+
+## Object reference not set to an instance of an object at deployment time.
+
+Ensure the device is selected in the Device Explorer Window
 
 ## Cannot find ESP32 in Device Explorer
 
@@ -177,7 +185,7 @@ Error	MSB4018	The "GenerateBinaryOutputTask" task failed unexpectedly.
 System.IO.IOException: The process cannot access the file 'C:\workspace\ulx3s-examples\nanoFramework\nanoFrameworkSSD1331\bin\Debug\nanoFrameworkSSD1331.dll' because it is being used by another process.
 ...etc
 ```
-Try simmply building the projecvt again (not rebuild)
+Try simmply building the project again (not rebuild)
 
 ## Package already exists in folder, Install failed. Rolling back...
 
@@ -266,6 +274,10 @@ Ensure the Core Library checkbox is checked in `Tools - NuGet Package Manager - 
 
 ## A fatal error occurred: Failed to connect to ESP32: Timed out waiting for packet header
 
+
+When flashing the nanoFramework bootloader, the esptool may fail. 
+Although this occurs on some other ESP32 boards, it typically is not an issue on the ULX3S.
+
 Attempting to upload gives a sequence of dots and underlines, then gives up:
 
 ```
@@ -273,14 +285,31 @@ Connecting........_____....._____....._____.....
 ```
 
 This is a common message for some ESP32 boards that did not implement a robust auto-detect of the uploader. 
-Some manual intervention is needed to kickstart the upload.
+Some manual intervention is needed to kickstart the upload. 
 
 While running uploader: Hold down `1O0`, continue holding then press `EN`, release `EN` amd release `IO0` and the upload should begin.
 
 ![ESP32_upload_error_needs_button_pre](./images/ESP32_upload_error_needs_button_pre.png)
 
+This process may need to be repeated. To experiment interactively, connect a terminal program such as putty to the COM port:
+
+![putty 115200 8N1](./images/putty_115200_8N1.png)
+
+Observe the sequence of button presses to get this prompt:
+
+```
+ets Jun  8 2016 00:22:57
+
+rst:0x1 (POWERON_RESET),boot:0x3 (DOWNLOAD_BOOT(UART0/UART1/SDIO_REI_REO_V2))
+waiting for download
+
+```
+
+Be sure to lose the putty application as the nanoFramework needs exclusive access to the COM port.
 
 ## A fatal error occurred: Invalid head of packet ('e')
+
+Although this occurs on other ESP32 boards, it typically is not an issue on the ULX3S.
 
 This error is also typical of some ESP32 boards needing the special button sequence. Often this message will be seen after the nanoFramework
 has been successfully loaded onto the chip.
