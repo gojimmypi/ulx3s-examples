@@ -171,3 +171,23 @@ https://bintray.com/nfbot/nanoframework-images-dev/ESP32_WROOM_32/1.4.0-preview.
 
 https://github.com/nanoframework/nf-interpreter#firmware-for-reference-boards
 
+
+https://github.com/emard/ulx3s/issues/8
+
+https://github.com/adafruit/Adafruit-SSD1331-OLED-Driver-Library-for-Arduino/blob/master/Adafruit_SSD1331.cpp
+
+https://github.com/nanoframework/lib-Windows.Devices.Gpio
+
+https://www.electronics-lab.com/project/color-oled-ssd1331-display-arduino-uno/
+
+https://github.com/Dweaver309/nanoframework.SS1306
+
+https://github.com/NuGet/docs.microsoft.com-nuget/blob/master/docs/what-is-nuget.md
+
+https://github.com/nanoframework/lib-Windows.Devices.Spi/tree/develop/source/Windows.Devices.Spi
+
+https://docs.nanoframework.net/api/Windows.Devices.Spi.html
+
+https://discordapp.com/channels/478725473862549535/532862286797471744
+
+https://github.com/sumotoy/SSD_13XX
