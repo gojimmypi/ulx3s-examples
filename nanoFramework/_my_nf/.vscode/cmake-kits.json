@@ -1,0 +1,6 @@
+[
+  {
+    "name": "ESP32 Tools",
+    "toolchainFile": "CMake/toolchain.xtensa-esp32-elf.cmake"
+  }
+]

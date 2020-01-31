@@ -1,0 +1,47 @@
+{
+    // See https://go.microsoft.com/fwlink/?LinkId=733558
+    // for the documentation about the tasks.json format
+    "version": "2.0.0",
+    "tasks": [
+        {
+            "taskName": "Flash nanoCLR COM9",
+            "type": "shell",
+            "command": "python C:/ESP32_TOOLS/esp-idf-v3.3/components/esptool_py/esptool/esptool.py --chip esp32 --port \"COM9\" --baud 921600 --before \"default_reset\" --after \"hard_reset\" write_flash -z --flash_mode \"dio\" --flash_freq \"40m\" --flash_size detect 0x1000 C:/ESP32_TOOLS/libs-v3.3/bootloader.bin 0x10000 C:/nf/build/nanoCLR.bin 0x8000 C:/nf/build/partitions_4mb.bin",
+            "presentation": {
+                "reveal": "always",
+                "panel": "shared"
+            },
+            "problemMatcher": []
+        },
+        { 
+            "taskName": "Erase flash COM9", 
+            "type": "shell", 
+            "command": "python C:/ESP32_TOOLS/esp-idf-v3.3/components/esptool_py/esptool/esptool.py --chip esp32 --port \"COM9\" --baud 115200 --before \"default_reset\" --after \"hard_reset\" erase_flash", 
+            "presentation": { 
+                "reveal": "always", 
+                "panel": "shared" 
+            }, 
+            "problemMatcher": [] 
+        }, 
+        {
+            "taskName": "Flash nanoCLR Wrover COM9",
+            "type": "shell",
+            "command": "python C:/ESP32_TOOLS/esp-idf-v3.3/components/esptool_py/esptool/esptool.py --chip esp32 --port \"COM9\" --baud 921600 --before \"default_reset\" --after \"hard_reset\" write_flash -z --flash_mode \"dio\" --flash_freq \"40m\" --flash_size detect 0x1000 C:/ESP32_TOOLS/libs-v3.3/bootloader.bin 0x10000 C:/nf/build/nanoCLR.bin 0x8000 C:/nf/build/partitions_4mb.bin",
+            "presentation": {
+                "reveal": "always",
+                "panel": "shared"
+            },
+            "problemMatcher": []
+        },
+        {
+            "taskName": "Flash nanoCLR ESP32-EVB COM9",
+            "type": "shell",
+            "command": "python C:/ESP32_TOOLS/esp-idf-v3.3/components/esptool_py/esptool/esptool.py --chip esp32 --port \"COM9\" --baud 921600 --before \"default_reset\" --after \"hard_reset\" write_flash -z --flash_mode \"dio\" --flash_freq \"40m\" --flash_size detect 0x1000 C:/ESP32_TOOLS/libs-v3.3/bootloader.bin 0x10000 C:/nf/build/nanoCLR.bin 0x8000 C:/nf/build/partitions_4mb.bin",
+            "presentation": {
+                "reveal": "always",
+                "panel": "shared"
+            },
+            "problemMatcher": []
+        }
+    ]
+}

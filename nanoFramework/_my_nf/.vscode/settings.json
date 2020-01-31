@@ -1,0 +1,20 @@
+[
+    {
+    "cmake.preferredGenerators": [
+        "Ninja"
+    ],
+    "cmake.generator": "Ninja",
+    "cmake.useCMakeServer": true,
+    "cmake.autoRestartBuild": true,
+    "cmake.configureSettings": {
+        "CMAKE_MAKE_PROGRAM": "C:/Ninja/ninja.exe"
+    },
+    "cmake.configureOnOpen": false,
+    "C_Cpp.default.configurationProvider": "vector-of-bool.cmake-tools",
+    "files.associations": {
+        "usbcfg.h": "c",
+        "ftdi.h": "c",
+        "*.in": "cpp"
+    }
+}
+]
