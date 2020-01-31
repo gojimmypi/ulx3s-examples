@@ -1,0 +1,149 @@
+[cms-client] Configuring using the "Ninja" CMake generator
+[cms-client] Configuring using the "Ninja" CMake generator
+[rollbar] Unhandled exception: Unhandled Promise rejection: Update code model for cpptools TypeError: Cannot read property 'getApi' of undefined {}
+[cmake] 
+[cmake] Setting RTOS to FREERTOS_ESP32
+[cmake] 
+[cmake] Found free drive letter: B: 
+[cmake] 
+[cmake] Created new  subst for C:\Temp\nanolib\nf-interpreter\ on B: 
+[cmake] 
+[cmake] You can remove it with subst B: /D 
+[cmake] 
+[cmake] Using short path B:\ for C:\Temp\nanolib\nf-interpreter\ 
+[cmake] 
+[cmake] The C compiler identification is GNU 5.2.0
+[cmake] The CXX compiler identification is GNU 5.2.0
+[cmake] Check for working C compiler: C:/ESP32_TOOLS/xtensa-esp32-elf/bin/xtensa-esp32-elf-gcc.exe
+[cmake] Check for working C compiler: C:/ESP32_TOOLS/xtensa-esp32-elf/bin/xtensa-esp32-elf-gcc.exe -- works
+[cmake] Detecting C compiler ABI info
+[cmake] Detecting C compiler ABI info - done
+[cmake] Detecting C compile features
+[cmake] Detecting C compile features - done
+[cmake] Check for working CXX compiler: C:/ESP32_TOOLS/xtensa-esp32-elf/bin/xtensa-esp32-elf-g++.exe
+[cmake] Check for working CXX compiler: C:/ESP32_TOOLS/xtensa-esp32-elf/bin/xtensa-esp32-elf-g++.exe -- works
+[cmake] Detecting CXX compiler ABI info
+[cmake] Detecting CXX compiler ABI info - done
+[cmake] Detecting CXX compile features
+[cmake] Detecting CXX compile features - done
+[cmake] Building nanoFramework version 0.9.99.999 using build type 'Debug'.
+[cmake] Source directory is 'C:/workspace/nf-interpreter'.
+[cmake] Build  directory is 'C:/workspace/nf-interpreter/build'.
+[cmake] Single-precision floating point is effective
+[cmake] Complex math functions available
+[cmake] String conversion to value from base 10 and 16 (partial) is effective
+[cmake] Random Number Generation by target MCU is activated
+[cmake] Support for debugging managed applications is included.
+[cmake] Application Domains support IS NOT included
+[cmake] CLR has all trace messages and checks enabled
+[cmake] CLR IL inlining is enabled
+[cmake] Configuration block storage is included
+[cmake] Support for SD Card is included
+[cmake] Support for USB Mass Storage IS NOT included
+[cmake] Support for SPIFFS IS NOT included
+[cmake] Wire Protocol does NOT implement CRC32
+[cmake] Support for System.Reflection API enabled
+[cmake] Support for System.Collections API enabled
+[cmake] Support for System.Text API enabled
+[cmake] Support for networking enabled with security from mbedTLS
+[cmake] Platform ESP32 target board: ESP32_WROOM_32
+[cmake] Found Git: C:/Program Files/Git/cmd/git.exe (found version "2.17.1.windows.2") 
+[cmake] CMake Warning (dev) in CMakeLists.txt:
+[cmake] 
+[cmake]   No cmake_minimum_required command is present.  A line of code such as
+[cmake] 
+[cmake]     cmake_minimum_required(VERSION 3.16)
+[cmake] 
+[cmake]   should be added at the top of the file.  The version specified may be lower
+[cmake]   if you wish to support older CMake versions for this project.  For more
+[cmake]   information run "cmake --help-policy CMP0000".
+[cmake] This warning is for project developers.  Use -Wno-dev to suppress it.
+[cmake] 
+[cmake] 
+[cmake] -- Configuring done
+[cmake] 
+[cmake] -- Generating done
+[cmake] 
+[cmake] -- Build files have been written to: C:/workspace/nf-interpreter/build/mbedTLS_Download
+[cmake] 
+[cmake] [1/8] Creating directories for 'mbedTLS'
+[cmake] 
+[cmake] 
+[cmake] [2/8] Performing download step (git clone) for 'mbedTLS'
+[cmake] -- mbedTLS download command succeeded.  See also C:/workspace/nf-interpreter/build/mbedTLS_Download/mbedTLS/src/mbedTLS-stamp/mbedTLS-download-*.log
+[cmake] 
+[cmake] [3/8] No patch step for 'mbedTLS
+[cmake] '
+[cmake] 
+[cmake] [4/8] Performing update step for 'mbedTLS'
+[cmake] 
+[cmake] Current branch mbedtls-2.16.3 is up to date.
+[cmake] 
+[cmake] [5/8] No configure step for 'mbedTLS
+[cmake] '
+[cmake] 
+[cmake] [6/8] No build step for 'mbedTLS'
+[cmake] 
+[cmake] [7/8] No install step for 'mbedTLS
+[cmake] '
+[cmake] 
+[cmake] [8/8] Completed 'mbedTLS
+[cmake] '
+[cmake] 
+[cmake] The ASM compiler identification is GNU
+[cmake] Found assembler: C:/ESP32_TOOLS/xtensa-esp32-elf/bin/xtensa-esp32-elf-gcc.exe
+[cmake] Wire Protocol TRACE_MASK is '0'
+[cmake] Found WireProtocol: C:/workspace/nf-interpreter/src/CLR/Include  
+[cmake] Found NF_CoreCLR: C:/workspace/nf-interpreter/src/CLR/Core;C:/workspace/nf-interpreter/src/CLR/Include;C:/workspace/nf-interpreter/src/HAL/Include;C:/workspace/nf-interpreter/src/PAL/Include;C:/workspace/nf-interpreter/src/CLR/CorLib;C:/workspace/nf-interpreter/src/CLR/Startup;C:/workspace/nf-interpreter/src/CLR/Diagnostics;C:/workspace/nf-interpreter/src/CLR/Debugger;C:/workspace/nf-interpreter/src/CLR/Helpers/TinyPrintf;C:/workspace/nf-interpreter/src/CLR/Helpers/Base64;C:/workspace/nf-interpreter/src/nanoFramework.Runtime.Native  
+[cmake] Found NF_Debugger: C:/workspace/nf-interpreter/src/CLR/Debugger;C:/workspace/nf-interpreter/src/CLR/Messaging;C:/workspace/nf-interpreter/src/CLR/WireProtocol;C:/workspace/nf-interpreter/src/CLR/Include  
+[cmake] Found NF_Diagnostics: C:/workspace/nf-interpreter/src/CLR/Diagnostics;C:/workspace/nf-interpreter/src/CLR/Include  
+[cmake] Found NF_Networking: C:/workspace/nf-interpreter/src/PAL/Com/sockets;C:/workspace/nf-interpreter/src/PAL/Com/sockets/ssl;C:/workspace/nf-interpreter/src/PAL/Lwip;C:/workspace/nf-interpreter/src/DeviceInterfaces/Networking.Sntp;C:/workspace/nf-interpreter/src/PAL/Com/sockets/ssl/mbedTLS  
+[cmake] Found mbedTLS: C:/workspace/nf-interpreter/build/mbedTLS_Source/include/  
+[cmake] Found nanoFramework.Hardware.Esp32: C:/workspace/nf-interpreter/src/CLR/Core;C:/workspace/nf-interpreter/src/CLR/Include;C:/workspace/nf-interpreter/src/HAL/Include;C:/workspace/nf-interpreter/src/PAL/Include;C:/workspace/nf-interpreter/targets/FreeRTOS_ESP32/ESP32_WROOM_32/nanoCLR/nanoFramework.Hardware.Esp32  
+[cmake] Found nanoFramework.Networking.Sntp: C:/workspace/nf-interpreter/src/HAL/Include;C:/workspace/nf-interpreter/src/DeviceInterfaces/Networking.Sntp  
+[cmake] Found nanoFramework.ResourceManager: C:/workspace/nf-interpreter/src/HAL/Include;C:/workspace/nf-interpreter/src/nanoFramework.ResourceManager  
+[cmake] Found nanoFramework.System.Collections: C:/workspace/nf-interpreter/src/HAL/Include;C:/workspace/nf-interpreter/src/nanoFramework.System.Collections  
+[cmake] Found nanoFramework.System.Text: C:/workspace/nf-interpreter/src/HAL/Include;C:/workspace/nf-interpreter/src/nanoFramework.System.Text  
+[cmake] Found nanoFramework.Runtime.Events: C:/workspace/nf-interpreter/src/CLR/Core;C:/workspace/nf-interpreter/src/CLR/Include;C:/workspace/nf-interpreter/src/HAL/Include;C:/workspace/nf-interpreter/src/PAL/Include;C:/workspace/nf-interpreter/src/nanoFramework.Runtime.Events  
+[cmake] Found System.Net: C:/workspace/nf-interpreter/src/HAL/Include;C:/workspace/nf-interpreter/src/DeviceInterfaces/System.Net  
+[cmake] Found Windows.Devices.Adc: C:/workspace/nf-interpreter/src/CLR/Core;C:/workspace/nf-interpreter/src/CLR/Include;C:/workspace/nf-interpreter/src/HAL/Include;C:/workspace/nf-interpreter/src/PAL/Include;C:/workspace/nf-interpreter/targets/FreeRTOS_ESP32/ESP32_WROOM_32/nanoCLR/Windows.Devices.Adc;C:/workspace/nf-interpreter/src/Windows.Devices.Adc  
+[cmake] Found Windows.Devices.Gpio: C:/workspace/nf-interpreter/src/CLR/Core;C:/workspace/nf-interpreter/src/CLR/Include;C:/workspace/nf-interpreter/src/HAL/Include;C:/workspace/nf-interpreter/src/PAL/Include;C:/workspace/nf-interpreter/targets/FreeRTOS_ESP32/ESP32_WROOM_32/nanoCLR/Windows.Devices.Gpio;C:/workspace/nf-interpreter/src/Windows.Devices.Gpio  
+[cmake] Found Windows.Devices.I2c: C:/workspace/nf-interpreter/src/CLR/Core;C:/workspace/nf-interpreter/src/CLR/Include;C:/workspace/nf-interpreter/src/HAL/Include;C:/workspace/nf-interpreter/src/PAL/Include;C:/workspace/nf-interpreter/targets/FreeRTOS_ESP32/ESP32_WROOM_32/nanoCLR/Windows.Devices.I2c;C:/workspace/nf-interpreter/src/Windows.Devices.I2c  
+[cmake] Found Windows.Devices.Pwm: C:/workspace/nf-interpreter/src/CLR/Core;C:/workspace/nf-interpreter/src/CLR/Include;C:/workspace/nf-interpreter/src/HAL/Include;C:/workspace/nf-interpreter/src/PAL/Include;C:/workspace/nf-interpreter/targets/FreeRTOS_ESP32/ESP32_WROOM_32/nanoCLR/Windows.Devices.Pwm;C:/workspace/nf-interpreter/src/Windows.Devices.Pwm  
+[cmake] Found Windows.Devices.SerialCommunication: C:/workspace/nf-interpreter/targets/FreeRTOS_ESP32/ESP32_WROOM_32/nanoCLR/Windows.Devices.SerialCommunication;C:/workspace/nf-interpreter/targets/FreeRTOS_ESP32/ESP32_WROOM_32;C:/workspace/nf-interpreter/src/Windows.Devices.SerialCommunication  
+[cmake] Found Windows.Devices.Spi: C:/workspace/nf-interpreter/src/CLR/Core;C:/workspace/nf-interpreter/src/CLR/Include;C:/workspace/nf-interpreter/src/HAL/Include;C:/workspace/nf-interpreter/src/PAL/Include;C:/workspace/nf-interpreter/targets/FreeRTOS_ESP32/ESP32_WROOM_32/nanoCLR/Windows.Devices.Spi;C:/workspace/nf-interpreter/src/Windows.Devices.Spi  
+[cmake] Found Windows.Devices.Wifi: C:/workspace/nf-interpreter/src/CLR/Core;C:/workspace/nf-interpreter/src/CLR/Include;C:/workspace/nf-interpreter/src/HAL/Include;C:/workspace/nf-interpreter/src/PAL/Include;C:/workspace/nf-interpreter/targets/FreeRTOS_ESP32/ESP32_WROOM_32/nanoCLR/Windows.Devices.Wifi;C:/workspace/nf-interpreter/src/Windows.Devices.Wifi  
+[cmake] Found Windows.Storage: C:/workspace/nf-interpreter/targets/FreeRTOS_ESP32/ESP32_WROOM_32/Include;C:/workspace/nf-interpreter/targets/FreeRTOS_ESP32/ESP32_WROOM_32/nanoCLR/Windows.Storage;C:/workspace/nf-interpreter/src/Windows.Storage  
+[cmake]  *** NO Interop assemblies included ***
+[cmake]  *** APIs included ***
+[cmake]  nanoFramework.Hardware.Esp32
+[cmake]  nanoFramework.Networking.Sntp
+[cmake]  nanoFramework.ResourceManager
+[cmake]  nanoFramework.System.Collections
+[cmake]  nanoFramework.System.Text
+[cmake]  nanoFramework.Runtime.Events
+[cmake]  System.Net
+[cmake]  Windows.Devices.Adc
+[cmake]  Windows.Devices.Gpio
+[cmake]  Windows.Devices.I2c
+[cmake]  Windows.Devices.Pwm
+[cmake]  Windows.Devices.SerialCommunication
+[cmake]  Windows.Devices.Spi
+[cmake]  Windows.Devices.Wifi
+[cmake]  Windows.Storage
+[cmake]  ***  end of APIs  ***
+[cmake] Configuring done
+[cmake] CMake Deprecation Warning:
+[cmake]   The 'cmake-server(7)' is deprecated.  Please port clients to use the
+[cmake]   'cmake-file-api(7)' instead.
+[cmake] 
+[cmake] 
+[cmake] Generating done
+[cmake] CMake Warning:
+[cmake]   Manually-specified variables were not used by the project:
+[cmake] 
+[cmake]     SWO_OUTPUT
+[cmake]     USE_FPU
+[cmake] 
+[cmake] 
+[rollbar] Unhandled exception: Unhandled Promise rejection: Update code model for cpptools TypeError: Cannot read property 'getApi' of undefined {}
