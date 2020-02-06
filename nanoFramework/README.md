@@ -369,3 +369,14 @@ https://docs.nanoframework.net/api/Windows.Devices.Spi.html
 https://discordapp.com/channels/478725473862549535/532862286797471744
 
 https://github.com/sumotoy/SSD_13XX
+
+https://github.com/nanoFramework/nf-Community-contributions/tree/master/drivers/TFT-ST7735-display
+
+
+[Nuget package restore not working vs2019](https://github.com/NuGet/Home/issues/8852)
+
+[nanoFramework.CoreLibrary 1.6.0-preview.1](https://www.nuget.org/packages/nanoFramework.CoreLibrary/1.6.0-preview.1)
+
+[Update-Package (Package Manager Console in Visual Studio)](https://docs.microsoft.com/en-us/nuget/reference/ps-reference/ps-ref-update-package)
+
+[How to reinstall and update packages](https://docs.microsoft.com/en-us/nuget/consume-packages/reinstalling-and-updating-packages)
