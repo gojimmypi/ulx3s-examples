@@ -11,7 +11,7 @@
 #################################################################################################
 
 # native code directory
-set(BASE_PATH_FOR_THIS_MODULE "${BASE_PATH_FOR_CLASS_LIBRARIES_MODULES}/nanoFrameworkSSD1331_extern")
+set(BASE_PATH_FOR_THIS_MODULE "${BASE_PATH_FOR_CLASS_LIBRARIES_MODULES}/InteropAssemblies/nanoFrameworkSSD1331_extern")
 
 
 # set include directories
