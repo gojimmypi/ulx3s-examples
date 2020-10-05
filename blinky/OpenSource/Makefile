@@ -71,12 +71,12 @@ ulx3s.bit: ulx3s_out.config
 	ecppack ulx3s_out.config ulx3s.bit
 
 ulx3s_out.config: blinky.json
-	nextpnr-ecp5 --45k --json blinky.json --basecfg ulx3s_empty.config \
+	nextpnr-ecp5 --45k --json blinky.json  \
 		--lpf ulx3s_v20.lpf \
-		--textcfg ulx3s_out.config 
+		--textcfg ulx3s_out.config
 
 blinky.json: blinky.ys blinky.v
-	yosys blinky.ys 
+	yosys blinky.ys
 
 prog: ulx3s.bit
-	../../bin/ujprog ulx3s.bit
+	../../bin/fujprog ulx3s.bit

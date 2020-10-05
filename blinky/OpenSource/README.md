@@ -22,7 +22,7 @@ make ulx3s.bit
 
 For Windows WSL, there is [no USB support](https://github.com/Microsoft/WSL/issues/2185#issuecomment-306083436) so the linux `ujprog` will not work, but the Windows executable `ujprog.exe` can be used.
 
-It is important to note that `ujprog.exe` should only be executed from a non-VoIFS directory in WSL (e.g. /mnt/c/somedirectory...) see [ujprog troubleshooting](https://github.com/f32c/tools/tree/master/ujprog#troubleshooting) and the discussion [here](https://github.com/f32c/tools/pull/9#issuecomment-465693978).
+It is important to note that `fujprog.exe` should only be executed from a non-VoIFS directory in WSL (e.g. /mnt/c/somedirectory...) see [ujprog troubleshooting](https://github.com/f32c/tools/tree/master/ujprog#troubleshooting) and the discussion [here](https://github.com/f32c/tools/pull/9#issuecomment-465693978).
 
 ```
 # assume git clone to C:\workspace\
@@ -30,18 +30,18 @@ It is important to note that `ujprog.exe` should only be executed from a non-VoI
 cd /mnt/c/workspace/ulx3s-examples/blinky/OpenSource
 make clean
 make ulx3s.bit
-../../bin/ujprog.exe ulx3s.bit
+../../bin/fujprog.exe ulx3s.bit
 ```
 
 for the 12F on WSL:
 
 ```
 # assume git clone to C:\workspace\
-# Note ujprog.exe does NOT work when launching from WSL VoIFS, so we move to a DOS directory (/mnt/c/....)
+# Note fujprog.exe does NOT work when launching from WSL VoIFS, so we move to a DOS directory (/mnt/c/....)
 cd /mnt/c/workspace/ulx3s-examples/blinky/OpenSource
 make clean
 make ulx3s.bit -f Makefile.12F
-../../bin/ujprog.exe ulx3s.bit
+../../bin/fujprog.exe ulx3s.bit
 ```
 
 See also [other examples](../../README.md)

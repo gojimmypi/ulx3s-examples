@@ -19,7 +19,7 @@ if NOT EXIST c:\workspace mkdir c:\workspace
 git clone https://github.com/gojimmypi/ulx3s-examples.git c:\workspace\ulx3s-examples
 c:
 cd \workspace\ulx3s-examples\bin\
-.\ujprog.exe passthru.bit
+.\fujprog.exe passthru.bit
 ```
 
 ## WSL FPGA passthru
@@ -28,13 +28,13 @@ There is still [no native USB driver support in WSL](https://github.com/Microsof
 ULX2S / ULX3S JTAG programmer v 3.0.92 (built Jun  1 2019 15:29:22)
 Cannot find JTAG cable.
 ```
-We can call the Windows version from the Linux prompt. Note that for some unknown reason, it needs to be called from the Windows file system and not the Linux one. (e.g. not `~/workspace/`). Symptoms of running the Windows executable from the WSL filesystem is that no output at all is returned from `ujprog.exe`.
+We can call the Windows version from the Linux prompt. Note that for some unknown reason, it needs to be called from the Windows file system and not the Linux one. (e.g. not `~/workspace/`). Symptoms of running the Windows executable from the WSL filesystem is that no output at all is returned from `fujprog.exe`.
 ```
 mkdir -p /mnt/c/workspace/  # this is actually C:\workspace\ to Windows
 git clone https://github.com/gojimmypi/ulx3s-examples.git /mnt/c/workspace/ulx3s-examples
 cd /mnt/c/workspace/ulx3s-examples/bin/
-# ./ujprog.exe -j FLASH passthru.bit # optionally write to flash
-./ujprog.exe passthru.bit
+# ./fujprog.exe -j FLASH passthru.bit # optionally write to flash
+./fujprog.exe passthru.bit
 ```
 ##  Key settings in Visual Micro for ULX3S ESP32:
 

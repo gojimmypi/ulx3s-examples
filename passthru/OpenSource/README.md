@@ -17,7 +17,7 @@ make wslprog -f Makefile.12F
 This should result in a output something like this:
 
 ```
-../../bin/ujprog.exe ulx3s.bit
+../../bin/fujprog.exe ulx3s.bit
 Programming: 99% | ULX2S / ULX3S JTAG programmer v 3.0.92 (built Feb 18 2019 10:55:47)
 Using USB cable: ULX3S FPGA 12K v3.0.3
 Programming: 100%
@@ -1069,7 +1069,7 @@ Info: [ 82528,  82757) |*
 Info: [ 82757,  82986) |**
 3 warnings, 0 errors
 ecppack ulx3s_out.config ulx3s.bit --idcode 0x21111043
-../../bin/ujprog.exe ulx3s.bit
+../../bin/fujprog.exe ulx3s.bit
 ULX2S / ULX3S JTAG programmer v 3.0.92 (built Feb 18 2019 10:55:47)
 Using USB cable: ULX3S FPGA 12K v3.0.3
 Programming: 100%

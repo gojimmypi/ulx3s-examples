@@ -13,7 +13,7 @@ if NOT EXIST c:\workspace mkdir c:\workspace
 git clone https://github.com/gojimmypi/ulx3s-examples.git c:\workspace\ulx3s-examples
 c:
 cd \workspace\ulx3s-examples\bin\
-.\ujprog.exe passthru.bit
+.\fujprog.exe passthru.bit
 ```
 
 ## WSL - load FPGA passthru
@@ -28,7 +28,7 @@ mkdir -p /mnt/c/workspace/  # this is actually C:\workspace\ to Windows
 git clone https://github.com/gojimmypi/ulx3s-examples.git /mnt/c/workspace/ulx3s-examples
 cd /mnt/c/workspace/ulx3s-examples/bin/
 # ./ujprog.exe -j FLASH passthru.bit # optionally write to flash
-./ujprog.exe passthru.bit
+./fujprog.exe passthru.bit
 ```
 
 Examples assume the ULX3S is found on COM13

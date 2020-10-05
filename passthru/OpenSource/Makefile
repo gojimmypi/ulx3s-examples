@@ -79,4 +79,4 @@ passthru.json: passthru.ys passthru.v
 	yosys passthru.ys 
 
 prog: ulx3s.bit
-	../../bin/ujprog ulx3s.bit
+	../../bin/fujprog ulx3s.bit

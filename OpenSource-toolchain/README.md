@@ -57,7 +57,7 @@ Edit WORKSPACE setting to fit your needs.
   --nosystem     : do not install requirements; do not perform apt-get update and apt-get upgrade
   --prjtrellis   : install/update prjtrellis
   --system       : install requirements; perform apt-get update and apt-get upgrade
-  --ujprog       : install/update ujprog
+  --fujprog      : install/update fujprog
   --version      : show versions of installed tools
   --yosys        : install/update yosys
   ```

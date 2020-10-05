@@ -138,7 +138,7 @@ The FPGA sits between the display and the ESP32, allowing either the FPGA or ESP
 connection between the ESP32 to allow that device to control the display. Keep this in mind if also writing something in FPGA that also attempts to
 control the display concurrently. 
 
-The default for `ujprog` is to program to volatile SRAM (power cycle to revert). See the `-j` parameter to make FPGA changes persistent. 
+The default for `fujprog` is to program to volatile SRAM (power cycle to revert). See the `-j` parameter to make FPGA changes persistent. 
 
 ### Quick Start Passthru
 
@@ -146,7 +146,7 @@ Windows tip: you can open a command prompt by rick-clicking on the project in Vi
 ```
 :: From this project directory (e.g. c:\workspace\ulx3s-examples\VisualMicro-SSD1331-Display )
 cd ..\bin
-ujprog.exe passthru_implementation_12F.bit
+fujprog.exe passthru_implementation_12F.bit
 ```
 
 ### SSD1331 to ESP32 Passthru via FPGA details
